@@ -37,6 +37,11 @@ li {
  padding: 0;
 }
 
+#menu-btn {
+ background: #0000009e;
+ border-radius: 50%;
+}
+
 .container {
  max-width: 1140px;
  width: 100%;
@@ -58,11 +63,13 @@ li {
  -moz-transition: right .7s;
  -ms-transition: right .7s;
  -o-transition: right .7s;
+ z-index: 10;
 }
 
-#menu-btn svg {
+#menu-btn>svg {
  width: 40px;
  height: 40px;
+ color: var(--white);
 }
 
 
@@ -205,11 +212,12 @@ li {
 
 #videoPleer {
  position: absolute;
- top: 40px;
  bottom: 0;
+ top: 0;
  left: 0;
  right: 0;
  width: 100%;
  height: -webkit-fill-available;
  overflow: hidden;
+ z-index: -1;
 }
