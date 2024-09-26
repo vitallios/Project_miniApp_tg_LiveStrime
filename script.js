@@ -6,6 +6,16 @@ let iframeSeaction = document.querySelector('#videoPleer');
 let wrapPleer = document.querySelector('.wrap');
 const key = '04cf7fba122224318f217fe6344845db'
 const url = `https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?`
+const loader = document.querySelector('.loader');
+
+window.addEventListener('load', () => {
+ if(!window.onload) {
+  setTimeout(() => {
+   loader.style.display = 'none';
+  }, 3000);
+ }
+});
+
 
 const myHeaders = new Headers();
 myHeaders.append("x-rapidapi-key", `${key}`);
@@ -16,20 +26,6 @@ let requestOptions = {
   headers: myHeaders,
   redirect: 'follow'
 };
-
-// fetch("https://v1.rugby.api-sports.io/leagues", requestOptions)
-//   .then(response => {
-//    if (response.status == 200) {
-//     response.json()
-//     .then(data => {
-//       data.response.forEach(item => {
-//        console.dir(item);
-//        return item;
-//       });
-//     })
-//    }
-//   }  )
-//   .catch(error => console.log('error', error));
 
 const catalogLinks = [
  {
@@ -74,24 +70,17 @@ navBTN.addEventListener('click', () => {
  ? 'M6 18L18 6M6 6l12 12' : 'M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5';
 });
 
-
-
-
 catalogLinks.forEach(item => {
- if (item) {
-  wrapPleer.innerHTML = `<iframe id="videoPleer" title="rutube.ru" src="${item.link}" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>`;
- } else {
-  console.log('error');
- }
  const li = document.createElement('li');
  li.classList.add('menu__list-item');
  li.innerHTML = `<button class="menu__list-link" id="${item.id}" name="${item.name}">${item.name}</butt>`;
  menuList.appendChild(li);
 
  li.firstChild.addEventListener('click', () => {
-  if(li.firstChild.id == `${item.id}`) {
-   iframeSeaction.src = `${item.link}`;
-  }
+  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${item.link}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  menu.classList.toggle('active');
+  navBTN.firstElementChild.children[0].attributes[2].value = menu.classList.contains('active')
+ ? 'M6 18L18 6M6 6l12 12' : 'M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5';
 });
 
 
