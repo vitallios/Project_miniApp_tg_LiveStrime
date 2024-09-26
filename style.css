@@ -133,7 +133,7 @@ li {
 
 .content__description {
  letter-spacing: 0.05em;
- line-height: 3vh;
+ line-height: 25px;
 }
 
 .content__description>span {
@@ -145,6 +145,7 @@ li {
 .content__footer {
  letter-spacing: 0.2em;
  text-align: center;
+ margin-bottom: 20px;
 }
 
 .content__footer>a {
