@@ -40,6 +40,8 @@ li {
 #menu-btn {
  background: #0000009e;
  border-radius: 50%;
+ border-radius: 0 0 30%;
+ padding-right: 7px;
 }
 
 .container {
