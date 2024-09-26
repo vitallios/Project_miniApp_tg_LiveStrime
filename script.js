@@ -44,7 +44,33 @@ const catalogLinks = [
   link: 'https://rutube.ru/play/embed/7a485ef5da9fe50ba939f36ca3e6ed96',
   // link: '1',
  },
+ {
+  id: 3,
+  name: 'NBA',
+  link: 'https://rutube.ru/play/embed/876cf3628c698e956de40c1c911b0c5f',
+  // link: '1',
+ },
+ {
+  id: 4,
+  name: 'Football',
+  link: 'https://rutube.ru/play/embed/9cc47f22f8b64783940a3be37a2c69e7',
+  // link: '1',
+ },
+ {
+  id: 5,
+  name: 'Матч ТВ',
+  link: 'https://rutube.ru/play/embed/11bbbec75a2ceb8cf446ad16813c6eec',
+  // link: '1',
+ },
 ]
+
+
+
+
+
+
+
+
 
 // fetch(`https://v1.${sport}api-sports.io/`, requestOptions)
 //   .then(response => {
