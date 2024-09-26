@@ -9,9 +9,13 @@ const url = `https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?`
 const loader = document.querySelector('.loader');
 
 window.addEventListener('load', () => {
+ document.querySelector('.content').style.opacity = '0';
+
  if(!window.onload) {
   setTimeout(() => {
    loader.style.display = 'none';
+ document.querySelector('.content').style.opacity = '1';
+
   }, 3000);
  }
 });
