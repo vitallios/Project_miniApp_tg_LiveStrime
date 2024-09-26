@@ -3,7 +3,7 @@ const menu = document.querySelector('.menu');
 const menuListItem = document.querySelector('#menu__list-item');
 const menuList = document.querySelector('#menu__list');
 let iframeSeaction = document.querySelector('#videoPleer');
-
+let wrapPleer = document.querySelector('.wrap');
 const key = '04cf7fba122224318f217fe6344845db'
 const url = `https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?`
 
@@ -78,6 +78,11 @@ navBTN.addEventListener('click', () => {
 
 
 catalogLinks.forEach(item => {
+ if (item) {
+  wrapPleer.innerHTML = `<iframe id="videoPleer" title="rutube.ru" src="${item.link}" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>`;
+ } else {
+  console.log('error');
+ }
  const li = document.createElement('li');
  li.classList.add('menu__list-item');
  li.innerHTML = `<button class="menu__list-link" id="${item.id}" name="${item.name}">${item.name}</butt>`;
