@@ -109,7 +109,8 @@ li {
  flex-direction: column;
  justify-content: space-between;
 }
-.content__text{
+
+.content__text {
  flex: 2;
  display: flex;
  flex-direction: column;
@@ -118,23 +119,28 @@ li {
  text-align: center;
  gap: 3vh;
 }
-.content__title>span{
+
+.content__title>span {
  color: #15feff;
 }
-.content__description{
+
+.content__description {
  letter-spacing: 0.05em;
  line-height: 3vh;
 }
-.content__description>span{
+
+.content__description>span {
  text-transform: uppercase;
  color: #15feff;
  letter-spacing: 0.2em;
 }
-.content__footer{
+
+.content__footer {
  letter-spacing: 0.2em;
-text-align: center;
+ text-align: center;
 }
-.content__footer>a{
+
+.content__footer>a {
  color: #15feff;
 }
 
@@ -196,3 +202,14 @@ text-align: center;
 }
 
 /* loading */
+
+#videoPleer {
+ position: absolute;
+ top: 40px;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ width: 100%;
+ height: -webkit-fill-available;
+ overflow: hidden;
+}
