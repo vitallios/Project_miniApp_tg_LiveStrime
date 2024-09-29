@@ -120,17 +120,17 @@ li {
 .menu>ul>li>a {
  color: var(--white);
 }
-.menu>button {
- color: #15feff;
- font-size: 15px;
- text-transform: uppercase;
- letter-spacing: 0.2em;
- text-align: center;
- padding: 10px 15px;
- border: 1px solid;
- width: fit-content;
- margin: 10px;
- border-radius: 10px;
+#rundomFilms {
+    color: #15feff;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+    padding: 10px 15px;
+    border: 1px solid;
+    width: fit-content;
+    border-radius: 10px;
+    width: 100%;
 }
 .content {
  opacity: 1;
