@@ -130,7 +130,7 @@ li {
     border: 1px solid;
     width: fit-content;
     border-radius: 10px;
-    width: 99%;
+    width: 100%;
 }
 .content {
  opacity: 1;
