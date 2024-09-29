@@ -120,6 +120,9 @@ li {
 .menu>ul>li>a {
  color: var(--white);
 }
+.menu__btn{
+    padding: 0 10px;
+}
 #rundomFilms {
     color: #15feff;
     font-size: 0.7em;
