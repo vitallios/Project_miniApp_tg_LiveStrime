@@ -163,9 +163,9 @@ li {
 .menu>ul>li>a {
     color: var(--white);
 }
-
+/* 
 .menu__btn {
-}
+} */
 
 #rundomFilms {
     font-size: 0.7em;
