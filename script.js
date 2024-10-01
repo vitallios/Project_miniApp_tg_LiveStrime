@@ -49,7 +49,6 @@ const randomFilms = [
     // link: '1',
   },
 ];
-
 // Трансляции которые будут
 const transLinks = [
   {
@@ -86,73 +85,63 @@ const transLinks = [
   },
 ];
 
+function burgerSvg() {
+  menu.classList.toggle("active");
+  navBTN.firstElementChild.children[0].attributes[2].value =
+    menu.classList.contains("active")
+      ? "M6 18L18 6M6 6l12 12"
+      : "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5";
+}
+function openVideoIFrame(linkVideo) {
+  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+}
+
 // загрузка контента
-window.addEventListener("load", () => {
-  document.querySelector(".content").style.opacity = "0";
+document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("load", () => {
+    document.querySelector(".content").style.opacity = "0";
 
-  if (!window.onload) {
-    setTimeout(() => {
-      loader.style.display = "none";
-      document.querySelector(".content").style.opacity = "1";
-    }, 3000);
-  }
-});
-
-// if (window.innerWidth < 900 && window.userAgentData.mobile) {
-// console.dir('ok');
-// console.dir(window.userAgentData.mobile);
-
-// при нажатии, открывается home страница
-btnToHome.addEventListener("click", () => {
-  document.querySelector(".wrap__pages").classList.add("info__none");
-});
-
-// при нажатии, запускается рандомный фильм из списка
-rundomFilms.addEventListener("click", () => {
-  const randomLink =
-    randomFilms[Math.floor(Math.random() * randomFilms.length)];
-  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${randomLink.link}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-  menu.classList.toggle("active");
-  navBTN.firstElementChild.children[0].attributes[2].value =
-    menu.classList.contains("active")
-      ? "M6 18L18 6M6 6l12 12"
-      : "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5";
-});
-
-// при нажатии, открывается меню
-navBTN.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  navBTN.firstElementChild.children[0].attributes[2].value =
-    menu.classList.contains("active")
-      ? "M6 18L18 6M6 6l12 12"
-      : "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5";
-});
-
-// в открытом меню формируется список ссылок
-catalogLinks.forEach((item) => {
-  const li = document.createElement("li");
-  li.classList.add("menu__list-item");
-  li.innerHTML = `<button class="menu__list-link" id="${item.id}" name="${item.name}">${item.name}</butt>`;
-  menuList.appendChild(li);
-
-  li.firstChild.addEventListener("click", () => {
-    wrapPleer.innerHTML = `<iframe id="videoPleer" src="${item.link}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-    menu.classList.toggle("active");
-    navBTN.firstElementChild.children[0].attributes[2].value =
-      menu.classList.contains("active")
-        ? "M6 18L18 6M6 6l12 12"
-        : "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5";
+    if (!window.onload) {
+      setTimeout(() => {
+        loader.style.display = "none";
+        document.querySelector(".content").style.opacity = "1";
+      }, 3000);
+    }
   });
-});
 
-// } else {
-//   alert('Сори, только для мобильных устройств');
-//   window.location.reload();
-// }
+  // при нажатии, открывается home страница
+  btnToHome.addEventListener("click", () => {
+    document.querySelector(".wrap__pages").classList.add("info__none");
+  });
 
-// HomeScreen
+  // при нажатии, запускается рандомный фильм из списка
+  rundomFilms.addEventListener("click", () => {
+    const randomLink =
+      randomFilms[Math.floor(Math.random() * randomFilms.length)];
+    openVideoIFrame(randomLink.link);
 
-// document.addEventListener("DOMContentLoaded", () => {
+    burgerSvg();
+  });
+
+  // при нажатии, открывается меню
+  navBTN.addEventListener("click", () => {
+    burgerSvg();
+  });
+
+  // в открытом меню формируется список ссылок
+  catalogLinks.forEach((item) => {
+    const li = document.createElement("li");
+    li.classList.add("menu__list-item");
+    li.innerHTML = `<button class="menu__list-link" id="${item.id}" name="${item.name}">${item.name}</butt>`;
+    menuList.appendChild(li);
+
+    li.firstChild.addEventListener("click", () => {
+      openVideoIFrame(item.link);
+      burgerSvg();
+    });
+  });
+
+  // HomeScreen
   const slides = document.querySelector(".slides");
   const leftArrow = document.querySelector(".slider-arrow.left");
   const rightArrow = document.querySelector(".slider-arrow.right");
@@ -160,16 +149,18 @@ catalogLinks.forEach((item) => {
   let currentSlide = 0;
 
   transLinks.forEach((link, index) => {
-    const div = document.createElement("div");
+    const button = document.createElement("button");
     const h3 = document.createElement("h3");
     const span = document.createElement("span");
     h3.textContent = link.name;
     span.textContent = link.data;
-    div.appendChild(h3);
-    div.appendChild(span);
-    div.classList.add("slide");
-    div.style.backgroundImage = `url('${link.img}')`;
-    slides.appendChild(div);
+    button.appendChild(h3);
+    button.appendChild(span);
+    button.classList.add("slide");
+    button.setAttribute("data-slide-to", index);
+    button.setAttribute("id", index);
+    button.style.backgroundImage = `url('${link.img}')`;
+    slides.appendChild(button);
 
     const spanNav = document.createElement("span");
     spanNav.classList.add("slider-dot");
@@ -207,4 +198,13 @@ catalogLinks.forEach((item) => {
 
   leftArrow.addEventListener("click", prevSlide);
   rightArrow.addEventListener("click", nextSlide);
-// });
+});
+
+// if (window.innerWidth < 900 && window.userAgentData.mobile) {
+// console.dir('ok');
+// console.dir(window.userAgentData.mobile);
+
+// } else {
+//   alert('Сори, только для мобильных устройств');
+//   window.location.reload();
+// }
