@@ -55,35 +55,35 @@ const randomFilms = [
 const transLinks = [
   {
     id: 1,
-    name: "Трансляция1",
+    name: "Трансляция1 ",
     link: "https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8",
-    data: "2024.10.05",
-    time: "14:00",
-    img: "./img/im1.jpg",
+    data: "2024.10.01",
+    time: "18:00",
+    img: "",
   },
   {
     id: 2,
-    name: "Трансляция2",
+    name: "Трансляция2 ",
     link: "https://rutube.ru/play/embed/edf4662bfdf97433ced02ab6154313c4",
     data: "2024.10.01",
-    time: "14:00",
-    img: "./img/im2.jpg",
+    time: "15:45",
+    img: "",
   },
   {
     id: 3,
-    name: "Трансляция3",
+    name: "Трансляция3 ",
     link: "https://rutube.ru/play/embed/f893c0764662db0b17b277d15d6e0871",
     data: "2024.10.02",
     time: "10:50",
-    img: "./img/im3.jpg",
+    img: "",
   },
   {
     id: 4,
-    name: "Трансляция4",
+    name: "Трансляция4 ",
     link: "https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8",
     data: "2024.10.01",
     time: "11:50",
-    img: "./img/im4.jpg",
+    img: "",
   },
 ];
 
@@ -122,7 +122,9 @@ const day = `${Data.getUTCFullYear()}.${
   Data.getUTCMonth() + 1 > 9
     ? Data.getUTCMonth() + 1
     : "0" + (Data.getUTCMonth() + 1)
-}.${Data.getDay() - 1 > 9 ? Data.getDay() - 1 : "0" + (Data.getDay() - 1)}`;
+    }.${Data.getDay() - 1 > 9
+      ? Data.getDay() - 1
+      : "0" + (Data.getDay() - 1)}`;
 
 // при нажатии, открывается home страница
 btnToHome.addEventListener("click", () => {
@@ -138,7 +140,6 @@ rundomFilms.addEventListener("click", () => {
   const randomLink =
     randomFilms[Math.floor(Math.random() * randomFilms.length)];
   openVideoIFrame(randomLink.link);
-
   burgerSvg();
 });
 
@@ -171,8 +172,17 @@ transLinks.forEach((link, index) => {
   const button = document.createElement("button");
   const h3 = document.createElement("h3");
   const span = document.createElement("span");
+
   h3.textContent = link.name;
-  span.textContent = `${link.data} - ${link.time}`;
+  //
+  span.textContent = `${link.data}` === `${day}`
+  ? `Сегодня в ${link.time}`
+  : `${link.data} - ${link.time}`;
+  // проверка есть ли картинка для слайда
+  button.style.backgroundImage = `${link.img}`
+  ? `url('${link.img}')`
+  : `linear-gradient(rgba(0, 0, 0, 0.5), rgb(21 254 255 / 40%))`;
+  //
   button.appendChild(h3);
   button.appendChild(span);
   button.classList.add("slide");
@@ -181,7 +191,7 @@ transLinks.forEach((link, index) => {
   button.setAttribute("data-time", link.time);
   button.setAttribute("data-link", link.link);
   button.setAttribute("data-data", link.data);
-  button.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgb(21 254 255 / 40%)),url('${link.img}')`;
+  //
   slides.appendChild(button);
 
   const spanNav = document.createElement("span");
@@ -200,11 +210,7 @@ function showSlide(slideIndex) {
   slides.style.transform = `translateX(${slideIndex * -100}%)`;
   const dots = document.querySelectorAll(".slider-dot");
   dots.forEach((dot, i) => {
-    if (i === slideIndex) {
-      dot.classList.add("active");
-    } else {
-      dot.classList.remove("active");
-    }
+    dot.classList.toggle("active", i === slideIndex);
   });
 }
 
@@ -229,50 +235,80 @@ sliderItem.forEach((item) => {
   const sliderItemData = item.getAttribute("data-data");
   const sliderItemTime = item.getAttribute("data-time");
   const sliderItemLink = item.getAttribute("data-link");
+  const sliderItemId = item.getAttribute("data-id");
   // проверка совподает ли дата
   if (`${sliderItemData}` <= `${day}`) {
     // console.log('0k');
     const listItem = document.createElement("li");
-    const listLink = document.createElement("a");
+    const listLink = document.createElement("button");
     const listP = document.createElement("p");
     const listSpan = document.createElement("span");
     listItem.classList.add("listStrimes__item");
-    listLink.setAttribute("href", "#");
     listLink.setAttribute("data-link", sliderItemLink);
     listLink.setAttribute("data-time", sliderItemTime);
     listLink.setAttribute("data-data", sliderItemData);
+    listLink.setAttribute("data-id", sliderItemId);
     listLink.classList.add("slider__item-link");
     listP.textContent = `${item.children[0].textContent}`;
     listSpan.textContent = `${sliderItemData} : ${sliderItemTime}`;
     listP.appendChild(listSpan);
     listLink.appendChild(listP);
     listItem.appendChild(listLink);
-    Strimlists.appendChild(listItem);
-    //
+    Strimlists.appendChild(listItem);    //
     // проверка совпадает ли время
-    if (`${time}` >= `${sliderItemTime}`) {
-      item.children[1].textContent = "Трансляция началась ";
+    if (`${sliderItemTime}` <= `${time}` ) {
+      item.children[1].textContent = "Трансляция началась";
       item.children[1].classList.add("activeVideo");
       item.addEventListener("click", () => {
-        const link = sliderItemLink;
+      let link = sliderItemLink;
         openVideoIFrame(link);
       });
       // если трансляция сегодня, - подсвечивает текст и даем ссылки на трансляцию
       const listStrimesItem = document.querySelectorAll(".listStrimes__item");
       listStrimesItem.forEach((item) => {
-        if (`${item.firstChild.attributes[3].value}` === `${day}`) {
-          item.style.fontWeight = "normal";
-          item.style.color = "#15feff";
-          item.firstChild.children[0].childNodes[1].textContent = `Сегодня в ${item.children[0].attributes[2].value}`;
-          item.children[0].attributes[0].textContent =
-            item.children[0].attributes[1].value;
+
+
+        if (item.firstChild.attributes[2].value === `${day}`) {
+          //
+          item.children[0].style.fontWeight =  item.children[0].attributes[1].value >= `${time}`
+          ? "bold"
+          : "normal";
+          //
+          item.children[0].style.color = item.children[0].attributes[1].value >= `${time}`
+          ? "#15feff"
+          : "#D3D3D3FF";
+          //
+          item.children[0] = item.children[0].attributes[1].value >= `${time}`
+          ? `Сегодня в ${item.children[0].textContent}`
+          : `${item.children[0].attributes[2].value} - ${item.children[0].textContent}`;
+          //
+
+          item.children[0].style.opacity = `${Number(item.children[0].attributes[1].value.split(":")[0]) + 2}` <= `${time}`
+          ?  "0.5"
+          :  "1";
+          //
+          console.dir(item.children[0].children[0].textContent.split(" ")[0]);
+          if (`${Number(item.children[0].attributes[1].value.split(":")[0])}` >= `${time}`)
+          {
+            console.log('Еще не началась');
+          }
+          else if(`${Number(item.children[0].attributes[1].value.split(":")[0]) + 2}` < `${time}`)
+          {
+            console.log('Закончилась');
+            item.children[0].children[0].children[0].textContent = "Трансляция закончилась";
+          }
+          else
+          {
+            console.log('Уже идёт');
+            item.children[0].children[0].children[0].textContent = "Трансляция уже идёт";
+            item.children[0].addEventListener("click", () => {
+              openVideoIFrame(item.children[0].attributes[0].value);
+            })
+
+          }
+
         }
       });
-    } else {
-      transLinks.forEach((link) => {
-        console.dir(link);
-      });
-      // console.log("non");
     }
   }
   // console.log(`${sliderItemTime} === ${time}`);

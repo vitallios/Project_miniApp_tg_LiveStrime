@@ -429,8 +429,14 @@ li {
     border-bottom: 1px solid #15feff;
     line-height: 4vh;
 }
-#listStrimes > li > a > p {
+#listStrimes>li>button>p {
+    width: 100%;
+    display: contents;
+    line-height: 4vh;
+}
+#listStrimes>li>button{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    font-size: 16px;
 }
