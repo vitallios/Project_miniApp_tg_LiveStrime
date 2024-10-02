@@ -191,7 +191,9 @@ li {
     position: absolute;
     left: 100vw;
 }
-
+.home>h2{
+    margin: 1vh 0;
+}
 .content__text {
     flex: 2;
     display: flex;
@@ -408,6 +410,15 @@ li {
     font-weight: bold;
     color: #3c3c3c;
 }
+.newListItem{
+    color: var(--white);
+}
+.activeListItem{
+    color: #15feff;
+}
+.disabledListItem{
+    color: #8a8a8a;
+}
 
 #listStrimes{
     margin: 2vh 0;
@@ -439,4 +450,5 @@ li {
     justify-content: space-between;
     width: 100%;
     font-size: 16px;
+    align-items: center
 }

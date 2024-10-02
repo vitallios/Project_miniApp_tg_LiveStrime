@@ -57,7 +57,7 @@ const transLinks = [
     id: 1,
     name: "Трансляция1 ",
     link: "https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8",
-    data: "2024.10.01",
+    data: "2024.10.02",
     time: "18:00",
     img: "",
   },
@@ -65,15 +65,15 @@ const transLinks = [
     id: 2,
     name: "Трансляция2 ",
     link: "https://rutube.ru/play/embed/edf4662bfdf97433ced02ab6154313c4",
-    data: "2024.10.01",
-    time: "15:45",
+    data: "2024.10.02",
+    time: "13:00",
     img: "",
   },
   {
     id: 3,
     name: "Трансляция3 ",
     link: "https://rutube.ru/play/embed/f893c0764662db0b17b277d15d6e0871",
-    data: "2024.10.02",
+    data: "2024.10.03",
     time: "10:50",
     img: "",
   },
@@ -81,8 +81,8 @@ const transLinks = [
     id: 4,
     name: "Трансляция4 ",
     link: "https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8",
-    data: "2024.10.01",
-    time: "11:50",
+    data: "2024.10.02",
+    time: "10:00",
     img: "",
   },
 ];
@@ -112,8 +112,8 @@ window.addEventListener("load", () => {
 });
 
 let Data = new Date();
-const hours = Data.getHours();
-const minutes = Data.getMinutes();
+const hours = Data.getHours() > 9 ? Data.getHours() : "0" + Data.getHours();
+const minutes = Data.getMinutes() > 9 ? Data.getMinutes() : "0" + Data.getMinutes();
 
 // формат отображения времени для сравнения с временем показа
 const time = `${hours}:${minutes}`;
@@ -191,6 +191,7 @@ transLinks.forEach((link, index) => {
   button.setAttribute("data-time", link.time);
   button.setAttribute("data-link", link.link);
   button.setAttribute("data-data", link.data);
+  button.setAttribute("data-title", link.name);
   //
   slides.appendChild(button);
 
@@ -235,84 +236,89 @@ sliderItem.forEach((item) => {
   const sliderItemData = item.getAttribute("data-data");
   const sliderItemTime = item.getAttribute("data-time");
   const sliderItemLink = item.getAttribute("data-link");
-  const sliderItemId = item.getAttribute("data-id");
-  // проверка совподает ли дата
-  if (`${sliderItemData}` <= `${day}`) {
-    // console.log('0k');
-    const listItem = document.createElement("li");
-    const listLink = document.createElement("button");
-    const listP = document.createElement("p");
-    const listSpan = document.createElement("span");
-    listItem.classList.add("listStrimes__item");
-    listLink.setAttribute("data-link", sliderItemLink);
-    listLink.setAttribute("data-time", sliderItemTime);
-    listLink.setAttribute("data-data", sliderItemData);
-    listLink.setAttribute("data-id", sliderItemId);
-    listLink.classList.add("slider__item-link");
-    listP.textContent = `${item.children[0].textContent}`;
-    listSpan.textContent = `${sliderItemData} : ${sliderItemTime}`;
-    listP.appendChild(listSpan);
-    listLink.appendChild(listP);
-    listItem.appendChild(listLink);
-    Strimlists.appendChild(listItem);    //
-    // проверка совпадает ли время
-    if (`${sliderItemTime}` <= `${time}` ) {
+  const sliderItemId = item.getAttribute("id");
+  const sliderItemTitle = item.getAttribute("data-title");
+
+  function TodayOnAir(item) {
+    if (Number(item.attributes[3].value.split(":")[0]) > Number(time.split(":")[0])) {
+      item.children[1].textContent = `Начало в ${item.attributes[3].value}`;
+      item.children[1].classList.add("activeVideo");
+    }
+    if (Number(item.attributes[3].value.split(":")[0]) <= Number(time.split(":")[0])) {
       item.children[1].textContent = "Трансляция началась";
       item.children[1].classList.add("activeVideo");
       item.addEventListener("click", () => {
-      let link = sliderItemLink;
+        let link = sliderItemLink;
         openVideoIFrame(link);
-      });
-      // если трансляция сегодня, - подсвечивает текст и даем ссылки на трансляцию
-      const listStrimesItem = document.querySelectorAll(".listStrimes__item");
-      listStrimesItem.forEach((item) => {
-
-
-        if (item.firstChild.attributes[2].value === `${day}`) {
-          //
-          item.children[0].style.fontWeight =  item.children[0].attributes[1].value >= `${time}`
-          ? "bold"
-          : "normal";
-          //
-          item.children[0].style.color = item.children[0].attributes[1].value >= `${time}`
-          ? "#15feff"
-          : "#D3D3D3FF";
-          //
-          item.children[0] = item.children[0].attributes[1].value >= `${time}`
-          ? `Сегодня в ${item.children[0].textContent}`
-          : `${item.children[0].attributes[2].value} - ${item.children[0].textContent}`;
-          //
-
-          item.children[0].style.opacity = `${Number(item.children[0].attributes[1].value.split(":")[0]) + 2}` <= `${time}`
-          ?  "0.5"
-          :  "1";
-          //
-          console.dir(item.children[0].children[0].textContent.split(" ")[0]);
-          if (`${Number(item.children[0].attributes[1].value.split(":")[0])}` >= `${time}`)
-          {
-            console.log('Еще не началась');
-          }
-          else if(`${Number(item.children[0].attributes[1].value.split(":")[0]) + 2}` < `${time}`)
-          {
-            console.log('Закончилась');
-            item.children[0].children[0].children[0].textContent = "Трансляция закончилась";
-          }
-          else
-          {
-            console.log('Уже идёт');
-            item.children[0].children[0].children[0].textContent = "Трансляция уже идёт";
-            item.children[0].addEventListener("click", () => {
-              openVideoIFrame(item.children[0].attributes[0].value);
-            })
-
-          }
-
-        }
-      });
+      })
+    }
+    if ((Number(item.attributes[3].value.split(":")[0]) + 1) < Number(time.split(":")[0])) {
+      item.children[1].textContent = `Трансляция закончилась`;
+      item.children[1].classList.remove("activeVideo");
+      item.setAttribute("disabled", "")
+      item.style.opacity = "0.5";
     }
   }
-  // console.log(`${sliderItemTime} === ${time}`);
-  // console.log(`${sliderItemData} === ${day}`);
+  function TodayOnAirIsList(item) {
+    let ListItem = item.firstChild;
+
+    if (ListItem.attributes[2].value === `${day}`) {
+      ListItem.children[1].textContent = 'Начало в ' + sliderItemTime;
+
+    if(ListItem.attributes[1].value.split(":")[0] > time.split(":")[0])
+    {
+      ListItem.classList.add("newListItem");
+    }
+    else if(
+      Number(ListItem.attributes[1].value.split(":")[0]) == Number(time.split(":")[0]) ||
+      (Number(ListItem.attributes[1].value.split(":")[0]) + 1) == Number(time.split(":")[0]) ||
+      (Number(ListItem.attributes[1].value.split(":")[0]) + 2) == Number(time.split(":")[0])
+    )
+    {
+      ListItem.classList.remove("newListItem");
+      ListItem.classList.add("activeListItem");
+      ListItem.children[1].textContent = 'Трансляция началась';
+      ListItem.addEventListener("click", () => {
+        let link = sliderItemLink;
+        openVideoIFrame(link);
+      })
+    }
+    else if(ListItem.attributes[1].value.split(":")[0] < time.split(":")[0])
+    {
+      ListItem.classList.remove("activeListItem");
+      ListItem.classList.add("disabledListItem");
+      ListItem.children[1].textContent = 'Трансляция закончилась';
+    }
+
+    }
+  }
+  function TodayAddList(item) {
+    if (`${sliderItemData}` <= `${day}`) {
+      const listItem = document.createElement("li");
+      const listLink = document.createElement("button");
+      const listP = document.createElement("p");
+      const listSpan = document.createElement("span");
+      listItem.classList.add("listStrimes__item");
+      listLink.setAttribute("data-link", sliderItemLink);
+      listLink.setAttribute("data-time", sliderItemTime);
+      listLink.setAttribute("data-data", sliderItemData);
+      listLink.setAttribute("data-id", sliderItemId);
+      listLink.classList.add("slider__item-link");
+      listP.textContent = `${item.children[0].textContent}`;
+      listSpan.textContent = `${sliderItemData} : ${sliderItemTime}`;
+      listLink.appendChild(listP);
+      listLink.appendChild(listSpan);
+      listItem.appendChild(listLink);
+      Strimlists.appendChild(listItem);
+      TodayOnAirIsList(listItem);
+    }
+  }
+
+
+  if (`${sliderItemData}` === `${day}`) {
+    TodayOnAir(item);
+    TodayAddList(item);
+  }
 });
 
 
