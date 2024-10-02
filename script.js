@@ -60,7 +60,7 @@ const transLinks = [
     link: "https://rutube.ru/play/embed/baad342e5ab5c5c53aeb54955c952379",
     data: "2024.10.02",
     time: "15:00",
-    img: "",
+    img: "https://rutube.sport/upload/resize_cache/iblock/ea3/802_452_1/d16srw1bn9c0vx6j48dsewnxbcjz6my8.jpg",
   },
   {
     id: 2,
@@ -279,7 +279,7 @@ sliderItem.forEach((item) => {
     ){
       item.children[1].textContent = `Трансляция закончилась`;
       item.children[1].classList.remove("activeVideo");
-      item.setAttribute("disabled", "")
+      // item.setAttribute("disabled", "")
       item.style.opacity = "0.5";
     }
   }
