@@ -442,7 +442,7 @@ li {
     gap: 2vh;
     max-height: 55vh;
     height: 55vh;
-    overflow-x: scroll;
+    overflow-y: scroll;
     background: #333;
     padding: 0.5em;
     border-radius: 10px;

@@ -63,12 +63,13 @@ const transLinks = [
   },
   // {
   //   id: 2,
-  //   name: "Трансляция1 ",
-  //   link: "https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8",
+  //   name: "Юношеская Лига Чемпионов. Динамо Загреб - Монако (прямой эфир)",
+  //   link: "//uma.media/play/embed/e22ac03fd982f961b0b39325861133fb/",
   //   data: "2024.10.02",
-  //   time: "18:00",
+  //   time: "15:00",
   //   img: "",
   // },
+
   // {
   //   id: 3,
   //   name: "Трансляция3 ",
