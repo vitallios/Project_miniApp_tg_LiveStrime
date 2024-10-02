@@ -55,11 +55,11 @@ const randomFilms = [
 const transLinks = [
   {
     id: 1,
-    name: "FONBET Кубок России по футболу\nДинамо - Спартак",
+    name: "Кубок России по футболу\nДинамо - Спартак",
     link: "https://rutube.ru/static/iframe_resources/player-stub/time-to-event.html?title=02.10%2018%3A15%20%20FONBET%20%D0%9A%D1%83%D0%B1%D0%BE%D0%BA%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%BF%D0%BE%20%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D1%83%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%202024-2025%20%D0%B3%D0%B3.%20%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE%20-%20%D0%A1%D0%BF%D0%B0%D1%80%D1%82%D0%B0%D0%BA&future_publication=2024-10-02T18%3A15%3A00",
     data: "2024.10.02",
-    time: "14:15",
-    img: "https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/ec/32/18e2999891374a475d0687ca9f989d8366a210b38c414923119760.jpg",
+    time: "18:15",
+    img: "https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/eb/47/032b2cc936860b03048302d991c3498f66f589e5ad3d4376174232.jpg",
   },
   // {
   //   id: 2,
@@ -307,7 +307,7 @@ sliderItem.forEach((item) => {
     if (`${sliderItemData}` <= `${day}`) {
       const listItem = document.createElement("li");
       const listLink = document.createElement("button");
-      const listP = document.createElement("p");
+      const listH4 = document.createElement("h4");
       const listSpan = document.createElement("span");
       listItem.classList.add("listStrimes__item");
       listLink.setAttribute("data-link", sliderItemLink);
@@ -315,9 +315,9 @@ sliderItem.forEach((item) => {
       listLink.setAttribute("data-data", sliderItemData);
       listLink.setAttribute("data-id", sliderItemId);
       listLink.classList.add("slider__item-link");
-      listP.textContent = `${item.children[0].textContent}`;
+      listH4.textContent = `${item.children[0].textContent}`;
       listSpan.textContent = `${sliderItemData} : ${sliderItemTime}`;
-      listLink.appendChild(listP);
+      listLink.appendChild(listH4);
       listLink.appendChild(listSpan);
       listItem.appendChild(listLink);
       Strimlists.appendChild(listItem);
