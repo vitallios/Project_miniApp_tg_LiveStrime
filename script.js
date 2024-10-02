@@ -53,22 +53,34 @@ const randomFilms = [
 ];
 // Трансляции которые будут
 const transLinks = [
+
   {
     id: 1,
-    name: "Кубок России по футболу\nДинамо - Спартак",
-    link: "https://rutube.ru/static/iframe_resources/player-stub/time-to-event.html?title=02.10%2018%3A15%20%20FONBET%20%D0%9A%D1%83%D0%B1%D0%BE%D0%BA%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%BF%D0%BE%20%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D1%83%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%202024-2025%20%D0%B3%D0%B3.%20%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE%20-%20%D0%A1%D0%BF%D0%B0%D1%80%D1%82%D0%B0%D0%BA&future_publication=2024-10-02T18%3A15%3A00",
+    name: "Прямая трансляция матча ФОНБЕТ Кубка России\n«Химки» — «Ростов»",
+    link: "https://rutube.ru/play/embed/baad342e5ab5c5c53aeb54955c952379",
+    data: "2024.10.02",
+    time: "15:00",
+    img: "",
+  },
+  {
+    id: 2,
+    name: "Прямая трансляция матча ФОНБЕТ Кубка России\n«Динамо» — «Спартак»",
+    link: "https://rutube.ru/play/embed/1e4bd0599f368a00d3c42354943d60e3",
     data: "2024.10.02",
     time: "18:15",
-    img: "https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/eb/47/032b2cc936860b03048302d991c3498f66f589e5ad3d4376174232.jpg",
+    img: "https://rutube.sport/upload/resize_cache/iblock/088/521_293_1/yaj8tdwc27le7vb1nf23ws1aptz5um64.jpg",
   },
-  // {
-  //   id: 2,
-  //   name: "Юношеская Лига Чемпионов. Динамо Загреб - Монако (прямой эфир)",
-  //   link: "//uma.media/play/embed/e22ac03fd982f961b0b39325861133fb/",
-  //   data: "2024.10.02",
-  //   time: "15:00",
-  //   img: "",
-  // },
+  {
+    id: 3,
+    name: "Прямая трансляция матча ФОНБЕТ Кубка России\n«Зенит» — «Акрон»",
+    link: "https://rutube.ru/static/iframe_resources/player-stub/time-to-event.html?title=02.10%2021%3A00%20FONBET%20%D0%9A%D1%83%D0%B1%D0%BE%D0%BA%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%BF%D0%BE%20%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D1%83%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%202024-2025%20%D0%B3%D0%B3.%20%D0%97%D0%B5%D0%BD%D0%B8%D1%82%20-%20%D0%90%D0%BA%D1%80%D0%BE%D0%BD&amp;future_publication=2024-10-02T21%3A00%3A00",
+    data: "2024.10.02",
+    time: "21:15",
+    img: "https://rutube.sport/upload/resize_cache/iblock/f79/521_293_1/m1jb3uv7vllfi6itywfhy2d7fjpltcf7.jpg",
+  },
+  
+
+
 
   // {
   //   id: 3,
