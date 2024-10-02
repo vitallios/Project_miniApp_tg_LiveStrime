@@ -55,37 +55,41 @@ const randomFilms = [
 const transLinks = [
   {
     id: 1,
-    name: "Трансляция1 ",
-    link: "https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8",
+    name: "FONBET Кубок России по футболу\nДинамо - Спартак",
+    link: "https://rutube.ru/static/iframe_resources/player-stub/time-to-event.html?title=02.10%2018%3A15%20%20FONBET%20%D0%9A%D1%83%D0%B1%D0%BE%D0%BA%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%BF%D0%BE%20%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D1%83%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%202024-2025%20%D0%B3%D0%B3.%20%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE%20-%20%D0%A1%D0%BF%D0%B0%D1%80%D1%82%D0%B0%D0%BA&future_publication=2024-10-02T18%3A15%3A00",
     data: "2024.10.02",
-    time: "18:00",
-    img: "",
+    time: "14:15",
+    img: "https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/ec/32/18e2999891374a475d0687ca9f989d8366a210b38c414923119760.jpg",
   },
-  {
-    id: 2,
-    name: "Трансляция2 ",
-    link: "https://rutube.ru/play/embed/edf4662bfdf97433ced02ab6154313c4",
-    data: "2024.10.02",
-    time: "13:00",
-    img: "",
-  },
-  {
-    id: 3,
-    name: "Трансляция3 ",
-    link: "https://rutube.ru/play/embed/f893c0764662db0b17b277d15d6e0871",
-    data: "2024.10.03",
-    time: "10:50",
-    img: "",
-  },
-  {
-    id: 4,
-    name: "Трансляция4 ",
-    link: "https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8",
-    data: "2024.10.02",
-    time: "10:00",
-    img: "",
-  },
+  // {
+  //   id: 2,
+  //   name: "Трансляция1 ",
+  //   link: "https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8",
+  //   data: "2024.10.02",
+  //   time: "18:00",
+  //   img: "",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Трансляция3 ",
+  //   link: "https://rutube.ru/play/embed/f893c0764662db0b17b277d15d6e0871",
+  //   data: "2024.10.03",
+  //   time: "10:50",
+  //   img: "",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Трансляция4 ",
+  //   link: "https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8",
+  //   data: "2024.10.02",
+  //   time: "10:00",
+  //   img: "",
+  // },
 ];
+
+
+
+
 
 function burgerSvg() {
   menu.classList.toggle("active");
@@ -240,11 +244,16 @@ sliderItem.forEach((item) => {
   const sliderItemTitle = item.getAttribute("data-title");
 
   function TodayOnAir(item) {
-    if (Number(item.attributes[3].value.split(":")[0]) > Number(time.split(":")[0])) {
+    if(
+      Number(item.attributes[3].value.split(":")[0]) > Number(time.split(":")[0])
+    ){
+      console.dir(item.attributes[3].value.split(":")[1]);
       item.children[1].textContent = `Начало в ${item.attributes[3].value}`;
       item.children[1].classList.add("activeVideo");
     }
-    if (Number(item.attributes[3].value.split(":")[0]) <= Number(time.split(":")[0])) {
+    if(
+      Number(item.attributes[3].value.split(":")[0]) <= Number(time.split(":")[0])
+    ){
       item.children[1].textContent = "Трансляция началась";
       item.children[1].classList.add("activeVideo");
       item.addEventListener("click", () => {
@@ -252,7 +261,9 @@ sliderItem.forEach((item) => {
         openVideoIFrame(link);
       })
     }
-    if ((Number(item.attributes[3].value.split(":")[0]) + 1) < Number(time.split(":")[0])) {
+    if(
+      (Number(item.attributes[3].value.split(":")[0]) + 1) < Number(time.split(":")[0])
+    ){
       item.children[1].textContent = `Трансляция закончилась`;
       item.children[1].classList.remove("activeVideo");
       item.setAttribute("disabled", "")
