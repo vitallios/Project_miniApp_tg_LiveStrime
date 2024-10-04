@@ -56,48 +56,16 @@ const transLinks = [
 
   {
     id: 1,
-    name: "Прямая трансляция матча ФОНБЕТ Кубка России\n«Химки» — «Ростов»",
-    link: "https://rutube.ru/play/embed/baad342e5ab5c5c53aeb54955c952379",
-    data: "2024.10.02",
-    time: "15:00",
-    img: "https://rutube.sport/upload/resize_cache/iblock/ea3/802_452_1/d16srw1bn9c0vx6j48dsewnxbcjz6my8.jpg",
-  },
-  {
-    id: 2,
-    name: "Прямая трансляция матча ФОНБЕТ Кубка России\n«Динамо» — «Спартак»",
-    link: "https://rutube.ru/play/embed/1e4bd0599f368a00d3c42354943d60e3",
-    data: "2024.10.02",
-    time: "18:15",
-    img: "https://rutube.sport/upload/resize_cache/iblock/088/521_293_1/yaj8tdwc27le7vb1nf23ws1aptz5um64.jpg",
-  },
-  {
-    id: 3,
-    name: "Прямая трансляция матча ФОНБЕТ Кубка России\n«Зенит» — «Акрон»",
-    link: "https://rutube.ru/static/iframe_resources/player-stub/time-to-event.html?title=02.10%2021%3A00%20FONBET%20%D0%9A%D1%83%D0%B1%D0%BE%D0%BA%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%BF%D0%BE%20%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D1%83%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%202024-2025%20%D0%B3%D0%B3.%20%D0%97%D0%B5%D0%BD%D0%B8%D1%82%20-%20%D0%90%D0%BA%D1%80%D0%BE%D0%BD&amp;future_publication=2024-10-02T21%3A00%3A00",
-    data: "2024.10.02",
-    time: "21:15",
-    img: "https://rutube.sport/upload/resize_cache/iblock/f79/521_293_1/m1jb3uv7vllfi6itywfhy2d7fjpltcf7.jpg",
+    name: "hhh",
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243333&hash=5d818e401e022470",
+    data: "2024.10.04",
+    time: "16:00",
+    img: "",
   },
   
+  
 
-
-
-  // {
-  //   id: 3,
-  //   name: "Трансляция3 ",
-  //   link: "https://rutube.ru/play/embed/f893c0764662db0b17b277d15d6e0871",
-  //   data: "2024.10.03",
-  //   time: "10:50",
-  //   img: "",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Трансляция4 ",
-  //   link: "https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8",
-  //   data: "2024.10.02",
-  //   time: "10:00",
-  //   img: "",
-  // },
+// <iframe src="https://vk.com/video_ext.php?oid=-40984897&id=456243333&hash=5d818e401e022470" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
 ];
 
 
