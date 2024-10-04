@@ -31,7 +31,7 @@ const catalogLinks = [
   },
   {
     id: 3,
-    name: "SuperSport Premier League",
+    name: "Football Premier League",
     link: "https://rutube.ru/play/embed/e6fa77441a3b019526498775c5a5b9dc",
     // link: '1',
   },
@@ -98,14 +98,16 @@ const transLinks = [
     data: "2024.10.05",
     time: "10:00",
     img: "",
+    premium: false,
   },
   {
     id: 2,
-    name: "9 тур чемпионата России по регби-7 среди женских команд.\nПервый день",
+    name: "9 тур чемпионата России по регби-7 среди женских команд.\nПервый игровой день",
     link: "https://vk.com/video_ext.php?oid=-40984897&id=456243333&hash=5d818e401e022470",
     data: "2024.10.05",
     time: "10:00",
     img: "",
+    premium: false,
   },
   {
     id: 3,
@@ -114,14 +116,16 @@ const transLinks = [
     data: "2024.10.05",
     time: "12:00",
     img: "",
+    premium: true,
   },
   {
     id: 4,
-    name: "«ЛРК ВВА -МГУ\nДивизион «Центр-1» | ФРЛ ТР",
+    name: "«ЛРК ВВА - МГУ\nДивизион «Центр-1» | ФРЛ ТР",
     link: "https://vk.com/video_ext.php?oid=-204669808&id=456239516&hash=026adbf405b75c2e",
     data: "2024.10.05",
     time: "13:00",
     img: "",
+    premium: true,
   },
   {
     id: 5,
@@ -130,6 +134,7 @@ const transLinks = [
     data: "2024.10.05",
     time: "14:00",
     img: "",
+    premium: true,
 
   },
   {
@@ -139,7 +144,8 @@ const transLinks = [
     data: "2024.10.05",
     time: "15:00",
     img: "",
-    accent: "top" 
+    premium: true,
+    
   },
   {
     id: 7,
@@ -148,6 +154,7 @@ const transLinks = [
     data: "2024.10.05",
     time: "19:00",
     img: "",
+    premium: true,
   },
   {
     id: 8,
@@ -156,14 +163,16 @@ const transLinks = [
     data: "2024.10.06",
     time: "10:00",
     img: "",
+    premium: false,
   },
   {
     id: 9,
-    name: "9 тур чемпионата России по регби-7 среди женских команд.\nВторой день",
+    name: "9 тур чемпионата России по регби-7 среди женских команд.\nВторой игровой день",
     link: "https://vk.com/video_ext.php?oid=-40984897&id=456243334&hash=068f101f60b9fdb9",
     data: "2024.10.06",
     time: "10:00",
     img: "",
+    premium: false,
   },
   {
     id: 10,
@@ -172,6 +181,7 @@ const transLinks = [
     data: "2024.10.06",
     time: "10:30",
     img: "",
+    premium: true,
   },
 ];
 
@@ -265,6 +275,7 @@ let currentSlide = 0;
 
 // Создание банеров-слайдеров
 transLinks.forEach((link, index) => {
+  
   const button = document.createElement("button");
   const h3 = document.createElement("h3");
   const span = document.createElement("span");
@@ -429,26 +440,12 @@ sliderItem.forEach((item) => {
       TodayOnAirIsList(listItem);
     }
   }
-  const NonStrimsAddList = () => {
-    const listItem = document.createElement("li");
-    const listLink = document.createElement("button");
-    const listH4 = document.createElement("h4");
 
-    listItem.classList.add("listStrimes__item");
-    listLink.classList.add("slider__item-link");
-    listH4.classList.add("slider__item-h4");
-    listH4.textContent = "Сегодня трансляций нет";
-    listItem.appendChild(listH4);
-    Strimlists.appendChild(listItem);
-    TodayOnAirIsList(listItem);
-  };
 
   if (`${sliderItemData}` === `${day}`) {
     TodayOnAir(item);
     TodayAddList(item);
-  } else {
-    NonStrimsAddList();
-  }
+  } 
 
   
 

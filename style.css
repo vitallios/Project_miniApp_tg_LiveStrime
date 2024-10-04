@@ -117,6 +117,7 @@ bottom: 2vh;
     color: var(--white);
     font-size: 18px;
     text-transform: uppercase;
+    text-align: start;
 }
 
 .btn{
