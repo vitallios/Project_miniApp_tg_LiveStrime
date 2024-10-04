@@ -56,16 +56,86 @@ const transLinks = [
 
   {
     id: 1,
-    name: "hhh",
+    name: "Чемпионат Высшей Лиги по регби-7 среди мужских команд.\n6 тур. Первый игровой день",
     link: "https://vk.com/video_ext.php?oid=-40984897&id=456243333&hash=5d818e401e022470",
-    data: "2024.10.04",
-    time: "16:00",
+    data: "2024.10.05",
+    time: "10:00",
     img: "",
   },
-  
-  
+  {
+    id: 2,
+    name: "9 тур чемпионата России по регби-7 среди женских команд.\nПервый день",
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243333&hash=5d818e401e022470",
+    data: "2024.10.05",
+    time: "10:00",
+    img: "",
+  },
+  {
+    id: 3,
+    name: "«Красный Яр» – «Локомотив» \n Матч за 3 место PARI Чемпионата России по регби",
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243328&hash=4a302f6ac16916ec",
+    data: "2024.10.05",
+    time: "12:00",
+    img: "",
+  },
+  {
+    id: 4,
+    name: "«ЛРК ВВА -МГУ\nДивизион «Центр-1» | ФРЛ ТР",
+    link: "https://vk.com/video_ext.php?oid=-204669808&id=456239516&hash=026adbf405b75c2e",
+    data: "2024.10.05",
+    time: "13:00",
+    img: "",
+  },
+  {
+    id: 5,
+    name: "«Слава» – «ВВА-Подмосковье»\nМатч за 7 место PARI Чемпионата России по регби",
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243329&hash=108d6414ab6a3d35",
+    data: "2024.10.05",
+    time: "14:00",
+    img: "",
+  },
+  {
+    id: 6,
+    name: "«Московские драконы - Зеленоград/Армейцы\nДивизион «Центр-1» | ФРЛ ТР",
+    link: "https://vk.com/video_ext.php?oid=-204669808&id=456239517&hash=b416dcc6002af2c3",
+    data: "2024.10.04",
+    time: "15:00",
+    img: "",
+  },
+  {
+    id: 7,
+    name: "«Динамо» - «Металлург»\nМатч за 5 место PARI Чемпионата России по регби",
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243330&hash=fbbc118d6ec42cc6",
+    data: "2024.10.05",
+    time: "19:00",
+    img: "",
+  },
+  {
+    id: 8,
+    name: "Чемпионат Высшей Лиги по регби-7 среди мужских команд. 6 тур.\nВторой игровой день",
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243335&hash=5c68868d7c7518d1",
+    data: "2024.10.06",
+    time: "10:00",
+    img: "",
+  },
+  {
+    id: 9,
+    name: "9 тур чемпионата России по регби-7 среди женских команд.\nВторой день",
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243334&hash=068f101f60b9fdb9",
+    data: "2024.10.06",
+    time: "10:00",
+    img: "",
+  },
+  {
+    id: 9,
+    name: "«Енисей-СТМ» – «Стрела-Ак Барс»\nМатч за 5 место Финал PARI Чемпионата России по регби",
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243334&hash=068f101f60b9fdb9",
+    data: "2024.10.06",
+    time: "10:00",
+    img: "",
+  },
 
-// <iframe src="https://vk.com/video_ext.php?oid=-40984897&id=456243333&hash=5d818e401e022470" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+<iframe src="https://vk.com/video_ext.php?oid=-40984897&id=456243334&hash=068f101f60b9fdb9" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
 ];
 
 
