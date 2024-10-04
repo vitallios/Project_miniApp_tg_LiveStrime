@@ -365,7 +365,10 @@ sliderItem.forEach((item) => {
       const listLink = document.createElement("button");
       const listH4 = document.createElement("h4");
       const listSpan = document.createElement("span");
+
+
       listItem.classList.add("listStrimes__item");
+
       listLink.setAttribute("data-link", sliderItemLink);
       listLink.setAttribute("data-time", sliderItemTime);
       listLink.setAttribute("data-data", sliderItemData);
@@ -378,13 +381,26 @@ sliderItem.forEach((item) => {
       listItem.appendChild(listLink);
       Strimlists.appendChild(listItem);
       TodayOnAirIsList(listItem);
-    }
+    } 
   }
 
 
   if (`${sliderItemData}` === `${day}`) {
     TodayOnAir(item);
     TodayAddList(item);
+  } 
+  else {
+    const listItem = document.createElement("li");
+    const listLink = document.createElement("button");
+    const listH4 = document.createElement("h4");
+
+    listItem.classList.add("listStrimes__item");
+    listLink.classList.add("slider__item-link");
+    listH4.classList.add("slider__item-h4");
+    listH4.textContent = 'Сегодня трансляций нет';
+    listItem.appendChild(listH4);
+    Strimlists.appendChild(listItem);
+    TodayOnAirIsList(listItem);
   }
 });
 
