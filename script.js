@@ -29,6 +29,12 @@ const catalogLinks = [
     link: "https://rutube.ru/play/embed/876cf3628c698e956de40c1c911b0c5f",
     // link: '1',
   },
+  {
+    id: 3,
+    name: "SuperSport Premier League",
+    link: "https://rutube.ru/play/embed/e6fa77441a3b019526498775c5a5b9dc",
+    // link: '1',
+  },
 ];
 // Фильмы
 const randomFilms = [
@@ -50,10 +56,41 @@ const randomFilms = [
     link: "https://rutube.ru/play/embed/f893c0764662db0b17b277d15d6e0871",
     // link: '1',
   },
+  {
+    id: 4,
+    name: "Джокер (2019)",
+    link: "https://rutube.ru/play/embed/81e784b6eba4c9d3d0539536d7e58243",
+    // link: '1',
+  },
+  {
+    id: 5,
+    name: "Криминальное чтиво (1994)",
+    link: "https://rutube.ru/play/embed/b655f8af33deef0514481b2bb39b90e2",
+    // link: '1',
+  },
+  {
+    id: 6,
+    name: "Оппенгеймер (2023)",
+    link: "https://rutube.ru/play/embed/ffe77a61fb1ab119c33638900d8a77e4",
+    // link: '1',
+  },
+  {
+    id: 7,
+    name: "Дом у дороги (2024)",
+    link: "https://rutube.ru/play/embed/22bd521930719eedd02383e9c81b16e2",
+    // link: '1',
+  },
+  {
+    id: 8,
+    name: "Меч короля Артура (2017)",
+    link: "https://rutube.ru/play/embed/129b5b143a47f3d208b5aa151c72780b",
+    // link: '1',
+  },
+
+
 ];
 // Трансляции которые будут
 const transLinks = [
-
   {
     id: 1,
     name: "Чемпионат Высшей Лиги по регби-7 среди мужских команд.\n6 тур. Первый игровой день",
@@ -93,6 +130,7 @@ const transLinks = [
     data: "2024.10.05",
     time: "14:00",
     img: "",
+
   },
   {
     id: 6,
@@ -101,6 +139,7 @@ const transLinks = [
     data: "2024.10.05",
     time: "15:00",
     img: "",
+    accent: "top" 
   },
   {
     id: 7,
@@ -127,7 +166,7 @@ const transLinks = [
     img: "",
   },
   {
-    id: 9,
+    id: 10,
     name: "«Енисей-СТМ» – «Стрела-Ак Барс»\nМатч за 5 место Финал PARI Чемпионата России по регби",
     link: "https://vk.com/video_ext.php?oid=-40984897&id=456243334&hash=068f101f60b9fdb9",
     data: "2024.10.06",
@@ -136,24 +175,23 @@ const transLinks = [
   },
 ];
 
-
 // if (
 //   window.innerWidth < 900 &&
 //   window.userAgentData.mobile
 // ) {
 
-
-function burgerSvg() {
+// Открытие и закрытие меню
+const burgerSvg = () => {
   menu.classList.toggle("active");
   navBTN.firstElementChild.children[0].attributes[2].value =
     menu.classList.contains("active")
       ? "M6 18L18 6M6 6l12 12"
       : "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5";
 }
-function openVideoIFrame(linkVideo) {
+// Прием ссылки и запуск плеера
+const openVideoIFrame = (linkVideo) => {
   wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 }
-
 // загрузка контента
 // document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
@@ -167,9 +205,11 @@ window.addEventListener("load", () => {
   }
 });
 
+// Получение текужего времени и даты
 let Data = new Date();
 const hours = Data.getHours() > 9 ? Data.getHours() : "0" + Data.getHours();
-const minutes = Data.getMinutes() > 9 ? Data.getMinutes() : "0" + Data.getMinutes();
+const minutes =
+  Data.getMinutes() > 9 ? Data.getMinutes() : "0" + Data.getMinutes();
 
 // формат отображения времени для сравнения с временем показа
 const time = `${hours}:${minutes}`;
@@ -178,15 +218,14 @@ const day = `${Data.getUTCFullYear()}.${
   Data.getUTCMonth() + 1 > 9
     ? Data.getUTCMonth() + 1
     : "0" + (Data.getUTCMonth() + 1)
-    }.${Data.getDay() - 1 > 9
-      ? Data.getDay() - 1
-      : "0" + (Data.getDay() - 1)}`;
+}.${Data.getDay() - 1 > 9 ? Data.getDay() - 1 : "0" + (Data.getDay() - 1)}`;
 
 // при нажатии, открывается home страница
 btnToHome.addEventListener("click", () => {
   document.querySelector(".wrap__pages").classList.add("info__none");
 });
 
+// Обновление и возврат на страницу Info
 MenuBtnToHome.addEventListener("click", () => {
   window.location.reload();
 });
@@ -224,21 +263,23 @@ const rightArrow = document.querySelector(".slider-arrow.right");
 const sliderNavs = document.querySelector(".slider-nav");
 let currentSlide = 0;
 
+// Создание банеров-слайдеров
 transLinks.forEach((link, index) => {
   const button = document.createElement("button");
   const h3 = document.createElement("h3");
   const span = document.createElement("span");
 
   h3.textContent = link.name;
-  //
-  span.textContent = `${link.data}` === `${day}`
-  ? `Сегодня в ${link.time}`
-  : `${link.data} - ${link.time}`;
+  // Если дата совпадает, то убераем дату и пишем "Сегодня"
+  span.textContent =
+    `${link.data}` === `${day}`
+      ? `Сегодня в ${link.time}`
+      : `${link.data} - ${link.time}`;
 
   // проверка есть ли картинка для слайда
   button.style.backgroundImage = `${link.img}`
-  ? `url('${link.img}')`
-  : `linear-gradient(rgba(0, 0, 0, 0.5), rgb(21 254 255 / 40%))`;
+    ? `url('${link.img}')`
+    : `linear-gradient(rgba(0, 0, 0, 0.5), rgb(21 254 255 / 40%))`;
   //
   button.appendChild(h3);
   button.appendChild(span);
@@ -264,7 +305,7 @@ transLinks.forEach((link, index) => {
   });
 });
 
-function showSlide(slideIndex) {
+const showSlide = (slideIndex) => {
   slides.style.transform = `translateX(${slideIndex * -100}%)`;
   const dots = document.querySelectorAll(".slider-dot");
   dots.forEach((dot, i) => {
@@ -272,12 +313,12 @@ function showSlide(slideIndex) {
   });
 }
 
-function nextSlide() {
+const nextSlide = () => {
   currentSlide = (currentSlide + 1) % transLinks.length;
   showSlide(currentSlide);
 }
 
-function prevSlide() {
+const prevSlide = () => {
   currentSlide = (currentSlide - 1 + transLinks.length) % transLinks.length;
   showSlide(currentSlide);
 }
@@ -296,71 +337,76 @@ sliderItem.forEach((item) => {
   const sliderItemId = item.getAttribute("id");
   const sliderItemTitle = item.getAttribute("data-title");
 
-  function TodayOnAir(item) {
-    if(
-      Number(item.attributes[3].value.split(":")[0]) > Number(time.split(":")[0])
-    ){
+  const TodayOnAir = (item) => {
+    if (
+      Number(item.attributes[3].value.split(":")[0]) >
+      Number(time.split(":")[0])
+    ) {
       console.dir(item.attributes[3].value.split(":")[1]);
       item.children[1].textContent = `Начало в ${item.attributes[3].value}`;
       item.children[1].classList.add("activeVideo");
     }
-    if(
-      (Number(item.attributes[3].value.split(":")[0]) + 1) <= Number(time.split(":")[0]) ||
-      (Number(item.attributes[3].value.split(":")[0]) + 2) <= Number(time.split(":")[0])  ||
-      (Number(item.attributes[3].value.split(":")[0]) + 3) <= Number(time.split(":")[0])
-    ){
+    if (
+      Number(item.attributes[3].value.split(":")[0]) + 1 <=
+        Number(time.split(":")[0]) ||
+      Number(item.attributes[3].value.split(":")[0]) + 2 <=
+        Number(time.split(":")[0]) ||
+      Number(item.attributes[3].value.split(":")[0]) + 3 <=
+        Number(time.split(":")[0])
+    ) {
       item.children[1].textContent = "Трансляция началась";
       item.children[1].classList.add("activeVideo");
       item.addEventListener("click", () => {
         let link = sliderItemLink;
         openVideoIFrame(link);
-      })
+      });
     }
-    if(
-      (Number(item.attributes[3].value.split(":")[0]) + 3) < Number(time.split(":")[0])
-    ){
+    if (
+      Number(item.attributes[3].value.split(":")[0]) + 3 <
+      Number(time.split(":")[0])
+    ) {
       item.children[1].textContent = `Трансляция закончилась`;
       item.children[1].classList.remove("activeVideo");
       // item.setAttribute("disabled", "")
       item.style.opacity = "0.5";
     }
   }
-  function TodayOnAirIsList(item) {
+  const TodayOnAirIsList = (item) => {
     let ListItem = item.firstChild;
 
     if (ListItem.attributes[2].value === `${day}`) {
-      ListItem.children[1].textContent = 'Начало в ' + sliderItemTime;
+      ListItem.children[1].textContent = "Начало в " + sliderItemTime;
 
-    if(ListItem.attributes[1].value.split(":")[0] > time.split(":")[0])
-    {
-      ListItem.classList.add("newListItem");
-    }
-    else if(
-      Number(ListItem.attributes[1].value.split(":")[0]) == Number(time.split(":")[0]) ||
-      (Number(ListItem.attributes[1].value.split(":")[0]) + 1) == Number(time.split(":")[0]) ||
-      (Number(ListItem.attributes[1].value.split(":")[0]) + 2) == Number(time.split(":")[0]) ||
-      (Number(ListItem.attributes[1].value.split(":")[0]) + 3) == Number(time.split(":")[0])
-    )
-    {
-      ListItem.classList.remove("newListItem");
-      ListItem.classList.add("activeListItem");
-      ListItem.children[1].textContent = 'Трансляция началась';
-      ListItem.addEventListener("click", () => {
-        let link = sliderItemLink;
-        openVideoIFrame(link);
-      })
-    }
-    else if(
-      (Number(ListItem.attributes[1].value.split(":")[0]) + 3) < time.split(":")[0])
-    {
-      ListItem.classList.remove("activeListItem");
-      ListItem.classList.add("disabledListItem");
-      ListItem.children[1].textContent = 'Трансляция закончилась';
-    }
-
+      if (ListItem.attributes[1].value.split(":")[0] > time.split(":")[0]) {
+        ListItem.classList.add("newListItem");
+      } else if (
+        Number(ListItem.attributes[1].value.split(":")[0]) ==
+          Number(time.split(":")[0]) ||
+        Number(ListItem.attributes[1].value.split(":")[0]) + 1 ==
+          Number(time.split(":")[0]) ||
+        Number(ListItem.attributes[1].value.split(":")[0]) + 2 ==
+          Number(time.split(":")[0]) ||
+        Number(ListItem.attributes[1].value.split(":")[0]) + 3 ==
+          Number(time.split(":")[0])
+      ) {
+        ListItem.classList.remove("newListItem");
+        ListItem.classList.add("activeListItem");
+        ListItem.children[1].textContent = "Трансляция началась";
+        ListItem.addEventListener("click", () => {
+          let link = sliderItemLink;
+          openVideoIFrame(link);
+        });
+      } else if (
+        Number(ListItem.attributes[1].value.split(":")[0]) + 3 <
+        time.split(":")[0]
+      ) {
+        ListItem.classList.remove("activeListItem");
+        ListItem.classList.add("disabledListItem");
+        ListItem.children[1].textContent = "Трансляция закончилась";
+      }
     }
   }
-  function TodayAddList(item) {
+  const TodayAddList = (item) => {
     if (`${sliderItemData}` <= `${day}`) {
       const listItem = document.createElement("li");
       const listLink = document.createElement("button");
@@ -381,15 +427,9 @@ sliderItem.forEach((item) => {
       listItem.appendChild(listLink);
       Strimlists.appendChild(listItem);
       TodayOnAirIsList(listItem);
-    } 
+    }
   }
-
-
-  if (`${sliderItemData}` === `${day}`) {
-    TodayOnAir(item);
-    TodayAddList(item);
-  } 
-  else {
+  const NonStrimsAddList = () => {
     const listItem = document.createElement("li");
     const listLink = document.createElement("button");
     const listH4 = document.createElement("h4");
@@ -397,15 +437,24 @@ sliderItem.forEach((item) => {
     listItem.classList.add("listStrimes__item");
     listLink.classList.add("slider__item-link");
     listH4.classList.add("slider__item-h4");
-    listH4.textContent = 'Сегодня трансляций нет';
+    listH4.textContent = "Сегодня трансляций нет";
     listItem.appendChild(listH4);
     Strimlists.appendChild(listItem);
     TodayOnAirIsList(listItem);
+  };
+
+  if (`${sliderItemData}` === `${day}`) {
+    TodayOnAir(item);
+    TodayAddList(item);
+  } else {
+    NonStrimsAddList();
   }
+
+  
+
+
+
 });
-
-
-
 
 // console.dir('ok');
 // console.dir(window.userAgentData.mobile);
