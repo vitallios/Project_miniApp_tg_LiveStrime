@@ -365,7 +365,7 @@ bottom: 2vh;
 
 
 .slides>button>h3 {
-    font-size: 6vw;
+    font-size: 5.5vw;
     text-shadow: 2px 2px 4px var(--shadow-color);
     z-index: 10;
 }
@@ -407,14 +407,16 @@ bottom: 2vh;
 
 .slider-arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    /* transform: translateY(-50%); */
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    /* border-radius: 50%; */
+    width: 10vw;
+    /* height: 40px; */
     font-size: 20px;
     cursor: pointer;
     z-index: 10;
@@ -427,10 +429,10 @@ bottom: 2vh;
 }
 
 .slider-arrow.left {
-    left: 10px;
+    left: 0px;
 }
 .slider-arrow.right {
-    right: 10px;
+    right: 0px;
 }
 
 .activeVideo {
