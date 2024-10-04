@@ -98,7 +98,7 @@ const transLinks = [
     id: 6,
     name: "«Московские драконы - Зеленоград/Армейцы\nДивизион «Центр-1» | ФРЛ ТР",
     link: "https://vk.com/video_ext.php?oid=-204669808&id=456239517&hash=b416dcc6002af2c3",
-    data: "2024.10.04",
+    data: "2024.10.05",
     time: "15:00",
     img: "",
   },
@@ -137,8 +137,10 @@ const transLinks = [
 ];
 
 
-
-
+// if (
+//   window.innerWidth < 900 &&
+//   window.userAgentData.mobile
+// ) {
 
 function burgerSvg() {
   menu.classList.toggle("active");
@@ -231,6 +233,7 @@ transLinks.forEach((link, index) => {
   span.textContent = `${link.data}` === `${day}`
   ? `Сегодня в ${link.time}`
   : `${link.data} - ${link.time}`;
+
   // проверка есть ли картинка для слайда
   button.style.backgroundImage = `${link.img}`
   ? `url('${link.img}')`
@@ -301,7 +304,9 @@ sliderItem.forEach((item) => {
       item.children[1].classList.add("activeVideo");
     }
     if(
-      Number(item.attributes[3].value.split(":")[0]) <= Number(time.split(":")[0])
+      (Number(item.attributes[3].value.split(":")[0]) + 1) <= Number(time.split(":")[0]) ||
+      (Number(item.attributes[3].value.split(":")[0]) + 2) <= Number(time.split(":")[0])  ||
+      (Number(item.attributes[3].value.split(":")[0]) + 3) <= Number(time.split(":")[0])
     ){
       item.children[1].textContent = "Трансляция началась";
       item.children[1].classList.add("activeVideo");
@@ -311,7 +316,7 @@ sliderItem.forEach((item) => {
       })
     }
     if(
-      (Number(item.attributes[3].value.split(":")[0]) + 1) < Number(time.split(":")[0])
+      (Number(item.attributes[3].value.split(":")[0]) + 3) < Number(time.split(":")[0])
     ){
       item.children[1].textContent = `Трансляция закончилась`;
       item.children[1].classList.remove("activeVideo");
@@ -332,7 +337,8 @@ sliderItem.forEach((item) => {
     else if(
       Number(ListItem.attributes[1].value.split(":")[0]) == Number(time.split(":")[0]) ||
       (Number(ListItem.attributes[1].value.split(":")[0]) + 1) == Number(time.split(":")[0]) ||
-      (Number(ListItem.attributes[1].value.split(":")[0]) + 2) == Number(time.split(":")[0])
+      (Number(ListItem.attributes[1].value.split(":")[0]) + 2) == Number(time.split(":")[0]) ||
+      (Number(ListItem.attributes[1].value.split(":")[0]) + 3) == Number(time.split(":")[0])
     )
     {
       ListItem.classList.remove("newListItem");
@@ -343,7 +349,8 @@ sliderItem.forEach((item) => {
         openVideoIFrame(link);
       })
     }
-    else if(ListItem.attributes[1].value.split(":")[0] < time.split(":")[0])
+    else if(
+      (Number(ListItem.attributes[1].value.split(":")[0]) + 3) < time.split(":")[0])
     {
       ListItem.classList.remove("activeListItem");
       ListItem.classList.add("disabledListItem");
@@ -384,11 +391,12 @@ sliderItem.forEach((item) => {
 
 
 
-// if (window.innerWidth < 900 && window.userAgentData.mobile) {
 // console.dir('ok');
 // console.dir(window.userAgentData.mobile);
 
 // } else {
-//   alert('Сори, только для мобильных устройств');
-//   window.location.reload();
+//   document.querySelector(".container").innerHTML = `<h1>Сори, только для мобильных устройств</h1>`;
+//   setTimeout(() => {
+//       window.location.reload();
+//   }, 5000);
 // }

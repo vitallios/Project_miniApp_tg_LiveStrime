@@ -96,6 +96,18 @@ li {
     gap: 2vh;
     z-index: 10;
     overflow-x: overlay;
+    padding-bottom: 2vw;
+    border-bottom: 1px solid var(--white);
+}
+
+.menu__home {
+position: absolute;
+bottom: 2vh;
+}
+.menu__title{
+    font-size: 1.8vh;
+    text-transform: uppercase;
+    color: #15feff;
 }
 
 .menu__list-link {
@@ -407,7 +419,7 @@ li {
     cursor: pointer;
     z-index: 10;
     transition: background-color 0.3s ease;
-    z-index: 10;
+    z-index: 20;
 }
 
 .slider-arrow:hover {
