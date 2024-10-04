@@ -134,8 +134,6 @@ const transLinks = [
     time: "10:00",
     img: "",
   },
-
-<iframe src="https://vk.com/video_ext.php?oid=-40984897&id=456243334&hash=068f101f60b9fdb9" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
 ];
 
 
