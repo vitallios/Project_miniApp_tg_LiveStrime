@@ -131,7 +131,7 @@ const transLinks = [
     name: "«Енисей-СТМ» – «Стрела-Ак Барс»\nМатч за 5 место Финал PARI Чемпионата России по регби",
     link: "https://vk.com/video_ext.php?oid=-40984897&id=456243334&hash=068f101f60b9fdb9",
     data: "2024.10.06",
-    time: "10:00",
+    time: "10:30",
     img: "",
   },
 ];
@@ -141,6 +141,7 @@ const transLinks = [
 //   window.innerWidth < 900 &&
 //   window.userAgentData.mobile
 // ) {
+
 
 function burgerSvg() {
   menu.classList.toggle("active");
@@ -365,7 +366,6 @@ sliderItem.forEach((item) => {
       const listLink = document.createElement("button");
       const listH4 = document.createElement("h4");
       const listSpan = document.createElement("span");
-
 
       listItem.classList.add("listStrimes__item");
 
