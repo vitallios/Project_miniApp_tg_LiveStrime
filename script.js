@@ -110,6 +110,15 @@ const transLinks = [
     premium: false,
   },
   {
+    id: 12,
+    name: "Warriors - МИФИ | Дивизион «Центр-1» | ФРЛ ТР.",
+    link: "https://vk.com/video_ext.php?oid=-204669808&id=456239484&hash=b26e52bafab76510",
+    data: "2024.10.05",
+    time: "11:00",
+    img: "",
+    premium: true,
+  },
+  {
     id: 3,
     name: "«Красный Яр» – «Локомотив» Матч за 3 место PARI Чемпионата России по регби.",
     link: "https://vk.com/video_ext.php?oid=-40984897&id=456243328&hash=4a302f6ac16916ec",
