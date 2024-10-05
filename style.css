@@ -367,7 +367,8 @@ bottom: 2vh;
 
 
 .slides>button>h3 {
-    font-size: 5vw;
+    width: 80%;
+    font-size: 4vw;
     text-shadow: 2px 2px 4px var(--dartGraay);
     z-index: 10;
 }
