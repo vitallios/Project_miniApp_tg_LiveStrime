@@ -237,7 +237,10 @@ const day = `${Data.getUTCFullYear()}.${
   Data.getUTCMonth() + 1 > 9
     ? Data.getUTCMonth() + 1
     : "0" + (Data.getUTCMonth() + 1)
-}.${Data.getDay() - 1 > 9 ? Data.getDay() - 1 : "0" + Number(Data.getDay() + 1)}`;
+}.${Data.getUTCDate() > 9 ? Data.getUTCDate() : "0" + Number( Data.getUTCDate() + 1)}`;
+
+// console.log(link.data);
+
 
 // при нажатии, открывается home страница
 btnToHome.addEventListener("click", () => {
