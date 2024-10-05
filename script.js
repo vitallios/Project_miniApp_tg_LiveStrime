@@ -103,7 +103,7 @@ const transLinks = [
   {
     id: 2,
     name: "9 тур чемпионата России по регби-7 среди женских команд.\nПервый игровой день",
-    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243333&hash=5d818e401e022470",
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243332&hash=9287842c9eb69c9a",
     data: "2024.10.05",
     time: "10:00",
     img: "",
