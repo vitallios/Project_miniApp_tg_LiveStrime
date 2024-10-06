@@ -102,8 +102,8 @@ const transLinks = [
   },
   {
     id: 2,
-    name: "9 тур чемпионата России по регби-7 среди женских команд. Первый игровой день.",
-    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243332&hash=9287842c9eb69c9a",
+    name: "Test - 1",
+    link: "",
     data: "2024.10.04",
     time: "12:00",
     img: "",
@@ -111,8 +111,8 @@ const transLinks = [
   },
   {
     id: 3,
-    name: "Warriors - МИФИ | Дивизион «Центр-1» | ФРЛ ТР.",
-    link: "https://vk.com/video_ext.php?oid=-204669808&id=456239484&hash=b26e52bafab76510",
+    name: "test - 2",
+    link: "",
     data: "2024.10.06",
     time: "11:00",
     img: "",
@@ -120,8 +120,8 @@ const transLinks = [
   },
   {
     id: 4,
-    name: "Warriors - МИФИ | Дивизион «Центр-1» | ФРЛ ТР.",
-    link: "https://vk.com/video_ext.php?oid=-204669808&id=456239484&hash=b26e52bafab76510",
+    name: "test - 3",
+    link: "",
     data: "2024.10.06",
     time: "11:00",
     img: "",
