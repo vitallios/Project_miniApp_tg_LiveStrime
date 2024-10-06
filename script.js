@@ -95,8 +95,8 @@ const transLinks = [
     id: 1,
     name: "Чемпионат Высшей Лиги по регби-7 среди мужских команд. 6 тур. Первый игровой день.",
     link: "https://vk.com/video_ext.php?oid=-40984897&id=456243333&hash=5d818e401e022470",
-    data: "2024.10.05",
-    time: "12:00",
+    data: "2024.10.06",
+    time: "20:00",
     img: "",
     premium: false,
   },
@@ -104,91 +104,26 @@ const transLinks = [
     id: 2,
     name: "9 тур чемпионата России по регби-7 среди женских команд. Первый игровой день.",
     link: "https://vk.com/video_ext.php?oid=-40984897&id=456243332&hash=9287842c9eb69c9a",
-    data: "2024.10.05",
+    data: "2024.10.04",
     time: "12:00",
     img: "",
     premium: false,
   },
   {
-    id: 12,
+    id: 3,
     name: "Warriors - МИФИ | Дивизион «Центр-1» | ФРЛ ТР.",
     link: "https://vk.com/video_ext.php?oid=-204669808&id=456239484&hash=b26e52bafab76510",
-    data: "2024.10.05",
+    data: "2024.10.06",
     time: "11:00",
     img: "",
     premium: true,
   },
   {
-    id: 3,
-    name: "«Красный Яр» – «Локомотив» Матч за 3 место PARI Чемпионата России по регби.",
-    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243328&hash=4a302f6ac16916ec",
-    data: "2024.10.05",
-    time: "12:00",
-    img: "",
-    premium: true,
-  },
-  {
     id: 4,
-    name: "«ЛРК ВВА - МГУ\nДивизион «Центр-1»\nФРЛ ТР",
-    link: "https://vk.com/video_ext.php?oid=-204669808&id=456239516&hash=026adbf405b75c2e",
-    data: "2024.10.05",
-    time: "13:00",
-    img: "",
-    premium: true,
-  },
-  {
-    id: 5,
-    name: "«Слава» – «ВВА-Подмосковье»\nМатч за 7 место\nPARI Чемпионата России по регби",
-    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243329&hash=108d6414ab6a3d35",
-    data: "2024.10.05",
-    time: "14:00",
-    img: "",
-    premium: true,
-
-  },
-  {
-    id: 6,
-    name: "«Московские драконы - Зеленоград/Армейцы\nДивизион «Центр-1»\nФРЛ ТР",
-    link: "https://vk.com/video_ext.php?oid=-204669808&id=456239517&hash=b416dcc6002af2c3",
-    data: "2024.10.05",
-    time: "15:00",
-    img: "",
-    premium: true,
-    
-  },
-  {
-    id: 7,
-    name: "«Динамо» - «Металлург»\nМатч за 5 место\nPARI Чемпионата России по регби",
-    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243330&hash=fbbc118d6ec42cc6",
-    data: "2024.10.05",
-    time: "19:00",
-    img: "",
-    premium: true,
-  },
-  {
-    id: 8,
-    name: "Чемпионат Высшей Лиги по регби-7 среди мужских команд.6 тур.\nВторой игровой день",
-    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243335&hash=5c68868d7c7518d1",
+    name: "Warriors - МИФИ | Дивизион «Центр-1» | ФРЛ ТР.",
+    link: "https://vk.com/video_ext.php?oid=-204669808&id=456239484&hash=b26e52bafab76510",
     data: "2024.10.06",
-    time: "10:00",
-    img: "",
-    premium: false,
-  },
-  {
-    id: 9,
-    name: "9 тур чемпионата России по регби-7 среди женских команд.\nВторой игровой день",
-    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243334&hash=068f101f60b9fdb9",
-    data: "2024.10.06",
-    time: "10:00",
-    img: "",
-    premium: false,
-  },
-  {
-    id: 10,
-    name: "«Енисей-СТМ» – «Стрела-Ак Барс»\nМатч за 5 место\nФинал PARI Чемпионата России по регби",
-    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243334&hash=068f101f60b9fdb9",
-    data: "2024.10.06",
-    time: "10:30",
+    time: "11:00",
     img: "",
     premium: true,
   },
@@ -237,7 +172,7 @@ const day = `${Data.getUTCFullYear()}.${
   Data.getUTCMonth() + 1 > 9
     ? Data.getUTCMonth() + 1
     : "0" + (Data.getUTCMonth() + 1)
-}.${Data.getUTCDate() > 9 ? Data.getUTCDate() : "0" + Number( Data.getUTCDate() + 1)}`;
+}.${Data.getUTCDate() > 9 ? Data.getUTCDate() : "0" + Number(Data.getUTCDate())}`;
 
 // console.log(link.data);
 
@@ -278,192 +213,55 @@ catalogLinks.forEach((item) => {
   });
 });
 
-// HomeScreen
-const slides = document.querySelector(".slides");
-const leftArrow = document.querySelector(".slider-arrow.left");
-const rightArrow = document.querySelector(".slider-arrow.right");
-const sliderNavs = document.querySelector(".slider-nav");
-let currentSlide = 0;
+// ListStrime
 
-// Создание банеров-слайдеров
-transLinks.forEach((link, index) => {
+transLinks.forEach((item) => {
+  const li = document.createElement("li");
+
+  li.classList.add("list__strim-item");
+  li.setAttribute("data", item.data);
+  li.setAttribute("time", item.time);
+  li.setAttribute("premium", item.premium);
+  li.setAttribute("img", item.img);
+  li.setAttribute("href", item.link);
+  li.innerHTML = `<button
+  class="list__strim-link"
+  id="${item.id}"
+  name="${item.name}">
+
+  <h3>
+  ${item.name}
+  </h3>
   
-  const button = document.createElement("button");
-  const h3 = document.createElement("h3");
-  const span = document.createElement("span");
+  <span>
+  Начало: ${item.time}
+  </span>
+  
+  </butt>`;
 
-  h3.textContent = link.name;
-  // Если дата совпадает, то убераем дату и пишем "Сегодня"
-  span.textContent =
-    `${link.data}` === `${day}`
-      ? `Сегодня в ${link.time}`
-      : `${link.data} - ${link.time}`;
+  // выводим сегоднишние трансляции
+  const itemAtrinut = li.attributes;
+  itemAtrinut.data.value === day
+  ? Strimlists.appendChild(li)
+  : null;
 
-  // проверка есть ли картинка для слайда
-  button.style.backgroundImage = `${link.img}`
-    ? `url('${link.img}')`
-    : `linear-gradient(rgba(0, 0, 0, 0.5), rgb(21 254 255 / 40%))`;
-  //
-  button.appendChild(h3);
-  button.appendChild(span);
-  button.classList.add("slide");
-  button.setAttribute("data-slide-to", index);
-  button.setAttribute("id", index);
-  button.setAttribute("data-time", link.time);
-  button.setAttribute("data-link", link.link);
-  button.setAttribute("data-data", link.data);
-  button.setAttribute("data-title", link.name);
-  //
-  slides.appendChild(button);
+  // трансляции началась
+  itemAtrinut.time.value >= time
+  ? li.children[0].classList.add("active")
+  : null;
 
-  const spanNav = document.createElement("span");
-  spanNav.classList.add("slider-dot");
-
-  spanNav.setAttribute("data-slide-to", index);
-  sliderNavs.appendChild(spanNav);
-
-  spanNav.addEventListener("click", () => {
-    currentSlide = index;
-    showSlide(currentSlide);
-  });
-});
-
-const showSlide = (slideIndex) => {
-  slides.style.transform = `translateX(${slideIndex * -100}%)`;
-  const dots = document.querySelectorAll(".slider-dot");
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === slideIndex);
-  });
-}
-
-const nextSlide = () => {
-  currentSlide = (currentSlide + 1) % transLinks.length;
-  showSlide(currentSlide);
-}
-
-const prevSlide = () => {
-  currentSlide = (currentSlide - 1 + transLinks.length) % transLinks.length;
-  showSlide(currentSlide);
-}
-
-leftArrow.addEventListener("click", prevSlide);
-rightArrow.addEventListener("click", nextSlide);
-
-// });
-
-const sliderItem = document.querySelectorAll(".slide");
-
-sliderItem.forEach((item) => {
-  const sliderItemData = item.getAttribute("data-data");
-  const sliderItemTime = item.getAttribute("data-time");
-  const sliderItemLink = item.getAttribute("data-link");
-  const sliderItemId = item.getAttribute("id");
-  const sliderItemTitle = item.getAttribute("data-title");
-
-  const TodayOnAir = (item) => {
-    if (
-      Number(item.attributes[3].value.split(":")[0]) >
-      Number(time.split(":")[0])
-    ) {
-      console.dir(item.attributes[3].value.split(":")[1]);
-      item.children[1].textContent = `Начало в ${item.attributes[3].value}`;
-      item.children[1].classList.add("activeVideo");
-    }
-    if (
-      Number(item.attributes[3].value.split(":")[0]) + 1 <=
-        Number(time.split(":")[0]) ||
-      Number(item.attributes[3].value.split(":")[0]) + 2 <=
-        Number(time.split(":")[0]) ||
-      Number(item.attributes[3].value.split(":")[0]) + 3 <=
-        Number(time.split(":")[0])
-    ) {
-      item.children[1].textContent = "Трансляция началась";
-      item.children[1].classList.add("activeVideo");
-      item.addEventListener("click", () => {
-        let link = sliderItemLink;
-        openVideoIFrame(link);
-      });
-    }
-    if (
-      Number(item.attributes[3].value.split(":")[0]) + 3 <
-      Number(time.split(":")[0])
-    ) {
-      item.children[1].textContent = `Трансляция закончилась`;
-      item.children[1].classList.remove("activeVideo");
-      // item.setAttribute("disabled", "")
-      item.style.opacity = "0.5";
-    }
-  }
-  const TodayOnAirIsList = (item) => {
-    let ListItem = item.firstChild;
-
-    if (ListItem.attributes[2].value === `${day}`) {
-      ListItem.children[1].textContent = "Начало в " + sliderItemTime;
-
-      if (ListItem.attributes[1].value.split(":")[0] > time.split(":")[0]) {
-        ListItem.classList.add("newListItem");
-      } else if (
-        Number(ListItem.attributes[1].value.split(":")[0]) ==
-          Number(time.split(":")[0]) ||
-        Number(ListItem.attributes[1].value.split(":")[0]) + 1 ==
-          Number(time.split(":")[0]) ||
-        Number(ListItem.attributes[1].value.split(":")[0]) + 2 ==
-          Number(time.split(":")[0]) ||
-        Number(ListItem.attributes[1].value.split(":")[0]) + 3 ==
-          Number(time.split(":")[0])
-      ) {
-        ListItem.classList.remove("newListItem");
-        ListItem.classList.add("activeListItem");
-        ListItem.children[1].textContent = "Трансляция началась";
-        ListItem.addEventListener("click", () => {
-          let link = sliderItemLink;
-          openVideoIFrame(link);
-        });
-      } else if (
-        Number(ListItem.attributes[1].value.split(":")[0]) + 3 <
-        time.split(":")[0]
-      ) {
-        ListItem.classList.remove("activeListItem");
-        ListItem.classList.add("disabledListItem");
-        ListItem.children[1].textContent = "Трансляция закончилась";
-      }
-    }
-  }
-  const TodayAddList = (item) => {
-    if (`${sliderItemData}` <= `${day}`) {
-      const listItem = document.createElement("li");
-      const listLink = document.createElement("button");
-      const listH4 = document.createElement("h4");
-      const listSpan = document.createElement("span");
-
-      listItem.classList.add("listStrimes__item");
-
-      listLink.setAttribute("data-link", sliderItemLink);
-      listLink.setAttribute("data-time", sliderItemTime);
-      listLink.setAttribute("data-data", sliderItemData);
-      listLink.setAttribute("data-id", sliderItemId);
-      listLink.classList.add("slider__item-link");
-      listH4.textContent = `${item.children[0].textContent}`;
-      listSpan.textContent = `${sliderItemData} : ${sliderItemTime}`;
-      listLink.appendChild(listH4);
-      listLink.appendChild(listSpan);
-      listItem.appendChild(listLink);
-      Strimlists.appendChild(listItem);
-      TodayOnAirIsList(listItem);
-    }
-  }
-
-
-  if (`${sliderItemData}` === `${day}`) {
-    TodayOnAir(item);
-    TodayAddList(item);
-  } 
-
+  console.log(time);
+  console.log(item.time);
+  
   
 
 
 
+  li.firstChild.addEventListener("click", () => {
+    openVideoIFrame(item.link);
+  });
 });
+
 
 // console.dir('ok');
 // console.dir(window.userAgentData.mobile);
