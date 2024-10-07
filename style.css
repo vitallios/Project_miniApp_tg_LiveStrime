@@ -344,11 +344,14 @@ bottom: 2vh;
     color: var(--white);
     gap: 5vw;
     padding-bottom: 1vh;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
 }
 .list__strim-link>h3{
     text-align: start;
     flex: 1;
 }
-.list__strim-item .active{
+.list__strim-link.active{
     color: var(--akcent);
 }

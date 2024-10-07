@@ -86,48 +86,52 @@ const randomFilms = [
     link: "https://rutube.ru/play/embed/129b5b143a47f3d208b5aa151c72780b",
     // link: '1',
   },
-
-
 ];
 // Трансляции которые будут
 const transLinks = [
   {
     id: 1,
-    name: "Чемпионат Высшей Лиги по регби-7 среди мужских команд. 6 тур. Первый игровой день.",
-    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243333&hash=5d818e401e022470",
-    data: "2024.10.06",
+    name: "test - 0",
+    link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
+    data: "2024.10.07",
     time: "20:00",
     img: "",
     premium: false,
+    active: false,
   },
   {
     id: 2,
     name: "Test - 1",
-    link: "",
-    data: "2024.10.04",
-    time: "12:00",
+    link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
+    data: "2024.10.07",
+    time: "09:00",
     img: "",
     premium: false,
+    active: false,
   },
   {
     id: 3,
     name: "test - 2",
-    link: "",
-    data: "2024.10.06",
-    time: "11:00",
+    link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
+    data: "2024.10.07",
+    time: "10:47",
     img: "",
-    premium: true,
+    premium: false,
+    active: false,
   },
   {
     id: 4,
     name: "test - 3",
-    link: "",
-    data: "2024.10.06",
-    time: "11:00",
+    link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
+    data: "2024.10.07",
+    time: "14:00",
     img: "",
-    premium: true,
+    premium: false,
+    active: false,
   },
 ];
+
+
 
 // if (
 //   window.innerWidth < 900 &&
@@ -141,11 +145,11 @@ const burgerSvg = () => {
     menu.classList.contains("active")
       ? "M6 18L18 6M6 6l12 12"
       : "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5";
-}
+};
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
   wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-}
+};
 // загрузка контента
 // document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
@@ -172,10 +176,11 @@ const day = `${Data.getUTCFullYear()}.${
   Data.getUTCMonth() + 1 > 9
     ? Data.getUTCMonth() + 1
     : "0" + (Data.getUTCMonth() + 1)
-}.${Data.getUTCDate() > 9 ? Data.getUTCDate() : "0" + Number(Data.getUTCDate())}`;
+}.${
+  Data.getUTCDate() > 9 ? Data.getUTCDate() : "0" + Number(Data.getUTCDate())
+}`;
 
 // console.log(link.data);
-
 
 // при нажатии, открывается home страница
 btnToHome.addEventListener("click", () => {
@@ -214,7 +219,6 @@ catalogLinks.forEach((item) => {
 });
 
 // ListStrime
-
 transLinks.forEach((item) => {
   const li = document.createElement("li");
 
@@ -241,27 +245,32 @@ transLinks.forEach((item) => {
 
   // выводим сегоднишние трансляции
   const itemAtrinut = li.attributes;
-  itemAtrinut.data.value === day
-  ? Strimlists.appendChild(li)
-  : null;
+// все сегодняшние трансляции
+  if (itemAtrinut.data.value === day) {
+    Strimlists.appendChild(li);// добавляем в список
+
+    const timeStart = `${Number(itemAtrinut.time.value.split(":")[0])+':'+Number(itemAtrinut.time.value.split(":")[1])}`
+    // console.log(timeStart);
+    const timeFinish = `${(Number(itemAtrinut.time.value.split(":")[0]) + 2)+':'+Number(itemAtrinut.time.value.split(":")[1])}`
+    // console.log(timeFinish);
+
+    if (timeStart <= time && timeFinish >= time) {
+      console.dir('СТАРТ');
+      li.children[0].classList.add("active");
+      li.children[0].children[1].textContent = `Трансляция началась`;
+      itemAtrinut.active = true
+      li.addEventListener("click", () => {
+        openVideoIFrame(itemAtrinut.href.value);
+      })
+      console.dir(li.attributes);
+    }
+  }
 
   // трансляции началась
-  itemAtrinut.time.value >= time
-  ? li.children[0].classList.add("active")
-  : null;
 
-  console.log(time);
-  console.log(item.time);
-  
-  
-
-
-
-  li.firstChild.addEventListener("click", () => {
-    openVideoIFrame(item.link);
-  });
+  // console.log(time);
+  // console.log(item.time);
 });
-
 
 // console.dir('ok');
 // console.dir(window.userAgentData.mobile);
