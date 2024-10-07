@@ -88,7 +88,7 @@ const randomFilms = [
   },
 ];
 // Трансляции которые будут
-const transLinks = [
+let transLinks = [
   {
     id: 1,
     name: "test - 0",
@@ -97,41 +97,39 @@ const transLinks = [
     time: "20:00",
     img: "",
     premium: false,
-    active: false,
+    active: 0,
   },
   {
     id: 2,
     name: "Test - 1",
     link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
     data: "2024.10.07",
-    time: "09:00",
+    time: "12:00",
     img: "",
     premium: false,
-    active: false,
+    active: 0,
   },
   {
     id: 3,
     name: "test - 2",
     link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
     data: "2024.10.07",
-    time: "10:47",
+    time: "13:47",
     img: "",
     premium: false,
-    active: false,
+    active: 0,
   },
   {
     id: 4,
     name: "test - 3",
     link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
-    data: "2024.10.07",
+    data: "2024.10.08",
     time: "14:00",
     img: "",
     premium: false,
-    active: false,
+    active: 0,
   },
 ];
-
-
 
 // if (
 //   window.innerWidth < 900 &&
@@ -221,56 +219,74 @@ catalogLinks.forEach((item) => {
 // ListStrime
 transLinks.forEach((item) => {
   const li = document.createElement("li");
-
+//
   li.classList.add("list__strim-item");
   li.setAttribute("data", item.data);
   li.setAttribute("time", item.time);
   li.setAttribute("premium", item.premium);
   li.setAttribute("img", item.img);
   li.setAttribute("href", item.link);
+  li.setAttribute("active", item.active);
   li.innerHTML = `<button
   class="list__strim-link"
   id="${item.id}"
   name="${item.name}">
-
   <h3>
   ${item.name}
   </h3>
-  
   <span>
   Начало: ${item.time}
   </span>
-  
   </butt>`;
+
+
+
+
 
   // выводим сегоднишние трансляции
   const itemAtrinut = li.attributes;
-// все сегодняшние трансляции
+  // все сегодняшние трансляции
   if (itemAtrinut.data.value === day) {
-    Strimlists.appendChild(li);// добавляем в список
+    // время старта трансляции
+    const timeStart = `${
+      Number(itemAtrinut.time.value.split(":")[0]) +
+      ":" +
+      Number(itemAtrinut.time.value.split(":")[1])
+    }`;
+    // время окончания трансляции
+    const timeFinish = `${
+      Number(itemAtrinut.time.value.split(":")[0]) +
+      2 +
+      ":" +
+      Number(itemAtrinut.time.value.split(":")[1])
+    }`;
 
-    const timeStart = `${Number(itemAtrinut.time.value.split(":")[0])+':'+Number(itemAtrinut.time.value.split(":")[1])}`
-    // console.log(timeStart);
-    const timeFinish = `${(Number(itemAtrinut.time.value.split(":")[0]) + 2)+':'+Number(itemAtrinut.time.value.split(":")[1])}`
-    // console.log(timeFinish);
-
+    // проверка старта и окончания трансляции
     if (timeStart <= time && timeFinish >= time) {
-      console.dir('СТАРТ');
+      // console.dir("СТАРТ");
       li.children[0].classList.add("active");
       li.children[0].children[1].textContent = `Трансляция началась`;
-      itemAtrinut.active = true
+      itemAtrinut.active.value = 1;
       li.addEventListener("click", () => {
         openVideoIFrame(itemAtrinut.href.value);
-      })
-      console.dir(li.attributes);
+      });
     }
+    li.attributes.active.value == 1 ? Strimlists.insertBefore(li, Strimlists.children[0]) : Strimlists.appendChild(li); // добавляем в список
   }
-
-  // трансляции началась
-
-  // console.log(time);
-  // console.log(item.time);
 });
+// console.log(Strimlists.children);
+
+
+
+
+
+// const tt = [1,5,2,9,6]
+
+// tt.sort((a, b) => {
+//   return a - b
+// })
+
+
 
 // console.dir('ok');
 // console.dir(window.userAgentData.mobile);
