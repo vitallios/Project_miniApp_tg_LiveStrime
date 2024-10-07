@@ -343,7 +343,7 @@ bottom: 2vh;
     align-items: center;
     color: var(--white);
     gap: 5vw;
-    padding-bottom: 1vh;
+    padding: 1vh 0;
     justify-content: space-between;
     flex-direction: row;
     width: 100%;
