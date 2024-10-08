@@ -86,6 +86,12 @@ const randomFilms = [
     link: "https://rutube.ru/play/embed/129b5b143a47f3d208b5aa151c72780b",
     // link: '1',
   },
+  {
+    id: 9,
+    name: "Джокер: Безумие на двоих (2024)",
+    link: "https://alloha.as.newplayjj.com:444/?kp=1328346&token=d4018d6e2c16890c78bbc9ea262fca",
+    // link: '1',
+  },
 ];
 // Трансляции которые будут
 let transLinks = [
@@ -99,7 +105,6 @@ let transLinks = [
     premium: false,
     active: 0,
   },
-
 ];
 
 // if (
