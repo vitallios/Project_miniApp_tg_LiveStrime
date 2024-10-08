@@ -134,7 +134,27 @@ bottom: 2vh;
 
 .btn__to__content-home{
     margin-top: 5vh;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
 }
+
+
+
+@keyframes pulse {
+    0% {
+        /* transform: scale(1); */
+        box-shadow: 0 0 0 0 #15ffff4b;
+    }
+
+    100% {
+        /* transform: scale(1); */
+        box-shadow: 0 0 0 10px #15ffff00;
+    }
+}
+
+
+
+
 .content__donat {
     margin: 0 auto 20px;
 }
@@ -355,3 +375,7 @@ bottom: 2vh;
 .list__strim-link.active{
     color: var(--akcent);
 }
+
+
+
+

@@ -114,7 +114,7 @@ let transLinks = [
     name: "test - 2",
     link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
     data: "2024.10.08",
-    time: "13:10",
+    time: "15:10",
     img: "",
     premium: false,
     active: 0,
@@ -236,6 +236,7 @@ transLinks.forEach((item) => {
   ${item.name}
   </h3>
   <span>
+  Начало в - ${item.time}
   </span>
   </butt>`;
 
@@ -263,7 +264,6 @@ transLinks.forEach((item) => {
 
 
     if(Number(timeFinish.split(':')[0]) > Number(time.split(":")[0])){
-      li.children[0].children[1].textContent = `Начало в - ${item.time}`;
       itemAtrinut.active.value = 1;
     }
 
