@@ -91,44 +91,15 @@ const randomFilms = [
 let transLinks = [
   {
     id: 1,
-    name: "test - 0",
-    link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
+    name: "ВXЛ | Зауралье (Курган) - Сокол (Красноярск)",
+    link: "https://vk.com/video_ext.php?oid=-150501268&id=456253384&hash=e306828d9bfdb2b8",
     data: "2024.10.08",
-    time: "07:00",
+    time: "16:30",
     img: "",
     premium: false,
     active: 0,
   },
-  {
-    id: 2,
-    name: "Test - 1",
-    link: "https://video.matchtv.ru/iframe/feed/start/free_37fc60729a6fd4121ca228ebec12913d/1211989/59c2de9e6c20ce36f025a28e7eb41844/2208978000?sr=14&type_id=&width=100%25&height=100%25&lang=ru&skin_name=matchtv",
-    data: "2024.10.08",
-    time: "19:00",
-    img: "",
-    premium: false,
-    active: 0,
-  },
-  {
-    id: 3,
-    name: "test - 2",
-    link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
-    data: "2024.10.08",
-    time: "15:10",
-    img: "",
-    premium: false,
-    active: 0,
-  },
-  {
-    id: 4,
-    name: "test - 3",
-    link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
-    data: "2024.10.08",
-    time: "12:30",
-    img: "",
-    premium: false,
-    active: 0,
-  },
+
 ];
 
 // if (
