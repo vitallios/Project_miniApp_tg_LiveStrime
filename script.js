@@ -103,8 +103,8 @@ let transLinks = [
     id: 2,
     name: "Test - 1",
     link: "https://video.matchtv.ru/iframe/feed/start/free_37fc60729a6fd4121ca228ebec12913d/1211989/59c2de9e6c20ce36f025a28e7eb41844/2208978000?sr=14&type_id=&width=100%25&height=100%25&lang=ru&skin_name=matchtv",
-    data: "2024.10.07",
-    time: "12:00",
+    data: "2024.10.08",
+    time: "19:00",
     img: "",
     premium: false,
     active: 0,
@@ -113,8 +113,8 @@ let transLinks = [
     id: 3,
     name: "test - 2",
     link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
-    data: "2024.10.07",
-    time: "13:47",
+    data: "2024.10.08",
+    time: "13:10",
     img: "",
     premium: false,
     active: 0,
@@ -124,7 +124,7 @@ let transLinks = [
     name: "test - 3",
     link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
     data: "2024.10.08",
-    time: "14:00",
+    time: "12:30",
     img: "",
     premium: false,
     active: 0,
@@ -227,6 +227,7 @@ transLinks.forEach((item) => {
   li.setAttribute("img", item.img);
   li.setAttribute("href", item.link);
   li.setAttribute("active", item.active);
+
   li.innerHTML = `<button
   class="list__strim-link"
   id="${item.id}"
@@ -235,7 +236,6 @@ transLinks.forEach((item) => {
   ${item.name}
   </h3>
   <span>
-  Начало: ${item.time}
   </span>
   </butt>`;
 
@@ -261,22 +261,38 @@ transLinks.forEach((item) => {
       Number(itemAtrinut.time.value.split(":")[1])
     }`;
 
+
+    if(Number(timeFinish.split(':')[0]) > Number(time.split(":")[0])){
+      li.children[0].children[1].textContent = `Начало в - ${item.time}`;
+      itemAtrinut.active.value = 1;
+    }
+
     // проверка старта и окончания трансляции
     if (timeStart <= time && timeFinish >= time) {
-      // console.dir("СТАРТ");
       li.children[0].classList.add("active");
       li.children[0].children[1].textContent = `Трансляция началась`;
-      itemAtrinut.active.value = 1;
+      itemAtrinut.active.value = 2;
       li.addEventListener("click", () => {
         openVideoIFrame(itemAtrinut.href.value);
       });
     }
     if(Number(timeFinish.split(':')[0]) < Number(time.split(":")[0])){
-      li.children[0].setAttribute('disabled', true)
       li.children[0].children[1].textContent = `Трансляция закончилась`;
+      itemAtrinut.active.value = 0;
+      li.children[0].style.color = 'var(--disableGraay)'
+      li.children[0].setAttribute('disabled', true)
     }
 
-    li.attributes.active.value == 1 ? Strimlists.insertBefore(li, Strimlists.children[0]) : Strimlists.appendChild(li); // добавляем в список
+    if(li.attributes.active.value == '0'){
+      Strimlists.insertBefore(li, Strimlists.children[0])
+    }
+    if (li.attributes.active.value == '2') {
+    Strimlists.insertBefore(li, Strimlists.children[0])
+    } else {
+      Strimlists.insertBefore(li, Strimlists.lastChild)
+    }
+
+
   }
 });
 // console.log(Strimlists.children);
