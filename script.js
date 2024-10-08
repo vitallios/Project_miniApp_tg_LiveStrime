@@ -271,6 +271,11 @@ transLinks.forEach((item) => {
         openVideoIFrame(itemAtrinut.href.value);
       });
     }
+    if(Number(timeFinish.split(':')[0]) < Number(time.split(":")[0])){
+      li.children[0].setAttribute('disabled', true)
+      li.children[0].children[1].textContent = `Трансляция закончилась`;
+    }
+
     li.attributes.active.value == 1 ? Strimlists.insertBefore(li, Strimlists.children[0]) : Strimlists.appendChild(li); // добавляем в список
   }
 });
