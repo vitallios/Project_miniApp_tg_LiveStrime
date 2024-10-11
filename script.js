@@ -368,7 +368,7 @@ transLinks.forEach((item) => {
         openVideoIFrame(itemAtrinut.href.value);
       });
     }
-    if(Number(timeFinish.split(':')[0]) < Number(time.split(":")[0])){
+    if(Number(timeFinish.split(':')[0]) <= Number(time.split(":")[0])){
       li.children[0].children[1].textContent = `Трансляция закончилась`;
       itemAtrinut.active.value = 0;
       li.children[0].style.color = 'var(--disableGraay)'
