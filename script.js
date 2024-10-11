@@ -357,8 +357,6 @@ transLinks.forEach((item) => {
       li.children[0].style.color = "var(--disableGraay)";
       li.children[0].setAttribute("disabled", true);
     }
-
-
     if (li.attributes.active.value == "0") {
       Strimlists.insertBefore(li, Strimlists.children[0]);
     }
