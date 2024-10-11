@@ -102,7 +102,7 @@ let transLinks = [
     data: "2024.10.11",
     time: "12:00",
     img: "",
-    premium: true,
+    premium: false,
     active: 0,
   },
   {
@@ -337,7 +337,7 @@ transLinks.forEach((item) => {
     // время окончания трансляции
     const timeFinish=`${Number(itemAtrinut.time.value.split(":")[0])+2+":"+Number(itemAtrinut.time.value.split(":")[1])}`;
 
-    if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0])) 
+    if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0]))
       {
         itemAtrinut.active.value = 1;
       }
@@ -358,14 +358,6 @@ transLinks.forEach((item) => {
       li.children[0].setAttribute("disabled", true);
     }
 
-    if((Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])) && itemAtrinut.premium.value == "true"){
-      li.children[0].classList.add("active");
-      li.children[0].children[1].textContent = `Трансляция началась`;
-      itemAtrinut.active.value = 2;
-      li.addEventListener("click", () => {
-        openVideoIFrame(itemAtrinut.href.value);
-      });
-    }
 
     if (li.attributes.active.value == "0") {
       Strimlists.insertBefore(li, Strimlists.children[0]);
