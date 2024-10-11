@@ -237,6 +237,7 @@ const burgerSvg = () => {
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
   wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  burgerSvg();
 
   // accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture
 };
@@ -275,6 +276,7 @@ const day = `${Data.getUTCFullYear()}.${
 // при нажатии, открывается home страница
 btnToHome.addEventListener("click", () => {
   document.querySelector(".wrap__pages").classList.add("info__none");
+  burgerSvg();
 });
 
 // Обновление и возврат на страницу Info
@@ -383,7 +385,6 @@ transLinks.forEach((item) => {
     } else {
       Strimlists.insertBefore(li, Strimlists.lastChild)
     }
-
 
   }
 });
