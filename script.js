@@ -102,7 +102,7 @@ let transLinks = [
     data: "2024.10.11",
     time: "12:00",
     img: "",
-    premium: false,
+    premium: true,
     active: 0,
   },
   {
@@ -333,22 +333,14 @@ transLinks.forEach((item) => {
   // все сегодняшние трансляции
   if (itemAtrinut.data.value === day) {
     // время старта трансляции
-    const timeStart = `${
-      Number(itemAtrinut.time.value.split(":")[0]) +
-      ":" +
-      Number(itemAtrinut.time.value.split(":")[1])
-    }`;
+    const timeStart = `${Number(itemAtrinut.time.value.split(":")[0])+":"+Number(itemAtrinut.time.value.split(":")[1])}`;
     // время окончания трансляции
-    const timeFinish = `${
-      Number(itemAtrinut.time.value.split(":")[0]) +
-      2 +
-      ":" +
-      Number(itemAtrinut.time.value.split(":")[1])
-    }`;
+    const timeFinish=`${Number(itemAtrinut.time.value.split(":")[0])+2+":"+Number(itemAtrinut.time.value.split(":")[1])}`;
 
-    if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0])) {
-      itemAtrinut.active.value = 1;
-    }
+    if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0])) 
+      {
+        itemAtrinut.active.value = 1;
+      }
 
     // проверка старта и окончания трансляции
     if (timeStart <= time && timeFinish >= time) {
@@ -366,6 +358,15 @@ transLinks.forEach((item) => {
       li.children[0].setAttribute("disabled", true);
     }
 
+    if((Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])) && itemAtrinut.premium.value == "true"){
+      li.children[0].classList.add("active");
+      li.children[0].children[1].textContent = `Трансляция началась`;
+      itemAtrinut.active.value = 2;
+      li.addEventListener("click", () => {
+        openVideoIFrame(itemAtrinut.href.value);
+      });
+    }
+
     if (li.attributes.active.value == "0") {
       Strimlists.insertBefore(li, Strimlists.children[0]);
     }
@@ -374,6 +375,8 @@ transLinks.forEach((item) => {
     } else {
       Strimlists.insertBefore(li, Strimlists.lastChild);
     }
+
+    console.dir( itemAtrinut.premium.value );
   }
 });
 // console.log(Strimlists.children);
