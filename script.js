@@ -218,9 +218,6 @@ let transLinks = [
   },
 ];
 
-
-
-
 // if (
 //   window.innerWidth < 900 &&
 //   window.userAgentData.mobile
@@ -236,10 +233,8 @@ const burgerSvg = () => {
 };
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
-  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-  burgerSvg();
-
-  // accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture
+  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>`;
+  document.querySelector("#videoPleer").play();
 };
 // загрузка контента
 // document.addEventListener("DOMContentLoaded", () => {
@@ -276,7 +271,6 @@ const day = `${Data.getUTCFullYear()}.${
 // при нажатии, открывается home страница
 btnToHome.addEventListener("click", () => {
   document.querySelector(".wrap__pages").classList.add("info__none");
-  burgerSvg();
 });
 
 // Обновление и возврат на страницу Info
@@ -313,7 +307,7 @@ catalogLinks.forEach((item) => {
 // ListStrime
 transLinks.forEach((item) => {
   const li = document.createElement("li");
-//
+  //
   li.classList.add("list__strim-item");
   li.setAttribute("data", item.data);
   li.setAttribute("time", item.time);
@@ -334,10 +328,6 @@ transLinks.forEach((item) => {
   </span>
   </butt>`;
 
-
-
-
-
   // выводим сегоднишние трансляции
   const itemAtrinut = li.attributes;
   // все сегодняшние трансляции
@@ -356,8 +346,7 @@ transLinks.forEach((item) => {
       Number(itemAtrinut.time.value.split(":")[1])
     }`;
 
-
-    if(Number(timeFinish.split(':')[0]) > Number(time.split(":")[0])){
+    if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0])) {
       itemAtrinut.active.value = 1;
     }
 
@@ -370,37 +359,30 @@ transLinks.forEach((item) => {
         openVideoIFrame(itemAtrinut.href.value);
       });
     }
-    if(Number(timeFinish.split(':')[0]) <= Number(time.split(":")[0])){
+    if (Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])) {
       li.children[0].children[1].textContent = `Трансляция закончилась`;
       itemAtrinut.active.value = 0;
-      li.children[0].style.color = 'var(--disableGraay)'
-      li.children[0].setAttribute('disabled', true)
+      li.children[0].style.color = "var(--disableGraay)";
+      li.children[0].setAttribute("disabled", true);
     }
 
-    if(li.attributes.active.value == '0'){
-      Strimlists.insertBefore(li, Strimlists.children[0])
+    if (li.attributes.active.value == "0") {
+      Strimlists.insertBefore(li, Strimlists.children[0]);
     }
-    if (li.attributes.active.value == '2') {
-    Strimlists.insertBefore(li, Strimlists.children[0])
+    if (li.attributes.active.value == "2") {
+      Strimlists.insertBefore(li, Strimlists.children[0]);
     } else {
-      Strimlists.insertBefore(li, Strimlists.lastChild)
+      Strimlists.insertBefore(li, Strimlists.lastChild);
     }
-
   }
 });
 // console.log(Strimlists.children);
-
-
-
-
 
 // const tt = [1,5,2,9,6]
 
 // tt.sort((a, b) => {
 //   return a - b
 // })
-
-
 
 // console.dir('ok');
 // console.dir(window.userAgentData.mobile);
