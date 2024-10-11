@@ -182,7 +182,7 @@ const burgerSvg = () => {
 };
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
-  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 
   // accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture
 };
