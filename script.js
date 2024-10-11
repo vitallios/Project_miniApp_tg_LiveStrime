@@ -155,12 +155,63 @@ let transLinks = [
     premium: false,
     active: 0,
   },
+
   {
     id: 7,
     name: `Матч\nСборная России - Русские Барбарианс`,
     link: "",
     data: "2024.10.12",
     time: "14:30",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 8,
+    name: `WXV 2. \n Уэльс - Япония`,
+    link: "https://vk.com/video_ext.php?oid=-200149158&id=456274970&hash=12f6dc9b26816b2c",
+    data: "2024.10.11",
+    time: "17:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 9,
+    name: `Про Д2. \n Ойонна - Коломье`,
+    link: "https://vk.com/video_ext.php?oid=-200149158&id=456274970&hash=12f6dc9b26816b2c",
+    data: "2024.10.11",
+    time: "20:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 10,
+    name: `Про Д2. \n Ангулем - Прованс`,
+    link: "https://vk.com/video_ext.php?oid=-200149158&id=456274973&hash=38be164b04103378",
+    data: "2024.10.11",
+    time: "20:30",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 12,
+    name: `Про Д2. \n Брив - Биарриц`,
+    link: "https://vk.com/video_ext.php?oid=-200149158&id=456274974&hash=c669ce7819897afe",
+    data: "2024.10.11",
+    time: "22:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 13,
+    name: `WXV. \n США - Ирландия`,
+    link: "https://vk.com/video_ext.php?oid=-200149158&id=456274971&hash=b0134c03ba324a37",
+    data: "2024.10.11",
+    time: "22:00",
     img: "",
     premium: false,
     active: 0,
@@ -182,9 +233,8 @@ const burgerSvg = () => {
 };
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
-  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
-
-  // accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture
+  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>`;
+  document.querySelector("#videoPleer").play();
 };
 // загрузка контента
 // document.addEventListener("DOMContentLoaded", () => {
@@ -257,7 +307,7 @@ catalogLinks.forEach((item) => {
 // ListStrime
 transLinks.forEach((item) => {
   const li = document.createElement("li");
-//
+  //
   li.classList.add("list__strim-item");
   li.setAttribute("data", item.data);
   li.setAttribute("time", item.time);
@@ -278,10 +328,6 @@ transLinks.forEach((item) => {
   </span>
   </butt>`;
 
-
-
-
-
   // выводим сегоднишние трансляции
   const itemAtrinut = li.attributes;
   // все сегодняшние трансляции
@@ -300,8 +346,7 @@ transLinks.forEach((item) => {
       Number(itemAtrinut.time.value.split(":")[1])
     }`;
 
-
-    if(Number(timeFinish.split(':')[0]) > Number(time.split(":")[0])){
+    if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0])) {
       itemAtrinut.active.value = 1;
     }
 
@@ -314,39 +359,30 @@ transLinks.forEach((item) => {
         openVideoIFrame(itemAtrinut.href.value);
       });
     }
-    if(Number(timeFinish.split(':')[0]) <= Number(time.split(":")[0])){
+    if (Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])) {
       li.children[0].children[1].textContent = `Трансляция закончилась`;
       itemAtrinut.active.value = 0;
-      li.children[0].style.color = 'var(--disableGraay)'
-      li.children[0].setAttribute('disabled', true)
+      li.children[0].style.color = "var(--disableGraay)";
+      li.children[0].setAttribute("disabled", true);
     }
 
-    if(li.attributes.active.value == '0'){
-      Strimlists.insertBefore(li, Strimlists.children[0])
-      console.dir(Number(timeFinish.split(':')[0]));
+    if (li.attributes.active.value == "0") {
+      Strimlists.insertBefore(li, Strimlists.children[0]);
     }
-    if (li.attributes.active.value == '2') {
-    Strimlists.insertBefore(li, Strimlists.children[0])
+    if (li.attributes.active.value == "2") {
+      Strimlists.insertBefore(li, Strimlists.children[0]);
     } else {
-      Strimlists.insertBefore(li, Strimlists.lastChild)
+      Strimlists.insertBefore(li, Strimlists.lastChild);
     }
-
-
   }
 });
 // console.log(Strimlists.children);
-
-
-
-
 
 // const tt = [1,5,2,9,6]
 
 // tt.sort((a, b) => {
 //   return a - b
 // })
-
-
 
 // console.dir('ok');
 // console.dir(window.userAgentData.mobile);
