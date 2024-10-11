@@ -97,10 +97,60 @@ const randomFilms = [
 let transLinks = [
   {
     id: 1,
-    name: "ВXЛ | Зауралье (Курган) - Сокол (Красноярск)",
-    link: "https://vk.com/video_ext.php?oid=-150501268&id=456253384&hash=e306828d9bfdb2b8",
-    data: "2024.10.08",
-    time: "16:30",
+    name: `Сб. Краснодарского края – Сб. Москвы.\nПервенство России по регби среди юношей U19`,
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243345&hash=b389f608dd692bb8",
+    data: "2024.10.11",
+    time: "12:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 2,
+    name: `Сб. Московской области – «Красный Яр».\nПервенство России по регби среди юношей U19`,
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243346&hash=f3673e843897888d",
+    data: "2024.10.11",
+    time: "14:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 3,
+    name: `«Енисей-СТМ» – «Приморец-Олимпийские Надежды».\nПервенство России по регби среди юношей U19`,
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243347&hash=40b10bac2a4abcf0",
+    data: "2024.10.11",
+    time: "16:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 4,
+    name: `«Приморец-Олимпийские Надежды» – Сб. Краснодарского края.\nПервенство России по регби среди юношей U19`,
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243348&hash=1436c9527eb0e586",
+    data: "2024.10.13",
+    time: "12:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 5,
+    name: `Сб. Москвы – Сб. Московской области.\nПервенство России по регби среди юношей U19`,
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243349&hash=c055be33e96ad1f5",
+    data: "2024.10.13",
+    time: "14:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 5,
+    name: `«Красный Яр» – «Енисей-СТМ».\nПервенство России по регби среди юношей U19`,
+    link: "https://vk.com/video_ext.php?oid=-40984897&id=456243350&hash=a56d583d96291d90",
+    data: "2024.10.13",
+    time: "14:00",
     img: "",
     premium: false,
     active: 0,
@@ -122,7 +172,9 @@ const burgerSvg = () => {
 };
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
-  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+
+  // accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture
 };
 // загрузка контента
 // document.addEventListener("DOMContentLoaded", () => {
