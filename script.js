@@ -155,6 +155,7 @@ let transLinks = [
     premium: false,
     active: 0,
   },
+
   {
     id: 7,
     name: `Матч\nСборная России - Русские Барбарианс`,
@@ -165,7 +166,60 @@ let transLinks = [
     premium: false,
     active: 0,
   },
+  {
+    id: 8,
+    name: `WXV 2. \n Уэльс - Япония`,
+    link: "https://vk.com/video_ext.php?oid=-200149158&id=456274970&hash=12f6dc9b26816b2c",
+    data: "2024.10.11",
+    time: "17:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 9,
+    name: `Про Д2. \n Ойонна - Коломье`,
+    link: "https://vk.com/video_ext.php?oid=-200149158&id=456274970&hash=12f6dc9b26816b2c",
+    data: "2024.10.11",
+    time: "20:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 10,
+    name: `Про Д2. \n Ангулем - Прованс`,
+    link: "https://vk.com/video_ext.php?oid=-200149158&id=456274973&hash=38be164b04103378",
+    data: "2024.10.11",
+    time: "20:30",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 12,
+    name: `Про Д2. \n Брив - Биарриц`,
+    link: "https://vk.com/video_ext.php?oid=-200149158&id=456274974&hash=c669ce7819897afe",
+    data: "2024.10.11",
+    time: "22:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
+  {
+    id: 13,
+    name: `WXV. \n США - Ирландия`,
+    link: "https://vk.com/video_ext.php?oid=-200149158&id=456274971&hash=b0134c03ba324a37",
+    data: "2024.10.11",
+    time: "22:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
 ];
+
+
+
 
 // if (
 //   window.innerWidth < 900 &&
