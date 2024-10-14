@@ -231,8 +231,10 @@ const burgerSvg = () => {
       ? "M6 18L18 6M6 6l12 12"
       : "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5";
 };
+
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
+  burgerSvg();
   wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>`;
   document.querySelector("#videoPleer").play();
 };
