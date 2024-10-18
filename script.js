@@ -93,8 +93,21 @@ const randomFilms = [
     // link: '1',
   },
 ];
+
+
+
 // Трансляции которые будут
 let transLinks = [
+  {
+    id: 0,
+    name: `Челбаскет (Челябинск) - ЦСКА-2 (Москва)`,
+    link: `https://rutube.ru/play/embed/f92b3a9067ff8e0b5a5e0cb1bfe35992`,
+    data: "2024.10.18",
+    time: "16:00",
+    img: "",
+    premium: false,
+    active: 0,
+  },
   {
     id: 1,
     name: `Юношеский чемпионат России | «Балтийский Шторм» – СШ по регби «Локомотив»`,
@@ -215,6 +228,7 @@ let transLinks = [
 
 // Открытие и закрытие меню
 const burgerSvg = () => {
+  navBTN.classList.toggle("active");
   menu.classList.toggle("active");
   navBTN.firstElementChild.children[0].attributes[2].value =
     menu.classList.contains("active")
@@ -226,7 +240,7 @@ const burgerSvg = () => {
 const openVideoIFrame = (linkVideo) => {
   wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>`;
   document.querySelector("#videoPleer").play();
-  burgerSvg();
+  // burgerSvg();
 };
 // загрузка контента
 // document.addEventListener("DOMContentLoaded", () => {
