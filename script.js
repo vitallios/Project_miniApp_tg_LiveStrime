@@ -316,6 +316,7 @@ transLinks.forEach((item) => {
   //
   li.classList.add("list__strim-item");
   li.setAttribute("data", item.data);
+  li.setAttribute("id", item.id);
   li.setAttribute("time", item.time);
   li.setAttribute("premium", item.premium);
   li.setAttribute("img", item.img);
@@ -363,17 +364,26 @@ transLinks.forEach((item) => {
       li.children[0].style.color = "var(--disableGraay)";
       li.children[0].setAttribute("disabled", true);
     }
-    if (li.attributes.active.value == "0") {
-      Strimlists.insertBefore(li, Strimlists.children[0]);
-    }
-    if (li.attributes.active.value == "2") {
-      Strimlists.insertBefore(li, Strimlists.children[0]);
-    } else {
-      Strimlists.insertBefore(li, Strimlists.lastChild);
-    }
 
-    console.dir( itemAtrinut.premium.value );
+    // li.attributes.active.value.sort();
+    Strimlists.insertBefore(li, Strimlists.lastChild);
+    // if (li.attributes.active.value == "0") {
+    //   Strimlists.insertBefore(li, Strimlists.children[0]);
+    // }
+    // if (li.attributes.active.value == "2") {
+    //   Strimlists.insertBefore(li, Strimlists.children[0]);
+    // } else {
+    //   Strimlists.insertBefore(li, Strimlists.lastChild);
+    // }
+  // } else {
+    // Strimlists.insertBefore(li, Strimlists.lastChild);
   }
+
+  // for (const key in item) {
+  //   console.log(key.id);
+  // }
+
+
 });
 // console.log(Strimlists.children);
 
