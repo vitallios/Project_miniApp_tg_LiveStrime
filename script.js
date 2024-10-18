@@ -224,7 +224,7 @@ const burgerSvg = () => {
 
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
-  burgerSvg();
+  // burgerSvg();
   wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>`;
   document.querySelector("#videoPleer").play();
 };
