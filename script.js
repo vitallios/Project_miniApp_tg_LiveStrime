@@ -42,8 +42,6 @@ const randomFilms = [
     id: 1,
     name: "Битлджус Битлджус | Beetlejuice Beetlejuice (2024)",
     link: `<iframe
-    width="720"
-    height="405"
     src="https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8"
     frameBorder="0"
     allow="clipboard-write; autoplay"
@@ -59,8 +57,6 @@ const randomFilms = [
     name: "Чужой: Ромул / Alien: Romulus (2024)",
     link: `
       <iframe
-        width="720"
-        height="405"
         src="https://rutube.ru/play/embed/edf4662bfdf97433ced02ab6154313c4"
         frameBorder="0"
         allow="clipboard-write; autoplay"
@@ -76,8 +72,6 @@ const randomFilms = [
     name: "Дэдпул и Росомаха (2024)",
     link: `
       <iframe
-        width="720"
-        height="405"
         src="https://rutube.ru/play/embed/f893c0764662db0b17b277d15d6e0871"
         frameBorder="0"
         allow="clipboard-write; autoplay"
@@ -93,8 +87,6 @@ const randomFilms = [
     name: "Джокер (2019)",
     link: `
       <iframe
-        width="720"
-        height="405"
         src="https://rutube.ru/play/embed/81e784b6eba4c9d3d0539536d7e58243"
         frameBorder="0"
         allow="clipboard-write; autoplay"
