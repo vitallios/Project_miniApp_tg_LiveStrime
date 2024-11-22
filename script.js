@@ -14,25 +14,46 @@ const catalogLinks = [
   {
     id: 1,
     name: "Regby",
-    link: "https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f",
+    link: `
+      <iframe
+        src="https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f"
+        frameBorder="0"
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
+      ></iframe>
+    `,
     // link: '2',
   },
   {
     id: 2,
     name: "Hockey",
-    link: "https://rutube.ru/play/embed/7a485ef5da9fe50ba939f36ca3e6ed96",
+    link: `
+      <iframe
+        src="https://rutube.ru/play/embed/7a485ef5da9fe50ba939f36ca3e6ed96"
+        frameBorder="0"
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
+      ></iframe>
+    `,
     // link: '1',
   },
   {
     id: 3,
     name: "NBA",
-    link: "https://rutube.ru/play/embed/876cf3628c698e956de40c1c911b0c5f",
-    // link: '1',
-  },
-  {
-    id: 3,
-    name: "Football Premier League",
-    link: "https://rutube.ru/play/embed/e6fa77441a3b019526498775c5a5b9dc",
+    link: `
+      <iframe
+        src="https://rutube.ru/play/embed/876cf3628c698e956de40c1c911b0c5f"
+        frameBorder="0"
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
+      ></iframe>
+    `,
     // link: '1',
   },
 ];
@@ -102,8 +123,6 @@ const randomFilms = [
     name: "Криминальное чтиво (1994)",
     link: `
       <iframe
-        width="720"
-        height="405"
         src="https://rutube.ru/play/embed/b655f8af33deef0514481b2bb39b90e2"
         frameBorder="0"
         allow="clipboard-write; autoplay"
@@ -119,8 +138,6 @@ const randomFilms = [
     name: "Оппенгеймер (2023)",
     link: `
       <iframe
-        width="720"
-        height="405"
         src="https://rutube.ru/play/embed/ffe77a61fb1ab119c33638900d8a77e4"
         frameBorder="0"
         allow="clipboard-write; autoplay"
@@ -136,8 +153,6 @@ const randomFilms = [
     name: "Дом у дороги (2024)",
     link: `
       <iframe
-        width="720"
-        height="405"
         src="https://rutube.ru/play/embed/22bd521930719eedd02383e9c81b16e2"
         frameBorder="0"
         allow="clipboard-write; autoplay"
@@ -153,8 +168,6 @@ const randomFilms = [
     name: "Меч короля Артура (2017)",
     link: `
       <iframe
-        width="720"
-        height="405"
         src="https://rutube.ru/play/embed/129b5b143a47f3d208b5aa151c72780b"
         frameBorder="0"
         allow="clipboard-write; autoplay"
@@ -175,7 +188,7 @@ let transLinks = [
     id: 0,
     name: `Челбаскет (Челябинск) - ЦСКА-2 (Москва)`,
     link: `<iframe src="https://vk.com/video_ext.php?oid=-200149158&id=456275397&hash=e77cd508bc6594c2"  frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
-    data: "2024.11.22",
+    data: "2024.12.22",
     time: "14:00",
     img: "",
     premium: false,
