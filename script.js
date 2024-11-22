@@ -208,7 +208,7 @@ let transLinks = [
   },
   {
     id: 2,
-    name: `Франция — Аргентина | Летние тесты | Комментор - Семён Крюков`,
+    name: `Регби: Франция — Аргентина | Летние тесты | Комментор - Семён Крюков`,
     link: `<iframe src="https://vk.com/video_ext.php?oid=-15550428&id=456244601&hash=17e60939fc942151" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
     data: "2024.11.22",
     time: "22:00",
