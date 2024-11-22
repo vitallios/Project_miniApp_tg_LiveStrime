@@ -101,124 +101,14 @@ let transLinks = [
   {
     id: 0,
     name: `Челбаскет (Челябинск) - ЦСКА-2 (Москва)`,
-    link: `https://rutube.ru/play/embed/f92b3a9067ff8e0b5a5e0cb1bfe35992`,
-    data: "2024.10.18",
-    time: "16:00",
+    link: `<iframe src="https://vk.com/video_ext.php?oid=-200149158&id=456275397&hash=e77cd508bc6594c2" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    data: "2024.11.22",
+    time: "14:00",
     img: "",
     premium: false,
     active: 0,
   },
-  {
-    id: 1,
-    name: `Юношеский чемпионат России | «Балтийский Шторм» – СШ по регби «Локомотив»`,
-    link: `https://vk.com/video_ext.php?oid=-40984897&id=456243390&hash=5af12f5ca6335bc4`,
-    data: "2024.10.18",
-    time: "16:00",
-    img: "",
-    premium: false,
-    active: 0,
-  },
-  {
-    id: 2,
-    name: `Про Д2. Коломье - Ангулем.`,
-    link: `https://vk.com/video_ext.php?oid=-200149158&id=456275043&hash=4e8f84509b6c98df`,
-    data: "2024.10.18",
-    time: "20:00",
-    img: "",
-    premium: false,
-    active: 0,
-  },
-  {
-    id: 3,
-    name: `Про Д2. Орийяк - Ницца.`,
-    link: `https://vk.com/video_ext.php?oid=-200149158&id=456275044&hash=7b52b9be502e3b73`,
-    data: "2024.10.18",
-    time: "20:30",
-    img: "",
-    premium: false,
-    active: 0,
-  },
-  {
-    id: 4,
-    name: `Про Д2. Биарриц - Ажен.`,
-    link: `https://vk.com/video_ext.php?oid=-200149158&id=456275045&hash=ba6bca473fd2a822`,
-    data: "2024.10.18",
-    time: "22:00",
-    img: "",
-    premium: false,
-    active: 0,
-  },
-  {
-    id: 5,
-    name: `Финал Чемпионата Федеральной лиги по регби-7. Первый день`,
-    link: `https://vk.com/video_ext.php?oid=-40984897&id=456243393&hash=b619e9530ad26ac1`,
-    data: "2024.10.19",
-    time: "10:00",
-    img: "",
-    premium: true,
-    active: 0,
-  },
-  {
-    id: 6,
-    name: `10 тур чемпионата России по регби-7 среди женских команд. Первый день`,
-    link: `https://vk.com/video_ext.php?oid=-40984897&id=456243388&hash=ff20b198a22f5fed`,
-    data: "2024.10.19",
-    time: "10:00",
-    img: "",
-    premium: true,
-    active: 0,
-  },
-  {
-    id: 7,
-    name: `Юношеский чемпионат России | Приморец-Олимпийские Надежды – Московская Академия регби`,
-    link: `https://vk.com/video_ext.php?oid=-40984897&id=456243391&hash=2326aa3a5be3c743`,
-    data: "2024.10.19",
-    time: "15:30",
-    img: "",
-    premium: false,
-    active: 0,
-  },
-  // 20
-  {
-    id: 8,
-    name: `Финал Чемпионата Федеральной лиги по регби-7. Второй день`,
-    link: `https://vk.com/video_ext.php?oid=-40984897&id=456243394&hash=e9cbd23f981ff151`,
-    data: "2024.10.20",
-    time: "10:00",
-    img: "",
-    premium: true,
-    active: 0,
-  },
-  {
-    id: 9,
-    name: `Юношеский чемпионат России | СШОР «Красный Яр» – СШОР «Енисей-СТМ»`,
-    link: `https://vk.com/video_ext.php?oid=-40984897&id=456243392&hash=4e7195c2bb9560cb`,
-    data: "2024.10.20",
-    time: "10:00",
-    img: "",
-    premium: false,
-    active: 0,
-  },
-  {
-    id: 10,
-    name: `10 тур чемпионата России по регби-7 среди женских команд. Второй день`,
-    link: `https://vk.com/video_ext.php?oid=-40984897&id=456243389&hash=a5302e30c7a989a5`,
-    data: "2024.10.20",
-    time: "10:00",
-    img: "",
-    premium: true,
-    active: 0,
-  },
-  {
-    id: 11,
-    name: `Тест-матч. Сборная России U23 - Сборная России U19`,
-    link: `https://vk.com/video_ext.php?oid=-40984897&id=456243396&hash=be46dd937c45977b`,
-    data: "2024.10.20",
-    time: "13:00",
-    img: "",
-    premium: false,
-    active: 0,
-  },
+ 
 ];
 
 // if (
@@ -238,7 +128,7 @@ const burgerSvg = () => {
 
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
-  wrapPleer.innerHTML = `<iframe id="videoPleer" src="${linkVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>`;
+  wrapPleer.innerHTML = `${linkVideo}`;
   document.querySelector("#videoPleer").play();
   // burgerSvg();
 };
@@ -322,6 +212,8 @@ transLinks.forEach((item) => {
   li.setAttribute("img", item.img);
   li.setAttribute("href", item.link);
   li.setAttribute("active", item.active);
+
+
 
   li.innerHTML = `<button
   class="list__strim-link"
