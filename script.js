@@ -101,7 +101,7 @@ let transLinks = [
   {
     id: 0,
     name: `Челбаскет (Челябинск) - ЦСКА-2 (Москва)`,
-    link: `<iframe src="https://vk.com/video_ext.php?oid=-200149158&id=456275397&hash=e77cd508bc6594c2" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    link: `<iframe src="https://vk.com/video_ext.php?oid=-200149158&id=456275397&hash=e77cd508bc6594c2"  frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
     data: "2024.11.22",
     time: "14:00",
     img: "",
@@ -196,6 +196,8 @@ catalogLinks.forEach((item) => {
 
   li.firstChild.addEventListener("click", () => {
     openVideoIFrame(item.link);
+    console.log(`${item.name}`);
+    
     burgerSvg();
   });
 });
