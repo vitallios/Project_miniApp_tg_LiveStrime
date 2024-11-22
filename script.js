@@ -129,7 +129,7 @@ const burgerSvg = () => {
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
   wrapPleer.innerHTML = `${linkVideo}`;
-  document.querySelector("#videoPleer").play();
+  // document.querySelector("#videoPleer").play();
   // burgerSvg();
 };
 // загрузка контента
@@ -195,8 +195,8 @@ catalogLinks.forEach((item) => {
   menuList.appendChild(li);
 
   li.firstChild.addEventListener("click", () => {
+    console.log('11');
     openVideoIFrame(item.link);
-    console.log(`${item.name}`);
     
     burgerSvg();
   });
