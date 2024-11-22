@@ -70,7 +70,7 @@ const randomFilms = [
     mozallowfullscreen
     allowFullScreen
   ></iframe>
-`
+`,
     // link: '2',
   },
   {
@@ -180,9 +180,11 @@ const randomFilms = [
   },
 ];
 
-
-
 // Трансляции которые будут
+// Premium - трансляция целый день
+// 0 - трансляция закончилась
+// 1 - трансляция началась
+// 2 - трансляция в процессе
 let transLinks = [
   {
     id: 0,
@@ -191,8 +193,8 @@ let transLinks = [
     data: "2024.11.23",
     time: "09:00",
     img: "",
-    premium: false,
-    active: 0,
+    premium: 'Premium',
+    active: "Premium",
   },
   {
     id: 1,
@@ -201,26 +203,20 @@ let transLinks = [
     data: "2024.11.24",
     time: "09:00",
     img: "",
-    premium: false,
-    active: 0,
+    premium: 'Premium',
+    active: "Premium",
   },
   {
     id: 2,
-    name: `Финал Федеральной регбийной лиги «Трудовые резервы». Второй день`,
-    link: `<iframe src="https://vk.com/video_ext.php?oid=-40984897&id=456243478&hash=b53d3841e325382c" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    name: `Франция — Аргентина | Летние тесты | Комментор - Семён Крюков`,
+    link: `<iframe src="https://vk.com/video_ext.php?oid=-15550428&id=456244601&hash=17e60939fc942151" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
     data: "2024.11.22",
-    time: "0:00",
+    time: "16:00",
     img: "",
     premium: false,
     active: 0,
   },
- 
 ];
-
-// if (
-//   window.innerWidth < 900 &&
-//   window.userAgentData.mobile
-// ) {
 
 // Открытие и закрытие меню
 const burgerSvg = () => {
@@ -239,7 +235,6 @@ const openVideoIFrame = (linkVideo) => {
   // burgerSvg();
 };
 // загрузка контента
-// document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
   document.querySelector(".content").style.opacity = "0";
 
@@ -267,8 +262,6 @@ const day = `${Data.getUTCFullYear()}.${
 }.${
   Data.getUTCDate() > 9 ? Data.getUTCDate() : "0" + Number(Data.getUTCDate())
 }`;
-
-// console.log(link.data);
 
 // при нажатии, открывается home страница
 btnToHome.addEventListener("click", () => {
@@ -301,104 +294,61 @@ catalogLinks.forEach((item) => {
   menuList.appendChild(li);
 
   li.firstChild.addEventListener("click", () => {
-    console.log('11');
+    console.log("11");
     openVideoIFrame(item.link);
-    
+
     burgerSvg();
   });
 });
 
+
 // ListStrime
 transLinks.forEach((item) => {
   const li = document.createElement("li");
-  //
   li.classList.add("list__strim-item");
-  li.setAttribute("data", item.data);
-  li.setAttribute("id", item.id);
-  li.setAttribute("time", item.time);
-  li.setAttribute("premium", item.premium);
-  li.setAttribute("img", item.img);
-  li.setAttribute("href", item.link);
-  li.setAttribute("active", item.active);
+  li.dataset.data = item.data;
+  li.dataset.id = item.id;
+  li.dataset.time = item.time;
+  li.dataset.premium = item.premium;
+  li.dataset.img = item.img;
+  li.dataset.href = item.link;
+  li.dataset.active = item.active;
 
+  li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${item.name}">
+                    <h3>${item.name}</h3>
+                    <span>Начало в - ${item.time}</span>
+                  </button>`;
 
+  if (li.dataset.data === day) {
+    const timeStart = `${Number(li.dataset.time.split(":")[0])}:${li.dataset.time.split(":")[1]}`;
+    const timeFinish = `${Number(li.dataset.time.split(":")[0]) + 2}:${li.dataset.time.split(":")[1]}`;
 
-  li.innerHTML = `<button
-  class="list__strim-link"
-  id="${item.id}"
-  name="${item.name}">
-  <h3>
-  ${item.name}
-  </h3>
-  <span>
-  Начало в - ${item.time}
-  </span>
-  </butt>`;
+    if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0])) {
+      li.dataset.active = 1;
+    }
 
-  // выводим сегоднишние трансляции
-  const itemAtrinut = li.attributes;
-  // все сегодняшние трансляции
-  if (itemAtrinut.data.value === day) {
-    // время старта трансляции
-    const timeStart = `${Number(itemAtrinut.time.value.split(":")[0])+":"+Number(itemAtrinut.time.value.split(":")[1])}`;
-    // время окончания трансляции
-    const timeFinish=`${Number(itemAtrinut.time.value.split(":")[0])+2+":"+Number(itemAtrinut.time.value.split(":")[1])}`;
-
-    if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0]))
-      {
-        itemAtrinut.active.value = 1;
-      }
-
-    // проверка старта и окончания трансляции
     if (timeStart <= time && timeFinish >= time) {
-      li.children[0].classList.add("active");
-      li.children[0].children[1].textContent = `Трансляция началась`;
-      itemAtrinut.active.value = 2;
-      li.addEventListener("click", () => {
-        openVideoIFrame(itemAtrinut.href.value);
-      });
-    }
-    if (Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])) {
-      li.children[0].children[1].textContent = `Трансляция закончилась`;
-      itemAtrinut.active.value = 0;
-      li.children[0].style.color = "var(--disableGraay)";
-      li.children[0].setAttribute("disabled", true);
+      li.querySelector('.list__strim-link').classList.add("active");
+      li.querySelector('span').textContent = "Трансляция началась";
+      li.dataset.active = 2;
+      li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
     }
 
-    // li.attributes.active.value.sort();
+    if (li.dataset.premium === "Premium" && Number(time.split(":")[0]) < 22) {
+      li.querySelector('span').textContent = "Трансляция еще идёт";
+      li.querySelector('.list__strim-link').classList.add("active");
+      li.dataset.active = "Premium";
+      li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
+    }
+
+    if (li.dataset.premium == 0 && Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])) {
+      li.querySelector('span').textContent = "Трансляция закончилась";
+      li.dataset.active = 0;
+      li.querySelector('.list__strim-link').style.color = "var(--disableGraay)";
+      li.querySelector('.list__strim-link').setAttribute("disabled", true);
+    }
+
     Strimlists.insertBefore(li, Strimlists.lastChild);
-    // if (li.attributes.active.value == "0") {
-    //   Strimlists.insertBefore(li, Strimlists.children[0]);
-    // }
-    // if (li.attributes.active.value == "2") {
-    //   Strimlists.insertBefore(li, Strimlists.children[0]);
-    // } else {
-    //   Strimlists.insertBefore(li, Strimlists.lastChild);
-    // }
-  // } else {
-    // Strimlists.insertBefore(li, Strimlists.lastChild);
   }
-
-  // for (const key in item) {
-  //   console.log(key.id);
-  // }
-
-
 });
-// console.log(Strimlists.children);
 
-// const tt = [1,5,2,9,6]
-
-// tt.sort((a, b) => {
-//   return a - b
-// })
-
-// console.dir('ok');
-// console.dir(window.userAgentData.mobile);
-
-// } else {
-//   document.querySelector(".container").innerHTML = `<h1>Сори, только для мобильных устройств</h1>`;
-//   setTimeout(() => {
-//       window.location.reload();
-//   }, 5000);
-// }
