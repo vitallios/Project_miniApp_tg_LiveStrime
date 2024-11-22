@@ -233,6 +233,9 @@ const openVideoIFrame = (linkVideo) => {
   wrapPleer.innerHTML = `${linkVideo}`;
   // document.querySelector("#videoPleer").play();
   // burgerSvg();
+  // поиск и удалить с экрана на видео
+  // setTimeout(() =>{
+  // }, 3000);
 };
 // загрузка контента
 window.addEventListener("load", () => {
