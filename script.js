@@ -1,4 +1,4 @@
-UQCnMhMic0M2p_CdUCll5wdiXjdxxa39la1b2wVAHzVC1xE4const navBTN = document.querySelector("#menu-btn");
+const navBTN = document.querySelector("#menu-btn");
 const menu = document.querySelector(".menu");
 const menuListItem = document.querySelector("#menu__list-item");
 const menuList = document.querySelector("#menu__list");
