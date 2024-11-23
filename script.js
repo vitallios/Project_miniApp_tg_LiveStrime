@@ -342,7 +342,9 @@ transLinks.forEach((item) => {
       li.querySelector('.list__strim-link').classList.add("active");
       li.dataset.active = "Premium";
       li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
-    }
+    } else {
+li.querySelector('span').textContent = "Трансляция закончилась";
+}
 
     if (li.dataset.premium == 0 && Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])) {
       li.querySelector('span').textContent = "Трансляция закончилась";
