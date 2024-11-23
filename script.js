@@ -344,6 +344,9 @@ transLinks.forEach((item) => {
       li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
     } else {
 li.querySelector('span').textContent = "Трансляция закончилась";
+li.dataset.active = 0;
+      li.querySelector('.list__strim-link').style.color = "var(--disableGraay)";
+      li.querySelector('.list__strim-link').setAttribute("disabled", true);
 }
 
     if (li.dataset.premium == 0 && Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])) {
