@@ -9,7 +9,7 @@ const rundomFilms = document.querySelector("#rundomFilms");
 const btnToHome = document.querySelector("#btnToHome");
 const MenuBtnToHome = document.querySelector("#MenuBtnToHome");
 const Strimlists = document.querySelector("#listStrimes");
-// Тв программы
+// Тв программы 
 const catalogLinks = [
   {
     id: 1,
