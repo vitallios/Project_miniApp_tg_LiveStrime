@@ -1,4 +1,4 @@
-const navBTN = document.querySelector("#menu-btn");
+UQCnMhMic0M2p_CdUCll5wdiXjdxxa39la1b2wVAHzVC1xE4const navBTN = document.querySelector("#menu-btn");
 const menu = document.querySelector(".menu");
 const menuListItem = document.querySelector("#menu__list-item");
 const menuList = document.querySelector("#menu__list");
@@ -337,7 +337,7 @@ transLinks.forEach((item) => {
       li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
     }
 
-    if (li.dataset.premium === "Premium" && Number(time.split(":")[0]) < 22) {
+    if (li.dataset.premium === "Premium" && Number(time.split(":")[0]) < 18) {
       li.querySelector('span').textContent = "Трансляция еще идёт";
       li.querySelector('.list__strim-link').classList.add("active");
       li.dataset.active = "Premium";
