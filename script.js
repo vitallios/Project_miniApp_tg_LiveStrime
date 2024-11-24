@@ -336,7 +336,6 @@ transLinks.forEach((item) => {
       li.dataset.active = 2;
       li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
     }
-
     if (li.dataset.premium === "Premium" && Number(time.split(":")[0]) < 20) {
       li.querySelector('span').textContent = "Трансляция еще идёт";
       li.querySelector('.list__strim-link').classList.add("active");
