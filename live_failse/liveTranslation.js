@@ -53,6 +53,7 @@ export const transLinks = [
     img: "",
     premium: '0',
     active: 0,
-  }
+  },
+
 ];
 
