@@ -1,3 +1,8 @@
+import { catalogLinks } from "./live_failse/liveTv.js";
+import { randomFilms } from "./live_failse/liveFilms.js";
+import { transLinks } from "./live_failse/liveTranslation.js";
+
+//
 const navBTN = document.querySelector("#menu-btn");
 const menu = document.querySelector(".menu");
 const menuListItem = document.querySelector("#menu__list-item");
@@ -9,214 +14,6 @@ const rundomFilms = document.querySelector("#rundomFilms");
 const btnToHome = document.querySelector("#btnToHome");
 const MenuBtnToHome = document.querySelector("#MenuBtnToHome");
 const Strimlists = document.querySelector("#listStrimes");
-// Тв программы 
-const catalogLinks = [
-  {
-    id: 1,
-    name: "Regby",
-    link: `
-      <iframe
-        src="https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen
-      ></iframe>
-    `,
-    // link: '2',
-  },
-  {
-    id: 2,
-    name: "Hockey",
-    link: `
-      <iframe
-        src="https://rutube.ru/play/embed/7a485ef5da9fe50ba939f36ca3e6ed96"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen
-      ></iframe>
-    `,
-    // link: '1',
-  },
-  {
-    id: 3,
-    name: "NBA",
-    link: `
-      <iframe
-        src="https://rutube.ru/play/embed/876cf3628c698e956de40c1c911b0c5f"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen
-      ></iframe>
-    `,
-    // link: '1',
-  },
-];
-// Фильмы
-const randomFilms = [
-  {
-    id: 1,
-    name: "Битлджус Битлджус | Beetlejuice Beetlejuice (2024)",
-    link: `<iframe
-    src="https://rutube.ru/play/embed/0b87b1557018d8ff86c86cf3492ad5a8"
-    frameBorder="0"
-    allow="clipboard-write; autoplay"
-    webkitAllowFullScreen
-    mozallowfullscreen
-    allowFullScreen
-  ></iframe>
-`,
-    // link: '2',
-  },
-  {
-    id: 2,
-    name: "Чужой: Ромул / Alien: Romulus (2024)",
-    link: `
-      <iframe
-        src="https://rutube.ru/play/embed/edf4662bfdf97433ced02ab6154313c4"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen
-      ></iframe>
-    `,
-    // link: '1',
-  },
-  {
-    id: 3,
-    name: "Дэдпул и Росомаха (2024)",
-    link: `
-      <iframe
-        src="https://rutube.ru/play/embed/f893c0764662db0b17b277d15d6e0871"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen
-      ></iframe>
-    `,
-    // link: '1',
-  },
-  {
-    id: 4,
-    name: "Джокер (2019)",
-    link: `
-      <iframe
-        src="https://rutube.ru/play/embed/81e784b6eba4c9d3d0539536d7e58243"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen
-      ></iframe>
-    `,
-    // link: '1',
-  },
-  {
-    id: 5,
-    name: "Криминальное чтиво (1994)",
-    link: `
-      <iframe
-        src="https://rutube.ru/play/embed/b655f8af33deef0514481b2bb39b90e2"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen
-      ></iframe>
-    `,
-    // link: '1',
-  },
-  {
-    id: 6,
-    name: "Оппенгеймер (2023)",
-    link: `
-      <iframe
-        src="https://rutube.ru/play/embed/ffe77a61fb1ab119c33638900d8a77e4"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen
-      ></iframe>
-    `,
-    // link: '1',
-  },
-  {
-    id: 7,
-    name: "Дом у дороги (2024)",
-    link: `
-      <iframe
-        src="https://rutube.ru/play/embed/22bd521930719eedd02383e9c81b16e2"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen
-      ></iframe>
-    `,
-    // link: '1',
-  },
-  {
-    id: 8,
-    name: "Меч короля Артура (2017)",
-    link: `
-      <iframe
-        src="https://rutube.ru/play/embed/129b5b143a47f3d208b5aa151c72780b"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen
-      ></iframe>
-    `,
-    // link: '1',
-  },
-];
-
-// Трансляции которые будут
-// Premium - трансляция целый день
-// 0 - трансляция закончилась
-// 1 - трансляция началась
-// 2 - трансляция в процессе
-let transLinks = [
-  {
-    id: 0,
-    name: `Финал Федеральной регбийной лиги «Трудовые резервы». Первый день`,
-    link: `<iframe src="https://vk.com/video_ext.php?oid=-40984897&id=456243477&hash=a933f090a704084f" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
-    data: "2024.11.23",
-    time: "09:00",
-    img: "",
-    premium: 'Premium',
-    active: "Premium",
-  },
-  {
-    id: 1,
-    name: `Финал Федеральной регбийной лиги «Трудовые резервы». Второй день`,
-    link: `<iframe src="https://vk.com/video_ext.php?oid=-40984897&id=456243478&hash=b53d3841e325382c" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
-    data: "2024.11.24",
-    time: "09:00",
-    img: "",
-    premium: 'Premium',
-    active: "Premium",
-  },
-  {
-    id: 2,
-    name: `Регби: Франция — Аргентина | Летние тесты | Комментор - Семён Крюков`,
-    link: `<iframe src="https://vk.com/video_ext.php?oid=-15550428&id=456244601&hash=17e60939fc942151" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
-    data: "2024.11.22",
-    time: "23:00",
-    img: "",
-    premium: false,
-    active: 0,
-  },
-];
 
 // Открытие и закрытие меню
 const burgerSvg = () => {
@@ -297,13 +94,12 @@ catalogLinks.forEach((item) => {
   menuList.appendChild(li);
 
   li.firstChild.addEventListener("click", () => {
-    console.log("11");
+    // console.log("11");
     openVideoIFrame(item.link);
 
     burgerSvg();
   });
 });
-
 
 // ListStrime
 transLinks.forEach((item) => {
@@ -323,39 +119,45 @@ transLinks.forEach((item) => {
                   </button>`;
 
   if (li.dataset.data === day) {
-    const timeStart = `${Number(li.dataset.time.split(":")[0])}:${li.dataset.time.split(":")[1]}`;
-    const timeFinish = `${Number(li.dataset.time.split(":")[0]) + 2}:${li.dataset.time.split(":")[1]}`;
+    const timeStart = `${Number(li.dataset.time.split(":")[0])}:${
+      li.dataset.time.split(":")[1]
+    }`;
+    const timeFinish = `${Number(li.dataset.time.split(":")[0]) + 2}:${
+      li.dataset.time.split(":")[1]
+    }`;
 
     if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0])) {
       li.dataset.active = 1;
     }
 
     if (timeStart <= time && timeFinish >= time) {
-      li.querySelector('.list__strim-link').classList.add("active");
-      li.querySelector('span').textContent = "Трансляция началась";
+      li.querySelector(".list__strim-link").classList.add("active");
+      li.querySelector("span").textContent = "Трансляция началась";
       li.dataset.active = 2;
       li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
     }
     if (li.dataset.premium === "Premium" && Number(time.split(":")[0]) < 20) {
-      li.querySelector('span').textContent = "Трансляция еще идёт";
-      li.querySelector('.list__strim-link').classList.add("active");
+      li.querySelector("span").textContent = "Трансляция еще идёт";
+      li.querySelector(".list__strim-link").classList.add("active");
       li.dataset.active = "Premium";
       li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
     } else {
-li.querySelector('span').textContent = "Трансляция закончилась";
-li.dataset.active = 0;
-      li.querySelector('.list__strim-link').style.color = "var(--disableGraay)";
-      li.querySelector('.list__strim-link').setAttribute("disabled", true);
-}
-
-    if (li.dataset.premium == 0 && Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])) {
-      li.querySelector('span').textContent = "Трансляция закончилась";
+      li.querySelector("span").textContent = "Трансляция закончилась";
       li.dataset.active = 0;
-      li.querySelector('.list__strim-link').style.color = "var(--disableGraay)";
-      li.querySelector('.list__strim-link').setAttribute("disabled", true);
+      li.querySelector(".list__strim-link").style.color = "var(--disableGraay)";
+      li.querySelector(".list__strim-link").setAttribute("disabled", true);
+    }
+
+    if (
+      li.dataset.premium == 0 &&
+      Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])
+    ) {
+      li.querySelector("span").textContent = "Трансляция закончилась";
+      li.dataset.active = 0;
+      li.querySelector(".list__strim-link").style.color = "var(--disableGraay)";
+      li.querySelector(".list__strim-link").setAttribute("disabled", true);
     }
 
     Strimlists.insertBefore(li, Strimlists.lastChild);
   }
 });
-
