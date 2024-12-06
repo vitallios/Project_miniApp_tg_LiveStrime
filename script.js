@@ -5,9 +5,7 @@ import { transLinks } from "./live_failse/liveTranslation.js";
 //
 const navBTN = document.querySelector("#menu-btn");
 const menu = document.querySelector(".menu");
-const menuListItem = document.querySelector("#menu__list-item");
 const menuList = document.querySelector("#menu__list");
-let iframeSeaction = document.querySelector("#videoPleer");
 let wrapPleer = document.querySelector(".wrap");
 const loader = document.querySelector(".loader");
 const rundomFilms = document.querySelector("#rundomFilms");
@@ -28,11 +26,6 @@ const burgerSvg = () => {
 // Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
   wrapPleer.innerHTML = `${linkVideo}`;
-  // document.querySelector("#videoPleer").play();
-  // burgerSvg();
-  // поиск и удалить с экрана на видео
-  // setTimeout(() =>{
-  // }, 3000);
 };
 // загрузка контента
 window.addEventListener("load", () => {
@@ -94,9 +87,7 @@ catalogLinks.forEach((item) => {
   menuList.appendChild(li);
 
   li.firstChild.addEventListener("click", () => {
-    // console.log("11");
     openVideoIFrame(item.link);
-
     burgerSvg();
   });
 });
@@ -117,8 +108,6 @@ transLinks.forEach((item) => {
                     <h3>${item.name}</h3>
                     <span>Начало в - ${item.time}</span>
                   </button>`;
-
-  
 
   if (li.dataset.data === day) {
     //начало трансляции
