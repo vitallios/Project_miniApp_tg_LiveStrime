@@ -118,45 +118,69 @@ transLinks.forEach((item) => {
                     <span>Начало в - ${item.time}</span>
                   </button>`;
 
+  
+
   if (li.dataset.data === day) {
+    //начало трансляции
     const timeStart = `${Number(li.dataset.time.split(":")[0])}:${
       li.dataset.time.split(":")[1]
     }`;
+    // конец трансляции
     const timeFinish = `${Number(li.dataset.time.split(":")[0]) + 2}:${
       li.dataset.time.split(":")[1]
     }`;
 
+    // Когда совпадает текущяя дата и дата эфира
+    // То acnive трансляции меняется с 0 на 1
     if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0])) {
       li.dataset.active = 1;
     }
 
-    if (timeStart <= time && timeFinish >= time) {
-      li.querySelector(".list__strim-link").classList.add("active");
-      li.querySelector("span").textContent = "Трансляция началась";
-      li.dataset.active = 2;
+    const item = li.querySelector(".list__strim-link");
+
+
+    const startLiveStrime = () => {
+      item.classList.add("active");
+      li.dataset.active = 1;
       li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
     }
-    if (li.dataset.premium === "Premium" && Number(time.split(":")[0]) < 20) {
-      li.querySelector("span").textContent = "Трансляция еще идёт";
-      li.querySelector(".list__strim-link").classList.add("active");
-      li.dataset.active = "Premium";
-      li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
-    } else {
-      li.querySelector("span").textContent = "Трансляция закончилась";
+    const endLiveStrime = () => {
+      item.classList.remove("active");
       li.dataset.active = 0;
-      li.querySelector(".list__strim-link").style.color = "var(--disableGraay)";
-      li.querySelector(".list__strim-link").setAttribute("disabled", true);
+      item.style.color = "var(--disableGraay)";
+      item.setAttribute("disabled", true);
     }
 
-    if (
-      li.dataset.premium == 0 &&
-      Number(timeFinish.split(":")[0]) <= Number(time.split(":")[0])
-    ) {
-      li.querySelector("span").textContent = "Трансляция закончилась";
-      li.dataset.active = 0;
-      li.querySelector(".list__strim-link").style.color = "var(--disableGraay)";
-      li.querySelector(".list__strim-link").setAttribute("disabled", true);
+
+    const timeStartHour = Number(timeStart.split(":")[0]);
+    const timeFinishHour = Number(timeFinish.split(":")[0]);
+    const timeHour = Number(time.split(":")[0]);
+
+    try {
+      if (timeStartHour <= timeHour && timeFinishHour >= timeHour) {
+        console.log("start");
+        li.querySelector("span").textContent = "Трансляция началась";
+        startLiveStrime();
+      } else if (timeFinishHour <= timeHour) {
+        if (li.dataset.premium === '1') {
+          console.log("full day");
+          li.querySelector("span").textContent = "Трансляция целый день";
+          startLiveStrime();
+          li.dataset.active = 1;
+        } else {
+          console.log("end");
+          li.querySelector("span").textContent = "Трансляция закончилась";
+          endLiveStrime();
+          li.dataset.active = 0;
+        }
+      }
+    } catch (error) {
+      console.dir(error);
     }
+
+    console.dir(li.dataset.data);
+    console.dir(li.dataset.premium);
+    console.dir(time);
 
     Strimlists.insertBefore(li, Strimlists.lastChild);
   }
