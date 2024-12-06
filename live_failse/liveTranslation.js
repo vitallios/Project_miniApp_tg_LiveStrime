@@ -36,6 +36,16 @@ export const transLinks = [
   },
   {
     id: 4,
+    name: `Про Д2. Дакс - Биарриц`,
+    link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456276090&hash=1764e5af8c3c325b"  frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    data: "2024.12.07",
+    time: "00:00",
+    img: "",
+    premium: '0',
+    active: 0,
+  },
+  {
+    id: 5,
     name: `Мировая Серия по регби-7. День 1`,
     link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456276091&hash=68139d3b23a301b7"  frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
     data: "2024.12.08",
@@ -45,7 +55,7 @@ export const transLinks = [
     active: 0,
   },
   {
-    id: 5,
+    id: 6,
     name: `Мировая Серия по регби-7. День 2`,
     link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456276092&hash=9c3fb741cb376aa4"  frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
     data: "2024.12.08",
@@ -54,6 +64,7 @@ export const transLinks = [
     premium: '0',
     active: 0,
   },
+   
 
 ];
 

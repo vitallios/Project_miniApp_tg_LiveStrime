@@ -94,6 +94,8 @@ catalogLinks.forEach((item) => {
 
 // ListStrime
 transLinks.forEach((item) => {
+  
+  
   const li = document.createElement("li");
   li.classList.add("list__strim-item");
   li.dataset.data = item.data;
@@ -103,6 +105,7 @@ transLinks.forEach((item) => {
   li.dataset.img = item.img;
   li.dataset.href = item.link;
   li.dataset.active = item.active;
+
 
   li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${item.name}">
                     <h3>${item.name}</h3>
