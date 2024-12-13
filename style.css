@@ -354,6 +354,28 @@ bottom: 2vh;
     border-bottom: 1px solid var(--akcent);
     line-height: 3vh;
     display: flex;
+    padding: 0 2%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.list__strim-item.active{
+    background: #15feff21;
+    animation: bg_active 1s infinite;
+    -webkit-animation: bg_active 5s infinite;
+}
+@keyframes bg_active {
+    0%{
+        background: #15feff21;
+    }
+    50%{
+        background: #15feff3e;
+    }
+    100%{
+        background: #15feff21;
+    }
 }
 
 .list__strim-link{

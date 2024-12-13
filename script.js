@@ -152,6 +152,7 @@ transLinks.forEach((item) => {
       if (timeStartHour <= timeHour && timeFinishHour >= timeHour) {
         console.log("start");
         li.querySelector("span").textContent = "Трансляция началась";
+        li.classList.add("active");
         startLiveStrime();
       } else if (timeFinishHour <= timeHour) {
         if (li.dataset.premium === '1') {

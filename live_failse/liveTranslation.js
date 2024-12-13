@@ -19,7 +19,7 @@ export const transLinks = [
     name: `Ажен - Орийяк`,
     link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456276282&hash=aa0935327452e9f3"  frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
     data: "2024.12.13",
-    time: "21:30",
+    time: "11:30",
     img: "",
     premium: '0',
     active: 0,
