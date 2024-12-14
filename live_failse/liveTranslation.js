@@ -34,6 +34,7 @@ export const transLinks = [
     premium: '0',
     active: 0,
   },
+  
   {
     id: 3.1,
     name: `Гренобль - Брив`,
@@ -44,7 +45,27 @@ export const transLinks = [
     premium: '0',
     active: 0,
   },
-
+  
+  {
+    id: 4,
+    name: `Московский фестиваль регби на снегу. 1 Поле`,
+    link: `<iframe src="https://vk.com/video_ext.php?oid=-38197864&id=456240110&hash=9ce27c0f5d6219e9" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    data: "2024.12.14",
+    time: "11:00",
+    img: "",
+    premium: '1',
+    active: 0,
+  },
+  {
+    id: 4.1,
+    name: `Московский фестиваль регби на снегу. 2 Поле`,
+    link: `<iframe src="https://vk.com/video_ext.php?oid=-38197864&id=456240111&hash=d95c6b8b64c3e702" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    data: "2024.12.14",
+    time: "11:00",
+    img: "",
+    premium: '1',
+    active: 0,
+  }
 
 ];
 
