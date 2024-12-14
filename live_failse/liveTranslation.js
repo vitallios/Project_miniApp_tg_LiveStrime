@@ -53,7 +53,7 @@ export const transLinks = [
     data: "2024.12.14",
     time: "11:00",
     img: "",
-    premium: '1',
+    premium: '0',
     active: 0,
   },
   {
@@ -63,7 +63,7 @@ export const transLinks = [
     data: "2024.12.14",
     time: "11:00",
     img: "",
-    premium: '1',
+    premium: '0',
     active: 0,
   }
 
