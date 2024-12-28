@@ -106,11 +106,18 @@ transLinks.forEach((item) => {
   li.dataset.href = item.link;
   li.dataset.active = item.active;
 
-
-  li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${item.name}">
-                    <h3>${item.name}</h3>
-                    <span>Начало в - ${item.time}</span>
-                  </button>`;
+  if (!li.dataset.img) {
+    li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${item.name}">
+                      <h3>${item.name}</h3>
+                      <span>Начало в - ${item.time}</span>
+                    </button>`;
+  } else {
+    li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${item.name}">
+    <img src="${item.img}" alt="${item.name}" style="width: 100%; flex: 1; height: 80px; border-radius: 10px;">
+    <h3>${item.name}</h3>
+    <span>Начало в - ${item.time}</span>
+  </button>`;
+  }
 
   if (li.dataset.data === day) {
     //начало трансляции
