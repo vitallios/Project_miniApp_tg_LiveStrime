@@ -13,6 +13,18 @@ const btnToHome = document.querySelector("#btnToHome");
 const MenuBtnToHome = document.querySelector("#MenuBtnToHome");
 const Strimlists = document.querySelector("#listStrimes");
 
+
+async function getUser() {
+  try {
+    const { data } = await axios.get('https://rugger.info/video/gal12342');
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+getUser();
+
 // Открытие и закрытие меню
 const burgerSvg = () => {
   navBTN.classList.toggle("active");
