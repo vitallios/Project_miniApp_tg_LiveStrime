@@ -119,4 +119,18 @@ export const randomFilms = [
    `,
    // link: '1',
  },
+ {
+  id: 9,
+  name: "Крэйвен-охотник (2024)",
+  link: `
+      <iframe
+        src="https://rutube.ru/play/embed/17d090183bb12968d3055a8da7dfccd6"
+        frameBorder="0"
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
+      ></iframe>
+    `
+ }
 ];
