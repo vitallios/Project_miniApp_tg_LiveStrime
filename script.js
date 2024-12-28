@@ -109,7 +109,7 @@ transLinks.forEach((item) => {
   if (!li.dataset.img) {
     li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${item.name}">
                       <h3>${item.name}</h3>
-                      <span>Начало в - ${item.time}</span>
+                      <span>Начало в: ${item.time}</span>
                     </button>`;
   } else {
     li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${item.name}">
