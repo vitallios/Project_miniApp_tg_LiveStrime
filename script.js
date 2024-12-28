@@ -113,7 +113,7 @@ transLinks.forEach((item) => {
                     </button>`;
   } else {
     li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${item.name}">
-    <img src="${item.img}" alt="${item.name}" style="width: 100%; flex: 1; height: 80px; border-radius: 10px;">
+    <img src="${item.img}" alt="${item.name}" style="flex: 1; height: 4rem; border-radius: 10px;">
     <h3>${item.name}</h3>
     <span>Начало в - ${item.time}</span>
   </button>`;
