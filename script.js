@@ -125,9 +125,10 @@ transLinks.forEach((item) => {
       li.dataset.time.split(":")[1]
     }`;
     // конец трансляции
-    const timeFinish = `${Number(li.dataset.time.split(":")[0]) + 2}:${
+    const timeFinish = `${Number(li.dataset.time.split(":")[0]) + 3}:${
       li.dataset.time.split(":")[1]
     }`;
+    console.log(timeStart + " - "+timeFinish);
 
     // Когда совпадает текущяя дата и дата эфира
     // То acnive трансляции меняется с 0 на 1
@@ -158,16 +159,21 @@ transLinks.forEach((item) => {
     try {
       if (timeStartHour <= timeHour && timeFinishHour >= timeHour) {
         console.log("start");
-        li.querySelector("span").textContent = "Трансляция началась";
+          
+        li.dataset.active = 'Premium' ?  li.querySelector("span").textContent = "Трансляция целый день" : li.querySelector("span").textContent = "Трансляция началась";
+
         li.classList.add("active");
         startLiveStrime();
+        console.dir(li.querySelector("span").textContent);
       } else if (timeFinishHour <= timeHour) {
+        
         if (li.dataset.premium === '1') {
           console.log("full day");
           li.querySelector("span").textContent = "Трансляция целый день";
           startLiveStrime();
           li.dataset.active = 1;
-        } else {
+        }
+        else {
           console.log("end");
           li.querySelector("span").textContent = "Трансляция закончилась";
           endLiveStrime();
