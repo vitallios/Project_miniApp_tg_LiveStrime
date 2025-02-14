@@ -2,7 +2,6 @@ import { catalogLinks } from "./live_failse/liveTv.js";
 import { randomFilms } from "./live_failse/liveFilms.js";
 import { transLinks } from "./live_failse/liveTranslation.js";
 
-//
 const navBTN = document.querySelector("#menu-btn");
 const menu = document.querySelector(".menu");
 const menuList = document.querySelector("#menu__list");
@@ -13,7 +12,6 @@ const btnToHome = document.querySelector("#btnToHome");
 const MenuBtnToHome = document.querySelector("#MenuBtnToHome");
 const Strimlists = document.querySelector("#listStrimes");
 
-// Открытие и закрытие меню
 const burgerSvg = () => {
   navBTN.classList.toggle("active");
   menu.classList.toggle("active");
@@ -23,11 +21,10 @@ const burgerSvg = () => {
       : "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5";
 };
 
-// Прием ссылки и запуск плеера
 const openVideoIFrame = (linkVideo) => {
-  wrapPleer.innerHTML = `${linkVideo}`;
+  wrapPleer.innerHTML = linkVideo;
 };
-// загрузка контента
+
 window.addEventListener("load", () => {
   document.querySelector(".content").style.opacity = "0";
 
@@ -39,15 +36,12 @@ window.addEventListener("load", () => {
   }
 });
 
-// Получение текужего времени и даты
 let Data = new Date();
 const hours = Data.getHours() > 9 ? Data.getHours() : "0" + Data.getHours();
 const minutes =
   Data.getMinutes() > 9 ? Data.getMinutes() : "0" + Data.getMinutes();
 
-// формат отображения времени для сравнения с временем показа
 const time = `${hours}:${minutes}`;
-// Формат отображения даты для сравнения с датой показа
 const day = `${Data.getUTCFullYear()}.${
   Data.getUTCMonth() + 1 > 9
     ? Data.getUTCMonth() + 1
@@ -56,17 +50,14 @@ const day = `${Data.getUTCFullYear()}.${
   Data.getUTCDate() > 9 ? Data.getUTCDate() : "0" + Number(Data.getUTCDate())
 }`;
 
-// при нажатии, открывается home страница
 btnToHome.addEventListener("click", () => {
   document.querySelector(".wrap__pages").classList.add("info__none");
 });
 
-// Обновление и возврат на страницу Info
 MenuBtnToHome.addEventListener("click", () => {
   window.location.reload();
 });
 
-// при нажатии, запускается рандомный фильм из списка
 rundomFilms.addEventListener("click", () => {
   const randomLink =
     randomFilms[Math.floor(Math.random() * randomFilms.length)];
@@ -74,16 +65,14 @@ rundomFilms.addEventListener("click", () => {
   burgerSvg();
 });
 
-// при нажатии, открывается меню
 navBTN.addEventListener("click", () => {
   burgerSvg();
 });
 
-// в открытом меню формируется список ссылок
 catalogLinks.forEach((item) => {
   const li = document.createElement("li");
   li.classList.add("menu__list-item");
-  li.innerHTML = `<button class="menu__list-link" id="${item.id}" name="${item.name}">${item.name}</butt>`;
+  li.innerHTML = `<button class="menu__list-link" id="${item.id}" name="${item.name}">${item.name}</button>`;
   menuList.appendChild(li);
 
   li.firstChild.addEventListener("click", () => {
@@ -92,10 +81,7 @@ catalogLinks.forEach((item) => {
   });
 });
 
-// ListStrime
 transLinks.forEach((item) => {
-  
-  
   const li = document.createElement("li");
   li.classList.add("list__strim-item");
   li.dataset.data = item.data;
@@ -106,51 +92,43 @@ transLinks.forEach((item) => {
   li.dataset.href = item.link;
   li.dataset.active = item.active;
 
-  if (!li.dataset.img) {
-    li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${item.name}">
-                      <h3>${item.name}</h3>
-                      <span>Начало в: ${item.time}</span>
-                    </button>`;
-  } else {
-    li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${item.name}">
-    <img src="${item.img}" alt="${item.name}" style="flex: 1; height: 4rem; border-radius: 10px;">
+  li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${
+    item.name
+  }">
+    ${
+      item.img
+        ? `<img src="${item.img}" alt="${item.name}" style="flex: 1; height: 3rem; border-radius: 10px;">`
+        : ""
+    }
     <h3>${item.name}</h3>
     <span>Начало в - ${item.time}</span>
   </button>`;
-  }
 
   if (li.dataset.data === day) {
-    //начало трансляции
     const timeStart = `${Number(li.dataset.time.split(":")[0])}:${
       li.dataset.time.split(":")[1]
     }`;
-    // конец трансляции
     const timeFinish = `${Number(li.dataset.time.split(":")[0]) + 3}:${
       li.dataset.time.split(":")[1]
     }`;
-    console.log(timeStart + " - "+timeFinish);
 
-    // Когда совпадает текущяя дата и дата эфира
-    // То acnive трансляции меняется с 0 на 1
     if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0])) {
       li.dataset.active = 1;
     }
 
     const item = li.querySelector(".list__strim-link");
 
-
     const startLiveStrime = () => {
       item.classList.add("active");
       li.dataset.active = 1;
       li.addEventListener("click", () => openVideoIFrame(li.dataset.href));
-    }
+    };
     const endLiveStrime = () => {
       item.classList.remove("active");
       li.dataset.active = 0;
       item.style.color = "var(--disableGraay)";
       item.setAttribute("disabled", true);
-    }
-
+    };
 
     const timeStartHour = Number(timeStart.split(":")[0]);
     const timeFinishHour = Number(timeFinish.split(":")[0]);
@@ -158,35 +136,25 @@ transLinks.forEach((item) => {
 
     try {
       if (timeStartHour <= timeHour && timeFinishHour >= timeHour) {
-        console.log("start");
-          
-        li.dataset.active = 'Premium' ?  li.querySelector("span").textContent = "Трансляция целый день" : li.querySelector("span").textContent = "Трансляция началась";
-
+        if (li.dataset.premium === "Premium") {
+          li.querySelector("span").textContent = "Трансляция целый день";
+        } else {
+          li.querySelector("span").textContent = "Трансляция началась";
+        }
         li.classList.add("active");
         startLiveStrime();
-        console.dir(li.querySelector("span").textContent);
+      } else if (timeStartHour > timeHour) {
+        li.querySelector("span").textContent =
+          "Трансляция начнется в - " + timeStart;
+        li.dataset.active = 0;
       } else if (timeFinishHour <= timeHour) {
-        
-        if (li.dataset.premium === '1') {
-          console.log("full day");
-          li.querySelector("span").textContent = "Трансляция целый день";
-          startLiveStrime();
-          li.dataset.active = 1;
-        }
-        else {
-          console.log("end");
-          li.querySelector("span").textContent = "Трансляция закончилась";
-          endLiveStrime();
-          li.dataset.active = 0;
-        }
+        li.querySelector("span").textContent = "Трансляция закончилась";
+        endLiveStrime();
+        li.dataset.active = 0;
       }
     } catch (error) {
       console.dir(error);
     }
-
-    console.dir(li.dataset.data);
-    console.dir(li.dataset.premium);
-    console.dir(time);
 
     Strimlists.insertBefore(li, Strimlists.lastChild);
   }
