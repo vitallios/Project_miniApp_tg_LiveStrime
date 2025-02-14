@@ -34,8 +34,5 @@ export const transLinks = [
     premium: '',
     active: 0,
   },
-  
-
-
 ];
 
