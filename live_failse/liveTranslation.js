@@ -34,5 +34,15 @@ export const transLinks = [
     premium: "",
     active: 0,
   },
+  // {
+  //   id: 4,
+  //   name: `«Про Д2. Ажен - Безье» `,
+  //   link: `<a href="https://t.me/rugbyonsofa" target="_blank">Telegram-канал RUGBY_INFO</a>`,
+  //   data: "2025.02.14",
+  //   time: "17:00",
+  //   img: "https://sun9-1.userapi.com/impg/AZ01Qg1L3qVbIg4gSeS5UcLtJkQrl-MfDc-6Zw/93BhsFObOLk.jpg?size=1280x720&quality=95&sign=9bce15c0acfa53c060da9642984bc14a&type=video_thumb",
+  //   premium: "",
+  //   active: 0,
+  // },
 ];
 
