@@ -108,6 +108,7 @@ transLinks.forEach((item) => {
     const timeStart = `${Number(li.dataset.time.split(":")[0])}:${
       li.dataset.time.split(":")[1]
     }`;
+    
     const timeFinish = `${Number(li.dataset.time.split(":")[0]) + 3}:${
       li.dataset.time.split(":")[1]
     }`;
@@ -130,9 +131,11 @@ transLinks.forEach((item) => {
       item.setAttribute("disabled", true);
     };
 
-    const timeStartHour = Number(timeStart.split(":")[0]);
-    const timeFinishHour = Number(timeFinish.split(":")[0]);
-    const timeHour = Number(time.split(":")[0]);
+    const [timeStartHour, timeFinishHour, timeHour] = [
+      Number(timeStart.split(":")[0]),
+      Number(timeFinish.split(":")[0]),
+      Number(time.split(":")[0]),
+    ];
 
     try {
       if (timeStartHour <= timeHour && timeFinishHour >= timeHour) {
