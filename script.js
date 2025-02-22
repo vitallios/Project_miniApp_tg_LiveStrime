@@ -108,7 +108,7 @@ transLinks.forEach((item) => {
     const timeStart = `${Number(li.dataset.time.split(":")[0])}:${
       li.dataset.time.split(":")[1]
     }`;
-    
+
     const timeFinish = `${Number(li.dataset.time.split(":")[0]) + 3}:${
       li.dataset.time.split(":")[1]
     }`;
