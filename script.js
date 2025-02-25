@@ -42,22 +42,28 @@ const minutes =
   Data.getMinutes() > 9 ? Data.getMinutes() : "0" + Data.getMinutes();
 
 const time = `${hours}:${minutes}`;
+//console.log(time); // текущее время
+
 const day = `${Data.getUTCFullYear()}.${
   Data.getUTCMonth() + 1 > 9
     ? Data.getUTCMonth() + 1
     : "0" + (Data.getUTCMonth() + 1)
 }.${
   Data.getUTCDate() > 9 ? Data.getUTCDate() : "0" + Number(Data.getUTCDate())
-}`;
+}`; // текущая дата
+//console.log(day);
 
+// кнопка перехода на главную
 btnToHome.addEventListener("click", () => {
   document.querySelector(".wrap__pages").classList.add("info__none");
 });
 
+// кнопка перехода на главную
 MenuBtnToHome.addEventListener("click", () => {
   window.location.reload();
 });
 
+// кнопка рандомных фильмов
 rundomFilms.addEventListener("click", () => {
   const randomLink =
     randomFilms[Math.floor(Math.random() * randomFilms.length)];
@@ -65,14 +71,16 @@ rundomFilms.addEventListener("click", () => {
   burgerSvg();
 });
 
+// кнопка меню
 navBTN.addEventListener("click", () => {
   burgerSvg();
 });
 
+// каталог || лист трансляции
 catalogLinks.forEach((item) => {
   const li = document.createElement("li");
   li.classList.add("menu__list-item");
-  li.innerHTML = `<button class="menu__list-link" id="${item.id}" name="${item.name}">${item.name}</button>`;
+  li.innerHTML = `<button class="menu__list-link" id="${item.id}" name="${item.name}"> <img src="${item.img}" alt="${item.name}">   ${item.name}</button>`;
   menuList.appendChild(li);
 
   li.firstChild.addEventListener("click", () => {
@@ -108,14 +116,35 @@ transLinks.forEach((item) => {
     const timeStart = `${Number(li.dataset.time.split(":")[0])}:${
       li.dataset.time.split(":")[1]
     }`;
+    //console.log(timeStart); // время начала трансляции
 
-    const timeFinish = `${Number(li.dataset.time.split(":")[0]) + 3}:${
-      li.dataset.time.split(":")[1]
-    }`;
+    // вариант 1
+    // const timeFinish = li.dataset.premium
+    //   ? `${Number(li.dataset.time.split(":")[0]) + 8}:${li.dataset.time.split(":")[1]}`
+    //   : `${Number(li.dataset.time.split(":")[0]) + 3}:${li.dataset.time.split(":")[1]}`;
+
+    // вариант 2
+    const timeFinish =
+      li.dataset.premium === "Premium"
+        ? (() => {
+            const endHour = Number(li.dataset.time.split(":")[0]) + 8;
+            const newTime =
+              endHour < 24
+                ? `${endHour}:${li.dataset.time.split(":")[1]}`
+                : `${endHour - 24}:${li.dataset.time.split(":")[1]}`;
+            li.dataset.nextDay = endHour >= 24 ? "true" : "false";
+            return newTime;
+          })()
+        : (() => {
+            const endHour = Number(li.dataset.time.split(":")[0]) + 3;
+            return `${endHour}:${li.dataset.time.split(":")[1]}`;
+          })();
+    //console.log(timeFinish); // время конца трансляции
 
     if (Number(timeFinish.split(":")[0]) > Number(time.split(":")[0])) {
       li.dataset.active = 1;
     }
+    //console.log(li.dataset.active); // активна ли трансляция
 
     const item = li.querySelector(".list__strim-link");
 

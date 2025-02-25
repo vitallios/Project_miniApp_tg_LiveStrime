@@ -109,6 +109,13 @@ li {
     font-size: 18px;
     text-transform: uppercase;
     text-align: start;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 1vw;
+}
+.menu__list-link>img{
+    border-radius: 100%;
 }
 
 .btn {
@@ -363,12 +370,13 @@ li {
     width: 100%;
     justify-items: center;
 }
-/* .wrap>a{
+
+.wrap>a {
     display: flex;
-        margin: 50vh auto;
-        padding: 2vh;
-        border: 1px solid;
-        align-items: center;
-        justify-content: center;
-        width: 70vw;
-} */
+    margin: 50vh auto;
+    padding: 2vh;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+}
