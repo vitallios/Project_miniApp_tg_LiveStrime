@@ -115,26 +115,36 @@ transLinks.forEach((item, index) => {
     const footbol = []
     const basketbol = []
 
-    for (let i = 0; i < transLinks.length; i++) {
-      if (transLinks[i].category === 'хоккей') {
-        hockey.push(transLinks[i])
-      } else if (transLinks[i].category === 'регби') {
-        regby.push(transLinks[i])
-      } else if (transLinks[i].category === 'футбол') {
-        footbol.push(transLinks[i])
-      } else if (transLinks[i].category === 'баскетбол') {
-        basketbol.push(transLinks[i])
+    transLinks.forEach((item) => {
+      switch (item.category) {
+        case 'хоккей':
+          hockey.push(item);
+          break;
+        case 'регби':
+          regby.push(item);
+          break;
+        case 'футбол':
+          footbol.push(item);
+          break;
+        case 'баскетбол':
+          basketbol.push(item);
+          break;
+        default:
+          break;
       }
-    }
-    li.innerHTML = `<button class="list__strim-link" id="${index}" name="${item.name}">
-      ${item.img ? `<img src="${item.img}" alt="${item.name}" style="flex: 1; height: 3rem; border-radius: 10px;">` : ""}
-      <h3>${item.name}</h3>
-      <span>Начало в - ${item.time}</span>
-    </button>`;
+    });
+
+    li.innerHTML = `
+      <button class="list__strim-link" id="${index}" name="${item.name}">
+        ${item.img ? `<img src="${item.img}" alt="${item.name}" style="flex: 1; height: 3rem; border-radius: 10px;">` : ""}
+        <h3>${item.name}</h3>
+        <span>Начало в - ${item.time}</span>
+      </button>
+    `.trim();
     // 
   }
 
-
+// https://srrb.ru/category/translyacii-sportivnyx-sobytij
 
 
 
@@ -215,6 +225,6 @@ transLinks.forEach((item, index) => {
       console.dir(error);
     }
 
-    Strimlists.insertBefore(li, Strimlists.lastChild);
+    Strimlists.appendChild(li);
   }
 });
