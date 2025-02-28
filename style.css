@@ -332,6 +332,8 @@ li {
     border-radius: 10px;
 }
 
+
+
 .list__strim-item {
     border-bottom: 1px solid var(--akcent);
     line-height: 3vh;
@@ -379,4 +381,26 @@ li {
     align-items: center;
     justify-content: center;
     width: 70vw;
+}
+
+@media (min-width: 450px) {
+    #listStrimes {
+        display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4vw;
+        }
+}
+@media (min-width: 900px) {
+    #listStrimes {
+        display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4vw;
+        }
+}
+@media (min-width: 1400px) {
+    #listStrimes {
+        display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4vw;
+        }
 }

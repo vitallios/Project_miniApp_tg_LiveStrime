@@ -225,8 +225,21 @@ transLinks.forEach((item, index) => {
       console.dir(error);
     }
 
-    Strimlists.insertBefore(li, Strimlists.lastChild);
-    console.log(li);
-    
+
+    //сортируем список трансляций по времени
+    //сортируем список трансляций по времени
+    //если трансляция активна, то сортируем список по времени
+    //если трансляция неактивна, то добавляем ее в конец списка
+    const sortListStrime = (itemListActive) => {
+      const sortByTime = (a, b) => Number(a.dataset.time.split(":")[0]) - Number(b.dataset.time.split(":")[0]);
+
+      const insertElement = itemListActive != "1" ? Strimlists.lastChild : Strimlists.firstChild;
+
+      Strimlists.insertBefore(
+        li,
+        [...Strimlists.children].sort(sortByTime).find((item) => Number(item.dataset.time.split(":")[0]) > Number(li.dataset.time.split(":")[0])) || insertElement
+      );
+    };
+    sortListStrime(li.dataset.active);
   }
 });

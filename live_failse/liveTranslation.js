@@ -64,6 +64,36 @@ export const transLinks = [
     premium: "",
     active: 0,
   },
+  {
+    category: "футбол",
+    name: `Оболонь – Полесье.<br>Украинская премьер лига`,
+    link: `<iframe src=" https://p2plive3.top/stream/31.html "frameborder="0" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" allowfullscreen="allowfullscreen"></iframe>`,
+    data: "2025.02.28",
+    time: "14:00",
+    img: "https://srrb.ru/wp-content/uploads/2020/09/%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BC%D1%8F%D1%87.jpg",
+    premium: "",
+    active: 0,
+  },
+  {
+    category: "футбол",
+    name: `Карпаты – ЛНЗ.<br>Украинская премьер лига`,
+    link: `<iframe src=" https://p2plive3.top/stream/31.html "frameborder="0" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" allowfullscreen="allowfullscreen"></iframe>`,
+    data: "2025.02.28",
+    time: "19:00",
+    img: "https://srrb.ru/wp-content/uploads/2020/09/%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BC%D1%8F%D1%87.jpg",
+    premium: "",
+    active: 0,
+  },
+  {
+    category: "футбол",
+    name: `Динамо Махачкала – Локомотив.<br>Российская Премьер-лига`,
+    link: `<iframe style="width: 100%; max-width: 720px;" src="https://news.sportbox.ru/vdl/poster/2170101" width="720" height="405" frameborder="0" scrolling="no"></iframe>`,
+    data: "2025.02.28",
+    time: "18:30",
+    img: "https://srrb.ru/wp-content/uploads/2020/09/Российская-Премьер-Лига.jpg",
+    premium: "",
+    active: 0,
+  },
   // 
 
   
