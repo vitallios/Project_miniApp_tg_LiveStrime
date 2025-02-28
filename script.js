@@ -235,10 +235,14 @@ transLinks.forEach((item, index) => {
 
       const insertElement = itemListActive != "1" ? Strimlists.lastChild : Strimlists.firstChild;
 
-      Strimlists.insertBefore(
-        li,
-        [...Strimlists.children].sort(sortByTime).find((item) => Number(item.dataset.time.split(":")[0]) > Number(li.dataset.time.split(":")[0])) || insertElement
-      );
+      const sortedChildren = [...Strimlists.children].sort(sortByTime);
+
+      const insertBeforeElement = sortedChildren.find(
+        (item) => Number(item.dataset.time.split(":")[0]) > Number(li.dataset.time.split(":")[0])
+      ) || insertElement;
+
+      Strimlists.insertBefore(li, insertBeforeElement);
+      
     };
     sortListStrime(li.dataset.active);
   }
