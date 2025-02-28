@@ -5,7 +5,7 @@
 
 export const transLinks = [
   {
-    id: 1,
+    category: "регби",
     name: `Про Д2. Коломье - Брив`,
     link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456277947&hash=641364c87d17fdf1" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
     data: "2025.02.28",
@@ -15,7 +15,7 @@ export const transLinks = [
     active: 0,
   },
   {
-    id: 2,
+    category: "регби",
     name: `Про Д2. Ангулем - Орийяк`,
     link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456277948&hash=5b0e57b904dc3610" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
     data: "2025.02.28",
@@ -25,7 +25,7 @@ export const transLinks = [
     active: 0,
   },
   {
-    id: 3,
+    category: "регби",
     name: `Про Д2. Гренобль - Безье`,
     link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456277949&hash=93d67b6c7d4b483f" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
     data: "2025.02.28",
@@ -35,12 +35,32 @@ export const transLinks = [
     active: 0,
   },
   {
-    id: 3,
+    category: "хоккей",
     name: `Трактор – Ак Барс. КХЛ`,
     link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-56643473&id=456247195&hash=8f5b6947ccd16ee9" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
     data: "2025.02.28",
     time: "17:00",
     img: "https://srrb.ru/wp-content/uploads/2024/09/%D0%BA%D1%85%D0%BB.jpg",
+    premium: "",
+    active: 0,
+  },
+  {
+    category: "хоккей",
+    name: `Агидель – СКСО<br>Регулярный чемпионат Женской хоккейной лиги<br>(ЖХЛ)`,
+    link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-101412855&id=456242738&hash=731d71a1470ca6c7" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    data: "2025.02.28",
+    time: "15:00",
+    img: "https://srrb.ru/wp-content/uploads/2024/09/%D0%96%D1%85%D0%BB.jpg",
+    premium: "",
+    active: 0,
+  },
+  {
+    category: "хоккей",
+    name: `МСМО 7.62 - Торнадо<br>Регулярный чемпионат Женской хоккейной лиги<br>(ЖХЛ)`,
+    link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-101412855&id=456242739&hash=c1e52d1a2b0905b2" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    data: "2025.02.28",
+    time: "17:00",
+    img: "https://srrb.ru/wp-content/uploads/2024/09/%D0%96%D1%85%D0%BB.jpg",
     premium: "",
     active: 0,
   },

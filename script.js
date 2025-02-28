@@ -89,33 +89,60 @@ catalogLinks.forEach((item) => {
   });
 });
 
-transLinks.forEach((item) => {
+
+// list LiveStrime
+transLinks.forEach((item, index) => {
+
+  // console.dir(index);
+  
   const li = document.createElement("li");
   li.classList.add("list__strim-item");
   li.dataset.data = item.data;
-  li.dataset.id = item.id;
+  li.dataset.id = index;
   li.dataset.time = item.time;
   li.dataset.premium = item.premium;
   li.dataset.img = item.img;
   li.dataset.href = item.link;
   li.dataset.active = item.active;
+  li.dataset.category = item.category;
 
-  li.innerHTML = `<button class="list__strim-link" id="${item.id}" name="${
-    item.name
-  }">
-    ${
-      item.img
-        ? `<img src="${item.img}" alt="${item.name}" style="flex: 1; height: 3rem; border-radius: 10px;">`
-        : ""
+  const categories = ['хоккей', 'футбол', 'баскетбол', 'регби'];
+
+  if (categories.includes(li.dataset.category)) {
+    // 
+    const hockey = []
+    const regby = []
+    const footbol = []
+    const basketbol = []
+
+    for (let i = 0; i < transLinks.length; i++) {
+      if (transLinks[i].category === 'хоккей') {
+        hockey.push(transLinks[i])
+      } else if (transLinks[i].category === 'регби') {
+        regby.push(transLinks[i])
+      } else if (transLinks[i].category === 'футбол') {
+        footbol.push(transLinks[i])
+      } else if (transLinks[i].category === 'баскетбол') {
+        basketbol.push(transLinks[i])
+      }
     }
-    <h3>${item.name}</h3>
-    <span>Начало в - ${item.time}</span>
-  </button>`;
+    li.innerHTML = `<button class="list__strim-link" id="${index}" name="${item.name}">
+      ${item.img ? `<img src="${item.img}" alt="${item.name}" style="flex: 1; height: 3rem; border-radius: 10px;">` : ""}
+      <h3>${item.name}</h3>
+      <span>Начало в - ${item.time}</span>
+    </button>`;
+    // 
+  }
+
+
+
+
 
   if (li.dataset.data === day) {
     const timeStart = `${Number(li.dataset.time.split(":")[0])}:${
       li.dataset.time.split(":")[1]
     }`;
+
     //console.log(timeStart); // время начала трансляции
 
     // вариант 1
