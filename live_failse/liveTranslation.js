@@ -34,6 +34,16 @@ export const transLinks = [
     premium: "",
     active: 0,
   },
+  {
+    id: 3,
+    name: `Трактор – Ак Барс. КХЛ`,
+    link: `<iframe src="https://vkvideo.ru/video_ext.php?oid=-56643473&id=456247195&hash=8f5b6947ccd16ee9" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    data: "2025.02.28",
+    time: "17:00",
+    img: "https://srrb.ru/wp-content/uploads/2024/09/%D0%BA%D1%85%D0%BB.jpg",
+    premium: "",
+    active: 0,
+  },
   // 
 
   
