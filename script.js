@@ -225,6 +225,8 @@ transLinks.forEach((item, index) => {
       console.dir(error);
     }
 
-    Strimlists.appendChild(li);
+    Strimlists.insertBefore(li, Strimlists.lastChild);
+    console.log(li);
+    
   }
 });
