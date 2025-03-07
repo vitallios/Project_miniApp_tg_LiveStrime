@@ -93,6 +93,9 @@ catalogLinks.forEach((item) => {
 // list LiveStrime
 transLinks.forEach((item, index) => {
 
+  console.dir(item);
+  
+
   const li = document.createElement("li");
   li.classList.add("list__strim-item");
   li.dataset.data = item.data;
@@ -138,6 +141,7 @@ transLinks.forEach((item, index) => {
           other.push(item);
           break;
         default:
+          other.push(item);
           break;
       }
     });
