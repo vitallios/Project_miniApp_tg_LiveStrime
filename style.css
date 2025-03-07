@@ -330,6 +330,8 @@ li {
     background: #393939;
     padding: 0.5em;
     border-radius: 10px;
+    grid-template-rows: max-content;
+
 }
 
 
@@ -340,6 +342,7 @@ li {
     display: flex;
     padding: 0 2%;
     border-radius: 10px;
+    max-height: 25vh;
 }
 
 .list__strim-item.active {
