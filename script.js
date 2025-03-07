@@ -152,7 +152,7 @@ transLinks.forEach((item, index) => {
 
     li.innerHTML = `
       <button class="list__strim-link" id="${index}" name="${item.name}">
-        ${item.img ? `<img src="${item.img}" alt="${item.name}" style="flex: 1; height: 3rem; border-radius: 10px;">` : ""}
+        ${item.img ? `<img src="${item.img}" alt="${item.name}" style="flex: 1; height: 10vh; border-radius: 10px;">` : ""}
         <h3>${item.name}</h3>
         <span>Начало в - ${item.time}</span>
         ${item.premium === "Premium" ? `<span class="list__strim-premium">Premium</span>` : ""}
