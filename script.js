@@ -93,21 +93,25 @@ catalogLinks.forEach((item) => {
 // list LiveStrime
 transLinks.forEach((item, index) => {
 
-  console.dir(item);
+  // console.dir(item);
   
 
   const li = document.createElement("li");
+
+  const srcValue = item.link.split('src=')[1].split('"')[1].trim();
+  
+
   li.classList.add("list__strim-item");
   li.dataset.data = item.data;
   li.dataset.id = index;
   li.dataset.time = item.time;
   li.dataset.premium = item.premium;
   li.dataset.img = item.img;
-  li.dataset.href = item.link;
+  li.dataset.href = item.link === `<iframe src="${srcValue}" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>` ? item.link : `<iframe src="${srcValue}" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
   li.dataset.active = item.active;
   li.dataset.category = item.category;
 
-  console.dir(item);
+  // console.dir(item.link);
   
 
   // console.dir(li.dataset.data ? li.dataset.data : ' ');

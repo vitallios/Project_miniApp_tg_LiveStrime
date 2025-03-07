@@ -65,6 +65,7 @@ export const transLinks = [
     premium: "",
     active: 0,
   },
+
   {
     category: "другое",
     name: "Лыжи. Женщины. Эстафета 4х7,5 км. Чемпионат мира 2025. 7 марта 2025.",
