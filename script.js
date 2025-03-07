@@ -93,8 +93,6 @@ catalogLinks.forEach((item) => {
 // list LiveStrime
 transLinks.forEach((item, index) => {
 
-  // console.dir(index);
-  
   const li = document.createElement("li");
   li.classList.add("list__strim-item");
   li.dataset.data = item.data;
@@ -106,7 +104,13 @@ transLinks.forEach((item, index) => {
   li.dataset.active = item.active;
   li.dataset.category = item.category;
 
-  const categories = ['хоккей', 'футбол', 'баскетбол', 'регби'];
+  console.dir(item);
+  
+
+  // console.dir(li.dataset.data ? li.dataset.data : ' ');
+  
+
+  const categories = ['хоккей', 'футбол', 'баскетбол', 'регби', 'другое'];
 
   if (categories.includes(li.dataset.category)) {
     // 
@@ -114,6 +118,7 @@ transLinks.forEach((item, index) => {
     const regby = []
     const footbol = []
     const basketbol = []
+    const other = []
 
     transLinks.forEach((item) => {
       switch (item.category) {
@@ -129,6 +134,9 @@ transLinks.forEach((item, index) => {
         case 'баскетбол':
           basketbol.push(item);
           break;
+        case 'другое':
+          other.push(item);
+          break;
         default:
           break;
       }
@@ -139,6 +147,7 @@ transLinks.forEach((item, index) => {
         ${item.img ? `<img src="${item.img}" alt="${item.name}" style="flex: 1; height: 3rem; border-radius: 10px;">` : ""}
         <h3>${item.name}</h3>
         <span>Начало в - ${item.time}</span>
+        ${item.premium === "Premium" ? `<span class="list__strim-premium">Premium</span>` : ""}
       </button>
     `.trim();
     // 
@@ -222,7 +231,7 @@ transLinks.forEach((item, index) => {
         li.dataset.active = 0;
       }
     } catch (error) {
-      console.dir(error);
+      // console.dir(error + " - " + li.dataset.name);
     }
 
 
