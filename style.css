@@ -342,7 +342,7 @@ li {
     display: flex;
     padding: 0 2%;
     border-radius: 10px;
-    max-height: 25vh;
+    /* max-height: 25vh; */
 }
 
 .list__strim-item.active {

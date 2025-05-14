@@ -145,10 +145,12 @@ transLinks.forEach((item, index) => {
           other.push(item);
           break;
         default:
-          other.push(item);
+          // other.push(item);
           break;
       }
     });
+  console.log(li);
+  
 
     li.innerHTML = `
       <button class="list__strim-link" id="${index}" name="${item.name}">
