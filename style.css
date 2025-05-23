@@ -400,7 +400,7 @@ li {
     width: 70vw;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 400px) {
     #listStrimes {
         display: grid;
             grid-template-columns: repeat(2, 1fr);
