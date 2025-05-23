@@ -26,6 +26,7 @@ const currentMinutes = currentDate.getMinutes().toString().padStart(2, '0');
 const currentTime = `${currentHours}:${currentMinutes}`;
 const currentDay = `${currentDate.getUTCFullYear()}.${(currentDate.getUTCMonth() + 1).toString().padStart(2, '0')}.${currentDate.getUTCDate().toString().padStart(2, '0')}`;
 
+
 /**
  * Переключает состояние бургер-меню и меняет иконку
  */
@@ -81,6 +82,8 @@ const getSafeIframe = (html) => {
  */
 const isTransmissionActive = (startTime, endTime, date = currentDay) => {
   // Если дата не совпадает с текущей - трансляция неактивна
+  console.log(date);
+  
   if (date !== currentDay) return false;
 
   // Разбираем время на часы и минуты
@@ -118,6 +121,9 @@ const isTransmissionActive = (startTime, endTime, date = currentDay) => {
 const isTransmissionFinished = (endTime, date = currentDay) => {
   // Если дата не совпадает с текущей - трансляция неактивна
   if (date !== currentDay) return false;
+
+
+  
 
   // Разбираем время на часы и минуты
   const parseTime = (timeStr) => {
@@ -204,6 +210,8 @@ const renderTransmissions = () => {
   transLinks.forEach((item, index) => {
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
+    // !! Проверка спска трансляциий
+    // console.dir(item);
 
     // Рассчитываем время трансляции
     const {
