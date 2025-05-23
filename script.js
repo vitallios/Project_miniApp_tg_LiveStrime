@@ -234,7 +234,7 @@ const renderTransmissions = () => {
       if (item.data === currentDay) {
         timeInfo = `Начало в ${startTime}`;
       } else {
-        timeInfo = `Запланировано на ${item.data}`;
+        timeInfo = `Запланировано на ${item.data} в ${startTime}`;
       }
     }
 
@@ -277,39 +277,105 @@ const renderTransmissions = () => {
 /**
  * Сортирует трансляции по времени начала
  */
+// const sortTransmissions = () => {
+//   const items = Array.from(Strimlists.children);
+
+//   items.sort((a, b) => {
+//     // Сначала сортируем по статусу (активные > запланированные > завершенные)
+//     const aActive = a.dataset.active === '1';
+//     const bActive = b.dataset.active === '1';
+//     const aFinished = a.dataset.finished === '1';
+//     const bFinished = b.dataset.finished === '1';
+
+//     if (aActive && !bActive) return -1;
+//     if (!aActive && bActive) return 1;
+//     if (aFinished && !bFinished) return 1;
+//     if (!aFinished && bFinished) return -1;
+
+//     // Затем сортируем по времени начала
+//     const aTime = a.dataset.time.split(':').map(Number);
+//     const bTime = b.dataset.time.split(':').map(Number);
+//     return (aTime[0] * 60 + aTime[1]) - (bTime[0] * 60 + bTime[1]);
+//   });
+
+//   // Группируем элементы по статусам
+//   const activeItems = items.filter(item => item.dataset.active === '1');
+//   const upcomingItems = items.filter(item => 
+//     item.dataset.active === '0' && 
+//     item.dataset.finished === '0' && 
+//     (item.dataset.data === currentDay || item.dataset.data > currentDay)
+//   );
+//   const finishedItems = items.filter(item => item.dataset.finished === '1');
+
+//   // Очищаем список и добавляем элементы в правильном порядке
+//   Strimlists.innerHTML = '';
+//   Strimlists.append(...activeItems, ...upcomingItems, ...finishedItems);
+// };
+
+/**
+ * Сортирует трансляции в порядке: активные > ближайшие > запланированные > завершенные
+ */
 const sortTransmissions = () => {
   const items = Array.from(Strimlists.children);
 
   items.sort((a, b) => {
-    // Сначала сортируем по статусу (активные > запланированные > завершенные)
+    // Получаем данные о трансляциях
     const aActive = a.dataset.active === '1';
     const bActive = b.dataset.active === '1';
     const aFinished = a.dataset.finished === '1';
     const bFinished = b.dataset.finished === '1';
-
-    if (aActive && !bActive) return -1;
-    if (!aActive && bActive) return 1;
-    if (aFinished && !bFinished) return 1;
-    if (!aFinished && bFinished) return -1;
-
-    // Затем сортируем по времени начала
+    const aDate = a.dataset.data;
+    const bDate = b.dataset.data;
     const aTime = a.dataset.time.split(':').map(Number);
     const bTime = b.dataset.time.split(':').map(Number);
-    return (aTime[0] * 60 + aTime[1]) - (bTime[0] * 60 + bTime[1]);
+    const aTotalMinutes = aTime[0] * 60 + aTime[1];
+    const bTotalMinutes = bTime[0] * 60 + bTime[1];
+
+    // 1. Активные трансляции - в начало
+    if (aActive && !bActive) return -1;
+    if (!aActive && bActive) return 1;
+
+    // 2. Ближайшие трансляции (сегодня, но еще не начавшиеся)
+    if (!aActive && !bActive && !aFinished && !bFinished) {
+      // Если обе на сегодня
+      if (aDate === currentDay && bDate === currentDay) {
+        return aTotalMinutes - bTotalMinutes;
+      }
+      // Если только одна на сегодня - она должна быть выше
+      if (aDate === currentDay) return -1;
+      if (bDate === currentDay) return 1;
+    }
+
+    // 3. Запланированные трансляции (на будущие даты)
+    if (aDate > currentDay && bDate > currentDay) {
+      // Сначала сравниваем даты
+      if (aDate !== bDate) {
+        return aDate.localeCompare(bDate);
+      }
+      // Если даты одинаковые - сравниваем время
+      return aTotalMinutes - bTotalMinutes;
+    }
+    if (aDate > currentDay) return -1;
+    if (bDate > currentDay) return 1;
+
+    // 4. Завершенные трансляции - в конец
+    if (aFinished && !bFinished) return 1;
+    if (!aFinished && bFinished) return -1;
+    if (aFinished && bFinished) {
+      // Среди завершенных сортируем по дате (новые выше)
+      if (aDate !== bDate) {
+        return bDate.localeCompare(aDate);
+      }
+      // Если даты одинаковые - сортируем по времени (поздние выше)
+      return bTotalMinutes - aTotalMinutes;
+    }
+
+    return 0;
   });
 
-  // Группируем элементы по статусам
-  const activeItems = items.filter(item => item.dataset.active === '1');
-  const upcomingItems = items.filter(item => 
-    item.dataset.active === '0' && 
-    item.dataset.finished === '0' && 
-    (item.dataset.data === currentDay || item.dataset.data > currentDay)
-  );
-  const finishedItems = items.filter(item => item.dataset.finished === '1');
-
-  // Очищаем список и добавляем элементы в правильном порядке
+  // Очищаем список и добавляем элементы в новом порядке
   Strimlists.innerHTML = '';
-  Strimlists.append(...activeItems, ...upcomingItems, ...finishedItems);
+  items.forEach(item => Strimlists.appendChild(item));
 };
 
 /**

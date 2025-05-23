@@ -134,6 +134,36 @@ export const transLinks = [
     "premium": "",
     "active": 0
   },
+  {
+    "category": "🏉 Регби",
+    "name": "4 тур Чемпионата России по регби-7 среди женских команд в Красноярске. Второй игровой день",
+    "link": "<iframe src=\"https://vk.com/video_ext.php?oid=-40984897&id=456243738&hash=397c9145f1facbb1\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.05.25",
+    "time": "08:00",
+    "img": "https://sun1-93.userapi.com/impg/qyxa0RtYZteMa9RQNvGuolxzNEZPfGIGDOUGRA/GsOSooDbK1U.jpg?size=1280x720&quality=95&sign=a67d4581f3f5422cab13d52595d4b673&type=video_thumb",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "🏉 Регби",
+    "name": "25 мая, «Красный Яр» – «Слава», стадион «Красный Яр», Красноярск",
+    "link": "<iframe class=\"sb-iframe\" src=\"https://sportsru.sprinttyott.com/embed/hrio2v3pkKvkWsZVDODN7dSl3bEAJ45axzQWr-CUVAY?autoplay=1&amp;loop=1&amp;muted=1\" height=\"410\" width=\"730\" loading=\"lazy\" allow=\"fullscreen: none\" type=\"iframe\" index=\"8\"></iframe>",
+    "data": "2025.05.25",
+    "time": "11:00",
+    "img": "https://st.video.sports.ru/thumbnail/preview/682dbdc64075abc0cfcb1a18/maxres.png",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "🏉 Регби",
+    "name": "26 мая, «Динамо» – «Енисей-СТМ», спортивный городок «Лужники», Москва",
+    "link": "<iframe class=\"sb-iframe\" src=\"https://sportsru.sprinttyott.com/embed/uVFgjgItOXB8M49bIKLuKc7Bf2qKxAh9wehZoKi0DV8?autoplay=1&amp;loop=1&amp;muted=1\" height=\"410\" width=\"730\" loading=\"lazy\" allow=\"fullscreen: none\" type=\"iframe\" index=\"17\"></iframe>",
+    "data": "2025.05.26",
+    "time": "16:00",
+    "img": "https://st.video.sports.ru/thumbnail/preview/682dbddd41686dfa3921ebdb/maxres.png",
+    "premium": "",
+    "active": 0
+  },
 ]
 
 // {
