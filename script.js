@@ -149,26 +149,21 @@ const renderTransmissions = () => {
   Strimlists.innerHTML = '';
 
   transLinks.forEach((item, index) => {
-    // Пропускаем трансляции с прошедшей датой
-    if (isDatePassed(item.data)) {
-      return;
-    }
-
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
 
-    const {
-      startTime,
-      endTime,
-      endDay
-    } = calculateTransmissionTime(item.time, item.premium);
+    const { startTime, endTime, endDay } = calculateTransmissionTime(item.time, item.premium);
     const isActive = isTransmissionActive(startTime, endTime, item.data);
+    const isPast = isDatePassed(item.data) || 
+                  (item.data === currentDay && currentTime > endTime);
 
     let timeInfo;
-    if (isActive) {
-      timeInfo = item.premium === "Premium" ?
-        "Трансляция весь день" :
-        `Идет трансляция (до ${endTime})`;
+    if (isPast) {
+      timeInfo = "Завершено";
+    } else if (isActive) {
+      timeInfo = item.premium === "Premium" 
+        ? "Трансляция весь день" 
+        : `Идет трансляция (до ${endTime})`;
     } else {
       if (item.data === currentDay) {
         timeInfo = `Начало в ${startTime}`;
@@ -178,7 +173,7 @@ const renderTransmissions = () => {
     }
 
     const li = document.createElement('li');
-    li.className = `list__strim-item ${isActive ? 'active' : ''}`;
+    li.className = `list__strim-item ${isActive ? 'active' : ''} ${isPast ? 'past' : ''}`;
     li.dataset.id = `transmission-${index}`;
     li.dataset.time = item.time;
     li.dataset.premium = item.premium || '';
@@ -189,8 +184,9 @@ const renderTransmissions = () => {
     li.dataset.category = item.category || 'другое';
 
     li.innerHTML = `
-      <button class="list__strim-link ${isActive ? 'active' : ''}" 
+      <button class="list__strim-link ${isActive ? 'active' : ''} ${isPast ? 'past' : ''}" 
               id="${item.id}" 
+              ${isPast ? 'disabled' : ''}
               dataTransmissionIndex="${item.data}"  
               startTransmissionTime="${startTime}" 
               endTime="${endTime}">
@@ -201,7 +197,7 @@ const renderTransmissions = () => {
       </button>
     `;
 
-    if (isActive) {
+    if (isActive && !isPast) {
       li.addEventListener('click', () => openVideoIFrame(iframeHTML));
     }
 
@@ -224,6 +220,8 @@ const sortTransmissions = () => {
     const bDate = b.dataset.data;
     const aTime = a.dataset.time.split(':').map(Number);
     const bTime = b.dataset.time.split(':').map(Number);
+    const aPast = a.classList.contains('past');
+    const bPast = b.classList.contains('past');
 
     // Активные трансляции в начало
     if (aActive && !bActive) return -1;
@@ -232,6 +230,10 @@ const sortTransmissions = () => {
     // Затем сегодняшние трансляции
     if (aDate === currentDay && bDate !== currentDay) return -1;
     if (aDate !== currentDay && bDate === currentDay) return 1;
+
+    // Затем завершенные в конец
+    if (aPast && !bPast) return 1;
+    if (!aPast && bPast) return -1;
 
     // Затем сортируем по времени
     return (aTime[0] * 60 + aTime[1]) - (bTime[0] * 60 + bTime[1]);
