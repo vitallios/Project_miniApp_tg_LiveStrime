@@ -75,7 +75,7 @@ export const transLinks =[
     "active": 0
   },
   {
-    "category": "другое",
+    "category": "дартс",
     "name": "Чемпионат России 2025 по дартсу. Прямая 27 мая 2025",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"500\" sandbox=\"allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation\" src=\" https://darts-tv.ru/darts_5a_graf.mp4 \" width=\"720\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
     "data": "2025.05.27",
