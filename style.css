@@ -437,3 +437,58 @@ li {
             gap: 4vw;
         }
 }
+
+
+
+.home__header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &>h2{
+        flex: 1;
+    }
+}
+
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--bg-pages);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 1em 0;
+}
+
+.filter-btn:hover {
+  background-color: #ddd;
+}
+
+.filter-btn.active {
+  background-color: var(--akcent);
+  color: var(--dartGraay);
+}
+
+@media (max-width: 768px) {
+  .filter-buttons {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .filter-btn {
+    white-space: nowrap;
+  }
+}
+

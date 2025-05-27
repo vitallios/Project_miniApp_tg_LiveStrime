@@ -18,6 +18,7 @@ const rundomFilms = document.querySelector("#rundomFilms");
 const btnToHome = document.querySelector("#btnToHome");
 const MenuBtnToHome = document.querySelector("#MenuBtnToHome");
 const Strimlists = document.querySelector("#listStrimes");
+const filterButtons = document.querySelector(".filter-buttons");
 
 // Текущие дата и время
 const currentDate = new Date();
@@ -25,6 +26,10 @@ const currentHours = currentDate.getHours().toString().padStart(2, '0');
 const currentMinutes = currentDate.getMinutes().toString().padStart(2, '0');
 const currentTime = `${currentHours}:${currentMinutes}`;
 const currentDay = `${currentDate.getUTCFullYear()}.${(currentDate.getUTCMonth() + 1).toString().padStart(2, '0')}.${currentDate.getUTCDate().toString().padStart(2, '0')}`;
+
+// Переменные для фильтрации
+let currentFilter = 'all';
+const categories = [...new Set(transLinks.map(item => item.category || 'другое'))];
 
 /**
  * Проверяет, прошла ли дата трансляции
@@ -157,6 +162,12 @@ const renderTransmissions = () => {
     const isPast = isDatePassed(item.data) || 
                   (item.data === currentDay && currentTime > endTime);
 
+    // Пропускаем элементы, которые не соответствуют текущему фильтру
+    if (currentFilter === 'active' && !isActive) return;
+    if (currentFilter === 'planned' && (isActive || isPast)) return;
+    if (currentFilter !== 'all' && currentFilter !== 'active' && currentFilter !== 'planned' && 
+        item.category !== currentFilter) return;
+
     let timeInfo;
     if (isPast) {
       timeInfo = "Завершено";
@@ -268,6 +279,32 @@ const initCatalogMenu = () => {
   });
 };
 
+/**
+ * Создает кнопки фильтрации
+ */
+const createFilterButtons = () => {
+  const buttonsHTML = `
+    <button class="filter-btn active" data-filter="all">Все трансляции</button>
+    <button class="filter-btn" data-filter="active">Активные сейчас</button>
+    <button class="filter-btn" data-filter="planned">Запланированные</button>
+    ${categories.map(category => 
+      `<button class="filter-btn" data-filter="${category}">${category}</button>`
+    ).join('')}
+  `;
+  
+  filterButtons.innerHTML = buttonsHTML;
+
+  // Добавляем обработчики событий для кнопок фильтрации
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelector('.filter-btn.active').classList.remove('active');
+      btn.classList.add('active');
+      currentFilter = btn.dataset.filter;
+      renderTransmissions();
+    });
+  });
+};
+
 // Инициализация при загрузке страницы
 window.addEventListener('load', () => {
   document.querySelector('.content').style.opacity = '0';
@@ -276,6 +313,7 @@ window.addEventListener('load', () => {
     loader.style.display = 'none';
     document.querySelector('.content').style.opacity = '1';
     initCatalogMenu();
+    createFilterButtons();
     renderTransmissions();
   }, 1000);
 });
