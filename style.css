@@ -471,7 +471,7 @@ li {
 }
 
 .filter-btn:hover {
-  background-color: #ddd;
+  background-color: var(--bg-pages);
 }
 
 .filter-btn.active {
