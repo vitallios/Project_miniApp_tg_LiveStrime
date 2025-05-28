@@ -425,6 +425,7 @@ li {
         grid-template-columns: repeat(2, 1fr);
         gap: 2vw;
         max-height: 75vh;
+        grid-template-rows: auto;
     }
 }
 
@@ -432,7 +433,6 @@ li {
     #listStrimes {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
         gap: 3vw;
     }
 }
