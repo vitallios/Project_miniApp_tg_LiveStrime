@@ -426,6 +426,7 @@ li {
         gap: 2vw;
         max-height: 75vh;
         grid-template-rows: auto;
+        align-content: center;
     }
 }
 
