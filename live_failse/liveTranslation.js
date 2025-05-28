@@ -176,6 +176,8 @@ export const transLinks =[
   }
 ]
 
+
+// git add . && git commit -m "update" && git push
 // {
 //   category: "регби",
 //   name: "«Нортгемптон» — «Лестер». Премьершип",
