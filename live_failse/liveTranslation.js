@@ -19,7 +19,7 @@ export const transLinks =[
     "name": "Пул чемпионов 2025. Прямая 2 июня 2025.",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-229099122&amp;id=456239049&amp;hash=9b65fb4148ce5074\" width=\"640\"></iframe>",
     "data": "2025.06.02",
-    "time": "22:00",
+    "time": "20:00",
     "img": "https://srrb.ru/wp-content/uploads/2025/05/бильярд-пул-9.avif",
     "premium": "",
     "active": 0
