@@ -32,9 +32,19 @@ let currentFilter = 'all';
 const categories = [...new Set(transLinks.map(item => item.category || 'другое'))];
 
 /**
- * Проверяет, прошла ли дата трансляции
- * @param {string} date - Дата трансляции (YYYY.MM.DD)
- * @returns {boolean} true если дата прошла
+ * Преобразует время в формате HH:MM в минуты с начала дня
+ * @param {string} timeStr - Время в формате HH:MM
+ * @returns {number} Количество минут с начала дня
+ */
+const timeToMinutes = (timeStr) => {
+  const [hours, minutes] = timeStr.split(':').map(Number);
+  return hours * 60 + minutes;
+};
+
+/**
+ * Проверяет, прошла ли указанная дата по сравнению с текущей датой
+ * @param {string} date - Дата в формате YYYY.MM.DD
+ * @returns {boolean} Возвращает true, если переданная дата раньше текущей
  */
 const isDatePassed = (date) => {
   if (!date) return false;
@@ -42,7 +52,7 @@ const isDatePassed = (date) => {
 };
 
 /**
- * Переключает состояние бургер-меню и меняет иконку
+ * Переключает состояние бургер-меню (открыто/закрыто) и меняет иконку гамбургера на крестик
  */
 const toggleBurgerMenu = () => {
   navBTN.classList.toggle("active");
@@ -58,7 +68,7 @@ const toggleBurgerMenu = () => {
 };
 
 /**
- * Открывает видео в плеере
+ * Открывает видео в плеере, вставляя HTML iframe
  * @param {string} videoHTML - HTML-код iframe с видео
  */
 const openVideoIFrame = (videoHTML) => {
@@ -66,9 +76,9 @@ const openVideoIFrame = (videoHTML) => {
 };
 
 /**
- * Создает безопасный iframe из HTML-строки
+ * Создает безопасный iframe из HTML-строки, проверяя наличие src
  * @param {string} html - HTML-код iframe
- * @returns {string} Безопасный iframe или пустая строка
+ * @returns {string} Безопасный iframe или пустая строка, если src отсутствует
  */
 const getSafeIframe = (html) => {
   try {
@@ -86,69 +96,89 @@ const getSafeIframe = (html) => {
 };
 
 /**
- * Проверяет, активна ли трансляция в текущий момент
- * @param {string} startTime - Время начала (HH:MM)
- * @param {string} endTime - Время окончания (HH:MM)
- * @param {string} [date=currentDay] - Дата трансляции (YYYY.MM.DD)
- * @returns {boolean} true если трансляция активна
+ * Проверяет, активна ли трансляция в текущий момент времени
+ * @param {string} startTime - Время начала в формате HH:MM
+ * @param {string} endTime - Время окончания в формате HH:MM
+ * @param {string} [date=currentDay] - Дата трансляции в формате YYYY.MM.DD
+ * @returns {boolean} Возвращает true, если трансляция активна сейчас
  */
 const isTransmissionActive = (startTime, endTime, date = currentDay) => {
   if (date !== currentDay) return false;
 
-  const parseTime = (timeStr) => {
-    const [hours, minutes] = timeStr.split(':').map(Number);
-    return {
-      hours,
-      minutes
-    };
-  };
+  const startMinutes = timeToMinutes(startTime);
+  const endMinutes = timeToMinutes(endTime);
+  const nowMinutes = timeToMinutes(currentTime);
 
-  const start = parseTime(startTime);
-  const end = parseTime(endTime);
-  const now = parseTime(currentTime);
-
-  const startTotal = start.hours * 60 + start.minutes;
-  const endTotal = end.hours * 60 + end.minutes;
-  const nowTotal = now.hours * 60 + now.minutes;
-
-  if (endTotal < startTotal) {
-    return nowTotal >= startTotal || nowTotal <= endTotal;
+  // Если трансляция переходит через полночь (например, 22:00-01:00)
+  if (endMinutes < startMinutes) {
+    return nowMinutes >= startMinutes || nowMinutes <= endMinutes;
   }
 
-  return nowTotal >= startTotal && nowTotal <= endTotal;
+  // Обычный случай (например, 10:00-13:00)
+  return nowMinutes >= startMinutes && nowMinutes <= endMinutes;
 };
 
 /**
- * Рассчитывает время окончания трансляции
- * @param {string} startTime - Время начала (HH:MM)
- * @param {string} premium - Premium статус ("Premium" или любое другое значение)
- * @returns {Object} {startTime, endTime} - Форматированное время начала и окончания
+ * Рассчитывает время окончания трансляции на основе времени начала и типа (Premium/обычная)
+ * @param {string} startTime - Время начала в формате HH:MM
+ * @param {string} premium - Строка "Premium" для премиум-трансляций
+ * @returns {Object} Объект с временем начала, окончания и датой окончания
  */
 const calculateTransmissionTime = (startTime, premium) => {
-  const [hours, minutes] = startTime.split(':').map(Number);
-  const durationHours = premium === "Premium" ? 8 : 3;
+  const startMinutes = timeToMinutes(startTime);
+  const durationMinutes = premium === "Premium" ? 8 * 60 : 3 * 60;
+  const endMinutes = startMinutes + durationMinutes;
 
-  let endHour = hours + durationHours;
   let endDay = currentDay;
-
-  if (endHour >= 24) {
-    endHour -= 24;
-    const nextDate = new Date(currentDate);
-    nextDate.setDate(nextDate.getDate() + 1);
-    endDay = `${nextDate.getUTCFullYear()}.${(nextDate.getUTCMonth() + 1).toString().padStart(2, '0')}.${nextDate.getUTCDate().toString().padStart(2, '0')}`;
+  
+  // Если трансляция переходит на следующий день
+  if (endMinutes >= 1440) { // 1440 минут = 24 часа
+    endDay = new Date(currentDate);
+    endDay.setDate(endDay.getDate() + 1);
+    endDay = `${endDay.getUTCFullYear()}.${(endDay.getUTCMonth() + 1).toString().padStart(2, '0')}.${endDay.getUTCDate().toString().padStart(2, '0')}`;
   }
+
+  const endHour = Math.floor((endMinutes % 1440) / 60);
+  const endMinute = endMinutes % 60;
 
   const formatTime = (h, m) => `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`;
 
   return {
-    startTime: formatTime(hours, minutes),
-    endTime: formatTime(endHour, minutes),
-    endDay
+    startTime: startTime,
+    endTime: formatTime(endHour, endMinute),
+    endDay: endDay
   };
 };
 
 /**
- * Обновленная функция рендеринга трансляций
+ * Проверяет, завершена ли трансляция
+ * @param {Object} item - Объект трансляции
+ * @returns {boolean} Возвращает true, если трансляция завершена
+ */
+const isTransmissionPast = (item) => {
+  // Если дата трансляции уже прошла
+  if (isDatePassed(item.data)) return true;
+  
+  const { endTime, endDay } = calculateTransmissionTime(item.time, item.premium);
+  
+  // Если трансляция переходит на следующий день
+  if (endDay !== currentDay) {
+    // Проверяем, не прошла ли дата окончания
+    if (isDatePassed(endDay)) return true;
+    
+    // Если дата окончания сегодня, проверяем время
+    if (endDay === currentDay) {
+      return timeToMinutes(currentTime) > timeToMinutes(endTime);
+    }
+    return false;
+  }
+  
+  // Для трансляций в пределах одного дня
+  return timeToMinutes(currentTime) > timeToMinutes(endTime);
+};
+
+/**
+ * Рендерит список трансляций с учетом текущего фильтра
  */
 const renderTransmissions = () => {
   Strimlists.innerHTML = '';
@@ -159,8 +189,8 @@ const renderTransmissions = () => {
 
     const { startTime, endTime, endDay } = calculateTransmissionTime(item.time, item.premium);
     const isActive = isTransmissionActive(startTime, endTime, item.data);
-    const isPast = isDatePassed(item.data) || 
-                  (item.data === currentDay && currentTime > endTime);
+    const isPast = isTransmissionPast(item);
+    const isFuture = item.data === currentDay && timeToMinutes(currentTime) < timeToMinutes(startTime);
 
     // Пропускаем элементы, которые не соответствуют текущему фильтру
     if (currentFilter === 'active' && !isActive) return;
@@ -175,16 +205,14 @@ const renderTransmissions = () => {
       timeInfo = item.premium === "Premium" 
         ? "Трансляция весь день" 
         : `Идет трансляция (до ${endTime})`;
+    } else if (isFuture) {
+      timeInfo = `Начнётся в ${startTime}`;
     } else {
-      if (item.data === currentDay) {
-        timeInfo = `Начало в ${startTime}`;
-      } else {
-        timeInfo = `Запланировано на ${item.data} в ${startTime}`;
-      }
+      timeInfo = `Запланировано на ${item.data} в ${startTime}`;
     }
 
     const li = document.createElement('li');
-    li.className = `list__strim-item ${isActive ? 'active' : ''} ${isPast ? 'past' : ''}`;
+    li.className = `list__strim-item ${isActive ? 'active' : ''} ${isPast ? 'past' : ''} ${isFuture ? 'future' : ''}`;
     li.dataset.id = `transmission-${index}`;
     li.dataset.time = item.time;
     li.dataset.premium = item.premium || '';
@@ -195,7 +223,7 @@ const renderTransmissions = () => {
     li.dataset.category = item.category || 'другое';
 
     li.innerHTML = `
-      <button class="list__strim-link ${isActive ? 'active' : ''} ${isPast ? 'past' : ''}" 
+      <button class="list__strim-link ${isActive ? 'active' : ''} ${isPast ? 'past' : ''} ${isFuture ? 'future' : ''}" 
               id="${item.id}" 
               ${isPast ? 'disabled' : ''}
               dataTransmissionIndex="${item.data}"  
@@ -219,7 +247,7 @@ const renderTransmissions = () => {
 };
 
 /**
- * Сортирует трансляции: активные > сегодняшние > будущие
+ * Сортирует трансляции в порядке: активные > сегодняшние > будущие > завершенные
  */
 const sortTransmissions = () => {
   const items = Array.from(Strimlists.children);
@@ -229,25 +257,35 @@ const sortTransmissions = () => {
     const bActive = b.dataset.active === '1';
     const aDate = a.dataset.data;
     const bDate = b.dataset.data;
-    const aTime = a.dataset.time.split(':').map(Number);
-    const bTime = b.dataset.time.split(':').map(Number);
+    const aTime = timeToMinutes(a.dataset.time);
+    const bTime = timeToMinutes(b.dataset.time);
     const aPast = a.classList.contains('past');
     const bPast = b.classList.contains('past');
+    const aFuture = a.classList.contains('future');
+    const bFuture = b.classList.contains('future');
 
-    // Активные трансляции в начало
+    // 1. Активные трансляции в начало
     if (aActive && !bActive) return -1;
     if (!aActive && bActive) return 1;
 
-    // Затем сегодняшние трансляции
+    // 2. Будущие трансляции сегодня
+    if (aFuture && bFuture && aDate === currentDay && bDate === currentDay) {
+      return aTime - bTime;
+    }
+    if (aFuture && !bFuture && aDate === currentDay) return -1;
+    if (!aFuture && bFuture && bDate === currentDay) return 1;
+
+    // 3. Сегодняшние трансляции
     if (aDate === currentDay && bDate !== currentDay) return -1;
     if (aDate !== currentDay && bDate === currentDay) return 1;
 
-    // Затем завершенные в конец
+    // 4. Завершенные в конец
     if (aPast && !bPast) return 1;
     if (!aPast && bPast) return -1;
 
-    // Затем сортируем по времени
-    return (aTime[0] * 60 + aTime[1]) - (bTime[0] * 60 + bTime[1]);
+    // 5. Сортировка по дате и времени
+    if (aDate !== bDate) return aDate.localeCompare(bDate);
+    return aTime - bTime;
   });
 
   // Очищаем список и добавляем элементы в новом порядке
@@ -256,7 +294,7 @@ const sortTransmissions = () => {
 };
 
 /**
- * Инициализирует каталог трансляций в меню
+ * Инициализирует каталог трансляций в боковом меню
  */
 const initCatalogMenu = () => {
   catalogLinks.forEach(item => {
@@ -280,7 +318,7 @@ const initCatalogMenu = () => {
 };
 
 /**
- * Создает кнопки фильтрации
+ * Создает кнопки фильтрации трансляций
  */
 const createFilterButtons = () => {
   const buttonsHTML = `
