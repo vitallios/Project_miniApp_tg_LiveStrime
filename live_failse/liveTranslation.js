@@ -28,6 +28,18 @@ export const transLinks =[
     "allDay": "",
     "premium": "",
     "active": 0
+  },
+  {
+    "category": "Регби",
+    "id": 3,
+    "name": "«Крусейдерс» — «Редс». 1/4 финала Супер регби",
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-42170580&id=456244326&hash=ed6663ebbc3a0129" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.06.06",
+    "time": "10:00",
+    "img": "https://sun1-92.userapi.com/impg/LNnx059fh7vloyHFa8p4XzkK07UjEq0ZdOWtIQ/031I_GwBjlo.jpg?size=320x180&quality=95&sign=d993293b13c853b8eaf120f3fa2520eb&c_uniq_tag=B4UKeqhn6I5aci8gye1AKdrDwq0ys_xHfevMqVWX1Pk&type=video_thumb",
+    "allDay": "",
+    "premium": "",
+    "active": 0
   }
 ]
 
