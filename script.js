@@ -288,6 +288,7 @@ const initCatalogMenu = () => {
 };
 
 const createFilterButtons = () => {
+  const hasPremiumTransmissions = transLinks.some(item => item.premium === "premium");
   const buttonsHTML = `
     <button class="filter-btn active" data-filter="all">Все трансляции</button>
     <button class="filter-btn" data-filter="active">Активные сейчас</button>
@@ -295,7 +296,7 @@ const createFilterButtons = () => {
     ${categories.map(category => 
       `<button class="filter-btn" data-filter="${category}">${category}</button>`
     ).join('')}
-    <button class="filter-btn" data-filter="premium">Только Premium</button>
+    ${hasPremiumTransmissions ? '<button class="filter-btn" data-filter="premium">Только Premium</button>' : ''}
   `;
   
   filterButtons.innerHTML = buttonsHTML;
