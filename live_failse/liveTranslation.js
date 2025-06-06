@@ -4,39 +4,7 @@
 // 0 - трансляция закончилась
 // 1 - трансляция началась
 
-export const transLinks = [{
-    "category": "Гребля",
-    "name": "Гребной спорт. 64-я Большая Московская регата. Прямая 6 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-39885733&amp;id=456239980&amp;hash=ac4cf9e85d77b608\" width=\"640\"></iframe>",
-    "data": "2025.06.06",
-    "time": "09:20",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/гребля.jpg",
-    "allDay": "",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "Волейбол",
-    "name": "Франция – Бельгия. Волейбол. Лига Наций 2025. Женщины. Прямая 6 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\" frameborder=\"0\" height=\"600\" scrolling=\"no\" src=\"https://widgets.media.sportradar.com/uscommon/ru/betproxy/match.lmtplus/lmt1#matchId=57007593\" width=\"720\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.06.06",
-    "time": "10:00",
-    "img": "https://srrb.ru/wp-content/uploads/2024/05/Лига-Наций-2024.-Волейбол.-Женщины.jpg",
-    "allDay": "",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "Регби",
-    "name": "«Крусейдерс» — «Редс». 1/4 финала Супер регби",
-    "link": '<iframe src="https://vk.com/video_ext.php?oid=-42170580&id=456244326&hash=ed6663ebbc3a0129" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-    "data": "2025.06.06",
-    "time": "10:00",
-    "img": "https://sun1-92.userapi.com/impg/LNnx059fh7vloyHFa8p4XzkK07UjEq0ZdOWtIQ/031I_GwBjlo.jpg?size=320x180&quality=95&sign=d993293b13c853b8eaf120f3fa2520eb&c_uniq_tag=B4UKeqhn6I5aci8gye1AKdrDwq0ys_xHfevMqVWX1Pk&type=video_thumb",
-    "allDay": "",
-    "premium": "",
-    "active": 0
-  },
+export const transLinks = [
   {
     "category": "Регби",
     "name": "«Бат» — «Бристоль». Полуфинал Премьершипа 2025",
@@ -221,58 +189,6 @@ export const transLinks = [{
     "premium": "",
     "active": 0
   },
-  {
-    "category": "другое",
-    "name": "WRC. Ралли Сардинии. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-140964975&amp;id=456241514&amp;hash=51f9b050d9abf851\" width=\"640\"></iframe>",
-    "data": "2025.06.06",
-    "time": "10:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/04/WRC.-2025.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "гребля",
-    "name": "Гребной спорт. 64-я Большая Московская регата. Прямая 6 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-39885733&amp;id=456239980&amp;hash=ac4cf9e85d77b608\" width=\"640\"></iframe>",
-    "data": "2025.06.06",
-    "time": "09:20",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/гребля.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "волейбол",
-    "name": "Франция – Бельгия. Волейбол. Лига Наций 2025. Женщины. Прямая 6 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/zFGEKJ8xHm4\" title=\"France 🇫🇷 vs. Belgium 🇧🇪 - Highlights | Week 1 | Women's VNL 2025\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.06.06",
-    "time": "10:00",
-    "img": "https://srrb.ru/wp-content/uploads/2024/05/Лига-Наций-2024.-Волейбол.-Женщины.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "волейбол",
-    "name": "США – Бразилия. Волейбол. Лига Наций 2025. Женщины. Прямая 6 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/owvenfocIDg\" title=\"USA 🇺🇸 vs. Brazil 🇧🇷 - Highlights | Week 1 | Women's VNL 2025\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.06.06",
-    "time": "02:30",
-    "img": "https://srrb.ru/wp-content/uploads/2024/05/Лига-Наций-2024.-Волейбол.-Женщины.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "волейбол",
-    "name": "Канада – Нидерланды. Волейбол. Лига Наций 2025. Женщины. Прямая 6 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/pnVttSecey8\" title=\"Canada 🇨🇦 vs. Netherlands 🇳🇱 - Highlights | Week 1 | Women's VNL 2025\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.06.06",
-    "time": "02:30",
-    "img": "https://srrb.ru/wp-content/uploads/2024/05/Лига-Наций-2024.-Волейбол.-Женщины.jpg",
-    "premium": "",
-    "active": 0
-  }
-
-
 ]
 
 
