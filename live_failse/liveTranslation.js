@@ -64,6 +64,18 @@ export const transLinks =[
     "allDay": "all day",
     "premium": "",
     "active": 0
+  },
+  {
+    "category": "Регби",
+    "id": 5,
+    "name": "Регби Лиг. 🇦🇺 НРЛ. Тур 14. Мельбурн Шторм - Нью Квисленд. Смотреть прямой эфир",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-220089063&id=456246636&hash=6591cbc585ccd1ea" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.06.06",
+    "time": "12:00",
+    "img": "https://sun1-87.userapi.com/impg/cxh5VlovfV3-SC2qpORKtZZkHj6yPuPC-VakUw/axXUxNA6IZw.jpg?size=320x180&quality=95&sign=938d6237e42fa1b233c70eaf4032ed1f&c_uniq_tag=LzmEAD13d3hqS_UejkzLavt_TIPZC7z6lpAMo9JngEc&type=video_thumb",
+    "allDay": "",
+    "premium": "",
+    "active": 0
   }
 ]
 
