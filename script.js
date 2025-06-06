@@ -293,10 +293,10 @@ const createFilterButtons = () => {
     <button class="filter-btn active" data-filter="all">Все трансляции</button>
     <button class="filter-btn" data-filter="active">Активные сейчас</button>
     <button class="filter-btn" data-filter="planned">Запланированные</button>
+    ${hasPremiumTransmissions ? '<button class="filter-btn" data-filter="premium">Только Premium</button>' : ''}
     ${categories.map(category => 
       `<button class="filter-btn" data-filter="${category}">${category}</button>`
     ).join('')}
-    ${hasPremiumTransmissions ? '<button class="filter-btn" data-filter="premium">Только Premium</button>' : ''}
   `;
   
   filterButtons.innerHTML = buttonsHTML;
