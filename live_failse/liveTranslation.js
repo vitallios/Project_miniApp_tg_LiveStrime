@@ -40,6 +40,18 @@ export const transLinks =[
     "allDay": "",
     "premium": "",
     "active": 0
+  },
+  {
+    "category": "Регби",
+    "id": 4,
+    "name": "«Бат» — «Бристоль». Полуфинал Премьершипа 2025",
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-42170580&id=456244326&hash=ed6663ebbc3a0129" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.06.06",
+    "time": "21:45",
+    "img": "https://sun9-9.userapi.com/impg/SR_1MXSVajkO5b_GieRcgamTzRjfG0eNjJripQ/4LNsDDsHirc.jpg?size=320x180&quality=95&sign=c9acd507d4285d309476a6ea71ddfb61&c_uniq_tag=PuQo-xzc5nK-euv-qdbBSPot6K0EvO3bCMLb6mp3hJ4&type=video_thumb",
+    "allDay": "",
+    "premium": "",
+    "active": 0
   }
 ]
 
