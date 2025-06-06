@@ -23,7 +23,7 @@ export const transLinks = [
     "data": "2025.06.06",
     "time": "11:00",
     "img": "https://sun1-57.userapi.com/impg/sxCidiLMy-MjPGV81LUJjCktgESrxb0occgCGg/8ezBw_enoDs.jpg?size=320x180&quality=95&sign=13cfb8fb80766f4271d0d8aa00b47122&c_uniq_tag=chqwm7yg9xkyRqTG9ROR1rBf26m4A18JhM8wSZ_G2Og&type=video_thumb",
-    "allDay": "all day",
+    "allDay": "",
     "premium": "",
     "active": 0
   },
