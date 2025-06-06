@@ -19,12 +19,14 @@ export const transLinks =[
   },
   {
     "category": "Волейбол",
+    "id": 2,
     "name": "Франция – Бельгия. Волейбол. Лига Наций 2025. Женщины. Прямая 6 июня 2025",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\" frameborder=\"0\" height=\"600\" scrolling=\"no\" src=\"https://widgets.media.sportradar.com/uscommon/ru/betproxy/match.lmtplus/lmt1#matchId=57007593\" width=\"720\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
     "data": "2025.06.06",
     "time": "10:00",
     "img": "https://srrb.ru/wp-content/uploads/2024/05/Лига-Наций-2024.-Волейбол.-Женщины.jpg",
-    "premium": "premium",
+    "allDay": "",
+    "premium": "",
     "active": 0
   }
 ]
