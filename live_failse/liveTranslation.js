@@ -60,7 +60,7 @@ export const transLinks =[
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-79154888&id=456239737&hash=98db21e7d2b51fa7" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.06.06",
     "time": "11:00",
-    "img": "https://sun9-9.userapi.com/impg/SR_1MXSVajkO5b_GieRcgamTzRjfG0eNjJripQ/4LNsDDsHirc.jpg?size=320x180&quality=95&sign=c9acd507d4285d309476a6ea71ddfb61&c_uniq_tag=PuQo-xzc5nK-euv-qdbBSPot6K0EvO3bCMLb6mp3hJ4&type=video_thumb",
+    "img": "https://sun1-57.userapi.com/impg/sxCidiLMy-MjPGV81LUJjCktgESrxb0occgCGg/8ezBw_enoDs.jpg?size=320x180&quality=95&sign=13cfb8fb80766f4271d0d8aa00b47122&c_uniq_tag=chqwm7yg9xkyRqTG9ROR1rBf26m4A18JhM8wSZ_G2Og&type=video_thumb",
     "allDay": "all day",
     "premium": "",
     "active": 0
