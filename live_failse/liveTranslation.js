@@ -78,7 +78,7 @@ export const transLinks = [
     "data": "2025.06.07",
     "time": "11:00",
     "img": "https://sun9-46.userapi.com/impg/8BdUOoeVYW290WmBZUDUimKu5L8m87KhBF8elg/gHg-SKuZlXg.jpg?size=1280x720&quality=95&sign=c5e2c3f0f03c795d0135057045e8edb3&type=video_thumb",
-    "allDay": "all day",
+    "allDay": "",
     "premium": "",
     "active": 0
   },
@@ -89,7 +89,7 @@ export const transLinks = [
     "data": "2025.06.07",
     "time": "13:00",
     "img": "https://sun9-46.userapi.com/impg/8BdUOoeVYW290WmBZUDUimKu5L8m87KhBF8elg/gHg-SKuZlXg.jpg?size=1280x720&quality=95&sign=c5e2c3f0f03c795d0135057045e8edb3&type=video_thumb",
-    "allDay": "all day",
+    "allDay": "",
     "premium": "premium",
     "active": 0
   },
@@ -100,7 +100,7 @@ export const transLinks = [
     "data": "2025.06.07",
     "time": "14:00",
     "img": "https://photobooth.cdn.sports.ru/preset/message/0/9d/42255637e46d0b2c8ee67dbe2cda4.png?f=webp&s=2x&w=730",
-    "allDay": "all day",
+    "allDay": "",
     "premium": "premium",
     "active": 0
   },

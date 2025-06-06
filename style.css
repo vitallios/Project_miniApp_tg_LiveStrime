@@ -587,5 +587,9 @@ li {
     flex-wrap: wrap;
     gap: 8px;
 }
+.transmission-header > span {
+    text-transform: capitalize;
+    width: 100%;
+}
 
 /* premium */
