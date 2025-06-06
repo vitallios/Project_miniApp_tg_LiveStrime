@@ -229,8 +229,8 @@ const renderTransmissions = () => {
           ${item.allDay === "all day" ? '<span class="list__strim-allDay">all day</span>' : ''}
         </div>
         <div class="transmission-info">
-          ${isDifferentDate ? `<span class="transmission-date">${formatDisplayDate(transmissionDate)}</span>` : ''}
-          <span class="time-info">${timeInfo}</span>
+          ${isDifferentDate ? `<span class="transmission-date">${formatDisplayDate(transmissionDate)}</span>` : `<span class="time-info">${timeInfo}</span>`}
+          
         </div>
       </button>
     `;
