@@ -1,16 +1,18 @@
 // Трансляции которые будут
-// premium - Premium - трансляция целый день
+// allDay - all day - трансляция целый день
 // 0 - трансляция закончилась
 // 1 - трансляция началась
 
 export const transLinks =[
   {
     "category": "Гребля",
+    "id": 1,
     "name": "Гребной спорт. 64-я Большая Московская регата. Прямая 6 июня 2025",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-39885733&amp;id=456239980&amp;hash=ac4cf9e85d77b608\" width=\"640\"></iframe>",
     "data": "2025.06.06",
     "time": "09:20",
     "img": "https://srrb.ru/wp-content/uploads/2023/06/гребля.jpg",
+    "allDay": "",
     "premium": "",
     "active": 0
   },
@@ -21,7 +23,7 @@ export const transLinks =[
     "data": "2025.06.06",
     "time": "10:00",
     "img": "https://srrb.ru/wp-content/uploads/2024/05/Лига-Наций-2024.-Волейбол.-Женщины.jpg",
-    "premium": "",
+    "premium": "premium",
     "active": 0
   }
 ]
