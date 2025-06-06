@@ -207,7 +207,7 @@ const renderTransmissions = () => {
           : `Идет трансляция (до ${endTime})`;
         break;
       case 'future':
-        timeInfo = `Начнётся в ${startTime}`;
+        timeInfo = `Начнётся ${transmissionDate} в ${startTime}`;
         break;
       case 'past':
         timeInfo = "Завершено";
