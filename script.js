@@ -103,53 +103,77 @@ const calculateTransmissionTime = (startTime, allDay) => {
 const getTransmissionStatus = (item) => {
   const transmissionDate = item.data || currentDay;
   const { startTime, endTime, endDay } = calculateTransmissionTime(item.time, item.allDay);
+  const nowMinutes = timeToMinutes(currentTime);
+  const startMinutes = timeToMinutes(startTime);
+  const endMinutes = timeToMinutes(endTime);
 
-  // Если дата трансляции в прошлом
-  if (transmissionDate < currentDay) {
-    if (!endDay || endDay < currentDay) {
-      return { status: 'past', startTime, endTime, endDay, transmissionDate };
-    }
-    if (endDay === currentDay) {
-      const nowMinutes = timeToMinutes(currentTime);
-      const endMinutes = timeToMinutes(endTime);
+  // Если дата трансляции уже прошла
+  if (isDatePassed(transmissionDate)) {
+    return { 
+      status: 'past',
+      displayText: 'Трансляция завершена',
+      startTime,
+      endTime,
+      transmissionDate
+    };
+  }
+
+  // Если дата трансляции еще не наступила
+  if (transmissionDate > currentDay) {
+    return {
+      status: 'future',
+      displayText: `Запланирована на ${formatDisplayDate(transmissionDate)} в ${startTime}`,
+      startTime,
+      endTime,
+      transmissionDate
+    };
+  }
+
+  // Если дата сегодняшняя
+  // Проверяем активна ли трансляция
+  if (endMinutes < startMinutes) {
+    // Трансляция переходит через полночь
+    if (nowMinutes >= startMinutes || nowMinutes <= endMinutes) {
       return { 
-        status: nowMinutes <= endMinutes ? 'active' : 'past',
-        startTime, 
-        endTime, 
-        endDay,
+        status: 'active',
+        displayText: item.allDay === "all day" ? "Трансляция весь день" : `Идет трансляция (до ${endTime})`,
+        startTime,
+        endTime,
+        transmissionDate
+      };
+    }
+  } else {
+    // Обычная трансляция
+    if (nowMinutes >= startMinutes && nowMinutes <= endMinutes) {
+      return { 
+        status: 'active',
+        displayText: item.allDay === "all day" ? "Трансляция весь день" : `Идет трансляция (до ${endTime})`,
+        startTime,
+        endTime,
         transmissionDate
       };
     }
   }
 
-  // Если дата трансляции в будущем
-  if (transmissionDate > currentDay) {
-    return { status: 'future', startTime, endTime, endDay, transmissionDate };
-  }
-
-  // Если дата сегодняшняя
-  const nowMinutes = timeToMinutes(currentTime);
-  const startMinutes = timeToMinutes(startTime);
-  const endMinutes = timeToMinutes(endTime);
-
-  // Проверяем активна ли трансляция
-  if (endMinutes < startMinutes) {
-    if (nowMinutes >= startMinutes || nowMinutes <= endMinutes) {
-      return { status: 'active', startTime, endTime, endDay, transmissionDate };
-    }
-  } else {
-    if (nowMinutes >= startMinutes && nowMinutes <= endMinutes) {
-      return { status: 'active', startTime, endTime, endDay, transmissionDate };
-    }
-  }
-
-  // Проверяем будущая ли трансляция
+  // Если трансляция сегодня, но еще не началась
   if (nowMinutes < startMinutes) {
-    return { status: 'future', startTime, endTime, endDay, transmissionDate };
+    return {
+      status: 'future',
+      displayText: `Запланирована на ${startTime}`,
+      startTime,
+      endTime,
+      transmissionDate
+    };
   }
 
-  // Если ничего не подошло - трансляция завершена
-  return { status: 'past', startTime, endTime, endDay, transmissionDate };
+  // Если трансляция сегодня, но уже закончилась
+  return {
+    status: 'past',
+    displayText: 'Трансляция завершена',
+    startTime,
+    endTime,
+    transmissionDate
+  };
 };
 
 const renderTransmissions = () => {
@@ -187,7 +211,7 @@ const renderTransmissions = () => {
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
 
-    const { status, startTime, endTime, endDay, transmissionDate } = getTransmissionStatus(item);
+    const { status, displayText, transmissionDate } = getTransmissionStatus(item);
     const isPremium = item.premium === "premium";
     const isDifferentDate = transmissionDate !== currentDay;
 
@@ -198,21 +222,6 @@ const renderTransmissions = () => {
     if (currentFilter !== 'all' && currentFilter !== 'active' && 
         currentFilter !== 'planned' && currentFilter !== 'premium' && 
         item.category !== currentFilter) return;
-
-    let timeInfo;
-    switch (status) {
-      case 'active':
-        timeInfo = item.allDay === "all day" 
-          ? "Трансляция весь день" 
-          : `Идет трансляция (до ${endTime})`;
-        break;
-      case 'future':
-        timeInfo = `Начнётся в ${startTime}`;
-        break;
-      case 'past':
-        timeInfo = "Завершено";
-        break;
-    }
 
     const li = document.createElement('li');
     li.className = `list__strim-item ${status} ${isPremium ? 'premium' : ''}`;
@@ -229,8 +238,8 @@ const renderTransmissions = () => {
           ${item.allDay === "all day" ? '<span class="list__strim-allDay">all day</span>' : ''}
         </div>
         <div class="transmission-info">
-          ${isDifferentDate ? `<span class="transmission-date">${formatDisplayDate(transmissionDate)}</span>` : `<span class="time-info">${timeInfo}</span>`}
-          
+          ${isDifferentDate && status === 'future' ? `<span class="transmission-date">${formatDisplayDate(transmissionDate)}</span>` : ''}
+          <span class="time-info">${displayText}</span>
         </div>
       </button>
     `;
