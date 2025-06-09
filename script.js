@@ -1,6 +1,12 @@
-import { catalogLinks } from "./live_failse/liveTv.js";
-import { randomFilms } from "./live_failse/liveFilms.js";
-import { transLinks } from "./live_failse/liveTranslation.js";
+import {
+  catalogLinks
+} from "./live_failse/liveTv.js";
+import {
+  randomFilms
+} from "./live_failse/liveFilms.js";
+import {
+  transLinks
+} from "./live_failse/liveTranslation.js";
 
 // DOM элементы
 const navBTN = document.querySelector("#menu-btn");
@@ -81,7 +87,7 @@ const calculateTransmissionTime = (startTime, allDay) => {
   const endMinutes = startMinutes + durationMinutes;
 
   let endDay = currentDay;
-  
+
   if (endMinutes >= 1440) {
     const nextDay = new Date(currentDate);
     nextDay.setDate(nextDay.getDate() + 1);
@@ -102,13 +108,17 @@ const calculateTransmissionTime = (startTime, allDay) => {
 
 const getTransmissionStatus = (item) => {
   const transmissionDate = item.data || currentDay;
-  const { startTime, endTime, endDay } = calculateTransmissionTime(item.time, item.allDay);
+  const {
+    startTime,
+    endTime,
+    endDay
+  } = calculateTransmissionTime(item.time, item.allDay);
   const nowMinutes = timeToMinutes(currentTime);
   const startMinutes = timeToMinutes(startTime);
   const endMinutes = timeToMinutes(endTime);
 
   if (isDatePassed(transmissionDate)) {
-    return { 
+    return {
       status: 'past',
       displayText: 'Трансляция завершена',
       startTime,
@@ -129,7 +139,7 @@ const getTransmissionStatus = (item) => {
 
   if (endMinutes < startMinutes) {
     if (nowMinutes >= startMinutes || nowMinutes <= endMinutes) {
-      return { 
+      return {
         status: 'active',
         displayText: item.allDay === "all day" ? "Трансляция весь день" : `Идет трансляция (до ${endTime})`,
         startTime,
@@ -139,7 +149,7 @@ const getTransmissionStatus = (item) => {
     }
   } else {
     if (nowMinutes >= startMinutes && nowMinutes <= endMinutes) {
-      return { 
+      return {
         status: 'active',
         displayText: item.allDay === "all day" ? "Трансляция весь день" : `Идет трансляция (до ${endTime})`,
         startTime,
@@ -202,16 +212,20 @@ const renderTransmissions = () => {
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
 
-    const { status, displayText, transmissionDate } = getTransmissionStatus(item);
+    const {
+      status,
+      displayText,
+      transmissionDate
+    } = getTransmissionStatus(item);
     const isPremium = item.premium === "premium";
     const isDifferentDate = transmissionDate !== currentDay;
 
     if (currentFilter === 'active' && status !== 'active') return;
     if (currentFilter === 'planned' && status !== 'future') return;
     if (currentFilter === 'premium' && !isPremium) return;
-    if (currentFilter !== 'all' && currentFilter !== 'active' && 
-        currentFilter !== 'planned' && currentFilter !== 'premium' && 
-        item.category !== currentFilter) return;
+    if (currentFilter !== 'all' && currentFilter !== 'active' &&
+      currentFilter !== 'planned' && currentFilter !== 'premium' &&
+      item.category !== currentFilter) return;
 
     const li = document.createElement('li');
     li.className = `list__strim-item ${status} ${isPremium ? 'premium' : ''}`;
@@ -228,7 +242,6 @@ const renderTransmissions = () => {
           ${item.allDay === "all day" ? '<span class="list__strim-allDay">all day</span>' : ''}
         </div>
         <div class="transmission-info">
-          ${isDifferentDate && status === 'future' ? `<span class="transmission-date">${formatDisplayDate(transmissionDate)}</span>` : ''}
           <span class="time-info">${displayText}</span>
         </div>
       </button>
@@ -275,7 +288,7 @@ const createFilterButtons = () => {
     ).join('')}
     ${hasPremiumTransmissions ? '<button class="filter-btn" data-filter="premium">Только Premium</button>' : ''}
   `;
-  
+
   filterButtons.innerHTML = buttonsHTML;
 
   document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -297,7 +310,7 @@ window.addEventListener('load', () => {
     initCatalogMenu();
     createFilterButtons();
     renderTransmissions();
-    
+
     setInterval(() => {
       const now = new Date();
       if (now.getMinutes() !== currentDate.getMinutes()) {

@@ -524,20 +524,16 @@ li {
 
 
 .transmission-info {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
 }
 
-.transmission-date {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 3px;
-}
 
 .time-info {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 /* premium */
 .premium-badge {
     display: inline-block;
