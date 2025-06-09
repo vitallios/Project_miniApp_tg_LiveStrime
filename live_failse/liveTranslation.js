@@ -7,12 +7,32 @@
 export const transLinks = [
   {
     "category": "Регби",
+<<<<<<< HEAD
     "name": "Всероссийские соревнования по регби среди мальчиков до 15 лет. Пятый игровой день",
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-40984897&id=456243793&hash=6f7a56574f4a32d8" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.06.09",
     "time": "10:45",
     "img": "https://sun1-89.userapi.com/impg/Exaxgz3unL4P31v7veJc936u29t3ostBmHRvQA/iQcBC4KPFYg.jpg?size=320x180&quality=95&sign=c4839e06f8c95b9acd7a3ab8df2d5802&c_uniq_tag=KFmr6bCa48tM84yJaYvgPO1DnCxeBEcVfZgDzjPSVwA&type=video_thumb",
     "allDay": "all day",
+=======
+    "name": "«Бат» — «Бристоль». Полуфинал Премьершипа 2025",
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-42170580&id=456244326&hash=ed6663ebbc3a0129" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.06.06",
+    "time": "21:45",
+    "img": "https://sun9-9.userapi.com/impg/SR_1MXSVajkO5b_GieRcgamTzRjfG0eNjJripQ/4LNsDDsHirc.jpg?size=320x180&quality=95&sign=c9acd507d4285d309476a6ea71ddfb61&c_uniq_tag=PuQo-xzc5nK-euv-qdbBSPot6K0EvO3bCMLb6mp3hJ4&type=video_thumb",
+    "allDay": "",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "Бокс",
+    "name": "Чемпионат Москвы по боксу 2025",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-79154888&id=456239737&hash=98db21e7d2b51fa7" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.06.06",
+    "time": "11:00",
+    "img": "https://sun1-57.userapi.com/impg/sxCidiLMy-MjPGV81LUJjCktgESrxb0occgCGg/8ezBw_enoDs.jpg?size=320x180&quality=95&sign=13cfb8fb80766f4271d0d8aa00b47122&c_uniq_tag=chqwm7yg9xkyRqTG9ROR1rBf26m4A18JhM8wSZ_G2Og&type=video_thumb",
+    "allDay": "",
+>>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
     "premium": "",
     "active": 0
   },
