@@ -14,11 +14,7 @@ const MenuBtnToHome = document.querySelector("#MenuBtnToHome");
 const Strimlists = document.querySelector("#listStrimes");
 const filterButtons = document.querySelector(".filter-buttons");
 
-<<<<<<< HEAD
 // Текущая дата и время
-=======
-// Текущие дата и время
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
 let currentDate = new Date();
 let currentHours = currentDate.getHours().toString().padStart(2, '0');
 let currentMinutes = currentDate.getMinutes().toString().padStart(2, '0');
@@ -30,11 +26,7 @@ let currentFilter = 'all';
 const categories = [...new Set(transLinks.map(item => item.category || 'другое'))];
 const hasPremiumTransmissions = transLinks.some(item => item.premium === "premium");
 
-<<<<<<< HEAD
 // Форматирование даты
-=======
-// Функция форматирования даты для отображения
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
 const formatDisplayDate = (dateStr) => {
   if (!dateStr) return '';
   const [year, month, day] = dateStr.split('.');
@@ -115,10 +107,6 @@ const getTransmissionStatus = (item) => {
   const startMinutes = timeToMinutes(startTime);
   const endMinutes = timeToMinutes(endTime);
 
-<<<<<<< HEAD
-=======
-  // Если дата трансляции уже прошла
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
   if (isDatePassed(transmissionDate)) {
     return { 
       status: 'past',
@@ -129,10 +117,6 @@ const getTransmissionStatus = (item) => {
     };
   }
 
-<<<<<<< HEAD
-=======
-  // Если дата трансляции еще не наступила
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
   if (transmissionDate > currentDay) {
     return {
       status: 'future',
@@ -143,14 +127,7 @@ const getTransmissionStatus = (item) => {
     };
   }
 
-<<<<<<< HEAD
   if (endMinutes < startMinutes) {
-=======
-  // Если дата сегодняшняя
-  // Проверяем активна ли трансляция
-  if (endMinutes < startMinutes) {
-    // Трансляция переходит через полночь
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
     if (nowMinutes >= startMinutes || nowMinutes <= endMinutes) {
       return { 
         status: 'active',
@@ -161,10 +138,6 @@ const getTransmissionStatus = (item) => {
       };
     }
   } else {
-<<<<<<< HEAD
-=======
-    // Обычная трансляция
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
     if (nowMinutes >= startMinutes && nowMinutes <= endMinutes) {
       return { 
         status: 'active',
@@ -176,10 +149,6 @@ const getTransmissionStatus = (item) => {
     }
   }
 
-<<<<<<< HEAD
-=======
-  // Если трансляция сегодня, но еще не началась
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
   if (nowMinutes < startMinutes) {
     return {
       status: 'future',
@@ -190,10 +159,6 @@ const getTransmissionStatus = (item) => {
     };
   }
 
-<<<<<<< HEAD
-=======
-  // Если трансляция сегодня, но уже закончилась
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
   return {
     status: 'past',
     displayText: 'Трансляция завершена',
@@ -225,32 +190,12 @@ const renderTransmissions = () => {
     if (aIsPremium && !bIsPremium) return -1;
     if (!aIsPremium && bIsPremium) return 1;
 
-<<<<<<< HEAD
     // Активные перед будущими
     if (aStatus.status === 'active' && bStatus.status !== 'active') return -1;
     if (aStatus.status !== 'active' && bStatus.status === 'active') return 1;
 
     // Сортировка по времени
     return timeToMinutes(a.time) - timeToMinutes(b.time);
-=======
-    if (aStatus.status === 'active' && bStatus.status !== 'active') return -1;
-    if (aStatus.status !== 'active' && bStatus.status === 'active') return 1;
-
-    if (aStatus.status === 'future' && bStatus.status === 'past') return -1;
-    if (aStatus.status === 'past' && bStatus.status === 'future') return 1;
-
-    if (aStatus.status === 'active' || aStatus.status === 'future') {
-      const aTime = timeToMinutes(a.time);
-      const bTime = timeToMinutes(b.time);
-      return aTime - bTime;
-    }
-
-    const aDate = a.data || currentDay;
-    const bDate = b.data || currentDay;
-    if (aDate !== bDate) return bDate.localeCompare(aDate);
-    
-    return timeToMinutes(b.time) - timeToMinutes(a.time);
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
   });
 
   sortedTransmissions.forEach((item, index) => {
@@ -261,10 +206,6 @@ const renderTransmissions = () => {
     const isPremium = item.premium === "premium";
     const isDifferentDate = transmissionDate !== currentDay;
 
-<<<<<<< HEAD
-=======
-    // Фильтрация
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
     if (currentFilter === 'active' && status !== 'active') return;
     if (currentFilter === 'planned' && status !== 'future') return;
     if (currentFilter === 'premium' && !isPremium) return;
@@ -287,11 +228,7 @@ const renderTransmissions = () => {
           ${item.allDay === "all day" ? '<span class="list__strim-allDay">all day</span>' : ''}
         </div>
         <div class="transmission-info">
-<<<<<<< HEAD
-
-=======
           ${isDifferentDate && status === 'future' ? `<span class="transmission-date">${formatDisplayDate(transmissionDate)}</span>` : ''}
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
           <span class="time-info">${displayText}</span>
         </div>
       </button>
@@ -351,7 +288,6 @@ const createFilterButtons = () => {
   });
 };
 
-// Инициализация при загрузке
 window.addEventListener('load', () => {
   document.querySelector('.content').style.opacity = '0';
 
@@ -362,10 +298,6 @@ window.addEventListener('load', () => {
     createFilterButtons();
     renderTransmissions();
     
-<<<<<<< HEAD
-=======
-    // Обновляем каждую минуту
->>>>>>> 599d8e5a2347b89626da76290a5c5a41fa7cbf4e
     setInterval(() => {
       const now = new Date();
       if (now.getMinutes() !== currentDate.getMinutes()) {
@@ -380,7 +312,6 @@ window.addEventListener('load', () => {
   }, 1000);
 });
 
-// Обработчики событий
 navBTN.addEventListener('click', toggleBurgerMenu);
 btnToHome.addEventListener('click', () => {
   document.querySelector('.wrap__pages').classList.add('info__none');
