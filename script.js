@@ -2,7 +2,7 @@ import { catalogLinks } from "./live_failse/liveTv.js";
 import { randomFilms } from "./live_failse/liveFilms.js";
 import { transLinks } from "./live_failse/liveTranslation.js";
 
-// Получаем элементы DOM
+// DOM элементы
 const navBTN = document.querySelector("#menu-btn");
 const menu = document.querySelector(".menu");
 const menuList = document.querySelector("#menu__list");
@@ -14,16 +14,24 @@ const MenuBtnToHome = document.querySelector("#MenuBtnToHome");
 const Strimlists = document.querySelector("#listStrimes");
 const filterButtons = document.querySelector(".filter-buttons");
 
-// Текущие дата и время
-const currentDate = new Date();
-const currentHours = currentDate.getHours().toString().padStart(2, '0');
-const currentMinutes = currentDate.getMinutes().toString().padStart(2, '0');
-const currentTime = `${currentHours}:${currentMinutes}`;
-const currentDay = `${currentDate.getUTCFullYear()}.${(currentDate.getUTCMonth() + 1).toString().padStart(2, '0')}.${currentDate.getUTCDate().toString().padStart(2, '0')}`;
+// Текущая дата и время
+let currentDate = new Date();
+let currentHours = currentDate.getHours().toString().padStart(2, '0');
+let currentMinutes = currentDate.getMinutes().toString().padStart(2, '0');
+let currentTime = `${currentHours}:${currentMinutes}`;
+let currentDay = `${currentDate.getUTCFullYear()}.${(currentDate.getUTCMonth() + 1).toString().padStart(2, '0')}.${currentDate.getUTCDate().toString().padStart(2, '0')}`;
 
-// Переменные для фильтрации
+// Фильтрация
 let currentFilter = 'all';
 const categories = [...new Set(transLinks.map(item => item.category || 'другое'))];
+const hasPremiumTransmissions = transLinks.some(item => item.premium === "premium");
+
+// Форматирование даты
+const formatDisplayDate = (dateStr) => {
+  if (!dateStr) return '';
+  const [year, month, day] = dateStr.split('.');
+  return `${day}.${month}.${year}`;
+};
 
 const timeToMinutes = (timeStr) => {
   const [hours, minutes] = timeStr.split(':').map(Number);
@@ -67,20 +75,6 @@ const getSafeIframe = (html) => {
   }
 };
 
-const isTransmissionActive = (startTime, endTime, date = currentDay) => {
-  if (date !== currentDay) return false;
-
-  const startMinutes = timeToMinutes(startTime);
-  const endMinutes = timeToMinutes(endTime);
-  const nowMinutes = timeToMinutes(currentTime);
-
-  if (endMinutes < startMinutes) {
-    return nowMinutes >= startMinutes || nowMinutes <= endMinutes;
-  }
-
-  return nowMinutes >= startMinutes && nowMinutes <= endMinutes;
-};
-
 const calculateTransmissionTime = (startTime, allDay) => {
   const startMinutes = timeToMinutes(startTime);
   const durationMinutes = allDay === "all day" ? 8 * 60 : 3 * 60;
@@ -89,9 +83,9 @@ const calculateTransmissionTime = (startTime, allDay) => {
   let endDay = currentDay;
   
   if (endMinutes >= 1440) {
-    endDay = new Date(currentDate);
-    endDay.setDate(endDay.getDate() + 1);
-    endDay = `${endDay.getUTCFullYear()}.${(endDay.getUTCMonth() + 1).toString().padStart(2, '0')}.${endDay.getUTCDate().toString().padStart(2, '0')}`;
+    const nextDay = new Date(currentDate);
+    nextDay.setDate(nextDay.getDate() + 1);
+    endDay = `${nextDay.getUTCFullYear()}.${(nextDay.getUTCMonth() + 1).toString().padStart(2, '0')}.${nextDay.getUTCDate().toString().padStart(2, '0')}`;
   }
 
   const endHour = Math.floor((endMinutes % 1440) / 60);
@@ -106,164 +100,148 @@ const calculateTransmissionTime = (startTime, allDay) => {
   };
 };
 
-const isTransmissionPast = (item) => {
-  if (isDatePassed(item.data)) return true;
-  
-  const { endTime, endDay } = calculateTransmissionTime(item.time, item.allDay);
-  
-  if (endDay !== currentDay) {
-    if (isDatePassed(endDay)) return true;
-    
-    if (endDay === currentDay) {
-      return timeToMinutes(currentTime) > timeToMinutes(endTime);
-    }
-    return false;
+const getTransmissionStatus = (item) => {
+  const transmissionDate = item.data || currentDay;
+  const { startTime, endTime, endDay } = calculateTransmissionTime(item.time, item.allDay);
+  const nowMinutes = timeToMinutes(currentTime);
+  const startMinutes = timeToMinutes(startTime);
+  const endMinutes = timeToMinutes(endTime);
+
+  if (isDatePassed(transmissionDate)) {
+    return { 
+      status: 'past',
+      displayText: 'Трансляция завершена',
+      startTime,
+      endTime,
+      transmissionDate
+    };
   }
-  
-  return timeToMinutes(currentTime) > timeToMinutes(endTime);
+
+  if (transmissionDate > currentDay) {
+    return {
+      status: 'future',
+      displayText: `Запланирована на ${formatDisplayDate(transmissionDate)} в ${startTime}`,
+      startTime,
+      endTime,
+      transmissionDate
+    };
+  }
+
+  if (endMinutes < startMinutes) {
+    if (nowMinutes >= startMinutes || nowMinutes <= endMinutes) {
+      return { 
+        status: 'active',
+        displayText: item.allDay === "all day" ? "Трансляция весь день" : `Идет трансляция (до ${endTime})`,
+        startTime,
+        endTime,
+        transmissionDate
+      };
+    }
+  } else {
+    if (nowMinutes >= startMinutes && nowMinutes <= endMinutes) {
+      return { 
+        status: 'active',
+        displayText: item.allDay === "all day" ? "Трансляция весь день" : `Идет трансляция (до ${endTime})`,
+        startTime,
+        endTime,
+        transmissionDate
+      };
+    }
+  }
+
+  if (nowMinutes < startMinutes) {
+    return {
+      status: 'future',
+      displayText: `Запланирована на ${startTime}`,
+      startTime,
+      endTime,
+      transmissionDate
+    };
+  }
+
+  return {
+    status: 'past',
+    displayText: 'Трансляция завершена',
+    startTime,
+    endTime,
+    transmissionDate
+  };
 };
 
 const renderTransmissions = () => {
   Strimlists.innerHTML = '';
 
-  // Сортируем: премиум сначала, затем активные, затем по дате
   const sortedTransmissions = [...transLinks].sort((a, b) => {
+    const aStatus = getTransmissionStatus(a);
+    const bStatus = getTransmissionStatus(b);
     const aIsPremium = a.premium === "premium";
     const bIsPremium = b.premium === "premium";
-    const aActive = isTransmissionActive(
-      calculateTransmissionTime(a.time, a.allDay).startTime,
-      calculateTransmissionTime(a.time, a.allDay).endTime,
-      a.data
-    );
-    const bActive = isTransmissionActive(
-      calculateTransmissionTime(b.time, b.allDay).startTime,
-      calculateTransmissionTime(b.time, b.allDay).endTime,
-      b.data
-    );
 
+    // Завершенные трансляции (включая Premium) в конец
+    if (aStatus.status === 'past' && bStatus.status !== 'past') return 1;
+    if (aStatus.status !== 'past' && bStatus.status === 'past') return -1;
+    if (aStatus.status === 'past' && bStatus.status === 'past') {
+      const aDate = a.data || currentDay;
+      const bDate = b.data || currentDay;
+      return bDate.localeCompare(aDate);
+    }
+
+    // Для активных/будущих: Premium сначала
     if (aIsPremium && !bIsPremium) return -1;
     if (!aIsPremium && bIsPremium) return 1;
-    if (aActive && !bActive) return -1;
-    if (!aActive && bActive) return 1;
-    return 0;
+
+    // Активные перед будущими
+    if (aStatus.status === 'active' && bStatus.status !== 'active') return -1;
+    if (aStatus.status !== 'active' && bStatus.status === 'active') return 1;
+
+    // Сортировка по времени
+    return timeToMinutes(a.time) - timeToMinutes(b.time);
   });
 
   sortedTransmissions.forEach((item, index) => {
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
 
-    const { startTime, endTime, endDay } = calculateTransmissionTime(item.time, item.allDay);
-    const isActive = isTransmissionActive(startTime, endTime, item.data);
-    const isPast = isTransmissionPast(item);
-    const isFuture = item.data === currentDay && timeToMinutes(currentTime) < timeToMinutes(startTime);
+    const { status, displayText, transmissionDate } = getTransmissionStatus(item);
     const isPremium = item.premium === "premium";
-    
-    // Фильтрация в зависимости от выбранного фильтра
-    if (currentFilter === 'active' && !isActive) return;
-    if (currentFilter === 'planned' && (isActive || isPast)) return;
-    if (currentFilter === 'premium' && !isPremium) return; // Добавлена проверка для премиум фильтра
-    if (currentFilter !== 'all' && currentFilter !== 'active' && currentFilter !== 'planned' && 
-    currentFilter !== 'premium' && item.category !== currentFilter) return;
+    const isDifferentDate = transmissionDate !== currentDay;
 
-    let timeInfo;
-    if (isPast) {
-      timeInfo = "Завершено";
-    } else if (isActive) {
-      timeInfo = item.allDay === "all day" 
-        ? "Трансляция весь день" 
-        : `Идет трансляция (до ${endTime})`;
-    } else if (isFuture) {
-      timeInfo = `Начнётся в ${startTime}`;
-    } else {
-      timeInfo = `Запланировано на ${item.data} в ${startTime}`;
-    }
+    if (currentFilter === 'active' && status !== 'active') return;
+    if (currentFilter === 'planned' && status !== 'future') return;
+    if (currentFilter === 'premium' && !isPremium) return;
+    if (currentFilter !== 'all' && currentFilter !== 'active' && 
+        currentFilter !== 'planned' && currentFilter !== 'premium' && 
+        item.category !== currentFilter) return;
 
     const li = document.createElement('li');
-    li.className = `list__strim-item ${isActive ? 'active' : ''} ${isPast ? 'past' : ''} ${isFuture ? 'future' : ''} ${isPremium ? 'premium' : ''}`;
+    li.className = `list__strim-item ${status} ${isPremium ? 'premium' : ''}`;
     li.dataset.id = `transmission-${index}`;
-    li.dataset.time = item.time;
-    li.dataset.allDay = item.allDay || '';
-    li.dataset.data = item.data || '';
-    li.dataset.img = item.img || '';
-    li.dataset.href = iframeHTML;
-    li.dataset.active = isActive ? '1' : '0';
-    li.dataset.category = item.category || 'другое';
-    li.dataset.premium = isPremium ? '1' : '0';
 
     li.innerHTML = `
-      <button class="list__strim-link ${isActive ? 'active' : ''} ${isPast ? 'past' : ''} ${isFuture ? 'future' : ''}" 
-              id="${item.id}" 
-              ${isPast ? 'disabled' : ''}
-              dataTransmissionIndex="${item.data}"  
-              startTransmissionTime="${startTime}" 
-              endTime="${endTime}">
+      <button class="list__strim-link ${status}" 
+              ${status === 'past' ? 'disabled' : ''}
+              data-iframe="${encodeURIComponent(iframeHTML)}">
         ${item.img ? `<img src="${item.img}" alt="${item.name}" class="transmission-image">` : ""}
         <div class="transmission-header">
           <h3>${item.name}</h3>
           ${isPremium ? '<span class="premium-badge">Premium</span>' : ''}
           ${item.allDay === "all day" ? '<span class="list__strim-allDay">all day</span>' : ''}
         </div>
-        <span>${timeInfo}</span>
+        <div class="transmission-info">
+
+          <span class="time-info">${displayText}</span>
+        </div>
       </button>
     `;
 
-    if (isActive && !isPast) {
-      li.addEventListener('click', () => openVideoIFrame(iframeHTML));
+    if (status === 'active') {
+      li.querySelector('button').addEventListener('click', () => {
+        openVideoIFrame(iframeHTML);
+      });
     }
 
     Strimlists.appendChild(li);
   });
-
-  sortTransmissions();
-};
-
-const sortTransmissions = () => {
-  const items = Array.from(Strimlists.children);
-
-  items.sort((a, b) => {
-    const aPremium = a.dataset.premium === '1';
-    const bPremium = b.dataset.premium === '1';
-    const aActive = a.dataset.active === '1';
-    const bActive = b.dataset.active === '1';
-    const aDate = a.dataset.data;
-    const bDate = b.dataset.data;
-    const aTime = timeToMinutes(a.dataset.time);
-    const bTime = timeToMinutes(b.dataset.time);
-    const aPast = a.classList.contains('past');
-    const bPast = b.classList.contains('past');
-    const aFuture = a.classList.contains('future');
-    const bFuture = b.classList.contains('future');
-
-    // 1. Премиум трансляции в начало
-    if (aPremium && !bPremium) return -1;
-    if (!aPremium && bPremium) return 1;
-
-    // 2. Активные трансляции
-    if (aActive && !bActive) return -1;
-    if (!aActive && bActive) return 1;
-
-    // 3. Будущие трансляции сегодня
-    if (aFuture && bFuture && aDate === currentDay && bDate === currentDay) {
-      return aTime - bTime;
-    }
-    if (aFuture && !bFuture && aDate === currentDay) return -1;
-    if (!aFuture && bFuture && bDate === currentDay) return 1;
-
-    // 4. Сегодняшние трансляции
-    if (aDate === currentDay && bDate !== currentDay) return -1;
-    if (aDate !== currentDay && bDate === currentDay) return 1;
-
-    // 5. Завершенные в конец
-    if (aPast && !bPast) return 1;
-    if (!aPast && bPast) return -1;
-
-    // 6. Сортировка по дате и времени
-    if (aDate !== bDate) return aDate.localeCompare(bDate);
-    return aTime - bTime;
-  });
-
-  Strimlists.innerHTML = '';
-  items.forEach(item => Strimlists.appendChild(item));
 };
 
 const initCatalogMenu = () => {
@@ -272,7 +250,7 @@ const initCatalogMenu = () => {
     li.className = 'menu__list-item';
 
     li.innerHTML = `
-      <button class="menu__list-link" id="${item.id}" name="${item.name}">
+      <button class="menu__list-link" data-iframe="${encodeURIComponent(item.link)}">
         <img src="${item.img}" alt="${item.name}">
         ${item.name}
       </button>
@@ -288,15 +266,14 @@ const initCatalogMenu = () => {
 };
 
 const createFilterButtons = () => {
-  const hasPremiumTransmissions = transLinks.some(item => item.premium === "premium");
   const buttonsHTML = `
     <button class="filter-btn active" data-filter="all">Все трансляции</button>
     <button class="filter-btn" data-filter="active">Активные сейчас</button>
     <button class="filter-btn" data-filter="planned">Запланированные</button>
-    ${hasPremiumTransmissions ? '<button class="filter-btn" data-filter="premium">Только Premium</button>' : ''}
     ${categories.map(category => 
       `<button class="filter-btn" data-filter="${category}">${category}</button>`
     ).join('')}
+    ${hasPremiumTransmissions ? '<button class="filter-btn" data-filter="premium">Только Premium</button>' : ''}
   `;
   
   filterButtons.innerHTML = buttonsHTML;
@@ -320,6 +297,18 @@ window.addEventListener('load', () => {
     initCatalogMenu();
     createFilterButtons();
     renderTransmissions();
+    
+    setInterval(() => {
+      const now = new Date();
+      if (now.getMinutes() !== currentDate.getMinutes()) {
+        currentDate = now;
+        currentHours = now.getHours().toString().padStart(2, '0');
+        currentMinutes = now.getMinutes().toString().padStart(2, '0');
+        currentTime = `${currentHours}:${currentMinutes}`;
+        currentDay = `${now.getUTCFullYear()}.${(now.getUTCMonth() + 1).toString().padStart(2, '0')}.${now.getUTCDate().toString().padStart(2, '0')}`;
+        renderTransmissions();
+      }
+    }, 60000);
   }, 1000);
 });
 
