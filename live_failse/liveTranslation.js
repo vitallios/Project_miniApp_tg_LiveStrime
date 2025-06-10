@@ -5,17 +5,7 @@
 // 1 - трансляция началась
 
 export const transLinks = [
-  {
-    "category": "Регби",
-    "name": "Всероссийские соревнования по регби среди мальчиков до 15 лет. Пятый игровой день",
-    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-40984897&id=456243793&hash=6f7a56574f4a32d8" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-    "data": "2025.06.09",
-    "time": "10:45",
-    "img": "https://sun1-89.userapi.com/impg/Exaxgz3unL4P31v7veJc936u29t3ostBmHRvQA/iQcBC4KPFYg.jpg?size=320x180&quality=95&sign=c4839e06f8c95b9acd7a3ab8df2d5802&c_uniq_tag=KFmr6bCa48tM84yJaYvgPO1DnCxeBEcVfZgDzjPSVwA&type=video_thumb",
-    "allDay": "all day",
-    "premium": "",
-    "active": 0
-  },
+
   {
     "category": "Регби",
     "name": "Всероссийские соревнования по регби среди мальчиков до 15 лет. Пятый игровой день",
@@ -27,102 +17,146 @@ export const transLinks = [
     "premium": "",
     "active": 0
   },
-  {
-    "category": "Футбол",
-    "name": "Саудовская Аравия - Мали. Maurice Revello Tournament",
-    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-21620613&id=456251042&hash=2eb0de1fb2cd2758" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-    "data": "2025.06.09",
-    "time": "15:00",
-    "img": "https://sun1-55.userapi.com/impg/jxLlIa0TEZWvCbghhISwR5JISBBFvJYzidnpGw/-uKLqnF1IAg.jpg?size=1280x720&quality=95&sign=11ef85e82847805c7805fc749f009b33&type=video_thumb",
-    "allDay": "",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "Футбол",
-    "name": "Гвинея-Бисау - Габон. Товарищеский матч",
-    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-21620613&id=456251042&hash=2eb0de1fb2cd2758" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-    "data": "2025.06.09",
-    "time": "15:00",
-    "img": "https://sun1-27.userapi.com/impg/EUmuxfY54byI8w343gtaEcIEY_q9d01gqMA5Ow/uKIa6nUq2Wg.jpg?size=1280x720&quality=95&sign=bd4ce0fee2ba36fc12127f689bab79d7&type=video_thumb",
-    "allDay": "",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "Футбол",
-    "name": "Мадагаскар - Эсватини. Кубок КОСАФА. Смотреть прямой эфир",
-    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-21620613&id=456251044&hash=20a9d3b4f0e65be9" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-    "data": "2025.06.09",
-    "time": "16:00",
-    "img": "https://sun9-72.userapi.com/impg/hb9KNFaliTv5kiQffP0kTUT1Z34phZi6DLp7GA/dZMQhe_09as.jpg?size=1280x720&quality=95&sign=15901d0085255a3edb2c03d063fd90ae&type=video_thumb",
-    "allDay": "",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "Футбол",
-    "name": "Панама - Франция. Maurice Revello Tournament. Смотреть на русском прямой эфир",
-    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-21620613&id=456251045&hash=ac3dfe31fecaf855" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-    "data": "2025.06.09",
-    "time": "18:30",
-    "img": "https://sun1-94.userapi.com/impg/ibqDb0NjnLE8py5tztVVIvvlVsWHkm1L4cu0Cg/RvqIs7D-MYw.jpg?size=1280x720&quality=95&sign=9ce908750f279c742e8cac816f29498e&type=video_thumb",
-    "allDay": "",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "Футбол",
-    "name": "Коморские Острова - Ботсвана. Кубок КОСАФА",
-    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-21620613&id=456251046&hash=881da8902994b7db" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-    "data": "2025.06.09",
-    "time": "19:00",
-    "img": "https://sun9-72.userapi.com/impg/hb9KNFaliTv5kiQffP0kTUT1Z34phZi6DLp7GA/1uWbLfS_Q74.jpg?size=1280x720&quality=95&sign=7f5c3ba1fe143f61704a067e398b0f3d&type=video_thumb",
-    "allDay": "",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "Хоккей",
-    "name": "Флорида Пантерз - Эдмонтон Ойлерз | НХЛ. Кубок Стэнли. Финал. Матч №3",
-    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-212188022&id=456243082&hash=9a1cb99a4904278e" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+{
+    "category": "теннис",
+    "name": "Диана Шнайдер – Магдалена Фрех. WTA500 Лондон. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246227&amp;hash=54e3717c96d09357\" width=\"640\"></iframe>",
     "data": "2025.06.10",
-    "time": "03:00",
-    "img": "https://sun9-15.userapi.com/impg/C915wXxOoTNAl465ZKSDK5FCMfp-XbceSkXi9w/HK4LnyTmhF8.jpg?size=1280x720&quality=95&sign=d8a6d15769acbc156fb4dcbfb6f0bfb9&type=video_thumb",
-    "allDay": "",
-    "premium": "",
-    "active": 0
-  },
-    {
-    "category": "теннис",
-    "name": "Бенжамин Бонзи – Иржи Легечка. ATP 250 Штутгарт. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242728&amp;hash=08e34ef962d3ceea\" width=\"640\"></iframe>",
-    "data": "2025.06.09",
-    "time": "12:00",
+    "time": "18:00",
     "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
     "premium": "",
     "active": 0
   },
   {
     "category": "теннис",
-    "name": "Габриэль Диалло – Александар Вукич. ATP 250 Хертогенбош. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242729&amp;hash=44e8537a351972b4\" width=\"640\"></iframe>",
-    "data": "2025.06.09",
-    "time": "12:00",
+    "name": "Марин Чилич – Пол Джабб. ATP Chalenger 125 Илкли. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242744&amp;hash=d82fafeb480ae782\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "15:00",
     "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
     "premium": "",
     "active": 0
   },
   {
     "category": "теннис",
-    "name": "Вероника Кудерметова – Полина Кудерметова. WTA250 Хертогенбош. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/pVIHLx1feB6J \" width=\"640\"></iframe>",
-    "data": "2025.06.09",
-    "time": "12:00",
+    "name": "Борна Гойо – Билли Харрис. ATP Chalenger 125 Илкли. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242741&amp;hash=23d444fcbde4c31f\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "13:00",
     "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
     "premium": "",
     "active": 0
   },
+  {
+    "category": "теннис",
+    "name": "Вавринка Албот. ATP Chalenger 125 Перуджа. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246231&amp;hash=0514cd40070b5f8c\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "21:30",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Маесирелли Пассаро. ATP Chalenger 125 Перуджа. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246230&amp;hash=5f2c108991d11ffe\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "19:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Сакамото Лайович. ATP Chalenger 125 Перуджа. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246229&amp;hash=7c840c57d25a215b\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "14:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "🇺🇸 Алекс Микельсен – 🇨🇵 Гаэль Монфис. ATP 250 Штутгарт. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242748&amp;hash=e75cecb0c6c0865f\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "18:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "🇩🇪 Юстин Энгель – 🇦🇺 Джеймс Дакворт. ATP 250 Штутгарт. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242742&amp;hash=7285378c4c49144c\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "13:30",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Адриан Маннарино – Кристофер О’Коннелл. ATP 250 Хертогенбош. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242749&amp;hash=7781af63ca7d6d4a\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "18:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "🇵🇱 Хуберт Хуркач – 🇪🇸 Роберто Баутиста-Агут. ATP 250 Хертогенбош. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242746&amp;hash=89398bbe17ed254a\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "15:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Энн Ли – Анастасия Потапова. WTA250 Хертогенбош. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246224&amp;hash=7939fbbba0c054f8\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "13:30",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Пеллегрино Пираино. ATP Chalenger 125 Перуджа. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246228&amp;hash=6d198f918d047afd\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "12:30",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Мариам Болквадзе – Екатерина Александрова. WTA250 Хертогенбош. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246225&amp;hash=e27bfaa064c13e3e\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "13:30",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Денис Шаповалов – Артур Риндеркнеш. ATP 250 Штутгарт. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242739&amp;hash=81807a033543a09a\" width=\"640\"></iframe>",
+    "data": "2025.06.10",
+    "time": "12:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/теннис-трава.avif",
+    "premium": "",
+    "active": 0
+  }
 
   
 ]
