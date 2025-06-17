@@ -186,6 +186,26 @@ export const transLinks = [
     "active": 0
   },
   {
+    "category": "регби",
+    "name": "Сборная Красноярского края – «ВВА-Подмосковье» | Чемпионат России по регби среди женских команд 2025",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-40984897&id=456243802&hash=732789aadb9310f5" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.06.17",
+    "time": "17:00",
+    "img": "https://sun1-25.userapi.com/impg/x-y4mMLHlgO-_Md6LOXUhfMSbZcI3JtqdFqqtQ/SBa_pu97xV4.jpg?size=1280x720&quality=95&sign=a1cba53eda55e10a82baf51a8b026881&type=video_thumb",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "регби",
+    "name": "Сборная Москвы – Сборная Поволжья | Чемпионат России по регби среди женских команд 2025",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-40984897&id=456243803&hash=b42f206b42e5a4c4" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.06.17",
+    "time": "19:00",
+    "img": "https://sun1-25.userapi.com/impg/4Ug9oR4BK8qw9wom3VfDUWNM5BBAfwsveh7_wg/OHwlGUq2Tms.jpg?size=1280x720&quality=95&sign=73624e1b6e2c26184fcd249231af4503&type=video_thumb",
+    "premium": "",
+    "active": 0
+  },
+  {
     "category": "другое",
     "name": "Танцевальный спорт. “В РИТМАХ ЛЕТА 2025”. Прямая 17 июня 2025",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-44412995&amp;id=456241011&amp;hash=4eefb6ddfe2109a3\" width=\"640\"></iframe>",
