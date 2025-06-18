@@ -4,214 +4,43 @@
 // 0 - трансляция закончилась
 // 1 - трансляция началась
 
-export const transLinks = [
-  {
-    "category": "велоспорт",
-    "name": "Велоспорт. Тур Швейцарии. Этап 3. Прямая 17 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239640&amp;hash=86c121a5d5496c1b\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "15:00",
+export const transLinks = [{
+    "category": "Велоспорт",
+    "name": "Смотреть Велоспорт. Тур Бельгии. Этап 1. Прямая трансляция 18 июня 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239644&amp;hash=4fa5867daa973ee8\" width=\"640\"></iframe>",
+    "data": "2025.06.18",
+    "time": "16:30",
     "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
     "premium": "",
     "active": 0
   },
   {
-    "category": "велоспорт",
-    "name": "Велоспорт. Джиро Некст Ген/Giro d’Italia Next Gen. Этап 3. Мужчины. Прямая 17 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239639&amp;hash=63d025441ef5d4f0\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "14:30",
+    "category": "Велоспорт",
+    "name": "Смотреть Велоспорт. Рут д’Окситания. Этап 1. Мужчины. Прямая трансляция 18 июня 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239643&amp;hash=3b9a7bae424721d8\" width=\"640\"></iframe>",
+    "data": "2025.06.18",
+    "time": "16:00",
     "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
     "premium": "",
     "active": 0
   },
   {
-    "category": "теннис",
-    "name": "Дженсон Бруксби – Джек Дрейпер. ATP 500 Лондон. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242868&amp;hash=c9c2940a2c567b06\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "15:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/ATP-500-Лондон.avif",
+    "category": "Велоспорт",
+    "name": "Смотреть Велоспорт. Тур Швейцарии. Этап 4. Прямая трансляция 18 июня 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239642&amp;hash=3a8350b00700a7fc\" width=\"640\"></iframe>",
+    "data": "2025.06.18",
+    "time": "15:50",
+    "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
     "premium": "",
     "active": 0
   },
   {
-    "category": "теннис",
-    "name": "Даниил Медведев/Андрей Рублев – Садио Думбия/Фабьен Ребул. ATP 500 Галле. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242873&amp;hash=11f9940700dae546\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "15:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/ATP-500-Галле.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Янник Синнер – Янник Ханфманн. ATP 500 Галле. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242871&amp;hash=ee702d6ee48481c8\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "15:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/ATP-500-Галле.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Магда Линетт – Александра Эала. WTA250 Ноттингем. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/gZJQsNdTGM6Z \" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "13:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/WTA250-Ноттингем.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Денис Шаповалов – Уго Умбер. ATP 500 Галле. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242865&amp;hash=311185c49698c1ba\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "14:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/ATP-500-Галле.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Наоми Осака – Людмила Самсонова. WTA500 Берлин. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/r2UGZ0OlZ2Tq \" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "12:30",
-    "img": "https://srrb.ru/wp-content/uploads/2024/06/WTA500-🇩🇪-Берлин.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Синьюй Ван – Дарья Касаткина. WTA500 Берлин. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/4x9GrS-tBfB1 \" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "12:30",
-    "img": "https://srrb.ru/wp-content/uploads/2024/06/WTA500-🇩🇪-Берлин.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Андрей Рублев – Себастьян Офнер. ATP 500 Галле. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242858&amp;hash=d6d31d652a9f77a2\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "12:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/ATP-500-Галле.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Маркета Вондроушова – Мэдисон Киз. WTA500 Берлин. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246295&amp;hash=b2a118b369f4054b\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "14:00",
-    "img": "https://srrb.ru/wp-content/uploads/2024/06/WTA500-🇩🇪-Берлин.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "🇦🇷 Франциско Серундоло – 🇺🇸 Алекс Михеельсен. ATP 500 Галле. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242866&amp;hash=0fb0f931062c7258\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "14:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/ATP-500-Галле.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "другое",
-    "name": "Свободная пирамида. Финал Чемпионата мира 2025 прямая 17 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-44869284&amp;id=456246695&amp;hash=07be1c4491148498\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "09:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/Свободная-пирамида.-Чемпионат-мира-2025.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Жоао Фонсека – Флавио Коболли. ATP 500 Галле. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242864&amp;hash=a4e8900eb6cd3999\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "14:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/ATP-500-Галле.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Алекс Де Минор – Иржи Легечка. ATP 500 Лондон. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242861&amp;hash=6c0f6e3925a36196\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "14:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/ATP-500-Лондон.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "🇬🇧 Сонай Картал – 🇫🇷 Леолия Жанжан. WTA250 Ноттингем. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/BHvCjMjuTIp4 \" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "13:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/WTA250-Ноттингем.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "🇨🇿 Томаш Махач – 🇳🇱 Йеспер Де Йонг. ATP 500 Галле. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242859&amp;hash=3a9e425727ac0517\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "12:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/ATP-500-Галле.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Педро Мартинес – Томас Мартин Этчеверри. ATP 500 Галле. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456242860&amp;hash=aac951e23d3a9c76\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "12:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/ATP-500-Галле.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "регби",
-    "name": "Сборная Красноярского края – «ВВА-Подмосковье» | Чемпионат России по регби среди женских команд 2025",
-    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-40984897&id=456243802&hash=732789aadb9310f5" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-    "data": "2025.06.17",
-    "time": "17:00",
-    "img": "https://sun1-25.userapi.com/impg/x-y4mMLHlgO-_Md6LOXUhfMSbZcI3JtqdFqqtQ/SBa_pu97xV4.jpg?size=1280x720&quality=95&sign=a1cba53eda55e10a82baf51a8b026881&type=video_thumb",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "регби",
-    "name": "Сборная Москвы – Сборная Поволжья | Чемпионат России по регби среди женских команд 2025",
-    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-40984897&id=456243803&hash=b42f206b42e5a4c4" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-    "data": "2025.06.17",
-    "time": "19:00",
-    "img": "https://sun1-25.userapi.com/impg/4Ug9oR4BK8qw9wom3VfDUWNM5BBAfwsveh7_wg/OHwlGUq2Tms.jpg?size=1280x720&quality=95&sign=73624e1b6e2c26184fcd249231af4503&type=video_thumb",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "другое",
-    "name": "Танцевальный спорт. “В РИТМАХ ЛЕТА 2025”. Прямая 17 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-44412995&amp;id=456241011&amp;hash=4eefb6ddfe2109a3\" width=\"640\"></iframe>",
-    "data": "2025.06.17",
-    "time": "09:00",
-    "img": "https://srrb.ru/wp-content/uploads/2024/06/в-ритмах-лета-2024.jpg",
+    "category": "Велоспорт",
+    "name": "Смотреть Велоспорт. Джиро Некст Ген/Giro d’Italia Next Gen. Этап 4. Мужчины. Прямая трансляция 18 июня 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239641&amp;hash=844e4d0f4d851aad\" width=\"640\"></iframe>",
+    "data": "2025.06.18",
+    "time": "14:20",
+    "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
     "premium": "",
     "active": 0
   }
