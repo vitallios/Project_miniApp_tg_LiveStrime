@@ -4,11 +4,12 @@
 // 0 - трансляция закончилась
 // 1 - трансляция началась
 
-export const transLinks = [{
+export const transLinks = [
+  {
     "category": "Велоспорт",
-    "name": "Смотреть Велоспорт. Тур Бельгии. Этап 1. Прямая трансляция 18 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239644&amp;hash=4fa5867daa973ee8\" width=\"640\"></iframe>",
-    "data": "2025.06.18",
+    "name": "Смотреть Велоспорт. Тур Бельгии. Этап 2. Прямая трансляция 19 июня 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239648&amp;hash=35475bf67b228eeb\" width=\"640\"></iframe>",
+    "data": "2025.06.19",
     "time": "16:30",
     "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
     "premium": "",
@@ -16,19 +17,19 @@ export const transLinks = [{
   },
   {
     "category": "Велоспорт",
-    "name": "Смотреть Велоспорт. Рут д’Окситания. Этап 1. Мужчины. Прямая трансляция 18 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239643&amp;hash=3b9a7bae424721d8\" width=\"640\"></iframe>",
-    "data": "2025.06.18",
-    "time": "16:00",
+    "name": "Смотреть Велоспорт. Рут д’Окситания. Этап 2. Мужчины. Прямая трансляция 19 июня 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239647&amp;hash=872b4f818a401eaa\" width=\"640\"></iframe>",
+    "data": "2025.06.19",
+    "time": "15:15",
     "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
     "premium": "",
     "active": 0
   },
   {
     "category": "Велоспорт",
-    "name": "Смотреть Велоспорт. Тур Швейцарии. Этап 4. Прямая трансляция 18 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239642&amp;hash=3a8350b00700a7fc\" width=\"640\"></iframe>",
-    "data": "2025.06.18",
+    "name": "Смотреть Велоспорт. Тур Швейцарии. Этап 5. Прямая трансляция 19 июня 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239646&amp;hash=e4f32ba3f25e3651\" width=\"640\"></iframe>",
+    "data": "2025.06.19",
     "time": "15:50",
     "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
     "premium": "",
@@ -36,10 +37,10 @@ export const transLinks = [{
   },
   {
     "category": "Велоспорт",
-    "name": "Смотреть Велоспорт. Джиро Некст Ген/Giro d’Italia Next Gen. Этап 4. Мужчины. Прямая трансляция 18 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239641&amp;hash=844e4d0f4d851aad\" width=\"640\"></iframe>",
-    "data": "2025.06.18",
-    "time": "14:20",
+    "name": "Смотреть Велоспорт. Джиро Некст Ген/Giro d’Italia Next Gen. Этап 5. Мужчины. Прямая трансляция 19 июня 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239645&amp;hash=9b1ddb3cf285519c\" width=\"640\"></iframe>",
+    "data": "2025.06.19",
+    "time": "14:30",
     "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
     "premium": "",
     "active": 0
