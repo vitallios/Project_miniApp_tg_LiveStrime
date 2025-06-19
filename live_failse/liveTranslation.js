@@ -65,16 +65,7 @@ export const transLinks = [
     "premium": "",
     "active": 0
   },
-    {
-    "category": "хоккей",
-    "name": "Чемпионат КХЛ 3х3, 23 тур",
-    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-29809500&id=456245776&hash=497718697b4c367f" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
-    "data": "2025.06.19",
-    "time": "17:00",
-    "img": "https://sun1-85.userapi.com/impg/Zd5o31dR4fe2vho7XtE1CpS_Q64uMhTLZ9N78w/9s9TgUid7CA.jpg?size=1280x720&quality=95&sign=2df8a0fbf69145e9273188d50d8363c6&type=video_thumb",
-    "premium": "premium",
-    "active": 0
-  },
+  
 
 ]
 
