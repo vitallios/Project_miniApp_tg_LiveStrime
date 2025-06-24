@@ -7,26 +7,174 @@
 export const transLinks = [
   {
     "category": "другое",
-    "name": "Смотреть Снукер. Wuhan Open 2025. Квалификация. Прямая трансляция 23 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228871432&amp;id=456240281&amp;hash=4537c37cc1904b0e\" width=\"640\"></iframe>",
-    "data": "2025.06.23",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/Wuhan-Open-2025-Ухань-Опен.avif",
+    "name": "Анастасия Захарова – Лизетт Кабрера. Уимблдон. Квалификация. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/ogMjinaJV5HK \" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "19:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон.jpg",
     "premium": "",
     "active": 0
   },
   {
-    "category": "Регби",
-    "name": "«Енисей» – «Красный Яр»  ",
-    "link": '<iframe class="sb-iframe" src="https://sportsru.sprinttyott.com/embed/SHqd1vbVShxVUxn6H25G2E6IwNAgT1F-4rcGrH4LYKE?allowfullscreen=1&amp;loop=1" height="410" width="730" loading="lazy" allow="fullscreen" type="iframe" index="5"></iframe>',
-    "data": "2025.06.23",
-    "time": "14:30",
-    "img": "https://st.video.sports.ru/thumbnail/preview/6852ec28a1c1f6d9dbcf2841/maxres.png",
+    "category": "другое",
+    "name": "Екатерина Макарова – Ана Богдан. Уимблдон. Квалификация. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/x5eo1FP3vf8m \" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "19:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон.jpg",
     "premium": "",
     "active": 0
   },
-
-
+  {
+    "category": "другое",
+    "name": "Александра Саснович – Карлотта Мартинез Сирез. Уимблдон. Квалификация. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/r9XcSCLqreIo \" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "17:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Оксана Селехметьева – Юрико Миядзаки. Уимблдон. Квалификация. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/PoRVPwPZYmpI \" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "17:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Виктория Азаренко – Ига Швентек. WTA 500 Бад Хомбург. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/J-zB6rddvNK4 \" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "17:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/WTA-500-Бад-Хомбург.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Легкая атлетика. Мировой континентальный тур 2025. Острава Голден Спайк. Прямая 24 июня 2025.",
+    "link": "<iframe frameborder=\"0\" height=\"405\" scrolling=\"no\" src=\"https://news.sportbox.ru/vdl/poster/2214530\" style=\"width: 100%; max-width: 720px;\" width=\"720\"></iframe>",
+    "data": "2025.06.24",
+    "time": "19:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/03/Легкая-атлетика.-Мировой-континентальный-тур-2025.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Ирина Шиманович – Амелия Раецки. Уимблдон. Квалификация. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/vVeG8yy67qpL \" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "15:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Эрика Андреева – Селина Яницевич. Уимблдон. Квалификация. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/tCaUZLlZGAXX \" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "15:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Роман Сафиуллин – Хамад Меджедович. ATP 250 Мальорка. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://plvideo.ru/embed/55YWueUl6qui\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
+    "data": "2025.06.24",
+    "time": "14:30",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/майорка-теннис.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "велоспорт",
+    "name": "Велоспорт. Джиро дель’Апеннино. Мужчины. Прямая 24 июня 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239671&amp;hash=a0c1c64299b037e3\" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "16:00",
+    "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Наоми Осака – Эмма Наварро. WTA 500 Бад Хомбург. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246362&amp;hash=85d445c3d52546f0\" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "18:30",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/WTA-500-Бад-Хомбург.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Елена Приданкина – Присцилла Хон. Уимблдон. Квалификация. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/pTrxDEjV3-r5 \" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "15:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Артур Риндеркнеш – Феликс Оже-Альяссим. ATP 250 Мальорка. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243025&amp;hash=4b418160b492f04c\" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "19:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/майорка-теннис.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Джейкоб Фирнли – Флавио Коболли. ATP 250. Истбурн. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243024&amp;hash=110433323de8e234\" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "19:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Итан Куинн – Таллон Грикспур. ATP 250 Мальорка. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243023&amp;hash=db6ef175e84f044f\" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "16:30",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/майорка-теннис.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Билли Харрис – Кэмерон Норри. ATP 250. Истбурн. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243024&amp;hash=110433323de8e234\" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "17:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Нуну Боржеш – Джек Пиннигтон-Джонс. ATP 250. Истбурн. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243022&amp;hash=bd46ca5e4a446c6d\" width=\"640\"></iframe>",
+    "data": "2025.06.24",
+    "time": "15:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
+    "premium": "",
+    "active": 0
+  }
 ]
 
 
