@@ -6,137 +6,126 @@
 
 export const transLinks = [
   {
+    "category": "другое",
+    "name": "Знамя Труда – Ротор-2. Вторая Лига Б. Прямая 28 июня 2025 17:00.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-221212132&amp;id=456244269&amp;hash=5a70ce9cd8692e39\" width=\"640\"></iframe>",
+    "data": "2025.06.28",
+    "time": "17:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/10/Футбол-Вторая-лига.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Металлург Лп – СКА-Хабаровск-2. Вторая Лига Б. Прямая 28 июня 2025 17:00.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-221212132&amp;id=456244268&amp;hash=2951146a34928d3f\" width=\"640\"></iframe>",
+    "data": "2025.06.28",
+    "time": "17:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/10/Футбол-Вторая-лига.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Чертаново – Торпедо-Владимир. Вторая Лига Б. Прямая 28 июня 2025 17:00.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-221212132&amp;id=456244267&amp;hash=6dc224ae16c5df29\" width=\"640\"></iframe>",
+    "data": "2025.06.28",
+    "time": "17:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/10/Футбол-Вторая-лига.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Космос – Леон Сатурн. Вторая Лига Б. Прямая 28 июня 2025 16:00.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-221212132&amp;id=456244265&amp;hash=0bb34168cd1f84f7\" width=\"640\"></iframe>",
+    "data": "2025.06.28",
+    "time": "16:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/10/Футбол-Вторая-лига.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Рязань – Динамо-Брянск. Вторая Лига Б. Прямая 28 июня 2025 16:00.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-221212132&amp;id=456244266&amp;hash=1c66b0fbf3d5ed1c\" width=\"640\"></iframe>",
+    "data": "2025.06.28",
+    "time": "16:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/10/Футбол-Вторая-лига.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Спартак Тм – Динамо-СПб. Вторая Лига Б. Прямая 28 июня 2025 15:00.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-221212132&amp;id=456244264&amp;hash=971c043ed22fdb07\" width=\"640\"></iframe>",
+    "data": "2025.06.28",
+    "time": "15:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/10/Футбол-Вторая-лига.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
     "category": "теннис",
-    "name": "Ига Швентек – Жасмин Паолини. 1/2 финала WTA 500 Бад Хомбург. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228570966&amp;id=456239081&amp;hash=cfa5d6f09a870272\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
+    "name": "Таллон Грикспур – Корентен Муте. Финал ATP 250 Мальорка. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243207&amp;hash=81f11ae1f41cbf91\" width=\"640\"></iframe>",
+    "data": "2025.06.28",
+    "time": "16:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/майорка-теннис.avif",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Тэйлор Фриц – Дженсон Бруксби. Финал ATP 250. Истборн. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243208&amp;hash=cdeb34fa12e6d2b5\" width=\"640\"></iframe>",
+    "data": "2025.06.28",
+    "time": "18:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Майя Джойнт – Александра Эала. Финал WTA250. Истборн. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-144358990&amp;id=456246576&amp;hash=e785e0cdc98b75d5\" width=\"640\"></iframe>",
+    "data": "2025.06.28",
+    "time": "15:30",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Джессика Пегула – Ига Швентек. Финал WTA 500 Бад Хомбург. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-144358990&amp;id=456246577&amp;hash=4c7ae2ca98442d10\" width=\"640\"></iframe>",
+    "data": "2025.06.28",
     "time": "14:30",
     "img": "https://srrb.ru/wp-content/uploads/2025/06/WTA-500-Бад-Хомбург.avif",
     "premium": "",
     "active": 0
   },
   {
-    "category": "другое",
-    "name": "Гольф. Rocket Mortgage Classic США. День 2. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" sandbox=\"allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation\" src=\" https://sreamtivi.ru//player/playerjs.html?file=https://hls.setanta-1.ru/hls/eurosport2.m3u8 \" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.06.27",
-    "time": "22:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/01/Гольф.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "велоспорт",
-    "name": "Велоспорт. Чемпионат Бельгии: Гонка на время. Прямая 27 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239674&amp;hash=6edb1df7fd3285d0\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "15:00",
-    "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
     "category": "теннис",
-    "name": "Алекс Миккелсен – Корентен Муте. 1/2 финала ATP 250 Мальорка. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243193&amp;hash=5f2f825154099724\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "19:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/майорка-теннис.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Феликс Оже-Альяссим – Таллон Грикспур. 1/2 финала ATP 250 Мальорка. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243191&amp;hash=c5b65ac5b97d9207\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "16:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/майорка-теннис.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Тэйлор Фриц – Алехандро Давидович-Фокина. 1/2 финала ATP 250. Истборн. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243194&amp;hash=2ecb39e06bf0e912\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "19:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Уго Умбер – Дженсон Бруксби. 1/2 финала ATP 250. Истборн. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243192&amp;hash=acc172f5b280037e\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "16:30",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "другое",
-    "name": "Уимблдон. Жеребьевка. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228570966&amp;id=456239080&amp;hash=75092d030b947dde\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "14:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Джессика Пегула – Линда Носкова. 1/2 финала WTA 500 Бад Хомбург. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246390&amp;hash=0de35b000171ea09\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "16:30",
+    "name": "Александра Панова/Ханю Гуо – Людмила Киченок/Эллен Перес. Финал WTA 500 Бад Хомбург. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/dd-ycHNJILuN \" width=\"640\"></iframe>",
+    "data": "2025.06.28",
+    "time": "12:00",
     "img": "https://srrb.ru/wp-content/uploads/2025/06/WTA-500-Бад-Хомбург.avif",
     "premium": "",
     "active": 0
   },
   {
-    "category": "теннис",
-    "name": "Александра Эала – Варвара Грачева. 1/2 финала WTA250. Истборн. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228570966&amp;id=456239078&amp;hash=ad64c43efdac8156\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "13:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Анастасия Павлюченкова – Майя Джойнт. 1/2 финала WTA250. Истборн. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246388&amp;hash=63c4bc2dbc917944\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "15:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "🇰🇿Анна Данилина/🇨🇿Мари Бузкова – 🇬🇧Харриет Дарт/🇬🇧Майя Люмдсен. 1/2 финала WTA250. Истборн. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228570966&amp;id=456239079&amp;hash=4b48445fbcffcaf9\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "13:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "🇭🇺 Тимея Бабош/🇧🇷 Луиза Стефани – 🇺🇦 Надежда Киченок/🇦🇺 Эллен Перес. 1/2 финала WTA 500 Бад Хомбург. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/QsiWj5wPmFm1 \" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "12:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/WTA-500-Бад-Хомбург.avif",
+    "category": "другое",
+    "name": "Вольная борьба. Чемпионат России 2025. Прямая",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"526\" src=\"https://vk.com/video_ext.php?oid=-221814623&amp;id=456240361&amp;hash=96d39c5e3f43742c\" width=\"930\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
+    "data": "2025.06.28",
+    "time": "11:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/ЧЕМПИОНАТ-РОССИИ-ПО-БОРЬБЕ.avif",
     "premium": "",
     "active": 0
   }
 ]
-
 
 
 // git add . && git commit -m "update" && git push
