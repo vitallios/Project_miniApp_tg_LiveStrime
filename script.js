@@ -27,10 +27,19 @@ let currentMinutes = currentDate.getMinutes().toString().padStart(2, '0');
 let currentTime = `${currentHours}:${currentMinutes}`;
 let currentDay = `${currentDate.getUTCFullYear()}.${(currentDate.getUTCMonth() + 1).toString().padStart(2, '0')}.${currentDate.getUTCDate().toString().padStart(2, '0')}`;
 
+// Валидация и нормализация данных трансляций
+const validatedTransLinks = transLinks.map(item => ({
+  ...item,
+  time: item.time && /^\d{1,2}:\d{2}$/.test(item.time) ? item.time : '00:00',
+  data: item.data && /^\d{4}\.\d{2}\.\d{2}$/.test(item.data) ? item.data : currentDay,
+  category: item.category || 'другое',
+  premium: item.premium === "premium" ? "premium" : ""
+}));
+
 // Фильтрация
 let currentFilter = 'all';
-const categories = [...new Set(transLinks.map(item => item.category || 'другое'))];
-const hasPremiumTransmissions = transLinks.some(item => item.premium === "premium");
+const categories = [...new Set(validatedTransLinks.map(item => item.category))];
+const hasPremiumTransmissions = validatedTransLinks.some(item => item.premium === "premium");
 
 // Форматирование даты
 const formatDisplayDate = (dateStr) => {
@@ -40,8 +49,15 @@ const formatDisplayDate = (dateStr) => {
 };
 
 const timeToMinutes = (timeStr) => {
-  const [hours, minutes] = timeStr.split(':').map(Number);
-  return hours * 60 + minutes;
+  if (!timeStr || typeof timeStr !== 'string') return 0;
+  
+  try {
+    const [hours, minutes] = timeStr.split(':').map(Number);
+    return (hours || 0) * 60 + (minutes || 0);
+  } catch (e) {
+    console.error('Ошибка преобразования времени:', timeStr);
+    return 0;
+  }
 };
 
 const isDatePassed = (date) => {
@@ -63,10 +79,13 @@ const toggleBurgerMenu = () => {
 };
 
 const openVideoIFrame = (videoHTML) => {
+  if (!videoHTML) return;
   wrapPleer.innerHTML = videoHTML;
 };
 
 const getSafeIframe = (html) => {
+  if (!html) return '';
+  
   try {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
@@ -82,7 +101,8 @@ const getSafeIframe = (html) => {
 };
 
 const calculateTransmissionTime = (startTime, allDay) => {
-  const startMinutes = timeToMinutes(startTime);
+  const safeStartTime = startTime && /^\d{1,2}:\d{2}$/.test(startTime) ? startTime : '00:00';
+  const startMinutes = timeToMinutes(safeStartTime);
   const durationMinutes = allDay === "all day" ? 8 * 60 : 3 * 60;
   const endMinutes = startMinutes + durationMinutes;
 
@@ -100,7 +120,7 @@ const calculateTransmissionTime = (startTime, allDay) => {
   const formatTime = (h, m) => `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`;
 
   return {
-    startTime: startTime,
+    startTime: safeStartTime,
     endTime: formatTime(endHour, endMinute),
     endDay: endDay
   };
@@ -108,11 +128,18 @@ const calculateTransmissionTime = (startTime, allDay) => {
 
 const getTransmissionStatus = (item) => {
   const transmissionDate = item.data || currentDay;
-  const {
-    startTime,
-    endTime,
-    endDay
-  } = calculateTransmissionTime(item.time, item.allDay);
+  const { startTime, endTime, endDay } = calculateTransmissionTime(item.time, item.allDay);
+
+  if (!startTime || !endTime) {
+    return {
+      status: 'past',
+      displayText: 'Неверное время трансляции',
+      startTime: '00:00',
+      endTime: '00:00',
+      transmissionDate
+    };
+  }
+
   const nowMinutes = timeToMinutes(currentTime);
   const startMinutes = timeToMinutes(startTime);
   const endMinutes = timeToMinutes(endTime);
@@ -181,13 +208,12 @@ const getTransmissionStatus = (item) => {
 const renderTransmissions = () => {
   Strimlists.innerHTML = '';
 
-  const sortedTransmissions = [...transLinks].sort((a, b) => {
+  const sortedTransmissions = [...validatedTransLinks].sort((a, b) => {
     const aStatus = getTransmissionStatus(a);
     const bStatus = getTransmissionStatus(b);
     const aIsPremium = a.premium === "premium";
     const bIsPremium = b.premium === "premium";
 
-    // Завершенные трансляции (включая Premium) в конец
     if (aStatus.status === 'past' && bStatus.status !== 'past') return 1;
     if (aStatus.status !== 'past' && bStatus.status === 'past') return -1;
     if (aStatus.status === 'past' && bStatus.status === 'past') {
@@ -196,15 +222,12 @@ const renderTransmissions = () => {
       return bDate.localeCompare(aDate);
     }
 
-    // Для активных/будущих: Premium сначала
     if (aIsPremium && !bIsPremium) return -1;
     if (!aIsPremium && bIsPremium) return 1;
 
-    // Активные перед будущими
     if (aStatus.status === 'active' && bStatus.status !== 'active') return -1;
     if (aStatus.status !== 'active' && bStatus.status === 'active') return 1;
 
-    // Сортировка по времени
     return timeToMinutes(a.time) - timeToMinutes(b.time);
   });
 
@@ -212,11 +235,7 @@ const renderTransmissions = () => {
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
 
-    const {
-      status,
-      displayText,
-      transmissionDate
-    } = getTransmissionStatus(item);
+    const { status, displayText, transmissionDate } = getTransmissionStatus(item);
     const isPremium = item.premium === "premium";
     const isDifferentDate = transmissionDate !== currentDay;
 
