@@ -6,137 +6,106 @@
 
 export const transLinks = [
   {
-    "category": "теннис",
-    "name": "Ига Швентек – Жасмин Паолини. 1/2 финала WTA 500 Бад Хомбург. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228570966&amp;id=456239081&amp;hash=cfa5d6f09a870272\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "14:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/WTA-500-Бад-Хомбург.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
     "category": "другое",
-    "name": "Гольф. Rocket Mortgage Classic США. День 2. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" sandbox=\"allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation\" src=\" https://sreamtivi.ru//player/playerjs.html?file=https://hls.setanta-1.ru/hls/eurosport2.m3u8 \" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.06.27",
-    "time": "22:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/01/Гольф.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "велоспорт",
-    "name": "Велоспорт. Чемпионат Бельгии: Гонка на время. Прямая 27 июня 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227426668&amp;id=456239674&amp;hash=6edb1df7fd3285d0\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "15:00",
-    "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Алекс Миккелсен – Корентен Муте. 1/2 финала ATP 250 Мальорка. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243193&amp;hash=5f2f825154099724\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "19:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/майорка-теннис.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Феликс Оже-Альяссим – Таллон Грикспур. 1/2 финала ATP 250 Мальорка. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243191&amp;hash=c5b65ac5b97d9207\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "16:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/майорка-теннис.avif",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Тэйлор Фриц – Алехандро Давидович-Фокина. 1/2 финала ATP 250. Истборн. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243194&amp;hash=2ecb39e06bf0e912\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "19:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Уго Умбер – Дженсон Бруксби. 1/2 финала ATP 250. Истборн. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243192&amp;hash=acc172f5b280037e\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "16:30",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "другое",
-    "name": "Уимблдон. Жеребьевка. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228570966&amp;id=456239080&amp;hash=75092d030b947dde\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
+    "name": "Смотреть Снукер. Championship League 2025. Прямая трансляция 2 июля 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/Lq6d6m7JzVfk \" width=\"640\"></iframe>",
+    "data": "2025.07.02",
     "time": "14:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон.jpg",
+    "img": "https://srrb.ru/wp-content/uploads/2025/06/Снукер.-Championship-League-2025-768x420.avif",
     "premium": "",
     "active": 0
   },
   {
     "category": "теннис",
-    "name": "Джессика Пегула – Линда Носкова. 1/2 финала WTA 500 Бад Хомбург. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246390&amp;hash=0de35b000171ea09\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "16:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/WTA-500-Бад-Хомбург.avif",
+    "name": "Арина Соболенко – Мари Боузкова. Уимблдон",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246439&amp;hash=9da0e7946d8c5557\" width=\"640\"></iframe>",
+    "data": "2025.07.02",
+    "time": "15:30",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон-768x432.jpg",
     "premium": "",
     "active": 0
   },
   {
     "category": "теннис",
-    "name": "Александра Эала – Варвара Грачева. 1/2 финала WTA250. Истборн. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228570966&amp;id=456239078&amp;hash=ad64c43efdac8156\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "13:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Анастасия Павлюченкова – Майя Джойнт. 1/2 финала WTA250. Истборн. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246388&amp;hash=63c4bc2dbc917944\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
+    "name": "Диана Шнайдер – Диан Парри. Уимблдон",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246437&amp;hash=104c1d0b4085bae6\" width=\"640\"></iframe>",
+    "data": "2025.07.02",
     "time": "15:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон-768x432.jpg",
     "premium": "",
     "active": 0
   },
   {
     "category": "теннис",
-    "name": "🇰🇿Анна Данилина/🇨🇿Мари Бузкова – 🇬🇧Харриет Дарт/🇬🇧Майя Люмдсен. 1/2 финала WTA250. Истборн. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228570966&amp;id=456239079&amp;hash=4b48445fbcffcaf9\" width=\"640\"></iframe>",
-    "data": "2025.06.27",
+    "name": "Андрей Рублёв – Ллойд Харрис. Уимблдон",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246436&amp;hash=5078ca4a4e3d139e\" width=\"640\"></iframe>",
+    "data": "2025.07.02",
+    "time": "14:30",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "регби",
+    "name": "Регби. Британские и Ирландские Львы – Редс. Прямая трансляция 2 июля 2025.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-15550428&amp;id=456245106&amp;hash=4922fb67cde264c6\" width=\"640\"></iframe>",
+    "data": "2025.07.02",
     "time": "13:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/06/Истборн-Rothesay-International.jpg",
+    "img": "https://srrb.ru/wp-content/uploads/2023/08/регби-мяч-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Смотреть WWE NXT 01.07.2025. Прямая трансляция",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-40248182&amp;id=456240916&amp;hash=860aa826c2d0baef\" width=\"640\"></iframe>",
+    "data": "2025.07.02",
+    "time": null,
+    "img": "https://srrb.ru/wp-content/uploads/2025/05/WWE-NXT-768x432.jpg",
     "premium": "",
     "active": 0
   },
   {
     "category": "теннис",
-    "name": "🇭🇺 Тимея Бабош/🇧🇷 Луиза Стефани – 🇺🇦 Надежда Киченок/🇦🇺 Эллен Перес. 1/2 финала WTA 500 Бад Хомбург. Прямая",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/QsiWj5wPmFm1 \" width=\"640\"></iframe>",
-    "data": "2025.06.27",
-    "time": "12:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/WTA-500-Бад-Хомбург.avif",
+    "name": "Шинтаро Мочизуки – Карен Хачанов. Уимблдон",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246435&amp;hash=4d1db9be85dea787\" width=\"640\"></iframe>",
+    "data": "2025.07.02",
+    "time": "13:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Виктория Томова – Сонай Картал. Уимблдон",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-144358990&amp;id=456246600&amp;hash=4b475123605e8074\" width=\"640\"></iframe>",
+    "data": "2025.07.02",
+    "time": "13:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Ольга Данилович – Мэдисон Киз. Уимблдон",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-144358990&amp;id=456246599&amp;hash=fbe0e80a3f70f95f\" width=\"640\"></iframe>",
+    "data": "2025.07.02",
+    "time": "13:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Смотреть Уимблдон Прямая трансляция 2 июля 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246435&amp;hash=4d1db9be85dea787\" width=\"640\"></iframe>",
+    "data": "2025.07.02",
+    "time": "13:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/Уимблдон-768x432.jpg",
     "premium": "",
     "active": 0
   }
 ]
-
 
 
 // git add . && git commit -m "update" && git push
