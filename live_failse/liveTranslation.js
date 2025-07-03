@@ -76,7 +76,7 @@ export const transLinks = [{
   },
   {
     "category": "Футбол",
-    "name": "ТОВАРИЩЕСКИЙ МАТЧ. ЗЕНИТ - ПАРТИЗАН. ПРЯМАЯ ТРАНСЛЯЦИЯ",
+    "name": "ТОВАРИЩЕСКИЙ МАТЧ. ЗЕНИТ - ДИНАМО МАХАЧКАЛА. ПРЯМАЯ ТРАНСЛЯЦИЯ",
     "link": '<iframe src="https://rutube.ru/static/iframe_resources/player-stub/time-to-event.html?title=%D0%A2%D0%9E%D0%92%D0%90%D0%A0%D0%98%D0%A9%D0%95%D0%A1%D0%9A%D0%98%D0%99%20%D0%9C%D0%90%D0%A2%D0%A7.%20%20%D0%97%D0%95%D0%9D%D0%98%D0%A2%20-%20%D0%9F%D0%90%D0%A0%D0%A2%D0%98%D0%97%D0%90%D0%9D.%20%20%D0%9F%D0%A0%D0%AF%D0%9C%D0%90%D0%AF%20%D0%A2%D0%A0%D0%90%D0%9D%D0%A1%D0%9B%D0%AF%D0%A6%D0%98%D0%AF&amp;future_publication=2025-07-03T19%3A00%3A00&amp;thumbnail=https%3A//pic.rutube.ru/video/2025-07-03/53/7f/537fa10e8d75bf12c5926b27623727f5.jpg" allowfullscreen=""></iframe>',
     "data": "2025.07.03",
     "time": "19:00",
