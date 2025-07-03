@@ -74,7 +74,17 @@ export const transLinks = [
     "img": "https://srrb.ru/wp-content/uploads/2023/10/MLB-МЛБ-768x387.jpg",
     "premium": "",
     "active": 0
-  }
+  },
+     {
+        "category": "Регби",
+        "name": "CZECHIA — BELGIUM. U18 Girls 7s Championship 2025",
+        "link": "https://www.rugbyeurope.eu/competitions/season-2425/7s-tournaments-2025/u18-girls-7s-championship-2025/czechia-v-belgium/",
+        "data": "2025.07.12",
+        "time": "07:00",
+        "img": "https://www.rugbyeurope.eu/media/3jdndb4g/cze.png?width=40&format=webp&quality=80&mode=crop&v=1d6d1fb90370650",
+        "premium": "",
+        "active": 0
+    },
 ]
 
 

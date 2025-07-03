@@ -1,20 +1,20 @@
 // Тв программы
 export const catalogLinks = [
-  {
-    id: 1,
-    name: "Regby",
-    img: `https://pic.rutubelist.ru/user/17/71/17711bf151944fec1a3227e38bae4c07.jpg?width=34&height=34`,
-    link: `
-        <iframe
-          src="https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f"
-          frameBorder="0"
-          allow="clipboard-write; autoplay"
-          webkitAllowFullScreen
-          mozallowfullscreen
-          allowFullScreen
-        ></iframe>
-        `,
-  },
+  // {
+  //   id: 1,
+  //   name: "Regby",
+  //   img: `https://pic.rutubelist.ru/user/17/71/17711bf151944fec1a3227e38bae4c07.jpg?width=34&height=34`,
+  //   link: `
+  //       <iframe
+  //         src="https://rutube.ru/play/embed/0369d61bfb8ce126d15fada863cfd08f"
+  //         frameBorder="0"
+  //         allow="clipboard-write; autoplay"
+  //         webkitAllowFullScreen
+  //         mozallowfullscreen
+  //         allowFullScreen
+  //       ></iframe>
+  //       `,
+  // },
   {
     id: 2,
     name: "Football",
