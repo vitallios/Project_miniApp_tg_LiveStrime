@@ -145,63 +145,53 @@ const calculateTransmissionTime = (startTime, allDay) => {
 };
 
 /**
- * Форматирует время для таймера
- * @param {number} seconds - секунды до начала
- * @returns {string} - форматированное время
+ * Форматирует время в формате "ЧЧ:ММ:СС"
  */
-const formatCountdown = (seconds) => {
-  if (seconds <= 0) return "00:00:00";
-  
+const formatCountdownTime = (seconds) => {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const secs = seconds % 60;
-  
   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 };
 
 /**
- * Рассчитывает секунды до начала трансляции
- * @param {string} date - дата трансляции
- * @param {string} time - время начала
- * @returns {number} - секунды до начала
+ * Создает таймер обратного отсчета
  */
-const calculateSecondsUntilStart = (date, time) => {
-  if (!date || !time) return 0;
-  
+const createCountdownTimer = (element, startTime, date) => {
   const now = new Date();
-  const [year, month, day] = date.split('.');
-  const [hours, minutes] = time.split(':');
+  const today = `${now.getUTCFullYear()}.${(now.getUTCMonth() + 1).toString().padStart(2, '0')}.${now.getUTCDate().toString().padStart(2, '0')}`;
   
-  const startDate = new Date(
-    parseInt(year),
-    parseInt(month) - 1,
-    parseInt(day),
-    parseInt(hours),
-    parseInt(minutes),
-    0
-  );
-  
-  return Math.floor((startDate - now) / 1000);
-};
+  // Если трансляция не сегодня, не показываем таймер
+  if (date !== today) return;
 
-/**
- * Обновляет таймеры обратного отсчета
- */
-const updateCountdownTimers = () => {
-  document.querySelectorAll('.countdown-timer').forEach(timer => {
-    const seconds = parseInt(timer.dataset.seconds);
-    const newSeconds = seconds - 1;
-    
-    if (newSeconds <= 0) {
-      timer.textContent = "Сейчас в эфире";
-      timer.closest('.list__strim-item').querySelector('.list__strim-link').disabled = false;
-      timer.closest('.list__strim-item').classList.remove('future');
-      timer.closest('.list__strim-item').classList.add('active');
-    } else {
-      timer.textContent = `До начала: ${formatCountdown(newSeconds)}`;
-      timer.dataset.seconds = newSeconds;
+  const [hours, minutes] = startTime.split(':').map(Number);
+  const targetTime = new Date();
+  targetTime.setHours(hours, minutes, 0, 0);
+
+  // Если время уже прошло, не показываем таймер
+  if (targetTime <= now) return;
+
+  const timerElement = document.createElement('div');
+  timerElement.className = 'countdown-timer';
+  element.appendChild(timerElement);
+
+  const updateTimer = () => {
+    const now = new Date();
+    const diff = Math.floor((targetTime - now) / 1000);
+
+    if (diff <= 0) {
+      timerElement.textContent = '00:00:00';
+      clearInterval(timerInterval);
+      return;
     }
-  });
+
+    timerElement.textContent = formatCountdownTime(diff);
+  };
+
+  updateTimer();
+  const timerInterval = setInterval(updateTimer, 1000);
+
+  return timerInterval;
 };
 
 /**
@@ -236,14 +226,12 @@ const getTransmissionStatus = (item) => {
   }
 
   if (transmissionDate > currentDay) {
-    const secondsUntilStart = calculateSecondsUntilStart(transmissionDate, startTime);
     return {
       status: 'future',
-      displayText: `Начнется ${formatDisplayDate(transmissionDate)} в ${startTime}`,
+      displayText: `Запланирована на ${formatDisplayDate(transmissionDate)} в ${startTime}`,
       startTime,
       endTime,
-      transmissionDate,
-      secondsUntilStart
+      transmissionDate
     };
   }
 
@@ -270,14 +258,12 @@ const getTransmissionStatus = (item) => {
   }
 
   if (nowMinutes < startMinutes) {
-    const secondsUntilStart = calculateSecondsUntilStart(transmissionDate, startTime);
     return {
       status: 'future',
-      displayText: `До начала: ${formatCountdown(secondsUntilStart)}`,
+      displayText: `Запланирована на ${startTime}`,
       startTime,
       endTime,
-      transmissionDate,
-      secondsUntilStart
+      transmissionDate
     };
   }
 
@@ -323,7 +309,7 @@ const renderTransmissions = () => {
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
 
-    const { status, displayText, transmissionDate, secondsUntilStart } = getTransmissionStatus(item);
+    const { status, displayText, startTime, transmissionDate } = getTransmissionStatus(item);
     const isPremium = item.premium === "premium";
     const isDifferentDate = transmissionDate !== currentDay;
 
@@ -338,22 +324,23 @@ const renderTransmissions = () => {
     li.className = `list__strim-item ${status} ${isPremium ? 'premium' : ''}`;
     li.dataset.id = `transmission-${index}`;
 
+    const imageContainer = item.img ? 
+      `<div class="image-container">
+        <img src="${item.img}" alt="${item.name}" class="transmission-image">
+      </div>` : "";
+
     li.innerHTML = `
       <button class="list__strim-link ${status}" 
               ${status === 'past' ? 'disabled' : ''}
               data-iframe="${encodeURIComponent(iframeHTML)}">
-        ${item.img ? `<img src="${item.img}" alt="${item.name}" class="transmission-image">` : ""}
+        ${imageContainer}
         <div class="transmission-header">
           <h3>${item.name}</h3>
           ${isPremium ? '<span class="premium-badge">Premium</span>' : ''}
           ${item.allDay === "all day" ? '<span class="list__strim-allDay">all day</span>' : ''}
         </div>
         <div class="transmission-info">
-          <span class="time-info">
-            ${status === 'future' && secondsUntilStart > 0 
-              ? `<span class="countdown-timer" data-seconds="${secondsUntilStart}">${displayText}</span>`
-              : displayText}
-          </span>
+          <span class="time-info">${displayText}</span>
         </div>
       </button>
     `;
@@ -364,13 +351,16 @@ const renderTransmissions = () => {
       });
     }
 
+    // Добавляем таймер для будущих трансляций сегодня
+    if (status === 'future' && item.img && transmissionDate === currentDay) {
+      const imgContainer = li.querySelector('.image-container');
+      if (imgContainer) {
+        createCountdownTimer(imgContainer, startTime, transmissionDate);
+      }
+    }
+
     Strimlists.appendChild(li);
   });
-
-  // Запускаем обновление таймеров
-  if (document.querySelectorAll('.countdown-timer').length > 0) {
-    setInterval(updateCountdownTimers, 1000);
-  }
 };
 
 /**
@@ -423,9 +413,39 @@ const createFilterButtons = () => {
   });
 };
 
+// Стили для таймера
+const addCountdownStyles = () => {
+  const style = document.createElement('style');
+  style.textContent = `
+    .image-container {
+      position: relative;
+    }
+    .countdown-timer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      z-index: 10;
+    }
+    .transmission-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  `;
+  document.head.appendChild(style);
+};
+
 // Инициализация при загрузке страницы
 window.addEventListener('load', () => {
   document.querySelector('.content').style.opacity = '0';
+  addCountdownStyles();
 
   setTimeout(() => {
     loader.style.display = 'none';
