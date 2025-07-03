@@ -4,8 +4,7 @@
 // 0 - трансляция закончилась
 // 1 - трансляция началась
 
-export const transLinks = [
-  {
+export const transLinks = [{
     "category": "футбол",
     "name": "Смотреть КДВ Томск – Уралец. Вторая Лига Б. Прямая трансляция 3 июля 2025 в 14:00.",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-221212132&amp;id=456244350&amp;hash=3ff83b32dfb22ae2\" width=\"640\"></iframe>",
@@ -75,16 +74,16 @@ export const transLinks = [
     "premium": "",
     "active": 0
   },
-     {
-        "category": "Регби",
-        "name": "CZECHIA — BELGIUM. U18 Girls 7s Championship 2025",
-        "link": "https://www.rugbyeurope.eu/competitions/season-2425/7s-tournaments-2025/u18-girls-7s-championship-2025/czechia-v-belgium/",
-        "data": "2025.07.12",
-        "time": "07:00",
-        "img": "https://www.rugbyeurope.eu/media/3jdndb4g/cze.png?width=40&format=webp&quality=80&mode=crop&v=1d6d1fb90370650",
-        "premium": "",
-        "active": 0
-    },
+  {
+    "category": "Футбол",
+    "name": "ТОВАРИЩЕСКИЙ МАТЧ. ЗЕНИТ - ПАРТИЗАН. ПРЯМАЯ ТРАНСЛЯЦИЯ",
+    "link": '<iframe src="https://rutube.ru/static/iframe_resources/player-stub/time-to-event.html?title=%D0%A2%D0%9E%D0%92%D0%90%D0%A0%D0%98%D0%A9%D0%95%D0%A1%D0%9A%D0%98%D0%99%20%D0%9C%D0%90%D0%A2%D0%A7.%20%20%D0%97%D0%95%D0%9D%D0%98%D0%A2%20-%20%D0%9F%D0%90%D0%A0%D0%A2%D0%98%D0%97%D0%90%D0%9D.%20%20%D0%9F%D0%A0%D0%AF%D0%9C%D0%90%D0%AF%20%D0%A2%D0%A0%D0%90%D0%9D%D0%A1%D0%9B%D0%AF%D0%A6%D0%98%D0%AF&amp;future_publication=2025-07-03T19%3A00%3A00&amp;thumbnail=https%3A//pic.rutube.ru/video/2025-07-03/53/7f/537fa10e8d75bf12c5926b27623727f5.jpg" allowfullscreen=""></iframe>',
+    "data": "2025.07.03",
+    "time": "19:00",
+    "img": "https://pic.rutube.ru/video/2025-07-03/53/7f/537fa10e8d75bf12c5926b27623727f5.jpg",
+    "premium": "premium",
+    "active": 0
+  },
 ]
 
 
@@ -97,7 +96,6 @@ export const transLinks = [
 //   data: "2025.05.14",
 //   time: "08:45",
 //   img: "https://sun9-76.userapi.com/impg/gvFpqx1bb2QEFPkw_1Ch9YR9XvsUstl4xMaFMA/EANyeld5KQQ.jpg?size=1280x720&quality=95&sign=58d4322285b1d5212bbff5ee7cf176d0&type=video_thumb",
-//   premium: "",
+//   premium: "premium",
 //   active: 0,
 // },
-
