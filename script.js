@@ -48,6 +48,9 @@ const formatDisplayDate = (dateStr) => {
   return `${day}.${month}.${year}`;
 };
 
+/**
+ * Преобразует строку времени в минуты
+ */
 const timeToMinutes = (timeStr) => {
   if (!timeStr || typeof timeStr !== 'string') return 0;
   
@@ -60,11 +63,17 @@ const timeToMinutes = (timeStr) => {
   }
 };
 
+/**
+ * Проверяет, прошла ли указанная дата
+ */
 const isDatePassed = (date) => {
   if (!date) return false;
   return date < currentDay;
 };
 
+/**
+ * Переключает состояние бургер-меню
+ */
 const toggleBurgerMenu = () => {
   navBTN.classList.toggle("active");
   menu.classList.toggle("active");
@@ -78,11 +87,17 @@ const toggleBurgerMenu = () => {
   );
 };
 
+/**
+ * Открывает видео в iframe
+ */
 const openVideoIFrame = (videoHTML) => {
   if (!videoHTML) return;
   wrapPleer.innerHTML = videoHTML;
 };
 
+/**
+ * Создает безопасный iframe из HTML-строки
+ */
 const getSafeIframe = (html) => {
   if (!html) return '';
   
@@ -100,6 +115,9 @@ const getSafeIframe = (html) => {
   }
 };
 
+/**
+ * Рассчитывает время трансляции
+ */
 const calculateTransmissionTime = (startTime, allDay) => {
   const safeStartTime = startTime && /^\d{1,2}:\d{2}$/.test(startTime) ? startTime : '00:00';
   const startMinutes = timeToMinutes(safeStartTime);
@@ -126,6 +144,69 @@ const calculateTransmissionTime = (startTime, allDay) => {
   };
 };
 
+/**
+ * Форматирует время для таймера
+ * @param {number} seconds - секунды до начала
+ * @returns {string} - форматированное время
+ */
+const formatCountdown = (seconds) => {
+  if (seconds <= 0) return "00:00:00";
+  
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const secs = seconds % 60;
+  
+  return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+};
+
+/**
+ * Рассчитывает секунды до начала трансляции
+ * @param {string} date - дата трансляции
+ * @param {string} time - время начала
+ * @returns {number} - секунды до начала
+ */
+const calculateSecondsUntilStart = (date, time) => {
+  if (!date || !time) return 0;
+  
+  const now = new Date();
+  const [year, month, day] = date.split('.');
+  const [hours, minutes] = time.split(':');
+  
+  const startDate = new Date(
+    parseInt(year),
+    parseInt(month) - 1,
+    parseInt(day),
+    parseInt(hours),
+    parseInt(minutes),
+    0
+  );
+  
+  return Math.floor((startDate - now) / 1000);
+};
+
+/**
+ * Обновляет таймеры обратного отсчета
+ */
+const updateCountdownTimers = () => {
+  document.querySelectorAll('.countdown-timer').forEach(timer => {
+    const seconds = parseInt(timer.dataset.seconds);
+    const newSeconds = seconds - 1;
+    
+    if (newSeconds <= 0) {
+      timer.textContent = "Сейчас в эфире";
+      timer.closest('.list__strim-item').querySelector('.list__strim-link').disabled = false;
+      timer.closest('.list__strim-item').classList.remove('future');
+      timer.closest('.list__strim-item').classList.add('active');
+    } else {
+      timer.textContent = `До начала: ${formatCountdown(newSeconds)}`;
+      timer.dataset.seconds = newSeconds;
+    }
+  });
+};
+
+/**
+ * Определяет статус трансляции
+ */
 const getTransmissionStatus = (item) => {
   const transmissionDate = item.data || currentDay;
   const { startTime, endTime, endDay } = calculateTransmissionTime(item.time, item.allDay);
@@ -155,12 +236,14 @@ const getTransmissionStatus = (item) => {
   }
 
   if (transmissionDate > currentDay) {
+    const secondsUntilStart = calculateSecondsUntilStart(transmissionDate, startTime);
     return {
       status: 'future',
-      displayText: `Запланирована на ${formatDisplayDate(transmissionDate)} в ${startTime}`,
+      displayText: `Начнется ${formatDisplayDate(transmissionDate)} в ${startTime}`,
       startTime,
       endTime,
-      transmissionDate
+      transmissionDate,
+      secondsUntilStart
     };
   }
 
@@ -187,12 +270,14 @@ const getTransmissionStatus = (item) => {
   }
 
   if (nowMinutes < startMinutes) {
+    const secondsUntilStart = calculateSecondsUntilStart(transmissionDate, startTime);
     return {
       status: 'future',
-      displayText: `Запланирована на ${startTime}`,
+      displayText: `До начала: ${formatCountdown(secondsUntilStart)}`,
       startTime,
       endTime,
-      transmissionDate
+      transmissionDate,
+      secondsUntilStart
     };
   }
 
@@ -205,6 +290,9 @@ const getTransmissionStatus = (item) => {
   };
 };
 
+/**
+ * Отрисовывает список трансляций
+ */
 const renderTransmissions = () => {
   Strimlists.innerHTML = '';
 
@@ -235,7 +323,7 @@ const renderTransmissions = () => {
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
 
-    const { status, displayText, transmissionDate } = getTransmissionStatus(item);
+    const { status, displayText, transmissionDate, secondsUntilStart } = getTransmissionStatus(item);
     const isPremium = item.premium === "premium";
     const isDifferentDate = transmissionDate !== currentDay;
 
@@ -261,7 +349,11 @@ const renderTransmissions = () => {
           ${item.allDay === "all day" ? '<span class="list__strim-allDay">all day</span>' : ''}
         </div>
         <div class="transmission-info">
-          <span class="time-info">${displayText}</span>
+          <span class="time-info">
+            ${status === 'future' && secondsUntilStart > 0 
+              ? `<span class="countdown-timer" data-seconds="${secondsUntilStart}">${displayText}</span>`
+              : displayText}
+          </span>
         </div>
       </button>
     `;
@@ -274,8 +366,16 @@ const renderTransmissions = () => {
 
     Strimlists.appendChild(li);
   });
+
+  // Запускаем обновление таймеров
+  if (document.querySelectorAll('.countdown-timer').length > 0) {
+    setInterval(updateCountdownTimers, 1000);
+  }
 };
 
+/**
+ * Инициализирует меню каталога
+ */
 const initCatalogMenu = () => {
   catalogLinks.forEach(item => {
     const li = document.createElement('li');
@@ -297,6 +397,9 @@ const initCatalogMenu = () => {
   });
 };
 
+/**
+ * Создает кнопки фильтрации
+ */
 const createFilterButtons = () => {
   const buttonsHTML = `
     <button class="filter-btn active" data-filter="all">Все трансляции</button>
@@ -320,6 +423,7 @@ const createFilterButtons = () => {
   });
 };
 
+// Инициализация при загрузке страницы
 window.addEventListener('load', () => {
   document.querySelector('.content').style.opacity = '0';
 
@@ -330,6 +434,7 @@ window.addEventListener('load', () => {
     createFilterButtons();
     renderTransmissions();
 
+    // Обновление времени каждую минуту
     setInterval(() => {
       const now = new Date();
       if (now.getMinutes() !== currentDate.getMinutes()) {
@@ -344,6 +449,7 @@ window.addEventListener('load', () => {
   }, 1000);
 });
 
+// Обработчики событий
 navBTN.addEventListener('click', toggleBurgerMenu);
 btnToHome.addEventListener('click', () => {
   document.querySelector('.wrap__pages').classList.add('info__none');
