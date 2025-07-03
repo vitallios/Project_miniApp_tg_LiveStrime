@@ -53,7 +53,7 @@ const formatDisplayDate = (dateStr) => {
  */
 const timeToMinutes = (timeStr) => {
   if (!timeStr || typeof timeStr !== 'string') return 0;
-  
+
   try {
     const [hours, minutes] = timeStr.split(':').map(Number);
     return (hours || 0) * 60 + (minutes || 0);
@@ -100,7 +100,7 @@ const openVideoIFrame = (videoHTML) => {
  */
 const getSafeIframe = (html) => {
   if (!html) return '';
-  
+
   try {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
@@ -160,7 +160,7 @@ const formatCountdownTime = (seconds) => {
 const createCountdownTimer = (element, startTime, date) => {
   const now = new Date();
   const today = `${now.getUTCFullYear()}.${(now.getUTCMonth() + 1).toString().padStart(2, '0')}.${now.getUTCDate().toString().padStart(2, '0')}`;
-  
+
   // Если трансляция не сегодня, не показываем таймер
   if (date !== today) return;
 
@@ -199,7 +199,11 @@ const createCountdownTimer = (element, startTime, date) => {
  */
 const getTransmissionStatus = (item) => {
   const transmissionDate = item.data || currentDay;
-  const { startTime, endTime, endDay } = calculateTransmissionTime(item.time, item.allDay);
+  const {
+    startTime,
+    endTime,
+    endDay
+  } = calculateTransmissionTime(item.time, item.allDay);
 
   if (!startTime || !endTime) {
     return {
@@ -309,7 +313,12 @@ const renderTransmissions = () => {
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
 
-    const { status, displayText, startTime, transmissionDate } = getTransmissionStatus(item);
+    const {
+      status,
+      displayText,
+      startTime,
+      transmissionDate
+    } = getTransmissionStatus(item);
     const isPremium = item.premium === "premium";
     const isDifferentDate = transmissionDate !== currentDay;
 
@@ -324,7 +333,7 @@ const renderTransmissions = () => {
     li.className = `list__strim-item ${status} ${isPremium ? 'premium' : ''}`;
     li.dataset.id = `transmission-${index}`;
 
-    const imageContainer = item.img ? 
+    const imageContainer = item.img ?
       `<div class="image-container">
         <img src="${item.img}" alt="${item.name}" class="transmission-image">
       </div>` : "";
@@ -421,22 +430,28 @@ const addCountdownStyles = () => {
       position: relative;
     }
     .countdown-timer {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 2rem;
-      font-weight: bold;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      z-index: 10;
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
     }
     .transmission-image {
       display: block;
       width: 100%;
       height: auto;
+      position: relative;
+      border-radius: 5px;
     }
   `;
   document.head.appendChild(style);

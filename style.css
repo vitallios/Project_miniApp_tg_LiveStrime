@@ -342,8 +342,12 @@ li {
     line-height: 3vh;
     display: flex;
     padding: 0 2%;
-    border-radius: 10px;
-    align-content: space-between
+    border-radius: 5px;
+    align-content: space-between;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .list__strim-item>button>img {
