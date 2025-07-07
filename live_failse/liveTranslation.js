@@ -4,7 +4,7 @@
 // 0 - трансляция закончилась
 // 1 - трансляция началась
 
-export const transLinks = [
+export const transLinks =[
   {
     "category": "теннис",
     "name": "Тристан Скулкейт — Алекс Болт. ATP Challenger 125 Ньюпорт",
@@ -205,7 +205,7 @@ export const transLinks = [
     "premium": "",
     "active": 0
   }
-]
+] 
 
 
 
