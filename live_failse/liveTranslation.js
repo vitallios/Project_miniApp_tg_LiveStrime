@@ -36,32 +36,12 @@ export const transLinks =[
     "active": 0
   },
   {
-    "category": "другое",
-    "name": "Евроспорт 1. Прямой эфир смотреть онлайн",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" height=\"360 frameborder=\" scrolling=\"no\" src=\"https://live.vkvideo.ru/app/embed/tnt1\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.07.08",
-    "time": null,
-    "img": "https://srrb.ru/wp-content/uploads/2024/09/ЕВРОСПОРТ-1-768x401.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
     "category": "велоспорт",
     "name": "Велогонка Тур де Франс 2025. 4-й этап. Прямая трансляция 8 июля 2025 в 14:00",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" height=\"360 frameborder=\" scrolling=\"no\" src=\"https://live.vkvideo.ru/app/embed/tnt1\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
     "data": "2025.07.08",
     "time": "14:00",
     "img": "https://srrb.ru/wp-content/uploads/2025/07/тур-де-франс-768x428.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "другое",
-    "name": "Смотреть Милуоки Брюерс — Лос-Анджелес Доджерс. МЛБ. Бейсбол. Прямая трансляция 8 июля 2025 в 02:40.",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-227346189&amp;id=456242027&amp;hash=13e6cc5baf7e3d1a\" width=\"640\"></iframe>",
-    "data": "2025.07.08",
-    "time": "02:40",
-    "img": "https://srrb.ru/wp-content/uploads/2023/10/MLB-МЛБ-768x387.jpg",
     "premium": "",
     "active": 0
   }
