@@ -4,8 +4,7 @@
 // 0 - трансляция закончилась
 // 1 - трансляция началась
 
-export const transLinks = [
-  {
+export const transLinks = [{
     "category": "другое",
     "name": "Смотреть Снукер. Championship League 2025. Прямая трансляция 15 июля 2025",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/QZEnN0kgXT8\" title=\"WATCH LIVE | 2025 BetVictor Championship League Snooker Ranking Edition | Table One\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
@@ -84,7 +83,17 @@ export const transLinks = [
     "img": "https://sun1-30.userapi.com/impg/syPXk2S82xTGnuraNvY22sr7VqZPfGLbigFQ0g/A8hM-YCz86E.jpg?size=800x450&quality=95&keep_aspect_ratio=1&background=000000&sign=fff8d703303d12c534f75b7ca84afa2b&type=video_thumb",
     "premium": "",
     "active": 0
-  }
+  },
+  {
+    "category": "другое",
+    "name": "Кристалл-МЭЗТ (Борисоглебск) - Локомотив (Лиски)",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-157749661&id=456240798&hash=0da97eedd2c4d195" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.07.16",
+    "time": "17:30",
+    "img": "https://sun9-62.userapi.com/impg/y6gc6hj9iRFXY_-4pwWAcB8ebm2lFUaoGw9ReA/WA879y6kh5I.jpg?size=800x450&quality=95&keep_aspect_ratio=1&background=000000&sign=939fd42a6aa8b880af2442eb58ba0287&type=video_thumb",
+    "premium": "",
+    "active": 0
+  },
 ]
 
 // git add . && git commit -m "update" && git push
