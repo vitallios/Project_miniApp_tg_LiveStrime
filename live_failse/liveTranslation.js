@@ -36,16 +36,6 @@ export const transLinks = [
     "active": 0
   },
   {
-    "category": "другое",
-    "name": "Смотреть WWE Monday Night Raw 14.07.2025. Прямая трансляция",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-40248182&amp;id=456240964&amp;hash=16ec80d20d7cc845\" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": null,
-    "img": "https://srrb.ru/wp-content/uploads/2024/06/WWE-Monday-Night-RAW-03.06.2024-768x432.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
     "category": "теннис",
     "name": "Нома Ноха Акуге — Анна Бондарь. WTA 250 Гамбург",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-144358990&amp;id=456246679&amp;hash=926c1ad0563e0f7d\" width=\"640\"></iframe>",
@@ -62,96 +52,6 @@ export const transLinks = [
     "data": "2025.07.15",
     "time": "13:00",
     "img": "https://srrb.ru/wp-content/uploads/2024/12/теннис-ракетки.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Мартин Ландалус-Лакамбра — Давид Гоффен. АТР 250 Гштаад",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243324&amp;hash=de2d374c2225e008\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.07.15",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/гштат-768x284.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Хуго Гастон — Чун-Хсин Ценг. ATP 250 Бостад",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"315\" src=\"https://plvideo.ru/embed/xnxXm5LXpG_N\" width=\"560\"></iframe>",
-    "data": "2025.07.15",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/бастад-768x432.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Себастьян Офнер — Дамир Джумхур. ATP 250 Бостад",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243323&amp;hash=c97d60f90c77ddb1\" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/бастад-768x432.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Хуан-Мануэль Серундоло — Ян-Леннард Штруфф. АТР 250 Гштаад",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243322&amp;hash=848eca7471e76728\" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "11:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/гштат-768x284.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Симона Вальтерт — Анастасия Севастова. WTA 250 Яссы",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/zP2Trr_gcfhT \" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/WTA-250-Яссы-768x432.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Элина Аванесян — Андрея Присэкариу. WTA 250 Яссы",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/N3Y7h6LHsEZw \" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/WTA-250-Яссы-768x432.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Александра Крунич — Далма Галфи. WTA 250 Гамбург",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-144358990&amp;id=456246679&amp;hash=926c1ad0563e0f7d\" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/WTA-250-🇩🇪-Гамбург-768x292.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Сада Нахимана — Аранча Рус. WTA 250 Гамбург",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/TuU2ZdjITy_N \" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "11:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/WTA-250-🇩🇪-Гамбург-768x292.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Мария Тимофеева — Кайя Юван. WTA 250 Гамбург",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246576&amp;hash=639bb47856f8238c\" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "11:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/WTA-250-🇩🇪-Гамбург-768x292.jpg",
     "premium": "",
     "active": 0
   },
