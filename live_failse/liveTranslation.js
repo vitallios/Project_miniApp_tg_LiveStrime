@@ -75,7 +75,7 @@ export const transLinks = [{
     "active": 0
   },
   {
-    "category": "другое",
+    "category": "футбол",
     "name": "Университет спорта (Смоленская область) - Металлург-Оскол (Старый Оскол)",
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-157749661&id=456240799&hash=f27373e0a9f84828" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.07.15",
@@ -85,7 +85,7 @@ export const transLinks = [{
     "active": 0
   },
   {
-    "category": "другое",
+    "category": "футбол",
     "name": "Кристалл-МЭЗТ (Борисоглебск) - Локомотив (Лиски)",
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-157749661&id=456240798&hash=0da97eedd2c4d195" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.07.16",
@@ -94,7 +94,20 @@ export const transLinks = [{
     "premium": "",
     "active": 0
   },
+    {
+    "category": "футбол",
+    "name": "Динамо-М (Киров) - Машиностроитель (Киров) | Чемпионат МФФ 'Золотое кольцо'",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-123215899&id=456239423&hash=fdf689682afccdba" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.07.16",
+    "time": "17:15",
+    "img": "https://admsov.ru/wp-content/uploads/2024/12/vse-pro-futbol-ili-neskolko-interesnykh-faktov-730x365-2.jpg",
+    "premium": "",
+    "active": 0
+  },
 ]
+
+
+// vkvideo - videoplayer_live_waiting_thumb
 
 // git add . && git commit -m "update" && git push
 // {
@@ -107,3 +120,4 @@ export const transLinks = [{
 //   premium: "premium",
 //   active: 0,
 // },
+
