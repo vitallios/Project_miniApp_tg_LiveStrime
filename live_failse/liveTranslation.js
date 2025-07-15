@@ -4,73 +4,94 @@
 // 0 - трансляция закончилась
 // 1 - трансляция началась
 
-export const transLinks = [{
-    "category": "другое",
-    "name": "Смотреть Снукер. Championship League 2025. Прямая трансляция 15 июля 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/QZEnN0kgXT8\" title=\"WATCH LIVE | 2025 BetVictor Championship League Snooker Ranking Edition | Table One\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
+export const transLinks = [
+  {
+    "category": "теннис",
+    "name": "Дарья Лодикова — Жаклин Кристиан. WTA 250 Яссы",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/iP6HiAGvpcii \" width=\"640\"></iframe>",
     "data": "2025.07.15",
-    "time": "14:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/06/Снукер.-Championship-League-2025-768x420.avif",
+    "time": "16:30",
+    "img": "https://srrb.ru/wp-content/uploads/2025/07/WTA-250-Яссы-768x432.jpg",
     "premium": "",
     "active": 0
   },
   {
     "category": "теннис",
-    "name": "Николай Будков Крайер — Тьяго Монтейро. ATP 250 Бостад",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"315\" src=\"https://plvideo.ru/embed/eRftgYIUWa3p\" width=\"560\"></iframe>",
+    "name": "Виталия Дьяченко — Габриэла Кнутсон. WTA 125 Порту",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/w1HoXif4XKJS \" width=\"640\"></iframe>",
     "data": "2025.07.15",
-    "time": "14:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/бастад-768x432.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Элиаш Имер — Тристан Бойер. ATP 250 Бостад",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243325&amp;hash=2c925d939d568841\" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "14:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/бастад-768x432.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Нома Ноха Акуге — Анна Бондарь. WTA 250 Гамбург",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-144358990&amp;id=456246679&amp;hash=926c1ad0563e0f7d\" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "13:40",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/WTA-250-🇩🇪-Гамбург-768x292.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Алина Корнеева — Манон Леонард. WTA 125 Порту",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/iW0IH0575y9d \" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "13:00",
+    "time": "14:30",
     "img": "https://srrb.ru/wp-content/uploads/2024/12/теннис-ракетки.jpg",
     "premium": "",
     "active": 0
   },
   {
-    "category": "другое",
-    "name": "Смотреть онлайн Водное поло. Хорватия — Венгрия. Женщины. Чемпионат Мира по водным видам спорта 2025. Прямой эфир 15 июля 2025.",
-    "link": "<iframe frameborder=\"0\" height=\"405\" scrolling=\"no\" src=\"https://news.sportbox.ru/vdl/poster/2219815\" style=\"width: 100%; max-width: 720px;\" width=\"720\"></iframe>",
+    "category": "теннис",
+    "name": "Александр Шевченко — Стэн Вавринка. АТР 250 Гштаад",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243331&amp;hash=f7d9c22fbfe8e0f6\" width=\"640\"></iframe>",
     "data": "2025.07.15",
-    "time": "15:40",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/Чемпионат-Мира-по-водным-видам-спорта-2025-768x432.jpg",
+    "time": "16:80",
+    "img": "https://srrb.ru/wp-content/uploads/2025/07/гштат-768x284.jpg",
     "premium": "",
     "active": 0
   },
   {
-    "category": "другое",
-    "name": "Смотреть онлайн Водное поло. Австралия — Новая Зеландия. Женщины. Чемпионат Мира по водным видам спорта 2025. Прямой эфир 15 июля 2025.",
-    "link": "<iframe frameborder=\"0\" height=\"405\" scrolling=\"no\" src=\"https://news.sportbox.ru/vdl/poster/2219812\" style=\"width: 100%; max-width: 720px;\" width=\"720\"></iframe>",
+    "category": "теннис",
+    "name": "Жером Ким — Кальвен Эмери. АТР 250 Гштаад",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243328&amp;hash=3023011327e2d355\" width=\"640\"></iframe>",
     "data": "2025.07.15",
-    "time": "12:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/Чемпионат-Мира-по-водным-видам-спорта-2025-768x432.jpg",
+    "time": "16:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/07/гштат-768x284.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Мариано Навоне — Томас Барриос Вера. ATP 250 Бостад",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"315\" src=\"https://plvideo.ru/embed/5VC-Ac0xq1Ta\" width=\"560\"></iframe>",
+    "data": "2025.07.15",
+    "time": "18:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/07/бастад-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Кристиан Гарин — Камилло Уго Карабелли. ATP 250 Бостад",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"315\" src=\"https://plvideo.ru/embed/GBmB4Os3prbZ\" width=\"560\"></iframe>",
+    "data": "2025.07.15",
+    "time": "16:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/07/бастад-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Эльмер Моллер — Филипп Мисолич. ATP 250 Бостад",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243330&amp;hash=65d30473c7221144\" width=\"640\"></iframe>",
+    "data": "2025.07.15",
+    "time": "16:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/07/бастад-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Ботик Ван Де Зандшульп — Майкл Имер. ATP 250 Бостад",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243327&amp;hash=0243523ba576fed7\" width=\"640\"></iframe>",
+    "data": "2025.07.15",
+    "time": "16:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/07/бастад-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Лойс Буассон — Юлия Грабер. WTA 250 Гамбург",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246583&amp;hash=f3d57a5f71731eeb\" width=\"640\"></iframe>",
+    "data": "2025.07.15",
+    "time": "15:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/07/WTA-250-🇩🇪-Гамбург-768x292.jpg",
     "premium": "",
     "active": 0
   },
