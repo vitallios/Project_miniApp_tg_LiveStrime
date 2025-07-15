@@ -176,42 +176,12 @@ export const transLinks = [
     "active": 0
   },
   {
-    "category": "теннис",
-    "name": "Алибек Качмазов — Хуан Пабло Фикович. ATP 250 Лос-Кабос",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"428\" src=\"https://plvideo.ru/embed/5oFvSz_z5pmd\" width=\"760\"></iframe>",
+    "category": "другое",
+    "name": "Университет спорта (Смоленская область) - Металлург-Оскол (Старый Оскол)",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-157749661&id=456240799&hash=f27373e0a9f84828" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.07.15",
-    "time": "07:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/ATP-250-Лос-Кабос-768x391.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Таро Даниэл — Алекс Эрнандес. ATP 250 Лос-Кабос",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243319&amp;hash=167486e3b3760d74\" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "07:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/ATP-250-Лос-Кабос-768x391.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Александр Вукич — Эмилио Нава. ATP 250 Лос-Кабос",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243318&amp;hash=790db38a098ae7ee\" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "05:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/ATP-250-Лос-Кабос-768x391.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Хэйди Хабиб — Александр Ковачевич. ATP 250 Лос-Кабос",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243317&amp;hash=9f14acfd89425114\" width=\"640\"></iframe>",
-    "data": "2025.07.15",
-    "time": "04:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/ATP-250-Лос-Кабос-768x391.jpg",
+    "time": "18:0",
+    "img": "https://sun1-30.userapi.com/impg/syPXk2S82xTGnuraNvY22sr7VqZPfGLbigFQ0g/A8hM-YCz86E.jpg?size=800x450&quality=95&keep_aspect_ratio=1&background=000000&sign=fff8d703303d12c534f75b7ca84afa2b&type=video_thumb",
     "premium": "",
     "active": 0
   }
