@@ -180,7 +180,7 @@ export const transLinks = [
     "name": "Университет спорта (Смоленская область) - Металлург-Оскол (Старый Оскол)",
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-157749661&id=456240799&hash=f27373e0a9f84828" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.07.15",
-    "time": "18:0",
+    "time": "18:00",
     "img": "https://sun1-30.userapi.com/impg/syPXk2S82xTGnuraNvY22sr7VqZPfGLbigFQ0g/A8hM-YCz86E.jpg?size=800x450&quality=95&keep_aspect_ratio=1&background=000000&sign=fff8d703303d12c534f75b7ca84afa2b&type=video_thumb",
     "premium": "",
     "active": 0
