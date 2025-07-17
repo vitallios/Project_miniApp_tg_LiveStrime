@@ -186,6 +186,12 @@ export const transLinks = [
     "active": 0
   },
   {
+    "category": "футбол",
+    "name": "Университет спорта (Смоленская область) - Металлург-Оскол (Старый Оскол)",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-157749661&id=456240799&hash=f27373e0a9f84828" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.07.15",
+    "time": "18:30",
+    "img": "https://sun1-30.userapi.com/impg/syPXk2S82xTGnuraNvY22sr7VqZPfGLbigFQ0g/A8hM-YCz86E.jpg?size=800x450&quality=95&keep_aspect_ratio=1&background=000000&sign=fff8d703303d12c534f75b7ca84afa2b&type=video_thumb",
     "category": "теннис",
     "name": "🇬🇷 Деспина Папамихаил/🇬🇷 Стефанос Циципас — 🇪🇸 Марина Бассолс Рибера/🇪🇸 Роберто Баутиста Агут. Кубок Хопмана 2025",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-144358990&amp;id=456246684&amp;hash=5ce7935dcd285b42\" width=\"640\"></iframe>",
