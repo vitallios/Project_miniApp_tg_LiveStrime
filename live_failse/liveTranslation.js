@@ -4,7 +4,8 @@
 // 0 - трансляция закончилась
 // 1 - трансляция началась
 
-export const transLinks = [{
+export const transLinks = [
+  {
   category: "регби",
   name: "Тест-матч. Самоа - Шотландия.",
   link: '<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456282680&hash=6dbf8fbf2c58209b" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
@@ -13,7 +14,18 @@ export const transLinks = [{
   img: "https://sun1-90.userapi.com/impg/ObcYqJtZQsHGWdN5nqYEc4TGcZQADlrFmtfi5g/o_9NBK7a-Ho.jpg?size=320x180&quality=95&sign=b8161011398f03bb852d1cab2c4f8aa4&c_uniq_tag=MVZNN5JgNUsi-0V90ur5xVct9zJYFzcrcvaWHc-vhhU&type=video_thumb",
   premium: "premium",
   active: 0,
-}, ]
+}, 
+  {
+  category: "регби",
+  name: "Товарищеский матч. Аргентина-А - Румыния.",
+  link: '<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456282680&hash=6dbf8fbf2c58209b" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+  data: "2025.07.18",
+  time: "21:00",
+  img: "https://sun9-25.userapi.com/impg/C4Bs3rUFa4KMjs56g1ml7qF2GM09-r8mk81MLQ/7SmsXnjDm7Y.jpg?size=1280x720&quality=95&sign=b124666c78a73d45e5693462e800a6fb&type=video_thumb",
+  premium: "premium",
+  active: 0,
+}, 
+]
 
 
 // vkvideo - videoplayer_live_waiting_thumb
