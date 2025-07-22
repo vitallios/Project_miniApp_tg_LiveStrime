@@ -6,35 +6,16 @@
 
 export const transLinks = [
   {
-    "category": "теннис",
-    "name": "Мари Бузкова — Синю Гао. WTA250 Прага",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\" https://plvideo.ru/embed/E84pn0q0ElEY \" width=\"640\"></iframe>",
-    "data": "2025.07.21",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/WTA250-Прага-768x425.jpg",
-    "premium": "",
+    "category": "регби",
+    "name": "Сборная коренных народов Австралии и ТР - Британские и Ирландские Львы.",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456282794&hash=e56bb147a6eef072" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.07.22",
+    "time": "13:00",
+    "img": "https://img.championat.com/s/732x488/news/big/z/m/chto-stoit-znat-o-britanskih-i-irlandskih-lvah_1753008580619649123.jpg",
+    "premium": "premium",
     "active": 0
   },
-  {
-    "category": "теннис",
-    "name": "Александр Шевченко — Даниэль Галан. ATP250 Китцбюэль",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://plvideo.ru/embed/iRuUD2B7kifP\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.07.21",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/Китцбюэль-768x447.jpg",
-    "premium": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Франсиско Комесанья — Тристан Бойер. ATP250 Китцбюэль",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456243433&amp;hash=5b0928b5dad105a1\" width=\"640\"></iframe>",
-    "data": "2025.07.21",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/Китцбюэль-768x447.jpg",
-    "premium": "",
-    "active": 0
-  }
+
 ]
 
 
