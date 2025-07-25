@@ -95,6 +95,49 @@ export const transLinks = [
     "premium": "",
     "active": 0
   },
+  {
+    "category": "Регби",
+    "name": "«Локомотив-м» – «Динамо-МАР». Чемпионат молодёжных команд",
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-87994458&id=456242514&hash=bc97b8f646236b00" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.07.26",
+    "time": "17:00",
+    "img": "https://sun1-20.userapi.com/impg/YN1v45SvwfWM_taDydohfiTe1QMYR6TprI6lOg/nRVIzqVxl94.jpg?size=1280x720&quality=95&sign=c06e1c6e9a8dec491e8222c65dc98e69&type=video_thumb",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": 'Регби',
+    "name": '«Всероссийские соревнования по регби среди юношей до 17 лет. Финальный день',
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-40984897&id=456243891&hash=a9e4eba2f630ca98" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": '2025.07.26',
+    "time": '09:00',
+    "img": 'https://sun9-8.userapi.com/impg/KNugDVIeR0o_8Ig8tZbfK1WajMDHAcC8WsBluA/c2X573PXnMg.jpg?size=1280x720&quality=95&sign=9c04f5719c82ad2f893fa2bd2548eeb2&type=video_thumb',
+    "premium": '',
+    "active": 0,
+    "allDay": 'all day'
+  },
+  {
+    "category": 'Регби',
+    "name": '«Стрела-Ак Барс» – «Енисеем-СТМ»',
+    "link": '<iframe class="sb-iframe" src="https://video.sports.ru/embed/nbv0zli1Lfd9PEyIKCG0nmlOzqjA8Fc31gbNPCzseDA?allowfullscreen=1&amp;loop=1" height="410" width="730" loading="lazy" allow="" type="video" index="4"></iframe>',
+    "data": '2025.07.27',
+    "time": '15:00',
+    "img": 'https://st.video.sports.ru/thumbnail/preview/687f41359c085ba1521fb202/maxres.png',
+    "premium": '',
+    "active": 0,
+    "allDay": ''
+  },
+  {
+    "category": 'Регби',
+    "name": '«Локомотив» – «Красным Яром»',
+    "link": '<iframe class="sb-iframe" src="https://video.sports.ru/embed/YGkFDAEpmOM1gpPM4UCQ9RWNufVPyj5BNp9yM_GqD2M?allowfullscreen=1&amp;loop=1" height="410" width="730" loading="lazy" allow="" type="video" index="4"></iframe>',
+    "data": '2025.07.26',
+    "time": '15:30',
+    "img": 'https://st.video.sports.ru/thumbnail/preview/687f3fc5cd616094138e7396/maxres.png',
+    "premium": '',
+    "active": 0,
+    "allDay": ''
+  },
 
 ]
 
@@ -114,3 +157,4 @@ export const transLinks = [
 //   premium: "premium",
 //   active: 0,
 // },
+
