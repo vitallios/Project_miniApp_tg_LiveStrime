@@ -154,7 +154,7 @@ export const transLinks = [
     "name": 'West Siberian Championship, день 2',
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-215240369&id=456239120&hash=9464968ccda8d6aa" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": '2025.07.25',
-    "time": '11:40',
+    "time": '07:00',
     "img": 'https://sun1-85.userapi.com/impg/XZjaG8Zw3DqNFCThK6aS2a6aS5QZ9yi_qYD9tw/Hk0WDYiW53s.jpg?size=320x128&quality=95&sign=99a1abd8089b0e639cd7b3c29b6ab193&c_uniq_tag=WAF63UD2Uj2c93jHq4Hv84r2JmmRgiWjnGsNxqLJswk&type=video_thumb',
     "premium": '',
     "active": 0,
