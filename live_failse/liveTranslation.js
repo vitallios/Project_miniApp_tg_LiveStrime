@@ -102,8 +102,7 @@ export const transLinks = [
     "data": "2025.07.28",
     "time": "16:30",
     "img": "https://srrb.ru/wp-content/uploads/2025/07/тур-валлонии-768x290.jpg",
-    "premium": "",
-    "active": 0
+    "premium": ""
   }
 
 
