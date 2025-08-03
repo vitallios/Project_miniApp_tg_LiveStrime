@@ -18,9 +18,9 @@ export const transLinks = [
   },
   {
     "category": "Регби",
-    "name": "Чемпионат России по пляжному регби 2025. Первый игровой день",
+    "name": "Чемпионат России по пляжному регби 2025. Второй игровой день",
     "link": `<iframe src="https://vk.com/video_ext.php?oid=-40984897&id=456243928&hash=a6c705c376cd9d67" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
-    "data": "2025.08.02",
+    "data": "2025.08.03",
     "time": "09:00",
     "img": "https://sun1-24.userapi.com/impg/z0vMkl4xGFO89-kRD45BEKCDzY9u2D33UUBEYA/PQc4i8m_A3A.jpg?size=1280x720&quality=95&sign=31cea619eebf11fa58dd052cf06daec6&type=video_thumb",
     "premium": "",
