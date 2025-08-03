@@ -15,6 +15,16 @@ export const transLinks = [
     "premium": "",
     "active": 0
   },
+    {
+    "category": "другое",
+    "name": "Тоттенхэм - Ньюкасл",
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-151837602&id=456240251&hash=39fc80e3d14d981d" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.08.03",
+    "time": "14:00",
+    "img": "https://sun1-97.userapi.com/impg/PrpruvTldOd9ghPPndxH0bCC_6W3bx04zyNr8g/_b4579Tl5Us.jpg?size=320x181&quality=95&sign=c9bb171b55ad80b0289accb7f24f7912&c_uniq_tag=hb37CdBHj_7GzA3tx76-uK1wK-vWCl1J_tEWb-Y6cJE&type=video_thumb",
+    "premium": "",
+    "active": 0
+  },
   {
     "category": "другое",
     "name": "Формула-2. Гран-при Венгрии 2025.  Прямая трансляция 1 августа 2025.",
