@@ -16,7 +16,7 @@ export const transLinks = [
     "active": 0
   },
     {
-    "category": "другое",
+    "category": "футбол",
     "name": "Тоттенхэм - Ньюкасл",
     "link": '<iframe src="https://vk.com/video_ext.php?oid=-151837602&id=456240251&hash=39fc80e3d14d981d" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.08.03",
