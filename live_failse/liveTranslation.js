@@ -5,72 +5,41 @@
 // 1 - трансляция началась
 
 export const transLinks = [
-  {
-    "category": "велоспорт",
-    "name": "Смотреть Велоспорт. Тур Польши 2025. Этап 2. Прямая трансляция 5 августа 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-227426668&amp;id=456239718&amp;hash=687e86855eb40be0\" width=\"640\"></iframe>",
-    "data": "2025.08.05",
-    "time": "13:30",
-    "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт-768x432.jpg",
+
+    {
+    "category": "футбол",
+    "name": "Тоттенхэм - Ньюкасл",
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-151837602&id=456240251&hash=39fc80e3d14d981d" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.08.03",
+    "time": "14:00",
+    "img": "https://sun1-97.userapi.com/impg/PrpruvTldOd9ghPPndxH0bCC_6W3bx04zyNr8g/_b4579Tl5Us.jpg?size=320x181&quality=95&sign=c9bb171b55ad80b0289accb7f24f7912&c_uniq_tag=hb37CdBHj_7GzA3tx76-uK1wK-vWCl1J_tEWb-Y6cJE&type=video_thumb",
     "premium": "",
-    "allDays": "",
     "active": 0
   },
   {
-    "category": "хоккей",
-    "name": "Смотреть Академия СКА – МХК Динамо СПб. МХЛ. Турнир Маслова 2025 по хоккею. Прямая трансляция 5 августа 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/-yJIBUFwqM4\" title=\"5.08.2025. «Академия СКА» – МХК «Динамо» СПб | (Турнир имени Н.Е. Маслова) – Прямая трансляция\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.08.05",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/мхл-лого-768x432.jpg",
+    "category": "Регби",
+    "name": "Чемпионат России по пляжному регби 2025. Второй игровой день",
+    "link": `<iframe src="https://vk.com/video_ext.php?oid=-40984897&id=456243928&hash=a6c705c376cd9d67" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.08.03",
+    "time": "09:00",
+    "img": "https://sun1-24.userapi.com/impg/z0vMkl4xGFO89-kRD45BEKCDzY9u2D33UUBEYA/PQc4i8m_A3A.jpg?size=1280x720&quality=95&sign=31cea619eebf11fa58dd052cf06daec6&type=video_thumb",
     "premium": "",
-    "allDays": "",
+    "allDay": "all day",
     "active": 0
   },
-  {
-    "category": "хоккей",
-    "name": "Смотреть Красная Армия — Ирбис. МХЛ. Турнир Маслова 2025 по хоккею. Прямая трансляция 5 августа 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/nxQHGkGRl0U\" title=\"5.08.2025. «Красная Армия» – «Ирбис» | (Турнир имени Н.Е. Маслова) – Прямая трансляция\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.08.05",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/мхл-лого-768x432.jpg",
+    {
+    "category": "Регби",
+    "name": "«Слава» - «Красным Яром»",
+    "link": `<iframe class="sb-iframe" src="https://video.sports.ru/embed/ooEaIMIhBkKtWkn2f-MeRqUyZ0kcJmvtqrGyMC5XzBk?loop=1&amp;allowfullscreen=1" height="410" width="730" loading="lazy" allow="" type="video" index="5"></iframe>`,
+    "data": "2025.08.03",
+    "time": "16:50",
+    "img": "https://st.video.sports.ru/thumbnail/preview/688890f29821f7a434c04a54/maxres.png",
     "premium": "",
-    "allDays": "",
+    "allDay": "",
     "active": 0
   },
-  {
-    "category": "хоккей",
-    "name": "Хоккей. Рубин — Омские Крылья. ВХЛ 2025. Товарищеский матч. Прямая трансляция 5 августа 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-153712229&amp;id=456242147&amp;hash=182f4a17bce7336c\" width=\"640\"></iframe>",
-    "data": "2025.08.05",
-    "time": "11:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/вхл-768x492.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "хоккей",
-    "name": "Хоккей. Рубин — Омские Крылья. ВХЛ 2025. Товарищеский матч. Прямая трансляция 5 августа 2025",
-    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-21620613&id=456251815&hash=47a9d2d1f75388ce" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-    "data": "2025.08.05",
-    "time": "21:00",
-    "img": "https://sun1-27.userapi.com/impg/mIJcF6nj_qgIrnKcuibs5VgQ8x_cJxF_aEYsKA/sMhylBRPZGI.jpg?size=1280x720&quality=95&sign=47bf2b691d14e3a58536ab27e5c396ff&type=video_thumb",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Смотреть Теннис. Открытый Летний Кубок Москвы 2025. Прямая трансляция 5 августа 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-205880627&amp;id=456239687&amp;hash=aec7ac61584601d2\" width=\"640\"></iframe>",
-    "data": "2025.08.05",
-    "time": "09:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/08/летний-кубок-теннис-768x345.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  }
+
+
 ]
 
 
