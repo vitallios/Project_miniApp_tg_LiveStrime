@@ -137,6 +137,17 @@ li {
     animation: pulse 2s infinite;
 }
 
+.menu__donate>a>img {
+    width: 25vw;
+    margin-top: 4vw;
+    animation: pulse 2s infinite;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 #15ffff4b;
