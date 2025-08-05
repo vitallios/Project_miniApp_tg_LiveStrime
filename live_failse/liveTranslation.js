@@ -4,47 +4,92 @@
 // 0 - трансляция закончилась
 // 1 - трансляция началась
 
-export const transLinks = [
+export const transLinks = 
+[
   {
-    "category": "велоспорт",
-    "name": "Смотреть Велоспорт. Тур Польши 2025. Этап 2. Прямая трансляция 5 августа 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-227426668&amp;id=456239718&amp;hash=687e86855eb40be0\" width=\"640\"></iframe>",
+    "category": "футбол",
+    "name": "Смотреть Динамо Киев – Пафос. Лига чемпионов УЕФА 2025/2026. Прямая трансляция 5 августа 2025 в 21:00",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"405\" src=\"https://rutube.ru/play/embed/a44ac870efecb8acbbcaf5e95f32b583/\" width=\"720\"></iframe>",
     "data": "2025.08.05",
-    "time": "13:30",
-    "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт-768x432.jpg",
+    "time": "21:00",
+    "img": "https://srrb.ru/wp-content/uploads/2020/09/Лига-чемпионов-футбол-2020-768x384.jpg",
     "premium": "",
     "allDays": "",
     "active": 0
   },
   {
-    "category": "хоккей",
-    "name": "Смотреть Академия СКА – МХК Динамо СПб. МХЛ. Турнир Маслова 2025 по хоккею. Прямая трансляция 5 августа 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/-yJIBUFwqM4\" title=\"5.08.2025. «Академия СКА» – МХК «Динамо» СПб | (Турнир имени Н.Е. Маслова) – Прямая трансляция\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
+    "category": "футбол",
+    "name": "Смотреть Рейнджерс — Виктория Пльзень. Лига чемпионов УЕФА 2025/2026. Прямая трансляция 5 августа 2025 в 21:45",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"405\" src=\"https://rutube.ru/play/embed/3a9d1aea808efef7f489fe44789e91fe/\" width=\"720\"></iframe>",
     "data": "2025.08.05",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/мхл-лого-768x432.jpg",
+    "time": "21:45",
+    "img": "https://srrb.ru/wp-content/uploads/2020/09/Лига-чемпионов-футбол-2020-768x384.jpg",
     "premium": "",
     "allDays": "",
     "active": 0
   },
   {
-    "category": "хоккей",
-    "name": "Смотреть Красная Армия — Ирбис. МХЛ. Турнир Маслова 2025 по хоккею. Прямая трансляция 5 августа 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/nxQHGkGRl0U\" title=\"5.08.2025. «Красная Армия» – «Ирбис» | (Турнир имени Н.Е. Маслова) – Прямая трансляция\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
+    "category": "футбол",
+    "name": "Смотреть Шкендия — Карабах Агдам. Лига чемпионов УЕФА 2025/2026. Прямая трансляция 5 августа 2025 в 21:00",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"405\" src=\"https://rutube.ru/play/embed/adcbb65ac27fb521a9a7df44e7dcb5dc/\" width=\"720\"></iframe>",
     "data": "2025.08.05",
-    "time": "12:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/мхл-лого-768x432.jpg",
+    "time": "21:00",
+    "img": "https://srrb.ru/wp-content/uploads/2020/09/Лига-чемпионов-футбол-2020-768x384.jpg",
     "premium": "",
     "allDays": "",
     "active": 0
   },
   {
-    "category": "хоккей",
-    "name": "Хоккей. Рубин — Омские Крылья. ВХЛ 2025. Товарищеский матч. Прямая трансляция 5 августа 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-153712229&amp;id=456242147&amp;hash=182f4a17bce7336c\" width=\"640\"></iframe>",
+    "category": "футбол",
+    "name": "Смотреть КИ Клаксвик – Неман. Лига Конференций УЕФА 2025/2026. Прямая трансляция 5 августа 2025 в 21:45",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" sandbox=\"allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation\" src=\" https://euroball.ru/channel/7/7.html \" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
     "data": "2025.08.05",
-    "time": "11:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/вхл-768x492.jpg",
+    "time": "21:45",
+    "img": "https://srrb.ru/wp-content/uploads/2025/07/лига-конференций-уефа-футбол-768x437.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0
+  },
+  {
+    "category": "футбол",
+    "name": "Смотреть Эмполи — Сассуоло. Товарищеский матч. Прямая трансляция 5 августа 2025 в 19:30",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" sandbox=\"allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation\" src=\" https://sportzonline.si/channels/hd/hd7.php \" width=\"640\"></iframe>",
+    "data": "2025.08.05",
+    "time": "19:30",
+    "img": "https://srrb.ru/wp-content/uploads/2020/09/футбольный-мяч-768x399.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0
+  },
+  {
+    "category": "футбол",
+    "name": "Смотреть Шумбрат — Кристалл-МЭЗТ. Кубок России по футболу 2025/2026. Прямая трансляция 5 августа 2025 в 20:00.",
+    "link": "<iframe frameborder=\"0\" height=\"405\" scrolling=\"no\" src=\"https://news.sportbox.ru/vdl/poster/2226631\" style=\"width: 100%; max-width: 720px;\" width=\"720\"></iframe>",
+    "data": "2025.08.05",
+    "time": "20:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/10/Кубок-России-по-футболу-768x374.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0
+  },
+  {
+    "category": "футбол",
+    "name": "Смотреть Амкал — Квант. Кубок России по футболу 2025/2026. Прямая трансляция 5 августа 2025 в 18:00.",
+    "link": "<iframe frameborder=\"0\" height=\"405\" scrolling=\"no\" src=\"https://news.sportbox.ru/vdl/poster/2226629\" style=\"width: 100%; max-width: 720px;\" width=\"720\"></iframe>",
+    "data": "2025.08.05",
+    "time": "18:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/10/Кубок-России-по-футболу-768x374.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0
+  },
+  {
+    "category": "футбол",
+    "name": "Смотреть РВЧеллендж – Звезда СПб. Кубок России по футболу 2025/2026. Прямая трансляция 5 августа 2025 в 16:00.",
+    "link": "<iframe frameborder=\"0\" height=\"405\" scrolling=\"no\" src=\"https://news.sportbox.ru/vdl/poster/2226627\" style=\"width: 100%; max-width: 720px;\" width=\"720\"></iframe>",
+    "data": "2025.08.05",
+    "time": "16:00",
+    "img": "https://srrb.ru/wp-content/uploads/2023/10/Кубок-России-по-футболу-768x374.jpg",
     "premium": "",
     "allDays": "",
     "active": 0
@@ -60,17 +105,7 @@ export const transLinks = [
     "allDays": "",
     "active": 0
   },
-  {
-    "category": "теннис",
-    "name": "Смотреть Теннис. Открытый Летний Кубок Москвы 2025. Прямая трансляция 5 августа 2025",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-205880627&amp;id=456239687&amp;hash=aec7ac61584601d2\" width=\"640\"></iframe>",
-    "data": "2025.08.05",
-    "time": "09:30",
-    "img": "https://srrb.ru/wp-content/uploads/2025/08/летний-кубок-теннис-768x345.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  }
+
 ]
 
 
