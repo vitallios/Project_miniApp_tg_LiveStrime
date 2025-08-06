@@ -132,5 +132,35 @@ export const randomFilms = [
         allowFullScreen
       ></iframe>
     `
+ },
+ {
+  id: 10,
+  name: "Джон Уик: Балерина (HD) (2025)",
+  link: `
+     <iframe 
+     src="https://vkvideo.ru/video_ext.php?oid=-231952439&id=456239026&hash=a358bdbf930ecf9f"
+     frameborder="0" 
+     allowfullscreen="1" 
+     allow="autoplay; 
+     encrypted-media; 
+     fullscreen; 
+     picture-in-picture">
+    </iframe>
+    `
+ },
+ {
+  id: 11,
+  name: "Ледяной драйв 2: Возмездие",
+  link: `
+      <iframe
+        src="https://t.me/archive_kinozona_1080p/196"
+        frameBorder="0"
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
+      ></iframe>
+    `
  }
 ];
+// https://t.me/archive_kinozona_1080p/196
