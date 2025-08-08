@@ -86,6 +86,52 @@ export const transLinks =
     "premium": "",
     "active": 0
   },
+
+    {
+    "category": "регби",
+    "name": "«Канберра Рэйдерс» – «Мэнли Си Иглс»",
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-175058841&id=456240595&hash=a62b432ea36bb42b" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.08.08",
+    "time": "13:00",
+    "img": "https://sun1-97.userapi.com/impg/BDk26m57BCCDKEQcbwBMErPWs12p8DOjIwrl0w/cJmZ-7fxYXk.jpg?size=320x180&quality=95&sign=4354315f23c72417bf6ef5b29bc4321d&c_uniq_tag=vFpUB4kWAEB5G_OovZJ0hLim2BbZUuX8Mb4WdHAe_Gs&type=video_thumb",
+    "premium": "",
+    "active": 0
+  },
+      {
+    "category": "регби",
+    "name": "Warriors – МГУ",
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-206713236&id=456239122&hash=ae90cc29f6001c94" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.08.09",
+    "time": "11:00",
+    "img": "https://sun9-36.userapi.com/impg/stresYh4czMq1TttOjoRCYFmn32YYRu9LJ4Yjw/BzfHAKAQ9T0.jpg?size=1280x720&quality=95&sign=ac0feacf3c5b52fd3b7ddfb5eab9af4d&type=video_thumb",
+    "premium": "",
+    "active": 0
+  },
+        {
+    "category": "регби",
+    "name": "МИФИ – «Гранит»",
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-206713236&id=456239122&hash=ae90cc29f6001c94" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.08.09",
+    "time": "13:00",
+    "img": "https://sun9-36.userapi.com/impg/stresYh4czMq1TttOjoRCYFmn32YYRu9LJ4Yjw/BzfHAKAQ9T0.jpg?size=1280x720&quality=95&sign=ac0feacf3c5b52fd3b7ddfb5eab9af4d&type=video_thumb",
+    "premium": "",
+    "active": 0
+  },
+
+
+
+          {
+    "category": "регби",
+    "name": "«Мос. Драконы» – «Фаворит»",
+    "link": '<iframe src="https://vk.com/video_ext.php?oid=-206713236&id=456239122&hash=ae90cc29f6001c94" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.08.09",
+    "time": "15:00",
+    "img": "https://sun9-36.userapi.com/impg/stresYh4czMq1TttOjoRCYFmn32YYRu9LJ4Yjw/BzfHAKAQ9T0.jpg?size=1280x720&quality=95&sign=ac0feacf3c5b52fd3b7ddfb5eab9af4d&type=video_thumb",
+    "premium": "",
+    "active": 0
+  },
+
+
 ]
 
 
