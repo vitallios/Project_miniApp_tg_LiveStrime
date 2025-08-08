@@ -6,154 +6,87 @@
 
 export const transLinks = 
 [
-
-
-
   {
-    "category": "теннис",
-    "name": "Тэйлор Таунсенд/Чжен Шуай — Коко Гауфф/Маккартни Кесслер. Финал WTA1000 Монреаль",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-218116775&amp;id=456246803&amp;hash=1daaa61e014a5745\" width=\"640\"></iframe>",
-    "data": "2025.08.06",
-    "time": "22:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/07/монреаль-опен-768x432.jpg",
+    "category": "другое",
+    "name": "Смотреть Снукер. Saudi Arabia Masters 2025. Прямая трансляция 8 августа 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228871432&amp;id=456240555&amp;hash=01c84da0ac3fb3a3\" width=\"640\"></iframe>",
+    "data": "2025.08.08",
+    "time": "14:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/08/Saudi-Arabia-Masters-2025-768x461.jpg",
     "premium": "",
-    "allDays": "",
+    "active": 0
+  },
+  {
+    "category": "хоккей",
+    "name": "Хоккей. Рязань-ВДВ — Ростов. ВХЛ 2025. Товарищеский матч. Прямая трансляция 8 августа 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/OxA77Ii9FmQ\" title=\"\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
+    "data": "2025.08.08",
+    "time": "13:00",
+    "img": "https://srrb.ru/wp-content/uploads/2020/09/вхл-768x492.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Смотреть Лыжероллеры. Фестиваль Блинк-2025 Прямая трансляция 8 августа 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-226950043&amp;id=456239068&amp;hash=a169f4f3cf82f5a5\" width=\"640\"></iframe>",
+    "data": "2025.08.08",
+    "time": "20:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/08/БЛИНК-ФЕСТИВАЛЬ-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "велоспорт",
+    "name": "Смотреть Велоспорт. Тур де Лан 2025. Этап 3. Прямая трансляция 8 августа 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"//ok.ru/videoembed/9518866505339?nochat=1\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
+    "data": "2025.08.08",
+    "time": "17:45",
+    "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт-768x432.jpg",
+    "premium": "",
+    "active": 0
+  },
+  {
+    "category": "велоспорт",
+    "name": "Смотреть Велоспорт. Тур Польши 2025. Этап 5. Прямая трансляция 8 августа 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-227426668&amp;id=456239722&amp;hash=d289600516a343eb\" width=\"640\"></iframe>",
+    "data": "2025.08.08",
+    "time": "13:20",
+    "img": "https://srrb.ru/wp-content/uploads/2024/03/велоспорт-768x432.jpg",
+    "premium": "",
     "active": 0
   },
   {
     "category": "теннис",
-    "name": "Николоз Басилашвили — Колтон Смит. ATP1000 Цинциннати",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"315\" src=\"https://plvideo.ru/embed/Y4CDbWohCSwV\" width=\"560\"></iframe>",
-    "data": "2025.08.06",
-    "time": "20:00",
+    "name": "Уитни Осигве — Татьяна Мария. WTA1000 Цинциннати",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-212808533&amp;id=456259323&amp;hash=b74e6cedbcf01877\" width=\"640\"></iframe>",
+    "data": "2025.08.08",
+    "time": "22:30",
     "img": "https://srrb.ru/wp-content/uploads/2023/08/Цинцинати-Опен-768x432.jpg",
     "premium": "",
-    "allDays": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Смотреть Легкая атлетика. Чемпионат России 2025. Прямая трансляция 8 августа 2025.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-6783586&amp;id=456246315&amp;hash=9292e2275435f165\" width=\"640\"></iframe>",
+    "data": "2025.08.08",
+    "time": "10:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/08/ПСБ-чемпионат-России-легкая-атлетика-768x380.jpg",
+    "premium": "",
     "active": 0
   },
   {
     "category": "теннис",
-    "name": "Мариано Навоне — Ян-Леннард Штруфф. ATP1000 Цинциннати",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"315\" src=\"https://plvideo.ru/embed/Jl0uATeQ8mQx\" width=\"560\"></iframe>",
-    "data": "2025.08.06",
-    "time": "20:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/08/Цинцинати-Опен-768x432.jpg",
+    "name": "Смотреть Теннис. Летний Кубок Москвы 2025. Прямая трансляция 8 августа 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-205880627&amp;id=456239733&amp;hash=adfd32d85f1c8af5\" width=\"640\"></iframe>",
+    "data": "2025.08.08",
+    "time": "09:30",
+    "img": "https://srrb.ru/wp-content/uploads/2025/08/летний-кубок-теннис-768x345.jpg",
     "premium": "",
-    "allDays": "",
     "active": 0
   },
-  {
-    "category": "теннис",
-    "name": "Михаил Кукушкин — Эмилио Нава. ATP1000 Цинциннати",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"315\" src=\"https://plvideo.ru/embed/EAlEWjJZkf2l\" width=\"560\"></iframe>",
-    "data": "2025.08.06",
-    "time": "18:30",
-    "img": "https://srrb.ru/wp-content/uploads/2023/08/Цинцинати-Опен-768x432.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "теннис",
-    "name": "Александр Шевченко — Даниэль Галан. ATP1000 Цинциннати",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"315\" src=\"https://plvideo.ru/embed/qxDwsM9DFL_3\" width=\"560\"></iframe>",
-    "data": "2025.08.06",
-    "time": "18:00",
-    "img": "https://srrb.ru/wp-content/uploads/2023/08/Цинцинати-Опен-768x432.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "футбол",
-    "name": "Смотреть Астон Вилла – Рома. Товарищеский матч. Прямая трансляция 6 августа 2025 в 21:30",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-214218677&amp;id=456246301&amp;hash=100a2ec0fc2dc815\" width=\"640\"></iframe>",
-    "data": "2025.08.06",
-    "time": "21:30",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/футбольный-мяч-768x399.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "футбол",
-    "name": "Смотреть Арсенал – Вильярреал. Товарищеский матч. Прямая трансляция 6 августа 2025 в 20:00",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"405\" src=\"https://vkvideo.ru/video_ext.php?oid=-214218677&amp;id=456246299&amp;hash=ad80463978876867\" width=\"720\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.08.06",
-    "time": "20:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/футбольный-мяч-768x399.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "футбол",
-    "name": "Смотреть Фейеноорд – Фенербахче. Лига чемпионов УЕФА 2025/2026. Прямая трансляция 6 августа 2025 в 22:00",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"405\" src=\"https://vkvideo.ru/video_ext.php?oid=-214218677&amp;id=456246302&amp;hash=6167ce49d71a754d\" width=\"720\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
-    "data": "2025.08.06",
-    "time": "22:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/Лига-чемпионов-футбол-2020-768x384.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "футбол",
-    "name": "Смотреть Ницца – Бенфика. Лига чемпионов УЕФА 2025/2026. Прямая трансляция 6 августа 2025 в 22:00",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" sandbox=\"allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation\" src=\" https://sportzonline.si/channels/pt/sporttv1.php \" width=\"640\"></iframe>",
-    "data": "2025.08.06",
-    "time": "22:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/Лига-чемпионов-футбол-2020-768x384.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "футбол",
-    "name": "Смотреть Лех – Црвена Звезда. Лига чемпионов УЕФА 2025/2026. Прямая трансляция 6 августа 2025 в 21:30",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-214218677&amp;id=456246300&amp;hash=5b6b060db9ae887d\" width=\"640\"></iframe>",
-    "data": "2025.08.06",
-    "time": "21:30",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/Лига-чемпионов-футбол-2020-768x384.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "футбол",
-    "name": "Смотреть Лудогорец – Ференцварош. Лига чемпионов УЕФА 2025/2026. Прямая трансляция 6 августа 2025 в 20:30",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"405\" src=\"https://rutube.ru/play/embed/826fbfa9f3a6eb89765f12fe42922f18/\" width=\"720\"></iframe>",
-    "data": "2025.08.06",
-    "time": "20:30",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/Лига-чемпионов-футбол-2020-768x384.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "футбол",
-    "name": "Смотреть Ред Булл Зальцбург – Брюгге. Лига чемпионов УЕФА 2025/2026. Прямая трансляция 6 августа 2025 в 20:00",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-214218677&amp;id=456246298&amp;hash=f7dd1129d519c997\" width=\"640\"></iframe>",
-    "data": "2025.08.06",
-    "time": "20:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/Лига-чемпионов-футбол-2020-768x384.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  },
-  {
-    "category": "футбол",
-    "name": "Смотреть Кайрат – Слован. Лига чемпионов УЕФА 2025/2026. Прямая трансляция 6 августа 2025 в 18:00",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-214218677&amp;id=456246297&amp;hash=2337a70c535a23b9\" width=\"640\"></iframe>",
-    "data": "2025.08.06",
-    "time": "18:00",
-    "img": "https://srrb.ru/wp-content/uploads/2020/09/Лига-чемпионов-футбол-2020-768x384.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0
-  }
 ]
-
 
 
 
