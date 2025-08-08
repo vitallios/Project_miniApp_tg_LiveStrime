@@ -132,6 +132,8 @@ export const transLinks =
   },
 
 
+  // https://st.video.sports.ru/thumbnail/preview/68931c09fb21ccf8dec5d2b7/maxres.png
+
 ]
 
 
