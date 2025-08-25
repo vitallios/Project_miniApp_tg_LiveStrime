@@ -160,7 +160,17 @@ export const transLinks =
     "allDays": "",
     "active": 0
   },
-
+  {
+    "category": "футбол",
+    "name": "Смотреть Палмейрас — Спорт. Чемпионат Бразилии. Прямая трансляция 26 августа 2025.",
+    "link": "<iframe frameborder=\"0\" height=\"405\" scrolling=\"no\" src=\"https://news.sportbox.ru/vdl/poster/2234334\" style=\"width: 100%; max-width: 720px;\" width=\"720\"></iframe>",
+    "data": "2025.08.25",
+    "time": "01:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/07/чемпионат-бразилии-768x451.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0
+  },
   {
     "category": "футбол",
     "name": "Смотреть Севилья — Хетафе. Чемпионат Испании. Прямая трансляция 25 августа 2025 в 22:30",
@@ -250,8 +260,6 @@ export const transLinks =
     "active": 0
   }
 ]
-
-
 
 
 // vkvideo - videoplayer_live_waiting_thumb
