@@ -17,6 +17,17 @@ export const transLinks =
     allDays: "",
     active: 0
   },
+  {
+    category: "футбол",
+    name: "Орёл-М (Орёл) - Факел-2 (Воронеж)",
+    link: '<iframe src="https://vkvideo.ru/video_ext.php?oid=-157749661&id=456240866&hash=b045fa2ab7afd358" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    data: "2025.08.26",
+    time: "13:55",
+    img: "https://sun9-3.userapi.com/impg/ihiZo-2F05Rb1EZ6zTkfldWTlsc8PfNu4nWeFA/y4bA40inzxs.jpg?size=1280x720&quality=95&sign=65f4d264ed705eef9ba366272e5f0fca&type=video_thumb",
+    premium: "",
+    allDays: "",
+    active: 0
+  },
   
 ]
 
