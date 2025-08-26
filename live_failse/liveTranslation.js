@@ -12,7 +12,7 @@ export const transLinks =
     link: '<iframe src="https://vkvideo.ru/video_ext.php?oid=-224207689&id=456239802&hash=208688a6d3ccdb47" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     data: "2025.08.26",
     time: "16:20",
-    img: "https://srrb.ru/wp-content/uploads/2025/07/%D0%BF%D0%B5%D1%80%D0%B2%D0%B0%D1%8F-%D0%BB%D0%B8%D0%B3%D0%B0-768x435.jpg",
+    img: "https://sun9-18.userapi.com/impg/5lCFV5KgsNiEdvMUP1MO2CP0-ioNBczni51U8Q/GKAMq7TLN00.jpg?size=320x180&quality=95&sign=cc67823ef367964a5598703f62f3f6fa&c_uniq_tag=TLWvESiG9TkNjGeTvvHtOiylUK9o-fFORxOPTio3VYI&type=video_thumb",
     premium: "",
     allDays: "",
     active: 0
