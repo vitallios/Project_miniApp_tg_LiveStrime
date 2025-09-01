@@ -7,8 +7,8 @@
 export const transLinks = 
 [
   {
-    category: "футбол",
-    name: "Трабзонспор — Самсунспор. Суперлига Турции. Прямая трансляция 31 августа 2025 в 21:30",
+    category: "регби",
+    name: "Динамо - Слава",
     link: '<iframe class="sb-iframe" src="https://video.sports.ru/embed/uhEZrGiF89wXh-6s2o3Ypdgs6pBHv8xRw2Hlq9N1Wm0?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>',
     data: "2025.09.01",
     time: "17:00",
