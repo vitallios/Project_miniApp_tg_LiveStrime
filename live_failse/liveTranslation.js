@@ -6,16 +6,63 @@
 
 export const transLinks = 
 [
+
   {
-    category: "регби",
-    name: "Динамо - Слава",
-    link: '<iframe class="sb-iframe" src="https://video.sports.ru/embed/uhEZrGiF89wXh-6s2o3Ypdgs6pBHv8xRw2Hlq9N1Wm0?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>',
-    data: "2025.09.01",
-    time: "17:00",
-    img: "https://st.video.sports.ru/thumbnail/preview/68adbfb289d58da972bfe3b0/maxres.png",
-    premium: "",
-    active: 0
+    "category": "другое",
+    "name": "Снукер. Xi’an Grand Prix 2025. Квалификация. Прямая трансляция 3 сентября 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-228871432&amp;id=456240641&amp;hash=110a90b7eb0ef2eb\" width=\"640\"></iframe>",
+    "data": "2025.09.03",
+    "time": "12:00",
+    "img": "https://srrb.ru/wp-content/uploads/2024/07/Xian-Grand-Prix-2024-768x384.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0
   },
+  {
+    "category": "другое",
+    "name": "Смотреть Первенство города Москвы 2025 по фигурному катанию. Прямая трансляция 3 сентября 2025.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-44553412&amp;id=456239088&amp;hash=72d542bd3664078c\" width=\"640\"></iframe>",
+    "data": "2025.09.03",
+    "time": "11:45",
+    "img": "https://srrb.ru/wp-content/uploads/2021/10/фигурное-катание-768x432.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0
+  },
+  {
+    "category": "другое",
+    "name": "Смотреть 1-й этап Кубка Санкт-Петербурга 2025 по фигурному катанию. Прямая трансляция 3 сентября 2025.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-78970490&amp;id=456240387&amp;hash=ae2537e8745510a8\" width=\"640\"></iframe>",
+    "data": "2025.09.03",
+    "time": "11:00",
+    "img": "https://srrb.ru/wp-content/uploads/2021/10/фигурное-катание-768x432.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0
+  },
+  {
+    "category": "хоккей",
+    "name": "Смотреть Кузбасс  — Саяны. ЧР 2025/2026 по хоккею с мячом. Прямая трансляция 3 сентября 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-217393213&amp;id=456241100&amp;hash=dea98bc62642eb76\" width=\"640\"></iframe>",
+    "data": "2025.09.03",
+    "time": "15:00",
+    "img": "https://srrb.ru/wp-content/uploads/2021/08/Хоккей-с-мячом-768x422.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0
+  },
+  {
+    "category": "теннис",
+    "name": "Смотреть US Open 2025. Прямая трансляция 2 — 3 сентября 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-212808533&amp;id=456260026&amp;hash=dc97ad9a2c0778e6\" width=\"640\"></iframe>",
+    "data": "2025.09.03",
+    "time": "18:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/08/US-Open-2025-768x424.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0
+  }
+
 ]
 
 
