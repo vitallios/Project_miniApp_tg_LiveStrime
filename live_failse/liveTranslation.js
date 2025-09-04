@@ -206,7 +206,152 @@ export const transLinks =
     "premium": "",
     "allDays": "",
     "active": 0
+  },
+  {
+    "category": "футбол",
+    "name": "Афганистан - Индия. 2025 CAFA Nations Cup. Смотреть прямой эфир на русском 04.09.2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-21620613&id=456252128\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "14:55",
+    "img": "https://sun1-98.userapi.com/impg/jeurlOnJ0ZwDf_PSnr_qXHIzybg5AnlU-p4sGw/WKjaxmV1QcQ.jpg?size=320x180&quality=95&sign=3836aed638649467e683345ff917d842&c_uniq_tag=qqPugI7orLOS_h3Qfy9oKt891lHa43G1RucmRgfQqpA&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@vitalsport11"
+  },
+  {
+    "category": "футбол",
+    "name": "Саудовская Аравия - Северная Македония. Товарищеский матч. Смотреть прямой эфир на русском 04.09.2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-21620613&id=456252127\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "17:50",
+    "img": "https://sun1-85.userapi.com/impg/9haalS5NLwgY7GF60yy-ysVd12RNh2qv5m3JLQ/ei7jR7Efvyo.jpg?size=320x180&quality=95&sign=36476c6f44f57da53f459683f9c0762b&c_uniq_tag=zb4heALTjQxrI91n48yRMBFyu_CvS6eGiIAcGtkTtWs&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@vitalsport11"
+  },
+  {
+    "category": "футбол",
+    "name": "Исландия - Фарерские острова. Отборочные матчи ЧЕ-2027 U-21. Смотреть прямой эфир на русском 04.09.2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-21620613&id=456252126\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "20:00",
+    "img": "https://sun1-88.userapi.com/impg/_9d1-RIF9yPk07mE1yqyBLUPeT-hCop9lsGFQg/Z09I71DZjq8.jpg?size=320x180&quality=95&sign=16c0a3fa1f7848034f705a4051022e3f&c_uniq_tag=6KH7p42v093YbQMiB5FX7nXugmFpfFI0f_Hm1_50oCA&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@vitalsport11"
+  },
+  {
+    "category": "футбол",
+    "name": "Молдова - Ирландия. Отборочные матчи ЧЕ-2027 U-21. Смотреть прямой эфир на русском 04.09.2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-21620613&id=456252125\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "18:55",
+    "img": "https://sun1-30.userapi.com/impg/GMVF4typtI62ZIVwgsVFCVFyXIsAzudn3xDJ3g/cY_nYBJhySo.jpg?size=320x180&quality=95&sign=562f3517d698fdeca764c77974e6ed55&c_uniq_tag=IGgofArrrRYJFOrsLWRP5q1i1mGg_1I84epSORodR9U&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@vitalsport11"
+  },
+  {
+    "category": "футбол",
+    "name": "ОАЭ - Сирия. Товарищеский матч смотреть прямой эфир футбол на русском 04.09.25",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-21620613&id=456252123\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "19:25",
+    "img": "https://sun1-20.userapi.com/impg/_FaiUvGNUPCeYpDDWWq5LEShfCpjgjh3x8wcfA/dA2NPtulalw.jpg?size=320x180&quality=95&sign=0e2c6af068f0d142da10d017f420766a&c_uniq_tag=HzaeetBU3VsPy9MCfhR4N0ESq2ovQI33cAU9_lhR8RM&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@vitalsport11"
+  },
+  {
+    "category": "футбол",
+    "name": "Товарищеский матч Малайзия - Сингапур смотреть прямой эфир футбол на русском 04.09.25",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-21620613&id=456252122\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "15:55",
+    "img": "https://sun1-55.userapi.com/impg/eSlA4UDloNtlSn0Px1fUC10wPMGT2kTa5n5L4w/YlF80aw5yNA.jpg?size=320x180&quality=95&sign=796f185e3dd34281d89436c9a45cf974&c_uniq_tag=UM3Hdfqdo-deTwPxPLM3x7W3hsB_oqTsR1qgZHM1l7I&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@vitalsport11"
+  },
+  {
+    "category": "футбол",
+    "name": "Португалия - Чехия. Товарищеский матч среди сборных до 20 лет. Смотреть на русском прямой эфир. 04.09.2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-21620613&id=456252121\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "20:25",
+    "img": "https://sun1-57.userapi.com/impg/irbX5-hYFzyQ7H47pU61QHr4fbDRu5F8cShssw/7xtYyM5EhaU.jpg?size=320x180&quality=95&sign=942dc2a760a0fee23d573d1cc069b63a&c_uniq_tag=3COmQSQ_HWCR4GoN_AWPJiJ-aiPF6xOFAfv8Y61BU-k&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@vitalsport11"
+  },
+  {
+    "category": "футбол",
+    "name": "Беларусь - Бельгия. Отборочные матчи ЧЕ-2027 U-21. Смотреть на русском прямой эфир. 04.09.2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-21620613&id=456252120\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "17:55",
+    "img": "https://sun1-93.userapi.com/impg/Me5U4n81wXawk9UCp-FUNdKmiVwDeJe_2eID3w/Wvb6Xgh8F7g.jpg?size=320x180&quality=95&sign=4bbe57acad60f15eb6f56deba17fa75d&c_uniq_tag=tzdonk4blVavJ4NHcvF7UGRrCU87p3_vztcKs_19MbI&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@vitalsport11"
+  },
+  {
+    "category": "футбол",
+    "name": "«Полимер» (Барнаул) – «ДИНАМО-М» (Барнаул) | Третья Лига «Сибирь» | 17:00",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-230066757&id=456239235\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "17:00",
+    "img": "https://sun9-59.userapi.com/impg/zH7TyFQKeMOBIa0gz7gfLbij0KHZBPPgvqkMfA/0cfPDfwL4aI.jpg?size=320x180&quality=95&sign=b1c9faf98f99bbabfbf127382a31e52d&c_uniq_tag=Yr9GOEMT4ZQrcJb12gih0sk-b3dM2LsEh3y4TGrZkto&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@broadcast_sffsiberia"
+  },
+  {
+    "category": "футбол",
+    "name": "«Полимер» (Барнаул) – «ТЕМП» (Барнаул) | Третья Лига «Сибирь» | 18:00",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-230066757&id=456239234\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "18:00",
+    "img": "https://sun9-40.userapi.com/impg/IGvN6JdK1NtlybBZMTaldfB7zXY665auTc-R6Q/O9Y1eh5dAjA.jpg?size=320x180&quality=95&sign=637146c45b479172eb05c14bf5cfdab0&c_uniq_tag=DQx9eACJH6wWrzWH2GwUsQEnotD9lwXQ4LM9ck3bCHo&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@broadcast_sffsiberia"
+  },
+  {
+    "category": "футбол",
+    "name": "КДВ-2 (Томск) – МИШЕЛЬ И К (Томск) | Третья Лига «Сибирь» | 15:00",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-230066757&id=456239232\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "15:00",
+    "img": "https://sun9-16.userapi.com/impg/0y4IUlPTmnc1_4qDsLaaqOGqKDTzXE-wljaAtA/8aHUltKCWts.jpg?size=320x180&quality=95&sign=28fd4c0d18d8e82d9f9bb0fb72cec3f4&c_uniq_tag=OiJNd0bdqLMx61051se1AtHrVaiAMF6QRuBxhhEhbEw&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@broadcast_sffsiberia"
+  },
+  {
+    "category": "футбол",
+    "name": "«БУРЯТИЯ» (Улан-Удэ) – «ЧИТА» (Чита) | Третья Лига «Сибирь» | 14:00",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-230066757&id=456239231\" width=\"640\"></iframe>",
+    "data": "2025.09.04",
+    "time": "14:00",
+    "img": "https://sun9-14.userapi.com/impg/AROkmLCeTbyid3YxXqeamBb4EI5ZkYOb9lznkw/pdVbuQl-bmU.jpg?size=320x180&quality=95&sign=5102e001619209f829c9acaf33ffc701&c_uniq_tag=NwKdxCl3_LXRYnlRS0CJfJkWyyyg2kBt9N9idPRj5DI&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source_url": "https://vkvideo.ru/@broadcast_sffsiberia"
   }
+
 ]
 
 
