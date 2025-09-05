@@ -118,10 +118,10 @@ const getSafeIframe = (html) => {
 /**
  * Рассчитывает время трансляции
  */
-const calculateTransmissionTime = (startTime, allDay) => {
+const calculateTransmissionTime = (startTime, allDays) => {
   const safeStartTime = startTime && /^\d{1,2}:\d{2}$/.test(startTime) ? startTime : '00:00';
   const startMinutes = timeToMinutes(safeStartTime);
-  const durationMinutes = allDay === "all day" ? 10 * 60 : 3 * 60; // 10 часов для all day
+  const durationMinutes = allDays === "all day" ? 10 * 60 : 3 * 60; // 10 часов для all day
   const endMinutes = startMinutes + durationMinutes;
 
   let endDay = currentDay;
@@ -211,7 +211,7 @@ const getTransmissionStatus = (item) => {
     startTime,
     endTime,
     endDay
-  } = calculateTransmissionTime(item.time, item.allDay);
+  } = calculateTransmissionTime(item.time, item.allDays);
 
   if (!startTime || !endTime) {
     return {
@@ -238,7 +238,9 @@ const getTransmissionStatus = (item) => {
   }
 
   if (transmissionDate > currentDay) {
-    const displayText = item.allDay === "all day" ? 
+    console.log(item);
+    
+    const displayText = item.allDays === "all day" ? 
       `Запланирована на ${formatDisplayDate(transmissionDate)} (весь день)` : 
       `Запланирована на ${formatDisplayDate(transmissionDate)} в ${startTime}`;
     
@@ -253,7 +255,7 @@ const getTransmissionStatus = (item) => {
 
   if (endMinutes < startMinutes) {
     if (nowMinutes >= startMinutes || nowMinutes <= endMinutes) {
-      const displayText = item.allDay === "all day" ? 
+      const displayText = item.allDays === "all day" ? 
         "Трансляция весь день (10 часов)" : 
         `Идет трансляция (до ${endTime})`;
       
@@ -267,7 +269,7 @@ const getTransmissionStatus = (item) => {
     }
   } else {
     if (nowMinutes >= startMinutes && nowMinutes <= endMinutes) {
-      const displayText = item.allDay === "all day" ? 
+      const displayText = item.allDays === "all day" ? 
         "Трансляция весь день (10 часов)" : 
         `Идет трансляция (до ${endTime})`;
       
@@ -282,7 +284,7 @@ const getTransmissionStatus = (item) => {
   }
 
   if (nowMinutes < startMinutes) {
-    const displayText = item.allDay === "all day" ? 
+    const displayText = item.allDays === "all day" ? 
       `Запланирована на ${formatDisplayDate(transmissionDate)} (весь день)` : 
       `Запланирована на ${startTime}`;
     
@@ -357,7 +359,7 @@ const renderTransmissions = () => {
     const { status, displayText, startTime, transmissionDate } = getTransmissionStatus(item);
     const isPremium = item.premium === "premium";
     const isToday = transmissionDate === currentDay;
-    const isAllDay = item.allDay === "all day";
+    const isAllDay = item.allDays === "all day";
 
     if (currentFilter === 'active' && status !== 'active') return;
     if (currentFilter === 'planned' && status !== 'future') return;
@@ -503,12 +505,13 @@ const addCountdownStyles = () => {
       order: 0;
     }
     .all-day-badge {
-      background-color: #4CAF50;
+      position: absolute;
+      background-color: #006b6b;
       color: white;
       padding: 2px 8px;
-      border-radius: 12px;
+      border-radius: 0 0 12px 0;
       font-size: 0.8rem;
-      margin-left: 8px;
+      top: 0;
     }
     .premium-badge {
       background-color: #FFD700;

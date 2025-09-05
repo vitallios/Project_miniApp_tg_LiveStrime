@@ -420,11 +420,12 @@ li {
 }
 
 .list__strim-link {
+    position: relative;
     display: grid;
     align-items: center;
     color: var(--white);
     gap: 1vw;
-    padding: 1vh 0;
+    padding:0 0 1vh 0;
     justify-content: center;
     width: 100%;
     justify-items: center;

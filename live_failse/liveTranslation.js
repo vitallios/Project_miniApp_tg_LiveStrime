@@ -109,8 +109,8 @@ export const transLinks =
     "data": "2025.09.05",
     "time": "10:25",
     "img": "https://sun9-21.userapi.com/impg/iwMgniEHhjBHaz-mZLZjyIOB2sIwUgObh3siIQ/GHCCJwLLMok.jpg?size=320x180&quality=95&sign=e86fe2762d7019cca6f3fa41784034cd&c_uniq_tag=7SFWvhfpuXxpMLiZoqjI3hMliG1QT8arMq-QgrAmUJA&type=video_thumb",
-    "premium": "1",
-    "allDays": "all day",
+    "premium": "",
+    "allDays": "",
     "active": 0,
     "source_url": "https://vkvideo.ru/@broadcast_sffsiberia"
   },
@@ -121,13 +121,11 @@ export const transLinks =
     "data": "2025.09.05",
     "time": "12:55",
     "img": "https://sun9-47.userapi.com/impg/13fKL7WWEq8tyxcFH9SA8qLqjcZsej4aqP8UTQ/wfkNv9F12n0.jpg?size=320x180&quality=95&sign=5dee335833aa99bcc7c2d8a328a5da6e&c_uniq_tag=jxXnNa_bfxU_54R-chboNZYvTJyEoZWGn2zHKAMm6pY&type=video_thumb",
-    "premium": "1",
+    "premium": "",
     "allDays": "1",
     "active": 0,
     "source_url": "https://vkvideo.ru/@broadcast_sffsiberia"
   },
-
-
   {
     "category": "футбол",
     "name": "КДВ-2 (Томск) – МИШЕЛЬ И К (Томск) | Третья Лига «Сибирь»",
