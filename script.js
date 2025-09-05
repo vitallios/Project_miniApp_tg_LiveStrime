@@ -467,6 +467,7 @@ const addCountdownStyles = () => {
   style.textContent = `
     .image-container {
       position: relative;
+      width: 100%;
     }
     .countdown-timer {
       position: absolute;
