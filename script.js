@@ -121,7 +121,7 @@ const getSafeIframe = (html) => {
 const calculateTransmissionTime = (startTime, allDay) => {
   const safeStartTime = startTime && /^\d{1,2}:\d{2}$/.test(startTime) ? startTime : '00:00';
   const startMinutes = timeToMinutes(safeStartTime);
-  const durationMinutes = allDay === "all day" ? 8 * 60 : 3 * 60;
+  const durationMinutes = allDay === "all day" ? 10 * 60 : 3 * 60; // 10 часов для all day
   const endMinutes = startMinutes + durationMinutes;
 
   let endDay = currentDay;
@@ -155,15 +155,25 @@ const formatCountdownTime = (seconds) => {
 };
 
 /**
- * Создает таймер обратного отсчета
+ * Создает таймер обратного отсчета или отображает дату
  */
 const createCountdownTimer = (element, startTime, date) => {
   const now = new Date();
   const today = `${now.getUTCFullYear()}.${(now.getUTCMonth() + 1).toString().padStart(2, '0')}.${now.getUTCDate().toString().padStart(2, '0')}`;
 
-  // Если трансляция не сегодня, не показываем таймер
-  if (date !== today) return;
+  const timerElement = document.createElement('div');
+  timerElement.className = 'countdown-timer';
+  
+  // Если трансляция не сегодня, показываем дату
+  if (date !== today) {
+    const formattedDate = formatDisplayDate(date);
+    timerElement.textContent = `${formattedDate} в ${startTime}`;
+    timerElement.classList.add('date-display');
+    element.appendChild(timerElement);
+    return;
+  }
 
+  // Если трансляция сегодня, создаем обратный отсчет
   const [hours, minutes] = startTime.split(':').map(Number);
   const targetTime = new Date();
   targetTime.setHours(hours, minutes, 0, 0);
@@ -171,8 +181,6 @@ const createCountdownTimer = (element, startTime, date) => {
   // Если время уже прошло, не показываем таймер
   if (targetTime <= now) return;
 
-  const timerElement = document.createElement('div');
-  timerElement.className = 'countdown-timer';
   element.appendChild(timerElement);
 
   const updateTimer = () => {
@@ -230,9 +238,13 @@ const getTransmissionStatus = (item) => {
   }
 
   if (transmissionDate > currentDay) {
+    const displayText = item.allDay === "all day" ? 
+      `Запланирована на ${formatDisplayDate(transmissionDate)} (весь день)` : 
+      `Запланирована на ${formatDisplayDate(transmissionDate)} в ${startTime}`;
+    
     return {
       status: 'future',
-      displayText: `Запланирована на ${formatDisplayDate(transmissionDate)} в ${startTime}`,
+      displayText: displayText,
       startTime,
       endTime,
       transmissionDate
@@ -241,9 +253,13 @@ const getTransmissionStatus = (item) => {
 
   if (endMinutes < startMinutes) {
     if (nowMinutes >= startMinutes || nowMinutes <= endMinutes) {
+      const displayText = item.allDay === "all day" ? 
+        "Трансляция весь день (10 часов)" : 
+        `Идет трансляция (до ${endTime})`;
+      
       return {
         status: 'active',
-        displayText: item.allDay === "all day" ? "Трансляция весь день" : `Идет трансляция (до ${endTime})`,
+        displayText: displayText,
         startTime,
         endTime,
         transmissionDate
@@ -251,9 +267,13 @@ const getTransmissionStatus = (item) => {
     }
   } else {
     if (nowMinutes >= startMinutes && nowMinutes <= endMinutes) {
+      const displayText = item.allDay === "all day" ? 
+        "Трансляция весь день (10 часов)" : 
+        `Идет трансляция (до ${endTime})`;
+      
       return {
         status: 'active',
-        displayText: item.allDay === "all day" ? "Трансляция весь день" : `Идет трансляция (до ${endTime})`,
+        displayText: displayText,
         startTime,
         endTime,
         transmissionDate
@@ -262,9 +282,13 @@ const getTransmissionStatus = (item) => {
   }
 
   if (nowMinutes < startMinutes) {
+    const displayText = item.allDay === "all day" ? 
+      `Запланирована на ${formatDisplayDate(transmissionDate)} (весь день)` : 
+      `Запланирована на ${startTime}`;
+    
     return {
       status: 'future',
-      displayText: `Запланирована на ${startTime}`,
+      displayText: displayText,
       startTime,
       endTime,
       transmissionDate
@@ -291,7 +315,14 @@ const renderTransmissions = () => {
     const bStatus = getTransmissionStatus(b);
     const aIsPremium = a.premium === "premium";
     const bIsPremium = b.premium === "premium";
+    const aIsToday = (a.data || currentDay) === currentDay;
+    const bIsToday = (b.data || currentDay) === currentDay;
 
+    // Сначала сортируем по дате: сегодняшние в начале
+    if (aIsToday && !bIsToday) return -1;
+    if (!aIsToday && bIsToday) return 1;
+
+    // Затем по статусу
     if (aStatus.status === 'past' && bStatus.status !== 'past') return 1;
     if (aStatus.status !== 'past' && bStatus.status === 'past') return -1;
     if (aStatus.status === 'past' && bStatus.status === 'past') {
@@ -300,37 +331,43 @@ const renderTransmissions = () => {
       return bDate.localeCompare(aDate);
     }
 
+    // Premium контент выше обычного
     if (aIsPremium && !bIsPremium) return -1;
     if (!aIsPremium && bIsPremium) return 1;
 
+    // Активные трансляции выше запланированных
     if (aStatus.status === 'active' && bStatus.status !== 'active') return -1;
     if (aStatus.status !== 'active' && bStatus.status === 'active') return 1;
 
-    return timeToMinutes(a.time) - timeToMinutes(b.time);
+    // Сортировка по времени для трансляций на одну дату
+    if (aIsToday && bIsToday) {
+      return timeToMinutes(a.time) - timeToMinutes(b.time);
+    }
+
+    // Для не сегодняшних трансляций сортируем по дате (ближайшие сначала)
+    const aDate = a.data || currentDay;
+    const bDate = b.data || currentDay;
+    return aDate.localeCompare(bDate);
   });
 
   sortedTransmissions.forEach((item, index) => {
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
 
-    const {
-      status,
-      displayText,
-      startTime,
-      transmissionDate
-    } = getTransmissionStatus(item);
+    const { status, displayText, startTime, transmissionDate } = getTransmissionStatus(item);
     const isPremium = item.premium === "premium";
-    const isDifferentDate = transmissionDate !== currentDay;
+    const isToday = transmissionDate === currentDay;
+    const isAllDay = item.allDay === "all day";
 
     if (currentFilter === 'active' && status !== 'active') return;
     if (currentFilter === 'planned' && status !== 'future') return;
     if (currentFilter === 'premium' && !isPremium) return;
     if (currentFilter !== 'all' && currentFilter !== 'active' &&
-      currentFilter !== 'planned' && currentFilter !== 'premium' &&
-      item.category !== currentFilter) return;
+        currentFilter !== 'planned' && currentFilter !== 'premium' &&
+        item.category !== currentFilter) return;
 
     const li = document.createElement('li');
-    li.className = `list__strim-item ${status} ${isPremium ? 'premium' : ''}`;
+    li.className = `list__strim-item ${status} ${isPremium ? 'premium' : ''} ${isToday ? 'today' : 'future-day'} ${isAllDay ? 'all-day' : ''}`;
     li.dataset.id = `transmission-${index}`;
 
     const imageContainer = item.img ?
@@ -346,7 +383,7 @@ const renderTransmissions = () => {
         <div class="transmission-header">
           <h3>${item.name}</h3>
           ${isPremium ? '<span class="premium-badge">Premium</span>' : ''}
-          ${item.allDay === "all day" ? '<span class="list__strim-allDay">all day</span>' : ''}
+          ${isAllDay ? '<span class="all-day-badge">Весь день</span>' : ''}
         </div>
         <div class="transmission-info">
           <span class="time-info">${displayText}</span>
@@ -360,8 +397,8 @@ const renderTransmissions = () => {
       });
     }
 
-    // Добавляем таймер для будущих трансляций сегодня
-    if (status === 'future' && item.img && transmissionDate === currentDay) {
+    // Добавляем таймер для будущих трансляций сегодня или дату для других дней
+    if (status === 'future' && item.img) {
       const imgContainer = li.querySelector('.image-container');
       if (imgContainer) {
         createCountdownTimer(imgContainer, startTime, transmissionDate);
@@ -430,21 +467,27 @@ const addCountdownStyles = () => {
       position: relative;
     }
     .countdown-timer {
-    position: absolute;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 0.5rem 1rem;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+      position: absolute;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 0.5rem 1rem;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .countdown-timer.date-display {
+      font-size: 1rem;
+      line-height: 1.2;
+      padding: 0.3rem 0.5rem;
     }
     .transmission-image {
       display: block;
@@ -452,6 +495,36 @@ const addCountdownStyles = () => {
       height: auto;
       position: relative;
       border-radius: 5px;
+    }
+    .list__strim-item.future-day {
+      order: 1;
+    }
+    .list__strim-item.today {
+      order: 0;
+    }
+    .all-day-badge {
+      background-color: #4CAF50;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      margin-left: 8px;
+    }
+    .premium-badge {
+      background-color: #FFD700;
+      color: black;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      margin-left: 8px;
+    }
+    .list__strim-allDay {
+      background-color: #2196F3;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      margin-left: 8px;
     }
   `;
   document.head.appendChild(style);
