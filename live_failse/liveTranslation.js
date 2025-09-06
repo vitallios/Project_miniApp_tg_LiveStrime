@@ -276,7 +276,7 @@ export const transLinks =
     "name": "Чемпионат Москвы по регби среди мужчин",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-206713236&id=456239130\" width=\"640\"></iframe>",
     "data": "2025.09.06",
-    "time": "10:00",
+    "time": "15:20",
     "img": "https://sun9-41.userapi.com/impg/9gwm_-00NHkawcDjyR9OFwkfiTXc37CsK3ZT0Q/di2eNFuBM1Y.jpg?size=320x180&quality=95&sign=737939daa22bc039654adb365813af57&c_uniq_tag=lPTBxSUN82Esm-o0irCycQvTjuDuJ9RonEHl2GD9fmo&type=video_thumb",
     "premium": "",
     "allDays": "all day",
