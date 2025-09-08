@@ -500,6 +500,10 @@ li {
         grid-template-columns: repeat(3, 1fr);
         gap: 3vw;
     }
+    .transmission-image{
+        max-height: 10em;
+        min-height: 10em;    
+    }
 }
 
 @media (min-width: 1400px) {
