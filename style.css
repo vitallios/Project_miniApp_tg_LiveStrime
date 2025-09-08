@@ -386,7 +386,7 @@ li {
     border-bottom: 1px solid var(--akcent);
     line-height: 3vh;
     display: flex;
-    padding: 0 2%;
+    padding: 2%;
     border-radius: var(--radius-sm);
     align-content: space-between;
 }
@@ -505,8 +505,8 @@ li {
 @media (min-width: 1400px) {
     #listStrimes {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 4vw;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1vw; 
     }
 }
 

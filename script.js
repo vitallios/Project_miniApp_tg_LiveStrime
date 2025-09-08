@@ -498,6 +498,9 @@ const addCountdownStyles = () => {
       height: auto;
       position: relative;
       border-radius: 5px;
+      object-fit: cover;
+      max-height: 13em;
+
     }
     .list__strim-item.future-day {
       order: 1;
