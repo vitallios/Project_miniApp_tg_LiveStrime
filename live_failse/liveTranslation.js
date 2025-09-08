@@ -9,7 +9,7 @@ export const transLinks =
   {
     "category": "другое",
     "name": "Спортивная акробатика. МС «Кубок Золотова». Прямая трансляция 8 сентября 2025",
-    "link": '<iframe name="spb_player_iframe" id="spb_player_iframe" width="617" height="401.0625" src="https://video.matchtv.ru/iframe/feed/start/free_4abc5cf0e6c4c77b56326e05d60a646f/1294078/80bd809b9be616d8cdd22b167255912b/2208978000?sr=14&amp;type_id=&amp;width=100%25&amp;height=100%25&amp;lang=ru&amp;skin_name=matchtv" scrolling="no" frameborder="0" allowfullscreen="1" allow="autoplay" referrerpolicy="no-referrer-when-downgrade" onload="this.contentWindow.postMessage({ referrer: window.location.toString(), prevPageUrl: window.parent.document.referrer.toString() }, new window.URL(this.src).origin)"></iframe>',
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228873962&amp;id=456239550&amp;hash=6677878687443c93\" width=\"640\"></iframe>",
     "data": "2025.09.08",
     "time": "11:00",
     "img": "https://srrb.ru/wp-content/uploads/2025/09/мс-кубок-золотова.jpg",
@@ -105,7 +105,6 @@ export const transLinks =
     "priority": 0
   }
 ]
-
 
 // vkvideo - videoplayer_live_waiting_thumb
 
