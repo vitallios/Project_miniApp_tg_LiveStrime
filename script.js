@@ -500,7 +500,10 @@ const addCountdownStyles = () => {
       border-radius: 5px;
       object-fit: cover;
       max-height: 13em;
-
+    }
+    @media (min-width: 320px) {
+      max-height: 10em;
+      min-height: 10em;    
     }
     .list__strim-item.future-day {
       order: 1;
