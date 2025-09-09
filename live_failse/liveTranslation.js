@@ -123,7 +123,7 @@ export const transLinks =
     "name": "Спортивная акробатика. МС «Кубок Золотова». Прямая трансляция 9 сентября 2025",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-228873962&amp;id=456239551&amp;hash=fb67d790fbbfff0c\" width=\"640\"></iframe>",
     "data": "2025.09.09",
-    "time": "10:00",
+    "time": "11:00",
     "img": "https://srrb.ru/wp-content/uploads/2025/09/мс-кубок-золотова.jpg",
     "premium": "",
     "allDays": "",
