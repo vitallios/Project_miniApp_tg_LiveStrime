@@ -158,6 +158,7 @@ li {
 
 .menu__list-link>img {
     border-radius: var(--radius-circle);
+    max-width: 34px;
 }
 
 .btn {

@@ -16,6 +16,14 @@ export const catalogLinks = [
   //       `,
   // },
   {
+    id: 1,
+    name: "EvropeSportLive",
+    img: `https://sun1-96.userapi.com/s/v1/ig2/5a_-CyVNpzcNLTRg10If8IjycHqwff0dMvSNN0mFAK9174hBPjWMEnv8InbWDPBpgaY-8t-v155RJRQfM_eNPSe6.jpg?quality=95&crop=0,0,1024,1024&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=50x50`,
+    link: `
+       <iframe src="https://vkvideo.ru/video_ext.php?oid=-232089802&id=456239300&hash=5ae04e4027d5f555" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        `,
+  },
+  {
     id: 2,
     name: "Football",
     img: `https://pic.rutubelist.ru/user/73/ec/73ec1498073f9e98e7bd10625b1e5100.jpg?width=34&height=34`,
