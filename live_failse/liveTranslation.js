@@ -207,7 +207,7 @@ export const transLinks = [
     name: "«Уфа» - «Урал» Лига PARI. 10 тур.",
     link: '<iframe src="https://vkvideo.ru/video_ext.php?oid=-29484355&id=456250332&hash=b9c6a83931c83451" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     data: "2025.09.15",
-    time: "18:20",
+    time: "16:55",
     img: "https://sun1-18.userapi.com/impg/s528oVVFjTL4Mn611mgPDtzjjG5d-kkoFgSQbw/VAxOKJeVCqo.jpg?size=320x180&quality=95&sign=0641342ded56684a84ca8fe0285e3d9a&c_uniq_tag=-0qhkNyBz6hg_A4wK0Fqa5LoU3wS5lBDkBAFJeukrkw&type=video_thumb",
     premium: "",
     allDays: "",
