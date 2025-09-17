@@ -1182,6 +1182,20 @@ export const transLinks =
     "is_live": false,
     "priority": 0
   }
+  {
+    "category": "футбол",
+    "name": "Фанком (Киров) - СШОР (Тверская область) | Чемпионат МФФ 'Золотое кольцо'",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-179811248&id=456240687&hash=0bb78412d9afde7f" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.09.17",
+    "time": "16:15",
+    "img": "https://sun1-88.userapi.com/impg/fbTMlvYoavNFFliK2PmsKZCD9KWr3ofVXtk3Nw/16t7lXZYBik.jpg?size=1024x576&quality=95&sign=99351354f36fa1a8e9b79a37edad86bf&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.com",
+    "is_live": false,
+    "priority": 0
+  }
 ]
 
 // vkvideo - videoplayer_live_waiting_thumb
