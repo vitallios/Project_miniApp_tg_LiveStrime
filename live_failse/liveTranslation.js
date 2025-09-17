@@ -1181,7 +1181,7 @@ export const transLinks =
     "source": "vk.com",
     "is_live": false,
     "priority": 0
-  }
+  },
   {
     "category": "футбол",
     "name": "Фанком (Киров) - СШОР (Тверская область) | Чемпионат МФФ 'Золотое кольцо'",
