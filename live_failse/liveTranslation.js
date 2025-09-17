@@ -1167,6 +1167,20 @@ export const transLinks =
     "source": "vk.com",
     "is_live": false,
     "priority": 0
+  },
+  {
+    "category": "футбол",
+    "name": "Кубок ПФО | Сезон-2025 | Финал | Ижевск - БоМиК | 17 сентября 2025 г",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-98769807&id=456239778&hash=8ddfa3cc3c18aaa0" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.09.17",
+    "time": "15:55",
+    "img": "https://sun1-83.userapi.com/impg/bbeuRoIlITkJ7db7NjDCbGZR__XzOb8ENlP_6w/JGzPNGpKUVg.jpg?size=1280x851&quality=95&sign=3abeb1e88d5b77fcc851613931c593b4&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.com",
+    "is_live": false,
+    "priority": 0
   }
 ]
 
