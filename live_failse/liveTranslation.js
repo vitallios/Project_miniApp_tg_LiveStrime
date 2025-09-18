@@ -747,9 +747,6 @@ export const transLinks =
     "is_live": false,
     "priority": 0
   }
-
-
-  
 ]
 
 // vkvideo - videoplayer_live_waiting_thumb
