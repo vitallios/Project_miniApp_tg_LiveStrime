@@ -570,6 +570,20 @@ export const transLinks =
     "is_live": false,
     "priority": 0
   },
+    {
+    "category": "футбол",
+    "name": "КДВ (Томск) – Сибирь-М (Новосибирск) | Третья Лига «Сибирь»",
+    "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-230066757&id=456239282&hash=04ef8c35950854a2" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+    "data": "2025.09.19",
+    "time": "11:00",
+    "img": "https://sun9-49.userapi.com/impg/KmR03WkFZ2clJuAoPS89TJvCG4lT_zuwcIEUfw/hrw7-k5-G0c.jpg?size=1280x720&quality=95&sign=059b6ea2ba5827c06e3cd74aad33d38c&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.com",
+    "is_live": false,
+    "priority": 0
+  },
 ]
 
 // vkvideo - videoplayer_live_waiting_thumb
