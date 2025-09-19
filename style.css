@@ -445,14 +445,16 @@ li {
 
 .list__strim-link {
     position: relative;
-    display: grid;
+    display: flex;
     align-items: center;
     color: var(--white);
     gap: 1vw;
     padding: 0 0 var(--spacing-md) 0;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     justify-items: center;
+    /* align-content: space-between; */
+    flex-direction: column;
 }
 
 .wrap>a {
