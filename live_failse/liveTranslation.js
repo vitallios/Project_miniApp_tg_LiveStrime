@@ -530,7 +530,7 @@ export const transLinks =
   },
     {
     "category": "регби",
-    "name": "Про Д2. Биарриц - Брив. (Юношеский чемпионат России)",
+    "name": "Про Д2. Биарриц - Брив",
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456284763&hash=8650ad94797198de" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.09.19",
     "time": "20:00",
