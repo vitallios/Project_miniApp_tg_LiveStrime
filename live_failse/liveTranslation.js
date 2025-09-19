@@ -502,7 +502,7 @@ export const transLinks =
   },
     {
     "category": "Австралийский футбол",
-    "name": "Австралийский футбол. Geelong Cats - Hawthorn Hawks (предварительный финал)",
+    "name": "Австралийский футбол. Geelong Cats - Hawthorn Hawks",
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456284762&hash=a1cf5735fc27dde2" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.09.19",
     "time": "12:40",
@@ -558,7 +558,7 @@ export const transLinks =
   },
     {
     "category": "регби",
-    "name": "Про Д2. Ванн - Прованс.",
+    "name": "Про Д2. Ванн - Прованс",
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456284764&hash=dd2bce8d8ed2039b" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.09.19",
     "time": "22:00",
