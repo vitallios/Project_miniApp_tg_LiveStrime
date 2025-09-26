@@ -50,7 +50,7 @@ export const transLinks =
   },
   {
     "category": "Регби",
-    "name": "«Стрела-Ак Барс» vs «Красный Яр».",
+    "name": "«Стрела-Ак Барс» vs «Красный Яр»",
     "link": `<iframe class="sb-iframe" src="https://video.sports.ru/embed/XIya-TEl0FHFoKr0mJ6w2wUVuLpbbCp9GQIruIMKcdk?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>`,
     "data": "2025.09.27",
     "time": "11:30",
