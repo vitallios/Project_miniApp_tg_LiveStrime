@@ -66,7 +66,7 @@ export const transLinks =
     "category": "Регби",
     "name": " «ВВА-Подмосковье» vs «Слава»",
     "link": `<iframe class="sb-iframe" src="https://video.sports.ru/embed/H9OJUi8VfnananeMeZvy9n9Df2TVlJLjiXH5rmA0Bbw?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>`,
-    "data": "2025.09.28",
+    "data": "2025.09.27",
     "time": "11:50",
     "img": "https://st.video.sports.ru/thumbnail/preview/68d25b1d7516ecb1bef5567a/maxres.png",
     "premium": "",
