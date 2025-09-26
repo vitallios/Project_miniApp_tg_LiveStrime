@@ -709,10 +709,10 @@ export const transLinks =
   },
   {
     "category": "другое",
-    "name": "ЦСКА  — «Чертаново» I Winline Суперлига I  22 тур",
+    "name": "ЦСКА  — «Чертаново» | Winline Суперлига |  22 тур",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-29809500&id=456246590&hash=\"\" width=\"640\"></iframe>",
     "data": "2025.09.26",
-    "time": "17:50",
+    "time": "20:15",
     "img": "https://sun1-97.userapi.com/impg/34MGTsWsPG-XnRxf47NdfJOM2kw37WghAqf1-w/K_8bfo77D0k.jpg?size=320x180&quality=95&sign=0bf0a355b9816d5cbc4b23c5cec59d71&c_uniq_tag=aUSAWvHS7RsbEHtLQWxsnqWGZ17R6x7dThrzDC-8EnA&type=video_thumb",
     "premium": "",
     "allDays": "",
