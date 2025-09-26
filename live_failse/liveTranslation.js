@@ -94,7 +94,7 @@ export const transLinks =
     "category": "Регби",
     "name": " «Металлург» vs «Локомотив».",
     "link": `<iframe class="sb-iframe" src="https://video.sports.ru/embed/dbQVkedeIS5WFU5iSQkpiItux2936-Gno0FoPM50HhM?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>`,
-    "data": "2025.09.27",
+    "data": "2025.09.28",
     "time": "14:00",
     "img": "https://st.video.sports.ru/thumbnail/preview/68d25aedb647bee8f40296ce/maxres.png",
     "premium": "",
