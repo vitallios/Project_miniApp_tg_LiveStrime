@@ -35,6 +35,20 @@ export const transLinks =
     "priority": 9
   },
   {
+    "category": "Регби",
+    "name": "Storm vs Sharks | NRL 2025 | Полуфинал",
+    "link": "<iframe src=\"https://vkvideo.ru/video_ext.php?oid=-175058841&id=456240644&hash=edd9a22a83e8788a\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.09.26",
+    "time": "13:00",
+    "img": "https://sun1-25.userapi.com/impg/iXkVly7FH0MHckl-B3mTja8pb6ZWus120yL_aA/cjtsyW6tEvg.jpg?size=320x180&quality=95&sign=87aeab02a71e3bea7ba864398f1e8d11&c_uniq_tag=f9WUIShsGTNYWfbxv5zz5iOLNcUUDciq3VGDr98wBAs&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "srrb.ru",
+    "is_live": false,
+    "priority": 9
+  },
+  {
     "category": "хоккей",
     "name": "Смотреть МХК Динамо-Карелия – Спутник. МХЛ 2025/26. Прямая трансляция 26 сентября 2025",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/qOz6rQ9eleo\" title=\"26.09.2025. «Динамо-Карелия» – «Спутник» Ал | (OLIMPBET МХЛ 25/26) – Прямая трансляция\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
