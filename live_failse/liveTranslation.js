@@ -65,9 +65,9 @@ export const transLinks =
   {
     "category": "Регби",
     "name": " «ВВА-Подмосковье» vs «Слава»",
-    "link": `<iframe class="sb-iframe" src="https://video.sports.ru/embed/H9OJUi8VfnananeMeZvy9n9Df2TVlJLjiXH5rmA0Bbw?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>`,
+    "link": `<iframe class="sb-iframe" src="https://video.sports.ru/embed/dbQVkedeIS5WFU5iSQkpiItux2936-Gno0FoPM50HhM?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>`,
     "data": "2025.09.27",
-    "time": "14:00",
+    "time": "13:50",
     "img": "https://photobooth.cdn.sports.ru/preset/message/b/b5/a1cbedd2c45e1a984f6f441270b91.png?f=webp&s=2x&w=730",
     "premium": "",
     "allDays": "",
@@ -93,7 +93,7 @@ export const transLinks =
   {
     "category": "Регби",
     "name": " «Металлург» vs «Локомотив».",
-    "link": `<iframe class="sb-iframe" src="https://video.sports.ru/embed/dbQVkedeIS5WFU5iSQkpiItux2936-Gno0FoPM50HhM?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>`,
+    "link": `<iframe class="sb-iframe" src="https://video.sports.ru/embed/H9OJUi8VfnananeMeZvy9n9Df2TVlJLjiXH5rmA0Bbw?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>`,
     "data": "2025.09.28",
     "time": "12:00",
     "img": "https://photobooth.cdn.sports.ru/preset/message/8/76/17683f80d415db030aad3b9d30ae1.png?f=webp&s=2x&w=730",
