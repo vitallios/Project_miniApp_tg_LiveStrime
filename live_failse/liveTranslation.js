@@ -486,6 +486,34 @@ export const transLinks =
     "priority": 0
   },
   {
+    "category": "регби",
+    "name": "«Стрела-Ак Барс» vs «Динамо» | ФИНАЛ!",
+    "link": '<iframe class="sb-iframe" src="https://video.sports.ru/embed/an7xDufuwGb62wJ1qOHJ8fGkGftUyrl1oC2v7nB7-ek?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>',
+    "data": "2025.10.12",
+    "time": "12:25",
+    "img": "https://st.video.sports.ru/thumbnail/preview/68e62b6362073e219eb9e307/maxres.png",
+    "premium": "",
+    "allDays": "",
+    "active": 1,
+    "source": "vk.com",
+    "is_live": true,
+    "priority": 0
+  },
+  {
+    "category": "регби",
+    "name": "«Енисей-СТМ» vs «Красным Яром» | за 3 место",
+    "link": '<iframe class="sb-iframe" src="https://video.sports.ru/embed/mBpm1fjV0qufE0VcXLWV9qksEhA9T_pXKdvVPX9bS0o?loop=1" width="100%" loading="lazy" allow="" allowfullscreen="" type="video" index="5"></iframe>',
+    "data": "2025.10.12",
+    "time": "09:00",
+    "img": "https://st.video.sports.ru/thumbnail/preview/68e62b2b5cf2da3c77f0d27e/maxres.png",
+    "premium": "",
+    "allDays": "",
+    "active": 1,
+    "source": "vk.com",
+    "is_live": true,
+    "priority": 0
+  },
+  {
     "category": "другое",
     "name": "Всероссийские соревнования по боксу «Памяти Героя России – гвардии майора – Виктора Омелькова» среди мужчин. Супсех. День 4.",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-148618057&id=456254733&hash=\"\" width=\"640\"></iframe>",
