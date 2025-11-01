@@ -343,26 +343,12 @@ export const transLinks =
     "priority": 0
   },
   {
-    "category": "другое",
-    "name": "Всероссийские соревнования по боксу среди юношей 13-14 лет, 15-16 лет. Супсех. ФИНАЛЫ!",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://v3fujian.yanhuayu.com/attachment/web/images/0/2025/10/SYhfiKKtmcAwOOcCJ2aLA5OJGn40XgdO.png\"\" width=\"640\"></iframe>",
-    "data": "2025.11.01",
-    "time": "08:20",
-    "img": "https://sun1-19.userapi.com/impg/xd04rK9kZkoUEaI3AHCz8n6VBhbxy7bh6FpAjQ/RSBboK_2nRc.jpg?size=320x240&quality=95&sign=24b05a78cad338e55b56d897a13db901&c_uniq_tag=J9oMBkoOddM-7Zx-wRjkhwqhUSYEtusjqfo0t11cxNI&type=video_thumb",
-    "premium": "",
-    "allDays": "",
-    "active": 1,
-    "source": "vk.com",
-    "is_live": true,
-    "priority": 0
-  },
-  {
     "category": "РЕГБИ",
     "name": "Папуа - Новая Гвинея vs Фиджи",
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-175058841&id=456240684&hash=5e3a413d7624174d" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2025.11.01",
     "time": "08:00",
-    "img": "https://sun1-19.userapi.com/impg/xd04rK9kZkoUEaI3AHCz8n6VBhbxy7bh6FpAjQ/RSBboK_2nRc.jpg?size=320x240&quality=95&sign=24b05a78cad338e55b56d897a13db901&c_uniq_tag=J9oMBkoOddM-7Zx-wRjkhwqhUSYEtusjqfo0t11cxNI&type=video_thumb",
+    "img": "https://sun1-15.userapi.com/impg/mLoOfQK-8x-GrlYtXm7bgJYehfrKJA6xn3lesg/g5TOeBZa10g.jpg?size=320x177&quality=95&sign=75f763f85b7e6cb436531584310953cb&c_uniq_tag=5L-KAevfIpZEWjtgq6pBencKOB9jHxh3Yr9OuNg9IhI&type=video_thumb",
     "premium": "",
     "allDays": "",
     "active": 1,
