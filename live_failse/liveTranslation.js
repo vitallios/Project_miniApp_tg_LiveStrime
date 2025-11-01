@@ -784,12 +784,12 @@ export const transLinks =
     "data": "2025.11.01",
     "time": "23:10",
     "img": "https://sun9-66.userapi.com/impg/F4l6tTrdQZz6E59sBlKmvpFTzAkA585P0C6WLw/PFahBl4YsVM.jpg?size=1280x720&quality=95&sign=b3486bba411ed9aa0ae13f69f14de8ff&type=video_thumb",
-    "premium": "",
+    "premium": "premium",
     "allDays": "",
     "active": 1,
     "source": "vk.com",
     "is_live": true,
-    "priority": 0
+    "priority": 1
   },
   {
     "category": "регби",
@@ -798,12 +798,12 @@ export const transLinks =
     "data": "2025.11.01",
     "time": "18:10",
     "img": "https://sun9-9.userapi.com/impg/ZlxVK9sxZxNzjS4Tv1eKAg3TG3oDNbqAaL847g/l0N5SlWe6xA.jpg?size=1280x720&quality=95&sign=eb3c21e7abf4378b09e49c2ae93423f9&type=video_thumb",
-    "premium": "",
+    "premium": "premium",
     "allDays": "",
     "active": 1,
     "source": "vk.com",
     "is_live": true,
-    "priority": 0
+    "priority": 1
   },
   {
     "category": "регби",
@@ -812,12 +812,12 @@ export const transLinks =
     "data": "2025.11.01",
     "time": "19:10",
     "img": "https://sun9-73.userapi.com/impg/wmm7cBQzdWmRWRx7bLQRSnZcYF23MJtbctYS1g/chpufWtvBzQ.jpg?size=1280x720&quality=95&sign=0020bf7d21bcadfee9d5b5cc4467d68c&type=video_thumb",
-    "premium": "",
+    "premium": "premium",
     "allDays": "",
     "active": 1,
     "source": "vk.com",
     "is_live": true,
-    "priority": 0
+    "priority": 1
   },
 ]
 
