@@ -34,6 +34,48 @@ export const transLinks =
     "is_live": false,
     "priority": 0
   },
+  {
+    "category": "Регби",
+    "name": "Про Д2. Коломье - Прованс",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286137&hash=543a3de3ffdacf12" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.07",
+    "time": "21:00",
+    "img": "https://sun1-14.userapi.com/impg/edDaUOYb3zkTrmF7h_qOquv3nX_duX4t3eXSdA/fXbq66z7tFw.jpg?size=1280x720&quality=95&sign=ec71a1e6a57d7b957081d3f8ec47b140&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
+  {
+    "category": "Регби",
+    "name": "Про Д2. Ойонна - Ангулем",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286138&hash=3eeb305ba1e7d47e" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.07",
+    "time": "21:30",
+    "img": "https://sun1-24.userapi.com/impg/9X4IxqSyZtqcLc7o522KyByF5Ncj5-01R0GXNw/IWVQebyIxZw.jpg?size=1280x718&quality=95&sign=fcda2befb7514bebc7f908793de6d0b4&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
+  {
+    "category": "Регби",
+    "name": "Про Д2. Невер - Ванн",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286139&hash=b2e4838704f750d6" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.07",
+    "time": "23:00",
+    "img": "https://sun1-86.userapi.com/impg/BQtcYGPor9GQVs5sbPh3noEB19kbCcHTdEByNQ/MqYpmyT6w5w.jpg?size=1280x716&quality=95&sign=830eca47648c1e197c0aaa331fc96300&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
 
   {
     "category": "другое",
