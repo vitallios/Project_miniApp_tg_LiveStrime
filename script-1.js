@@ -27,23 +27,6 @@ let currentMinutes = currentDate.getMinutes().toString().padStart(2, '0');
 let currentTime = `${currentHours}:${currentMinutes}`;
 let currentDay = `${currentDate.getUTCFullYear()}.${(currentDate.getUTCMonth() + 1).toString().padStart(2, '0')}.${currentDate.getUTCDate().toString().padStart(2, '0')}`;
 
-// Константы
-const HIDE_AFTER_MINUTES = 10; // Скрывать через 10 минут после окончания
-const TIME_CONFIG = {
-  ALL_DAY_DURATION: 10 * 60, // 10 часов в минутах
-  REGULAR_DURATION: 3 * 60   // 3 часа в минутах
-};
-
-const TEXT = {
-  PREMIUM: 'Premium',
-  ALL_DAY: 'Весь день',
-  ACTIVE_NOW: 'Активные сейчас',
-  SCHEDULED: 'Запланированные',
-  TRANSMISSION_ENDED: 'Трансляция завершена',
-  TRANSMISSION_ACTIVE: 'Идет трансляция',
-  TRANSMISSION_SCHEDULED: 'Запланирована на'
-};
-
 // Валидация и нормализация данных трансляций
 const validatedTransLinks = transLinks.map(item => ({
   ...item,
@@ -58,8 +41,12 @@ let currentFilter = 'all';
 const categories = [...new Set(validatedTransLinks.map(item => item.category))];
 const hasPremiumTransmissions = validatedTransLinks.some(item => item.premium === "premium");
 
-// Хранилище для таймеров
-const timerIntervals = new Set();
+// Форматирование даты
+const formatDisplayDate = (dateStr) => {
+  if (!dateStr) return '';
+  const [year, month, day] = dateStr.split('.');
+  return `${day}.${month}.${year}`;
+};
 
 /**
  * Преобразует строку времени в минуты
@@ -77,54 +64,11 @@ const timeToMinutes = (timeStr) => {
 };
 
 /**
- * Преобразует дату и время в объект Date
- */
-const parseDateTime = (dateStr, timeStr) => {
-  if (!dateStr || !timeStr) return null;
-  
-  try {
-    const [year, month, day] = dateStr.split('.').map(Number);
-    const [hours, minutes] = timeStr.split(':').map(Number);
-    
-    // Создаем дату в локальном времени
-    return new Date(year, month - 1, day, hours, minutes);
-  } catch (e) {
-    console.error('Ошибка преобразования даты и времени:', dateStr, timeStr);
-    return null;
-  }
-};
-
-/**
  * Проверяет, прошла ли указанная дата
  */
 const isDatePassed = (date) => {
   if (!date) return false;
   return date < currentDay;
-};
-
-/**
- * Проверяет, завершилась ли трансляция более N минут назад
- */
-const isTransmissionEndedLongAgo = (endDate, endTime, minutesThreshold = HIDE_AFTER_MINUTES) => {
-  if (!endDate || !endTime) return false;
-  
-  const endDateTime = parseDateTime(endDate, endTime);
-  if (!endDateTime) return false;
-  
-  const now = new Date();
-  const timeDifference = now.getTime() - endDateTime.getTime();
-  const minutesDifference = timeDifference / (1000 * 60);
-  
-  return minutesDifference > minutesThreshold;
-};
-
-/**
- * Форматирование даты
- */
-const formatDisplayDate = (dateStr) => {
-  if (!dateStr) return '';
-  const [year, month, day] = dateStr.split('.');
-  return `${day}.${month}.${year}`;
 };
 
 /**
@@ -174,19 +118,18 @@ const getSafeIframe = (html) => {
 /**
  * Рассчитывает время трансляции
  */
-const calculateTransmissionTime = (startTime, allDays, transmissionDate = currentDay) => {
+const calculateTransmissionTime = (startTime, allDays) => {
   const safeStartTime = startTime && /^\d{1,2}:\d{2}$/.test(startTime) ? startTime : '00:00';
   const startMinutes = timeToMinutes(safeStartTime);
-  const durationMinutes = allDays === "all day" ? TIME_CONFIG.ALL_DAY_DURATION : TIME_CONFIG.REGULAR_DURATION;
+  const durationMinutes = allDays === "all day" ? 10 * 60 : 3 * 60; // 10 часов для all day
   const endMinutes = startMinutes + durationMinutes;
 
-  let endDay = transmissionDate;
+  let endDay = currentDay;
 
   if (endMinutes >= 1440) {
-    // Если трансляция переходит на следующий день
-    const [year, month, day] = transmissionDate.split('.').map(Number);
-    const nextDay = new Date(year, month - 1, day + 1);
-    endDay = `${nextDay.getFullYear()}.${(nextDay.getMonth() + 1).toString().padStart(2, '0')}.${nextDay.getDate().toString().padStart(2, '0')}`;
+    const nextDay = new Date(currentDate);
+    nextDay.setDate(nextDay.getDate() + 1);
+    endDay = `${nextDay.getUTCFullYear()}.${(nextDay.getUTCMonth() + 1).toString().padStart(2, '0')}.${nextDay.getUTCDate().toString().padStart(2, '0')}`;
   }
 
   const endHour = Math.floor((endMinutes % 1440) / 60);
@@ -216,7 +159,7 @@ const formatCountdownTime = (seconds) => {
  */
 const createCountdownTimer = (element, startTime, date) => {
   const now = new Date();
-  const today = `${now.getFullYear()}.${(now.getMonth() + 1).toString().padStart(2, '0')}.${now.getDate().toString().padStart(2, '0')}`;
+  const today = `${now.getUTCFullYear()}.${(now.getUTCMonth() + 1).toString().padStart(2, '0')}.${now.getUTCDate().toString().padStart(2, '0')}`;
 
   const timerElement = document.createElement('div');
   timerElement.className = 'countdown-timer';
@@ -255,7 +198,6 @@ const createCountdownTimer = (element, startTime, date) => {
 
   updateTimer();
   const timerInterval = setInterval(updateTimer, 1000);
-  timerIntervals.add(timerInterval);
 
   return timerInterval;
 };
@@ -269,113 +211,98 @@ const getTransmissionStatus = (item) => {
     startTime,
     endTime,
     endDay
-  } = calculateTransmissionTime(item.time, item.allDays, transmissionDate);
+  } = calculateTransmissionTime(item.time, item.allDays);
 
   if (!startTime || !endTime) {
     return {
       status: 'past',
-      displayText: TEXT.TRANSMISSION_ENDED,
+      displayText: 'Неверное время трансляции',
       startTime: '00:00',
       endTime: '00:00',
-      transmissionDate,
-      endDay: transmissionDate,
-      shouldHide: false
+      transmissionDate
     };
   }
 
-  const now = new Date();
   const nowMinutes = timeToMinutes(currentTime);
   const startMinutes = timeToMinutes(startTime);
   const endMinutes = timeToMinutes(endTime);
 
-  // Проверяем, нужно ли скрыть трансляцию (завершилась более 10 минут назад)
-  const shouldHide = isTransmissionEndedLongAgo(endDay, endTime, HIDE_AFTER_MINUTES);
-
-  // Если дата трансляции уже прошла ИЛИ нужно скрыть
-  if (isDatePassed(transmissionDate) || shouldHide) {
+  if (isDatePassed(transmissionDate)) {
     return {
       status: 'past',
-      displayText: TEXT.TRANSMISSION_ENDED,
+      displayText: 'Трансляция завершена',
       startTime,
       endTime,
-      transmissionDate,
-      endDay,
-      shouldHide
+      transmissionDate
     };
   }
 
-  // Если трансляция запланирована на будущую дату
   if (transmissionDate > currentDay) {
+    console.log(item);
+    
     const displayText = item.allDays === "all day" ? 
-      `${TEXT.TRANSMISSION_SCHEDULED} ${formatDisplayDate(transmissionDate)} (весь день)` : 
-      `${TEXT.TRANSMISSION_SCHEDULED} ${formatDisplayDate(transmissionDate)} в ${startTime}`;
+      `Запланирована на ${formatDisplayDate(transmissionDate)} (весь день)` : 
+      `Запланирована на ${formatDisplayDate(transmissionDate)} в ${startTime}`;
     
     return {
       status: 'future',
       displayText: displayText,
       startTime,
       endTime,
-      transmissionDate,
-      endDay,
-      shouldHide: false
+      transmissionDate
     };
   }
 
-  // Проверяем активные трансляции (сегодняшние)
-  const isActive = (() => {
-    if (endMinutes < startMinutes) {
-      // Трансляция переходит через полночь
-      return nowMinutes >= startMinutes || nowMinutes <= endMinutes;
-    } else {
-      // Обычная трансляция в пределах одного дня
-      return nowMinutes >= startMinutes && nowMinutes <= endMinutes;
+  if (endMinutes < startMinutes) {
+    if (nowMinutes >= startMinutes || nowMinutes <= endMinutes) {
+      const displayText = item.allDays === "all day" ? 
+        "Трансляция весь день (10 часов)" : 
+        `Идет трансляция (до ${endTime})`;
+      
+      return {
+        status: 'active',
+        displayText: displayText,
+        startTime,
+        endTime,
+        transmissionDate
+      };
     }
-  })();
-
-  if (isActive) {
-    const displayText = item.allDays === "all day" ? 
-      "Трансляция весь день (10 часов)" : 
-      `${TEXT.TRANSMISSION_ACTIVE} (до ${endTime})`;
-    
-    return {
-      status: 'active',
-      displayText: displayText,
-      startTime,
-      endTime,
-      transmissionDate,
-      endDay,
-      shouldHide: false
-    };
+  } else {
+    if (nowMinutes >= startMinutes && nowMinutes <= endMinutes) {
+      const displayText = item.allDays === "all day" ? 
+        "Трансляция весь день (10 часов)" : 
+        `Идет трансляция (до ${endTime})`;
+      
+      return {
+        status: 'active',
+        displayText: displayText,
+        startTime,
+        endTime,
+        transmissionDate
+      };
+    }
   }
 
-  // Если трансляция еще не началась сегодня
   if (nowMinutes < startMinutes) {
     const displayText = item.allDays === "all day" ? 
-      `${TEXT.TRANSMISSION_SCHEDULED} ${formatDisplayDate(transmissionDate)} (весь день)` : 
-      `${TEXT.TRANSMISSION_SCHEDULED} ${startTime}`;
+      `Запланирована на ${formatDisplayDate(transmissionDate)} (весь день)` : 
+      `Запланирована на ${startTime}`;
     
     return {
       status: 'future',
       displayText: displayText,
       startTime,
       endTime,
-      transmissionDate,
-      endDay,
-      shouldHide: false
+      transmissionDate
     };
   }
 
-  // Если трансляция завершилась недавно (менее 10 минут назад)
-  const recentlyEnded = !isTransmissionEndedLongAgo(endDay, endTime, HIDE_AFTER_MINUTES);
-  
   return {
     status: 'past',
-    displayText: TEXT.TRANSMISSION_ENDED,
+    displayText: 'Трансляция завершена',
     startTime,
     endTime,
-    transmissionDate,
-    endDay,
-    shouldHide: !recentlyEnded
+    transmissionDate
   };
 };
 
@@ -425,37 +352,21 @@ const renderTransmissions = () => {
     return aDate.localeCompare(bDate);
   });
 
-  let visibleTransmissionsCount = 0;
-
   sortedTransmissions.forEach((item, index) => {
     const iframeHTML = getSafeIframe(item.link);
     if (!iframeHTML) return;
 
-    const transmissionStatus = getTransmissionStatus(item);
-    const { status, displayText, startTime, transmissionDate, shouldHide } = transmissionStatus;
+    const { status, displayText, startTime, transmissionDate } = getTransmissionStatus(item);
     const isPremium = item.premium === "premium";
     const isToday = transmissionDate === currentDay;
     const isAllDay = item.allDays === "all day";
 
-    // Применяем фильтры
     if (currentFilter === 'active' && status !== 'active') return;
     if (currentFilter === 'planned' && status !== 'future') return;
     if (currentFilter === 'premium' && !isPremium) return;
     if (currentFilter !== 'all' && currentFilter !== 'active' &&
         currentFilter !== 'planned' && currentFilter !== 'premium' &&
         item.category !== currentFilter) return;
-
-    // Скрываем завершенные более 10 минут назад трансляции
-    if (shouldHide) {
-      console.log(`Скрыта трансляция: ${item.name}`, {
-        endDay: transmissionStatus.endDay,
-        endTime: transmissionStatus.endTime,
-        shouldHide
-      });
-      return;
-    }
-
-    visibleTransmissionsCount++;
 
     const li = document.createElement('li');
     li.className = `list__strim-item ${status} ${isPremium ? 'premium' : ''} ${isToday ? 'today' : 'future-day'} ${isAllDay ? 'all-day' : ''}`;
@@ -478,7 +389,6 @@ const renderTransmissions = () => {
         </div>
         <div class="transmission-info">
           <span class="time-info">${displayText}</span>
-          ${status === 'past' ? `<small>Завершилась в ${transmissionStatus.endTime}</small>` : ''}
         </div>
       </button>
     `;
@@ -499,21 +409,6 @@ const renderTransmissions = () => {
 
     Strimlists.appendChild(li);
   });
-
-  // Показываем сообщение, если нет видимых трансляций
-  if (visibleTransmissionsCount === 0) {
-    const noTransmissionsMessage = document.createElement('li');
-    noTransmissionsMessage.className = 'no-transmissions-message';
-    noTransmissionsMessage.innerHTML = `
-      <div class="message-content">
-        <h3>Нет доступных трансляций</h3>
-        <p>В данный момент нет активных или запланированных трансляций.</p>
-      </div>
-    `;
-    Strimlists.appendChild(noTransmissionsMessage);
-  }
-
-  console.log(`Отображено трансляций: ${visibleTransmissionsCount}`);
 };
 
 /**
@@ -566,15 +461,7 @@ const createFilterButtons = () => {
   });
 };
 
-/**
- * Очистка всех таймеров
- */
-const cleanupTimers = () => {
-  timerIntervals.forEach(interval => clearInterval(interval));
-  timerIntervals.clear();
-};
-
-// Стили для таймера и сообщений
+// Стили для таймера
 const addCountdownStyles = () => {
   const style = document.createElement('style');
   style.textContent = `
@@ -646,43 +533,9 @@ const addCountdownStyles = () => {
       font-size: 0.8rem;
       margin-left: 8px;
     }
-    .no-transmissions-message {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 3rem 2rem;
-      background-color: #f8f9fa;
-      border-radius: 8px;
-      margin: 2rem 0;
-    }
-    .no-transmissions-message h3 {
-      color: #6c757d;
-      margin-bottom: 1rem;
-    }
-    .no-transmissions-message p {
-      color: #868e96;
-      margin: 0;
-    }
-    .message-content {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    .transmission-info small {
-      display: block;
-      margin-top: 0.5rem;
-      color: #868e96;
-      font-size: 0.8rem;
-    }
   `;
   document.head.appendChild(style);
 };
-
-// Глобальный обработчик ошибок
-window.addEventListener('error', (e) => {
-  console.error('Global error:', e.error);
-});
-
-// Обработчик перед закрытием страницы
-window.addEventListener('beforeunload', cleanupTimers);
 
 // Инициализация при загрузке страницы
 window.addEventListener('load', () => {
@@ -704,8 +557,7 @@ window.addEventListener('load', () => {
         currentHours = now.getHours().toString().padStart(2, '0');
         currentMinutes = now.getMinutes().toString().padStart(2, '0');
         currentTime = `${currentHours}:${currentMinutes}`;
-        currentDay = `${now.getFullYear()}.${(now.getMonth() + 1).toString().padStart(2, '0')}.${now.getDate().toString().padStart(2, '0')}`;
-        console.log('Обновление времени:', currentDay, currentTime);
+        currentDay = `${now.getUTCFullYear()}.${(now.getUTCMonth() + 1).toString().padStart(2, '0')}.${now.getUTCDate().toString().padStart(2, '0')}`;
         renderTransmissions();
       }
     }, 60000);
