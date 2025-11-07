@@ -501,10 +501,134 @@ export const transLinks =
 
 
 
+  {
+    "category": "Регби",
+    "name": "Тест-матч. Ирландия - Япония",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286140&hash=a470c41bff781dd0" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.08",
+    "time": "15:40",
+    "img": "https://sun9-25.userapi.com/impg/6KNqj1OFvJLJO_2S9ykDfMNUoNIqvvUAkzj_KQ/zldr6AfNlcA.jpg?size=1024x576&quality=95&sign=f9a97825a2a2f9e57ed1ab98468f1f15&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
+    {
+    "category": "Регби",
+    "name": "Товарищеский матч. Англия XV - Новая Зеландия XV",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286141&hash=e77983eaf2192f45" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.08",
+    "time": "16:15",
+    "img": "https://sun9-9.userapi.com/impg/vnnx1waHfmOTIriK04yzCH9xl0VPIe2IZL98tw/eONTndBvrAc.jpg?size=320x180&quality=95&sign=6a787fa5e3a86b81d15609248795e2f5&c_uniq_tag=Hem4pGTckWDYh4YmUwX2aJb15ydVVP4Frja8AHsy0Fs&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
+      {
+    "category": "Регби",
+    "name": "Шотландия – Новая Зеландия | Осенние тест-матчи 2025",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286141&hash=e77983eaf2192f45" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.08",
+    "time": "18:10",
+    "img": "https://sun9-4.userapi.com/impg/wmWh4umZO2s6MNFfPHrkr_PaLEou3iWu0-gR0A/WcrSwcJCfgM.jpg?size=320x180&quality=95&sign=9e3922c264a529f9c547c3d6d25ddced&c_uniq_tag=DAgx2VdLlMw-RWkC4zo-bXgfK9N8sjzRQzpHno1nVVM&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
+        {
+    "category": "Регби",
+    "name": "Топ-14. Тулон - Ла-Рошель",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286142&hash=282fef9d46be2609" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.08",
+    "time": "18:10",
+    "img": "https://sun9-77.userapi.com/impg/Gbga6MRMYTALDp8DN_fK1FWrOItnmFfipZXZeQ/pVrxTcelEtQ.jpg?size=320x180&quality=95&sign=39f4c55da67259d19fcf5a54669b3a7c&c_uniq_tag=3pPZqHT8GhEvTQ4hR9WfocTYnst207dZ1_HJ8FuHNsc&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
+        {
+    "category": "Регби",
+    "name": "Италия - Австралия | Осенние тест-матчи 2025",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286143&hash=1cda1346481cc4da" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.08",
+    "time": "20:40",
+    "img": "https://sun9-87.userapi.com/impg/nJ62iq5SRB7MoB1hFNSeo_2WvyNiI_B5NvvE1Q/dv3_HcC2kKo.jpg?size=320x180&quality=95&sign=20b7843f9e28017531a7e66384ea2b3b&c_uniq_tag=sCQv82tTQ4-jHBbMiE8uLSoN39ZkV4neQ7UrWRGBauI&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
+        {
+    "category": "Регби",
+    "name": "Англия - Фиджи | Осенние тест-матчи 2025",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-175058841&id=456240693&hash=eec0774409aba7dc" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.08",
+    "time": "20:40",
+    "img": "https://sun9-4.userapi.com/impg/wmWh4umZO2s6MNFfPHrkr_PaLEou3iWu0-gR0A/Q8mZhW_ZFtI.jpg?size=1280x720&quality=95&sign=668cc48e74b10f0b960e4949c105fe65&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
+          {
+    "category": "Регби",
+    "name": "Франция – ЮАР | Осенние тест-матчи 2025",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-175058841&id=456240694&hash=28a64eb58566432e" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.08",
+    "time": "23:10",
+    "img": "https://sun9-4.userapi.com/impg/wmWh4umZO2s6MNFfPHrkr_PaLEou3iWu0-gR0A/yurxhM-UAf4.jpg?size=1280x720&quality=95&sign=56fa4e4d157b5a664d99baaebd75e331&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
+  //
 
-
-
-
+          {
+    "category": "Регби",
+    "name": "Новая Зеландия – Самоа | Pacific Championships 2025 ",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-175058841&id=456240695&hash=ec86d3bab0618664" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.09",
+    "time": "08:05",
+    "img": "https://sun1-24.userapi.com/impg/ZCLkUWz5H0ugttzAhFMhFlSquiTcU3jmyZx3tA/9V1M_KoRcJU.jpg?size=1080x600&quality=95&sign=0e8736c0f719745726aa9ee4139a8fa1&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
+            {
+    "category": "Регби",
+    "name": "Уэльс – Аргентина | Осенние тест-матчи 2025 ",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-175058841&id=456240696&hash=ddb98ad03da5d194" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.09",
+    "time": "18:10",
+    "img": "https://sun9-4.userapi.com/impg/wmWh4umZO2s6MNFfPHrkr_PaLEou3iWu0-gR0A/vTDrd4cVnK0.jpg?size=1280x720&quality=95&sign=3739b04a1d90b6cdfbd2e453148d3243&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "vk.ru",
+    "is_live": false,
+    "priority": 0
+  },
 
 
 
