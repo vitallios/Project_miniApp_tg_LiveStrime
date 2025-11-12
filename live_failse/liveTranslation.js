@@ -6,20 +6,7 @@
 
 export const transLinks = 
 [
-  {
-    "category": "теннис",
-    "name": "Игнасио Бусе — Вилиус Гаубас. ATP Challenger 100 Монтевидео",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456245177&amp;hash=6454be2f02729ae2\" width=\"640\"></iframe>",
-    "data": "2025.11.12",
-    "time": "02:00",
-    "img": "https://srrb.ru/wp-content/uploads/2024/12/теннис-ракетки.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0,
-    "source": "srrb.ru",
-    "is_live": false,
-    "priority": 8
-  },
+
   {
     "category": "волейбол",
     "name": "Енисей – Зенит. ЧР 2025/2026 по волейболу. Мужская суперлига. Прямая трансляция 12 ноября 2025.",
@@ -34,20 +21,7 @@ export const transLinks =
     "is_live": false,
     "priority": 6
   },
-  {
-    "category": "теннис",
-    "name": "Марко Чеккинато — Мариано Навоне. ATP Challenger 100 Монтевидео",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-226610789&amp;id=456245176&amp;hash=bb450cc9070ce461\" width=\"640\"></iframe>",
-    "data": "2025.11.12",
-    "time": "00:00",
-    "img": "https://srrb.ru/wp-content/uploads/2024/12/теннис-ракетки.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0,
-    "source": "srrb.ru",
-    "is_live": false,
-    "priority": 8
-  },
+
   {
     "category": "теннис",
     "name": "Густаво Хейде — Эмилио Нава. ATP Challenger 100 Монтевидео",
@@ -207,7 +181,7 @@ export const transLinks =
     "name": "Смотреть онлайн Муайтай. Кубок России и Кубок Содружества 2025. Прямой эфир 8 — 14 ноября 2025.",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-49711826&amp;id=456240092&amp;hash=a4801a5926c6a961\" width=\"640\"></iframe>",
     "data": "2025.11.12",
-    "time": null,
+    "time": "15:00",
     "img": "https://srrb.ru/wp-content/uploads/2025/11/муай-тай-куб-содруж-768x371.jpg",
     "premium": "",
     "allDays": "",
