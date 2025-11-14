@@ -832,6 +832,62 @@ export const transLinks =
     "is_live": true,
     "priority": 0
   },
+    {
+    "category": "регби",
+    "name": "Италия vs Южная Африка | Осенние тест-матчи | Регби",
+    "link": "<iframe src=\"https://vkvideo.ru/video_ext.php?oid=-175058841&id=456240698&hash=44259e7dacb940d5\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.11.15",
+    "time": "15:40",
+    "img": "https://sun1-92.userapi.com/impg/wmWh4umZO2s6MNFfPHrkr_PaLEou3iWu0-gR0A/nUAdT7qAvHY.jpg?size=1280x720&quality=95&sign=2157d02d375b227c2157722446abf974&type=video_thumb",
+    "premium": "premium",
+    "allDays": "all day",
+    "active": 1,
+    "source": "vkvideo.ru",
+    "is_live": true,
+    "priority": 0
+  },
+    {
+    "category": "регби",
+    "name": "Англия vs Новая Зеландия | Осенние тест-матчи 2025 | Регби",
+    "link": "<iframe src=\"https://vkvideo.ru/video_ext.php?oid=-175058841&id=456240699&hash=ee06b9f6ef7a7ede\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.11.15",
+    "time": "18:10",
+    "img": "https://sun1-92.userapi.com/impg/wmWh4umZO2s6MNFfPHrkr_PaLEou3iWu0-gR0A/nUAdT7qAvHY.jpg?size=1280x720&quality=95&sign=2157d02d375b227c2157722446abf974&type=video_thumb",
+    "premium": "premium",
+    "allDays": "all day",
+    "active": 1,
+    "source": "vkvideo.ru",
+    "is_live": true,
+    "priority": 0
+  },
+    {
+    "category": "регби",
+    "name": "Ирландия vs Австралия | Осенние тесты 2025 | Регби",
+    "link": "<iframe src=\"https://vkvideo.ru/video_ext.php?oid=-175058841&id=456240700&hash=97692b59052dc5a0\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.11.15",
+    "time": "23:10",
+    "img": "https://sun1-92.userapi.com/impg/wmWh4umZO2s6MNFfPHrkr_PaLEou3iWu0-gR0A/nUAdT7qAvHY.jpg?size=1280x720&quality=95&sign=2157d02d375b227c2157722446abf974&type=video_thumb",
+    "premium": "premium",
+    "allDays": "all day",
+    "active": 1,
+    "source": "vkvideo.ru",
+    "is_live": true,
+    "priority": 0
+  },
+    {
+    "category": "регби",
+    "name": "Шотландия vs Аргентина | Осенние тест-матчи 2025 | Регби",
+    "link": "<iframe src=\"https://vkvideo.ru/video_ext.php?oid=-175058841&id=456240701&hash=e55a70ba73342226\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.11.16",
+    "time": "18:10",
+    "img": "https://sun1-92.userapi.com/impg/wmWh4umZO2s6MNFfPHrkr_PaLEou3iWu0-gR0A/nUAdT7qAvHY.jpg?size=1280x720&quality=95&sign=2157d02d375b227c2157722446abf974&type=video_thumb",
+    "premium": "premium",
+    "allDays": "all day",
+    "active": 1,
+    "source": "vkvideo.ru",
+    "is_live": true,
+    "priority": 0
+  }
 ]
 
 
