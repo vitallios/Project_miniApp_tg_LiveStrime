@@ -803,7 +803,35 @@ export const transLinks =
     "source": "vk.com",
     "is_live": true,
     "priority": 0
-  }
+  },
+  {
+    "category": "регби",
+    "name": "4 тур Магнит Чемпионата России по регби-7. Первый игровой день",
+    "link": "<iframe src=\"https://vk.com/video_ext.php?oid=-40984897&id=456244139&hash=d75ce368a6b77594\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.11.15",
+    "time": "10:00",
+    "img": "https://sun1-29.userapi.com/impg/rRmUpQzsVOdbUyKYvB_evrKXD4u_cwiPglD74Q/YJ4b30QOn6E.jpg?size=1280x720&quality=95&sign=3a9b137f9a0dfca523f58209b3f2352b&type=video_thumb",
+    "premium": "premium",
+    "allDays": "all day",
+    "active": 1,
+    "source": "vk.com",
+    "is_live": true,
+    "priority": 0
+  },
+    {
+    "category": "регби",
+    "name": "4 тур Магнит Чемпионата России по регби-7. Второй игровой день",
+    "link": "<iframe src=\"https://vkvideo.ru/video_ext.php?oid=-40984897&id=456244140&hash=bd772006f7ecba0a\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.11.16",
+    "time": "10:00",
+    "img": "https://sun1-26.userapi.com/impg/-y9CxT0pc2vLO1muCWPDXE8_ZKrdyzF45hnMnA/N8C9eZtqv18.jpg?size=1280x720&quality=95&sign=e6a222a47cfcb338acadbeba0ac52d8b&type=video_thumb",
+    "premium": "premium",
+    "allDays": "all day",
+    "active": 1,
+    "source": "vkvideo.ru",
+    "is_live": true,
+    "priority": 0
+  },
 ]
 
 
