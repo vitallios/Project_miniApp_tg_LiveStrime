@@ -146,7 +146,8 @@ export const randomFilms = [{
      picture-in-picture">
     </iframe>
     `
-  }, {
+  },
+  {
     id: 11,
     name: "Ледяной драйв 2: Возмездие",
     link: `
@@ -161,6 +162,35 @@ export const randomFilms = [{
       picture-in-picture
       ">
     </iframe>
+    `
+  },
+  {
+    id: 12,
+    name: "Расплата (фильм 2016)",
+    link: `
+      <iframe
+        width="720"
+        height="405"
+        src="https://rutube.ru/play/embed/d3d410c537f9a2d6ea31b6ac5236e3cc"
+        style="border: none;"
+        allow="clipboard-write; autoplay"
+        allowFullScreen
+      ></iframe>
+    
+    `
+  },
+  {
+    id: 13,
+    name: "Расплата 2 | The Accountant 2 (2025)",
+    link: `
+      <iframe
+        width="720"
+        height="405"
+        src="https://rutube.ru/play/embed/f358a8773714bce57fbc5576f5e49c91"
+        style="border: none;"
+        allow="clipboard-write; autoplay"
+        allowFullScreen
+      ></iframe>    
     `
   }
 ];
