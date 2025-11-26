@@ -81,7 +81,7 @@ export const transLinks =
     "name": "Смотреть онлайн Прыжки на лыжах с трамплина. Кубок мира 2025/26. Фалун. HS134. Мужчины. Прямой эфир 26 ноября 2025.",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\" frameborder=\"0\" height=\"360\" loading=\"lazy\" scrolling=\"no\" src=\"https://live.vkvideo.ru/app/embed/dopp\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
     "data": "2025.11.26",
-    "time": null,
+    "time": "16:55",
     "img": "https://srrb.ru/wp-content/uploads/2024/11/прыжки-на-лыжах-с-трамплина-768x409.jpg",
     "premium": "",
     "allDays": "",
