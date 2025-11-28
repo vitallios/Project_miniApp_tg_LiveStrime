@@ -551,7 +551,52 @@ export const transLinks =
     "source": "vk.com",
     "is_live": true,
     "priority": 0
-  }
+  },
+//
+  {
+    "category": "Регби",
+    "name": "Про Д2. Гренобль - Биарриц. 28.11.2025",
+    "link": "<iframe src=\"https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286791&hash=8fe3ac8734c6c185\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.11.28",
+    "time": "21:00",
+    "img": "https://sun1-27.userapi.com/impg/dUUcVm6yIZ-AaIexMGQ7orcaiFC16s11PH85kw/cLWFiaqrFeg.jpg?size=1280x720&quality=95&sign=1b8944154b8fbe698762f406b998636a&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 1,
+    "source": "vk.com",
+    "is_live": true,
+    "priority": 0
+  },
+  {
+    "category": "Регби",
+    "name": "Про Д2. Гренобль - Биарриц. 28.11.2025",
+    "link": "<iframe src=\"https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286792&hash=f5039aaf512ef7fe\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.11.28",
+    "time": "21:30",
+    "img": "https://sun1-14.userapi.com/impg/uMm-GFMS2RzyUHKMHzpHVsHeWrjU0Tkh73AaCA/nynsKI9b7sU.jpg?size=1280x717&quality=95&sign=af59b243a5fa30109e2cee752ccf438d&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 1,
+    "source": "vk.com",
+    "is_live": true,
+    "priority": 0
+  },
+  {
+    "category": "Регби",
+    "name": "Про Д2. Ванн - Ажен. 28.11.2025",
+    "link": "<iframe src=\"https://vkvideo.ru/video_ext.php?oid=-200149158&id=456286793&hash=60b9a8a50d811567\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen=\"1\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\"></iframe>",
+    "data": "2025.11.28",
+    "time": "23:00",
+    "img": "https://sun9-64.userapi.com/impg/8qWc5W-KeZdEotxnB7rAX9WVaMbvo8IWPbL_Qw/ssCsQkDfyf0.jpg?size=1280x719&quality=95&sign=33b1bc775eb3cbfd5db78b2565ff7aae&type=video_thumb",
+    "premium": "",
+    "allDays": "",
+    "active": 1,
+    "source": "vk.com",
+    "is_live": true,
+    "priority": 0
+  },
+
+
 ]
 
 // vkvideo - videoplayer_live_waiting_thumb
