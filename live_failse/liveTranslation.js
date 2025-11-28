@@ -581,6 +581,34 @@ export const transLinks =
     "is_live": true,
     "priority": 0
   },
+  {
+    "category": "Регби",
+    "name": "Финал Федеральной регбийной Лиги «Трудовые Резервы». Первый день",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-40984897&id=456244172&hash=e31f9cf1ebecd155" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.29",
+    "time": "09:00",
+    "img": "https://sun1-95.userapi.com/impg/77oEpxq4_DqNtMOXYRDqX0pXyJVH7Rg_uDnU6Q/FUmTtZAu--I.jpg?size=1280x720&quality=95&sign=39550f5b0500a1428e92ab7f8ddd99e9&type=video_thumb",
+    "premium": "premium",
+    "allDays": "all day",
+    "active": 1,
+    "source": "vk.com",
+    "is_live": true,
+    "priority": 0
+  },
+  {
+    "category": "Регби",
+    "name": "Финал Федеральной регбийной Лиги «Трудовые Резервы». Второй день",
+    "link": `<iframe src="https://vkvideo.ru/video_ext.php?oid=-40984897&id=456244173&hash=b6d960a0ef2a6db9" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    "data": "2025.11.30",
+    "time": "09:00",
+    "img": "https://sun1-15.userapi.com/impg/4h2-dHKfGp3z6akmlanxm14mbWwcc3IN4r1R4g/53R3tD4XBqs.jpg?size=1280x720&quality=95&sign=c35b1eb68ec9f8d537750a946006c3ef&type=video_thumb",
+    "premium": "premium",
+    "allDays": "all day",
+    "active": 1,
+    "source": "vk.com",
+    "is_live": true,
+    "priority": 0
+  },
 
 
 ]
