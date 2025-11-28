@@ -121,7 +121,7 @@ const getSafeIframe = (html) => {
 const calculateTransmissionTime = (startTime, allDays) => {
   const safeStartTime = startTime && /^\d{1,2}:\d{2}$/.test(startTime) ? startTime : '00:00';
   const startMinutes = timeToMinutes(safeStartTime);
-  const durationMinutes = allDays === "all day" ? 10 * 60 : 3 * 60; // 10 часов для all day
+  const durationMinutes = allDays === "all day" ? 12 * 60 : 3 * 60; // 12 часов для all day
   const endMinutes = startMinutes + durationMinutes;
 
   let endDay = currentDay;
