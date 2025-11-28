@@ -7,20 +7,6 @@
 export const transLinks = 
 [
   {
-    "category": "хоккей",
-    "name": "Динамо СПб – ХК Норильск. ВХЛ 2025/2026. Прямая трансляция 28 ноября 2025 в 19:00",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-150501268&amp;id=456258744&amp;hash=d062183e75185fe1\" width=\"640\"></iframe>",
-    "data": "2025.11.28",
-    "time": "19:00",
-    "img": "https://srrb.ru/wp-content/uploads/2025/09/вхл-768x432.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0,
-    "source": "srrb.ru",
-    "is_live": false,
-    "priority": 9
-  },
-  {
     "category": "другое",
     "name": "Смотреть Комо — Сассуоло. Чемпионат Италии. Прямая трансляция 28 ноября 2025 в 22:40",
     "link": "<iframe frameborder=\"0\" height=\"405\" scrolling=\"no\" src=\"https://news.sportbox.ru/vdl/poster/2268312\" style=\"width: 100%; max-width: 720px;\" width=\"720\"></iframe>",
@@ -49,6 +35,48 @@ export const transLinks =
     "priority": 0
   },
   {
+    "category": "хоккей",
+    "name": "Динамо СПб – ХК Норильск. ВХЛ 2025/2026. Прямая трансляция 28 ноября 2025 в 19:00",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-150501268&amp;id=456258744&amp;hash=d062183e75185fe1\" width=\"640\"></iframe>",
+    "data": "2025.11.28",
+    "time": "19:00",
+    "img": "https://srrb.ru/wp-content/uploads/2025/09/вхл-768x432.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "srrb.ru",
+    "is_live": false,
+    "priority": 9
+  },
+  {
+    "category": "другое",
+    "name": "Смотреть онлайн Легкая атлетика. Матчевая встреча городов Сибири и Урала 2025. Прямой эфир 28 — 29 ноября 2025.",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-173608776&amp;id=456239121&amp;hash=e11023067751ab3f\" width=\"640\"></iframe>",
+    "data": "2025.11.28",
+    "time": null,
+    "img": "https://srrb.ru/wp-content/uploads/2023/06/легкая-атлетика-768x384.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "srrb.ru",
+    "is_live": false,
+    "priority": 0
+  },
+  {
+    "category": "другое",
+    "name": "Смотреть Лыжное двоеборье. Кубок мира 2025/2026. Руха. Финляндия. Прямая трансляция 28 ноября 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\" frameborder=\"0\" height=\"360\" sandbox=\"allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation\" src=\" https://ru1.su//look/ev1player2.php \" width=\"640\"></iframe>",
+    "data": "2025.11.28",
+    "time": "14:00",
+    "img": "https://srrb.ru/wp-content/uploads/2024/03/лыжное-двоеборье-768x432.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "srrb.ru",
+    "is_live": false,
+    "priority": 0
+  },
+  {
     "category": "гандбол",
     "name": "Лада — АГУ-«Адыиф». Чемпионат России 2025/2026 по гандболу",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\" frameborder=\"0\" height=\"405\" sandbox=\"allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation\" src=\" https://rushandballtv.clients.webcaster.pro/iframe/feed/start/free_aae27ac8b62c627f7f64113a104f73a7/6079_25260524/9ff06a5674f5b022f31143111ef5ab87/1764362950?sr=6511&amp;type_id=&amp;width=100%25&amp;height=100%25&amp;iframe_width=100%25&amp;iframe_height=100%25&amp;lang=ru \" width=\"720\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span><span 0=\"\" 0px=\"\" class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" display:=\"\" hidden=\"\" inline-block=\"\" line-height:=\"\" overflow:=\"\" style=\"display: inline-block; width: 0px; overflow: hidde&lt;span style=;\" width:=\"\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span>﻿</span><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
@@ -61,20 +89,6 @@ export const transLinks =
     "source": "srrb.ru",
     "is_live": false,
     "priority": 1
-  },
-  {
-    "category": "другое",
-    "name": "Смотреть Спортинг — Андорра. Чемпионат Испании. Сегунда. Прямая трансляция 28 ноября 2025 в 22:30",
-    "link": "<iframe frameborder=\"0\" height=\"405\" scrolling=\"no\" src=\"https://news.sportbox.ru/vdl/poster/2268308\" style=\"width: 100%; max-width: 720px;\" width=\"720\"></iframe>",
-    "data": "2025.11.28",
-    "time": "22:30",
-    "img": "https://srrb.ru/wp-content/uploads/2022/01/Ла-Лига-2021-22-768x432.jpg",
-    "premium": "",
-    "allDays": "",
-    "active": 0,
-    "source": "srrb.ru",
-    "is_live": false,
-    "priority": 0
   },
   {
     "category": "другое",
@@ -93,7 +107,7 @@ export const transLinks =
   {
     "category": "другое",
     "name": "Смотреть Лыжи. 10 км. Мужчины. Кубок мира 2025/26. Рука. Финляндия. 28 ноября 2025.",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"//ok.ru/videoembed/10327058816724?nochat=1\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\" frameborder=\"0\" height=\"360\" sandbox=\"allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation\" src=\" https://ru1.su//look/ev1player2.php \" width=\"640\"></iframe>",
     "data": "2025.11.28",
     "time": "12:20",
     "img": "https://srrb.ru/wp-content/uploads/2021/11/кубок-мира-по-лыжам-рука-мужчины-768x414.jpg",
@@ -107,10 +121,24 @@ export const transLinks =
   {
     "category": "другое",
     "name": "Смотреть Лыжи. 10 км. Женщины. Кубок мира 2025/26. Рука. Финляндия. 28 ноября 2025.",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"//ok.ru/videoembed/10327058816724?nochat=1\" width=\"640\"><span class=\"mce_SELRES_start\" data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\">﻿</span></iframe>",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\" frameborder=\"0\" height=\"360\" sandbox=\"allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation\" src=\" https://ru1.su//look/ev1player2.php \" width=\"640\"></iframe>",
     "data": "2025.11.28",
     "time": "12:20",
     "img": "https://srrb.ru/wp-content/uploads/2021/11/кубок-мира-по-лыжам-рука-женщины-768x414.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "srrb.ru",
+    "is_live": false,
+    "priority": 0
+  },
+  {
+    "category": "другое",
+    "name": "Смотреть Спортинг — Андорра. Чемпионат Испании. Сегунда. Прямая трансляция 28 ноября 2025 в 22:30",
+    "link": "<iframe frameborder=\"0\" height=\"405\" scrolling=\"no\" src=\"https://news.sportbox.ru/vdl/poster/2268308\" style=\"width: 100%; max-width: 720px;\" width=\"720\"></iframe>",
+    "data": "2025.11.28",
+    "time": "22:30",
+    "img": "https://srrb.ru/wp-content/uploads/2022/01/Ла-Лига-2021-22-768x432.jpg",
     "premium": "",
     "allDays": "",
     "active": 0,
@@ -260,20 +288,6 @@ export const transLinks =
   },
   {
     "category": "другое",
-    "name": "«Енисей» - «Ротор» Лига PARI. 21 тур.",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-29484355&id=456251019&hash=\"\" width=\"640\"></iframe>",
-    "data": "2025.11.30",
-    "time": "11:25",
-    "img": "https://sun1-57.userapi.com/impg/-2L3la4yVunWKpjax-AR_ypuBkqluQGmMPbUdA/dhjsSPaMf4E.jpg?size=320x180&quality=95&sign=e2cd83043781599155f475317f67f78e&c_uniq_tag=SfiJxKvGa7bvMu4RGrMHb0ZCQeCk3T5uDzoQ_vZzf74&type=video_thumb",
-    "premium": "",
-    "allDays": "",
-    "active": 1,
-    "source": "vk.com",
-    "is_live": true,
-    "priority": 0
-  },
-  {
-    "category": "другое",
     "name": "«Чайка» - «Уфа» Лига PARI. 21 тур.",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-29484355&id=456251018&hash=\"\" width=\"640\"></iframe>",
     "data": "2025.11.29",
@@ -400,20 +414,6 @@ export const transLinks =
   },
   {
     "category": "другое",
-    "name": "12:00 HC NORD WEST – ХК ГРОМ 3 Дивизион Арктур | Сокольники",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-197568462&id=456245322&hash=\"\" width=\"640\"></iframe>",
-    "data": "2025.11.30",
-    "time": "11:50",
-    "img": "https://sun9-28.userapi.com/impg/XCcnicSCTy9z-5wkGYbA7zqLg5S007TXUIvwiw/kTu_DITcZek.jpg?size=320x180&quality=95&sign=a2db2dc64a739f8af53c7b9d7f876e2f&c_uniq_tag=ev02jl86MWoWaKVLLgGzJMcco288kA_KZCBSgBZwCvE&type=video_thumb",
-    "premium": "",
-    "allDays": "",
-    "active": 1,
-    "source": "vk.com",
-    "is_live": true,
-    "priority": 0
-  },
-  {
-    "category": "другое",
     "name": "19:45 ХК МОЭК – КБ Спартак 2 Дивизион Орион | Arena Play Юг",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-197568462&id=456245320&hash=\"\" width=\"640\"></iframe>",
     "data": "2025.11.30",
@@ -461,20 +461,6 @@ export const transLinks =
     "data": "2025.11.30",
     "time": "13:35",
     "img": "https://sun9-44.userapi.com/impg/kxdNGkYVk-pfEAjc0HC9wjmDkI71xgtaWgfA-A/l4OfrJvgTH8.jpg?size=320x180&quality=95&sign=33bc47bd64d5048c1194b2778fcf34cb&c_uniq_tag=7u5F1OSxiF7Z9nlFwZL6b3J66mxzaKH_zxAcRLPDl3c&type=video_thumb",
-    "premium": "",
-    "allDays": "",
-    "active": 1,
-    "source": "vk.com",
-    "is_live": true,
-    "priority": 0
-  },
-  {
-    "category": "другое",
-    "name": "11:45 ХК Санте МС – HC VSporte Дивизион Альтаир | Arena Play Юг",
-    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-197568462&id=456245316&hash=\"\" width=\"640\"></iframe>",
-    "data": "2025.11.30",
-    "time": "11:35",
-    "img": "https://sun9-27.userapi.com/impg/Ftl3FNS1IQQ_FGqQSzRp1aAeKJruTusEwOuXyA/Cyod-M0D3aI.jpg?size=320x180&quality=95&sign=f8fbc4e344e3a95777c63ce0b5a6f64b&c_uniq_tag=TASSj9NIeHpDCu7TFqgBTwTZaFIzSbKcf7HMiqWMf3E&type=video_thumb",
     "premium": "",
     "allDays": "",
     "active": 1,
