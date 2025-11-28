@@ -256,7 +256,7 @@ const getTransmissionStatus = (item) => {
   if (endMinutes < startMinutes) {
     if (nowMinutes >= startMinutes || nowMinutes <= endMinutes) {
       const displayText = item.allDays === "all day" ? 
-        "Трансляция весь день (10 часов)" : 
+        "Трансляция весь день (12 часов)" : 
         `Идет трансляция (до ${endTime})`;
       
       return {
@@ -270,7 +270,7 @@ const getTransmissionStatus = (item) => {
   } else {
     if (nowMinutes >= startMinutes && nowMinutes <= endMinutes) {
       const displayText = item.allDays === "all day" ? 
-        "Трансляция весь день (10 часов)" : 
+        "Трансляция весь день (12 часов)" : 
         `Идет трансляция (до ${endTime})`;
       
       return {
