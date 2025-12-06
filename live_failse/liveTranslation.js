@@ -98,7 +98,7 @@ export const transLinks =
     "time": "10:55",
     "img": "https://sun1-18.userapi.com/impg/dT89Fz23APL-C8sv-alGQlOAx_56rvik7EISiw/NRV_YUSHc3g.jpg?size=320x180&quality=95&sign=eb8c09521840fce2d53b7abb98530bb8&c_uniq_tag=i2TWS4uIkFkv5SWANGk7wIhfh5DY_cJWqa-uHYMQ0YE&type=video_thumb",
     "premium": "",
-    "allDays": "all days",
+    "allDays": "all day",
     "active": 1,
     "source": "vk.com",
     "is_live": true,
