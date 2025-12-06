@@ -112,7 +112,7 @@ export const transLinks =
     "time": "10:55",
     "img": "https://sun1-25.userapi.com/impg/6qzEH-_D_iy0MNSKReu2CyBrEZCcyZ6D8qPHRg/Fbegimf-RKo.jpg?size=320x180&quality=95&sign=eb78e36f5cacc6778d8912ffa952f35b&c_uniq_tag=IjofTHkJWgOpMzginbYOYoT0FlBSxT-s7oDiriZTb-U&type=video_thumb",
     "premium": "",
-    "allDays": "all days",
+    "allDays": "all day",
     "active": 1,
     "source": "vk.com",
     "is_live": true,
