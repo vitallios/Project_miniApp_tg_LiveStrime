@@ -134,6 +134,20 @@ export const transLinks =
   },
   {
     "category": "другое",
+    "name": "Смотреть Плавание. ВС «Резерв России 2025». Юниоры. Прямая трансляция 8 декабря 2025",
+    "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vkvideo.ru/video_ext.php?oid=-39279630&amp;id=456241792&amp;hash=91c9c9c1bc1d7e4b\" width=\"640\"></iframe>",
+    "data": "2025.12.08",
+    "time": null,
+    "img": "https://srrb.ru/wp-content/uploads/2025/12/резерв-россии.jpg",
+    "premium": "",
+    "allDays": "",
+    "active": 0,
+    "source": "srrb.ru",
+    "is_live": false,
+    "priority": 0
+  },
+  {
+    "category": "другое",
     "name": "Гамбург - Кёльн. Женская Бундеслига смотреть прямой эфир футбол на русском 08.12.25.",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-21620613&id=456253056&hash=\"\" width=\"640\"></iframe>",
     "data": "2025.12.08",
