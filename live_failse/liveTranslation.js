@@ -550,7 +550,7 @@ export const transLinks =
     "active": 1,
     "source": "vk.com",
     "is_live": true,
-    "priority": 0
+    "priority": 0,
   }
 ]
 // vkvideo - videoplayer_live_waiting_thumb
