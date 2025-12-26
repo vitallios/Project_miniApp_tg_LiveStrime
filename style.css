@@ -390,6 +390,7 @@ li {
     padding: 2%;
     border-radius: var(--radius-sm);
     align-content: space-between;
+    height: max-content;
 }
 
 .list__strim-item>button>img {
@@ -455,6 +456,8 @@ li {
     justify-items: center;
     /* align-content: space-between; */
     flex-direction: column;
+    max-height: 22em;
+    height: 330px;
 }
 
 .wrap>a {
