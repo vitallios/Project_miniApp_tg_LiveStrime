@@ -403,7 +403,7 @@ export const transLinks =
     "name": "Про Д2. Ажен - Коломье. 22.01.2026",
     "link": "<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-200149158&id=456287675&hash=\"\" width=\"640\"></iframe>",
     "data": "2026.01.22",
-    "time": "13:50",
+    "time": "23:00",
     "img": "https://sun9-81.userapi.com/impg/_wu29edTb42GH_qHULT2xgPp0wPDoL2AikdIHQ/h0ulsuREux4.jpg?size=320x179&quality=95&sign=e025a9c4b216c7c6d827a24ab7e3ff70&c_uniq_tag=XDpNuUW9gQxSK01x6d2nf2RNRSsGKsYWrhKSltD4WHc&type=video_thumb",
     "premium": "",
     "allDays": "",
