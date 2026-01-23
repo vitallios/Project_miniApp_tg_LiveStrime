@@ -9,20 +9,6 @@ export const transLinks =
   {
     "category": "другое",
     "name": "Про Д2. Прованс - Орийяк.",
-    "link": '<iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://vk.com/video_ext.php?oid=-228871432&amp;id=456241105&amp;hash=b464e6365e6de582\" width=\"640\"></iframe>',
-    "data": "2026.01.23",
-    "time": "21:00",
-    "img": "https://sun9-80.userapi.com/impg/PdZY8VKlpD6ukyi6VLlR8oCVPT6peMj7KGJfBw/0VDq9uNS2jI.jpg?size=1280x722&quality=95&sign=f33d4fb87f1aad063f2bfa5b052eb434&type=video_thumb",
-    "premium": "",
-    "allDays": "",
-    "active": 0,
-    "source": "srrb.ru",
-    "is_live": false,
-    "priority": 0
-  },
-  {
-    "category": "другое",
-    "name": "Про Д2. Прованс - Орийяк.",
     "link": '<iframe src="https://vkvideo.ru/video_ext.php?oid=-200149158&id=456287677&hash=d31c8e10fb7a571e" width="640" height="360" frameborder="0" allowfullscreen="1" style="background-color: #000" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     "data": "2026.01.23",
     "time": "21:30",
