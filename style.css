@@ -388,7 +388,6 @@ li {
     line-height: 3vh;
     display: flex;
     padding: 2%;
-    width: 20rem;
     height: 21rem;
     border-radius: var(--radius-sm);
     align-content: space-between;
