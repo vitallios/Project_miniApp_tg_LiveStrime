@@ -388,9 +388,10 @@ li {
     line-height: 3vh;
     display: flex;
     padding: 2%;
+    width: 20rem;
+    height: 15rem;
     border-radius: var(--radius-sm);
     align-content: space-between;
-    height: max-content;
 }
 
 .list__strim-item>button>img {
