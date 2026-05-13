@@ -389,7 +389,7 @@ li {
     display: flex;
     padding: 2%;
     width: 20rem;
-    height: 15rem;
+    height: 21rem;
     border-radius: var(--radius-sm);
     align-content: space-between;
 }
